@@ -1,1 +1,0 @@
-/usr/bin/c++    -rdynamic CMakeFiles/logtest.dir/test.cpp.o  -o ../bin/logtest  -Wl,-rpath,/home/fql/Project/C++/sylar/lib ../lib/libservercc_lib.so 

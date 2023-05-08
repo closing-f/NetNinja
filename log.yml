@@ -1,0 +1,20 @@
+logs:
+    - name: root
+      level: INFO
+      appenders:
+          - type: FileLogAppender
+            file: /home/fql/Project/C++/sylar/log.txt
+          - type: StdoutLogAppender
+    - name: system
+      level: INFO
+      appenders:
+          - type: FileLogAppender
+            file: /home/fql/Project/C++/sylar/log.txt
+          - type: StdoutLogAppender
+system:
+      port: 9900
+      value: 15
+      int_vec:
+         - 30
+         - 40
+      int_set: [30,20,60,20]

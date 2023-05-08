@@ -1,0 +1,12 @@
+file(REMOVE_RECURSE
+  "../lib/libservercc.pdb"
+  "../lib/libservercc.so"
+  "CMakeFiles/servercc.dir/src/config.cpp.o"
+  "CMakeFiles/servercc.dir/src/logger.cpp.o"
+  "CMakeFiles/servercc.dir/src/utils.cpp.o"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/servercc.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

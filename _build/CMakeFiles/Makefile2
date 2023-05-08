@@ -53,8 +53,8 @@ CMAKE_BINARY_DIR = /home/fql/Project/C++/sylar/_build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/logtest.dir/all
-all: CMakeFiles/servercc_lib.dir/all
+all: CMakeFiles/test.dir/all
+all: CMakeFiles/servercc.dir/all
 
 .PHONY : all
 
@@ -64,64 +64,64 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/logtest.dir/clean
-clean: CMakeFiles/servercc_lib.dir/clean
+clean: CMakeFiles/test.dir/clean
+clean: CMakeFiles/servercc.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/logtest.dir
+# Target rules for target CMakeFiles/test.dir
 
 # All Build rule for target.
-CMakeFiles/logtest.dir/all: CMakeFiles/servercc_lib.dir/all
-	$(MAKE) -f CMakeFiles/logtest.dir/build.make CMakeFiles/logtest.dir/depend
-	$(MAKE) -f CMakeFiles/logtest.dir/build.make CMakeFiles/logtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/fql/Project/C++/sylar/_build/CMakeFiles --progress-num=1,2 "Built target logtest"
-.PHONY : CMakeFiles/logtest.dir/all
+CMakeFiles/test.dir/all: CMakeFiles/servercc.dir/all
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/depend
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/fql/Project/C++/sylar/_build/CMakeFiles --progress-num=5,6 "Built target test"
+.PHONY : CMakeFiles/test.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/logtest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fql/Project/C++/sylar/_build/CMakeFiles 5
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/logtest.dir/all
+CMakeFiles/test.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fql/Project/C++/sylar/_build/CMakeFiles 6
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/fql/Project/C++/sylar/_build/CMakeFiles 0
-.PHONY : CMakeFiles/logtest.dir/rule
+.PHONY : CMakeFiles/test.dir/rule
 
 # Convenience name for target.
-logtest: CMakeFiles/logtest.dir/rule
+test: CMakeFiles/test.dir/rule
 
-.PHONY : logtest
+.PHONY : test
 
 # clean rule for target.
-CMakeFiles/logtest.dir/clean:
-	$(MAKE) -f CMakeFiles/logtest.dir/build.make CMakeFiles/logtest.dir/clean
-.PHONY : CMakeFiles/logtest.dir/clean
+CMakeFiles/test.dir/clean:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/clean
+.PHONY : CMakeFiles/test.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/servercc_lib.dir
+# Target rules for target CMakeFiles/servercc.dir
 
 # All Build rule for target.
-CMakeFiles/servercc_lib.dir/all:
-	$(MAKE) -f CMakeFiles/servercc_lib.dir/build.make CMakeFiles/servercc_lib.dir/depend
-	$(MAKE) -f CMakeFiles/servercc_lib.dir/build.make CMakeFiles/servercc_lib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/fql/Project/C++/sylar/_build/CMakeFiles --progress-num=3,4,5 "Built target servercc_lib"
-.PHONY : CMakeFiles/servercc_lib.dir/all
+CMakeFiles/servercc.dir/all:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/depend
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/fql/Project/C++/sylar/_build/CMakeFiles --progress-num=1,2,3,4 "Built target servercc"
+.PHONY : CMakeFiles/servercc.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/servercc_lib.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fql/Project/C++/sylar/_build/CMakeFiles 3
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/servercc_lib.dir/all
+CMakeFiles/servercc.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fql/Project/C++/sylar/_build/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/servercc.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/fql/Project/C++/sylar/_build/CMakeFiles 0
-.PHONY : CMakeFiles/servercc_lib.dir/rule
+.PHONY : CMakeFiles/servercc.dir/rule
 
 # Convenience name for target.
-servercc_lib: CMakeFiles/servercc_lib.dir/rule
+servercc: CMakeFiles/servercc.dir/rule
 
-.PHONY : servercc_lib
+.PHONY : servercc
 
 # clean rule for target.
-CMakeFiles/servercc_lib.dir/clean:
-	$(MAKE) -f CMakeFiles/servercc_lib.dir/build.make CMakeFiles/servercc_lib.dir/clean
-.PHONY : CMakeFiles/servercc_lib.dir/clean
+CMakeFiles/servercc.dir/clean:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/clean
+.PHONY : CMakeFiles/servercc.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

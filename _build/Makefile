@@ -111,111 +111,138 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named logtest
+# Target rules for targets named test
 
 # Build rule for target.
-logtest: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 logtest
-.PHONY : logtest
+test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test
+.PHONY : test
 
 # fast build rule for target.
-logtest/fast:
-	$(MAKE) -f CMakeFiles/logtest.dir/build.make CMakeFiles/logtest.dir/build
-.PHONY : logtest/fast
+test/fast:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
+.PHONY : test/fast
 
 #=============================================================================
-# Target rules for targets named servercc_lib
+# Target rules for targets named servercc
 
 # Build rule for target.
-servercc_lib: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 servercc_lib
-.PHONY : servercc_lib
+servercc: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 servercc
+.PHONY : servercc
 
 # fast build rule for target.
-servercc_lib/fast:
-	$(MAKE) -f CMakeFiles/servercc_lib.dir/build.make CMakeFiles/servercc_lib.dir/build
-.PHONY : servercc_lib/fast
+servercc/fast:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/build
+.PHONY : servercc/fast
 
-logger/logger.o: logger/logger.cpp.o
+src/config.o: src/config.cpp.o
 
-.PHONY : logger/logger.o
-
-# target to build an object file
-logger/logger.cpp.o:
-	$(MAKE) -f CMakeFiles/servercc_lib.dir/build.make CMakeFiles/servercc_lib.dir/logger/logger.cpp.o
-.PHONY : logger/logger.cpp.o
-
-logger/logger.i: logger/logger.cpp.i
-
-.PHONY : logger/logger.i
-
-# target to preprocess a source file
-logger/logger.cpp.i:
-	$(MAKE) -f CMakeFiles/servercc_lib.dir/build.make CMakeFiles/servercc_lib.dir/logger/logger.cpp.i
-.PHONY : logger/logger.cpp.i
-
-logger/logger.s: logger/logger.cpp.s
-
-.PHONY : logger/logger.s
-
-# target to generate assembly for a file
-logger/logger.cpp.s:
-	$(MAKE) -f CMakeFiles/servercc_lib.dir/build.make CMakeFiles/servercc_lib.dir/logger/logger.cpp.s
-.PHONY : logger/logger.cpp.s
-
-test.o: test.cpp.o
-
-.PHONY : test.o
+.PHONY : src/config.o
 
 # target to build an object file
-test.cpp.o:
-	$(MAKE) -f CMakeFiles/logtest.dir/build.make CMakeFiles/logtest.dir/test.cpp.o
-.PHONY : test.cpp.o
+src/config.cpp.o:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/config.cpp.o
+.PHONY : src/config.cpp.o
 
-test.i: test.cpp.i
+src/config.i: src/config.cpp.i
 
-.PHONY : test.i
+.PHONY : src/config.i
 
 # target to preprocess a source file
-test.cpp.i:
-	$(MAKE) -f CMakeFiles/logtest.dir/build.make CMakeFiles/logtest.dir/test.cpp.i
-.PHONY : test.cpp.i
+src/config.cpp.i:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/config.cpp.i
+.PHONY : src/config.cpp.i
 
-test.s: test.cpp.s
+src/config.s: src/config.cpp.s
 
-.PHONY : test.s
+.PHONY : src/config.s
 
 # target to generate assembly for a file
-test.cpp.s:
-	$(MAKE) -f CMakeFiles/logtest.dir/build.make CMakeFiles/logtest.dir/test.cpp.s
-.PHONY : test.cpp.s
+src/config.cpp.s:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/config.cpp.s
+.PHONY : src/config.cpp.s
 
-utils.o: utils.cpp.o
+src/logger.o: src/logger.cpp.o
 
-.PHONY : utils.o
+.PHONY : src/logger.o
 
 # target to build an object file
-utils.cpp.o:
-	$(MAKE) -f CMakeFiles/servercc_lib.dir/build.make CMakeFiles/servercc_lib.dir/utils.cpp.o
-.PHONY : utils.cpp.o
+src/logger.cpp.o:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/logger.cpp.o
+.PHONY : src/logger.cpp.o
 
-utils.i: utils.cpp.i
+src/logger.i: src/logger.cpp.i
 
-.PHONY : utils.i
+.PHONY : src/logger.i
 
 # target to preprocess a source file
-utils.cpp.i:
-	$(MAKE) -f CMakeFiles/servercc_lib.dir/build.make CMakeFiles/servercc_lib.dir/utils.cpp.i
-.PHONY : utils.cpp.i
+src/logger.cpp.i:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/logger.cpp.i
+.PHONY : src/logger.cpp.i
 
-utils.s: utils.cpp.s
+src/logger.s: src/logger.cpp.s
 
-.PHONY : utils.s
+.PHONY : src/logger.s
 
 # target to generate assembly for a file
-utils.cpp.s:
-	$(MAKE) -f CMakeFiles/servercc_lib.dir/build.make CMakeFiles/servercc_lib.dir/utils.cpp.s
-.PHONY : utils.cpp.s
+src/logger.cpp.s:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/logger.cpp.s
+.PHONY : src/logger.cpp.s
+
+src/utils.o: src/utils.cpp.o
+
+.PHONY : src/utils.o
+
+# target to build an object file
+src/utils.cpp.o:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/utils.cpp.o
+.PHONY : src/utils.cpp.o
+
+src/utils.i: src/utils.cpp.i
+
+.PHONY : src/utils.i
+
+# target to preprocess a source file
+src/utils.cpp.i:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/utils.cpp.i
+.PHONY : src/utils.cpp.i
+
+src/utils.s: src/utils.cpp.s
+
+.PHONY : src/utils.s
+
+# target to generate assembly for a file
+src/utils.cpp.s:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/utils.cpp.s
+.PHONY : src/utils.cpp.s
+
+test_thread.o: test_thread.cpp.o
+
+.PHONY : test_thread.o
+
+# target to build an object file
+test_thread.cpp.o:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test_thread.cpp.o
+.PHONY : test_thread.cpp.o
+
+test_thread.i: test_thread.cpp.i
+
+.PHONY : test_thread.i
+
+# target to preprocess a source file
+test_thread.cpp.i:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test_thread.cpp.i
+.PHONY : test_thread.cpp.i
+
+test_thread.s: test_thread.cpp.s
+
+.PHONY : test_thread.s
+
+# target to generate assembly for a file
+test_thread.cpp.s:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test_thread.cpp.s
+.PHONY : test_thread.cpp.s
 
 # Help Target
 help:
@@ -225,17 +252,20 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... logtest"
-	@echo "... servercc_lib"
-	@echo "... logger/logger.o"
-	@echo "... logger/logger.i"
-	@echo "... logger/logger.s"
-	@echo "... test.o"
-	@echo "... test.i"
-	@echo "... test.s"
-	@echo "... utils.o"
-	@echo "... utils.i"
-	@echo "... utils.s"
+	@echo "... test"
+	@echo "... servercc"
+	@echo "... src/config.o"
+	@echo "... src/config.i"
+	@echo "... src/config.s"
+	@echo "... src/logger.o"
+	@echo "... src/logger.i"
+	@echo "... src/logger.s"
+	@echo "... src/utils.o"
+	@echo "... src/utils.i"
+	@echo "... src/utils.s"
+	@echo "... test_thread.o"
+	@echo "... test_thread.i"
+	@echo "... test_thread.s"
 .PHONY : help
 
 

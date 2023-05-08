@@ -13,8 +13,12 @@
      "${file}",
      "-o",
      "${fileDirname}/${fileBasenameNoExtension}",
-     "-L${workspaceFolder}/lib",		//库文件路径，多个路径时逗号分割
-     "-llogger"
+     "-I",
+    "/usr/include/",
+    
+    "-L${workspaceFolder}/lib",		//库文件路径，多个路径时逗号分割
+     "-lservercc",
+     "-lyaml-cpp",
 
      ],
      "options": {

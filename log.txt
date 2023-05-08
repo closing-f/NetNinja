@@ -1,3 +1,2 @@
-2023-04-08 12:29:53	3844356	0	[DEBUG]	[root]:	test macro 
-2023-04-08 12:29:53	3844356	0	[DEBUG]	[root]:	test macro error 
-2023-04-08 12:29:53	3844356	0	[DEBUG]	[root]:	test macro fmt aa 
+2023-04-11 20:46:36	105284	0	[INFO]	[system]:	hello system
+ 
