@@ -1,2 +1,7 @@
-2023-04-11 20:46:36	105284	0	[INFO]	[system]:	hello system
- 
+2023-05-08 15:46:37	545565	0	[INFO]	[root]:	name: name_0 this.name: name_0 id: 545565 this.id: 545565 
+2023-05-08 15:46:37	545566	0	[INFO]	[root]:	name: name_2 this.name: name_2 id: 545566 this.id: 545566 
+2023-05-08 15:46:37	545567	0	[INFO]	[root]:	name: name_4 this.name: name_4 id: 545567 this.id: 545567 
+2023-05-08 15:46:37	545568	0	[INFO]	[root]:	name: name_6 this.name: name_6 id: 545568 this.id: 545568 
+2023-05-08 15:46:37	545569	0	[INFO]	[root]:	name: name_8 this.name: name_8 id: 545569 this.id: 545569 
+2023-05-08 15:46:37	545564	0	[INFO]	[root]:	thread test end 
+2023-05-08 15:46:37	545564	0	[INFO]	[root]:	count=500 

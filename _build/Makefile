@@ -163,6 +163,33 @@ src/config.cpp.s:
 	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/config.cpp.s
 .PHONY : src/config.cpp.s
 
+src/fiber.o: src/fiber.cpp.o
+
+.PHONY : src/fiber.o
+
+# target to build an object file
+src/fiber.cpp.o:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/fiber.cpp.o
+.PHONY : src/fiber.cpp.o
+
+src/fiber.i: src/fiber.cpp.i
+
+.PHONY : src/fiber.i
+
+# target to preprocess a source file
+src/fiber.cpp.i:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/fiber.cpp.i
+.PHONY : src/fiber.cpp.i
+
+src/fiber.s: src/fiber.cpp.s
+
+.PHONY : src/fiber.s
+
+# target to generate assembly for a file
+src/fiber.cpp.s:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/fiber.cpp.s
+.PHONY : src/fiber.cpp.s
+
 src/logger.o: src/logger.cpp.o
 
 .PHONY : src/logger.o
@@ -189,6 +216,60 @@ src/logger.s: src/logger.cpp.s
 src/logger.cpp.s:
 	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/logger.cpp.s
 .PHONY : src/logger.cpp.s
+
+src/mutex.o: src/mutex.cpp.o
+
+.PHONY : src/mutex.o
+
+# target to build an object file
+src/mutex.cpp.o:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/mutex.cpp.o
+.PHONY : src/mutex.cpp.o
+
+src/mutex.i: src/mutex.cpp.i
+
+.PHONY : src/mutex.i
+
+# target to preprocess a source file
+src/mutex.cpp.i:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/mutex.cpp.i
+.PHONY : src/mutex.cpp.i
+
+src/mutex.s: src/mutex.cpp.s
+
+.PHONY : src/mutex.s
+
+# target to generate assembly for a file
+src/mutex.cpp.s:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/mutex.cpp.s
+.PHONY : src/mutex.cpp.s
+
+src/thread.o: src/thread.cpp.o
+
+.PHONY : src/thread.o
+
+# target to build an object file
+src/thread.cpp.o:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/thread.cpp.o
+.PHONY : src/thread.cpp.o
+
+src/thread.i: src/thread.cpp.i
+
+.PHONY : src/thread.i
+
+# target to preprocess a source file
+src/thread.cpp.i:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/thread.cpp.i
+.PHONY : src/thread.cpp.i
+
+src/thread.s: src/thread.cpp.s
+
+.PHONY : src/thread.s
+
+# target to generate assembly for a file
+src/thread.cpp.s:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/thread.cpp.s
+.PHONY : src/thread.cpp.s
 
 src/utils.o: src/utils.cpp.o
 
@@ -217,32 +298,32 @@ src/utils.cpp.s:
 	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/utils.cpp.s
 .PHONY : src/utils.cpp.s
 
-test_thread.o: test_thread.cpp.o
+test_fiber.o: test_fiber.cpp.o
 
-.PHONY : test_thread.o
+.PHONY : test_fiber.o
 
 # target to build an object file
-test_thread.cpp.o:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test_thread.cpp.o
-.PHONY : test_thread.cpp.o
+test_fiber.cpp.o:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test_fiber.cpp.o
+.PHONY : test_fiber.cpp.o
 
-test_thread.i: test_thread.cpp.i
+test_fiber.i: test_fiber.cpp.i
 
-.PHONY : test_thread.i
+.PHONY : test_fiber.i
 
 # target to preprocess a source file
-test_thread.cpp.i:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test_thread.cpp.i
-.PHONY : test_thread.cpp.i
+test_fiber.cpp.i:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test_fiber.cpp.i
+.PHONY : test_fiber.cpp.i
 
-test_thread.s: test_thread.cpp.s
+test_fiber.s: test_fiber.cpp.s
 
-.PHONY : test_thread.s
+.PHONY : test_fiber.s
 
 # target to generate assembly for a file
-test_thread.cpp.s:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test_thread.cpp.s
-.PHONY : test_thread.cpp.s
+test_fiber.cpp.s:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test_fiber.cpp.s
+.PHONY : test_fiber.cpp.s
 
 # Help Target
 help:
@@ -257,15 +338,24 @@ help:
 	@echo "... src/config.o"
 	@echo "... src/config.i"
 	@echo "... src/config.s"
+	@echo "... src/fiber.o"
+	@echo "... src/fiber.i"
+	@echo "... src/fiber.s"
 	@echo "... src/logger.o"
 	@echo "... src/logger.i"
 	@echo "... src/logger.s"
+	@echo "... src/mutex.o"
+	@echo "... src/mutex.i"
+	@echo "... src/mutex.s"
+	@echo "... src/thread.o"
+	@echo "... src/thread.i"
+	@echo "... src/thread.s"
 	@echo "... src/utils.o"
 	@echo "... src/utils.i"
 	@echo "... src/utils.s"
-	@echo "... test_thread.o"
-	@echo "... test_thread.i"
-	@echo "... test_thread.s"
+	@echo "... test_fiber.o"
+	@echo "... test_fiber.i"
+	@echo "... test_fiber.s"
 .PHONY : help
 
 

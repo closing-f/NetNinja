@@ -31,7 +31,9 @@ class ScopedLock{
             m_mutex.lock();
             m_locked = true;
         }
-
+        ~ScopedLock() {
+            unlock();
+        }   
         void lock(){
             if(!m_locked){
                 m_mutex.lock();

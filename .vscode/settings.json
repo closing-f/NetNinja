@@ -61,5 +61,6 @@
         "strstream": "cpp",
         "unordered_set": "cpp",
         "cfenv": "cpp"
-    }
+    },
+    "C_Cpp.errorSquiggles": "disabled"
 }

@@ -101,7 +101,7 @@ void test_config() {
 
     YAML::Node root = YAML::LoadFile("/home/fql/Project/C++/sylar/log.yml");
     server_cc::Config::LoadFromYaml(root);
-
+    
     SEVER_CC_LOG_INFO(SEVER_CC_LOG_ROOT()) << "after: " << g_int_value_config->getValue();
     SEVER_CC_LOG_INFO(SEVER_CC_LOG_ROOT()) << "after: " << g_float_value_config->toString();
     XX(g_int_set_value_config, int_set, after);

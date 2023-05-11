@@ -57,27 +57,27 @@ include CMakeFiles/test.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/test.dir/flags.make
 
-CMakeFiles/test.dir/test_thread.cpp.o: CMakeFiles/test.dir/flags.make
-CMakeFiles/test.dir/test_thread.cpp.o: ../test_thread.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fql/Project/C++/sylar/_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test.dir/test_thread.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test.dir/test_thread.cpp.o -c /home/fql/Project/C++/sylar/test_thread.cpp
+CMakeFiles/test.dir/test_fiber.cpp.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/test_fiber.cpp.o: ../test_fiber.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fql/Project/C++/sylar/_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test.dir/test_fiber.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test.dir/test_fiber.cpp.o -c /home/fql/Project/C++/sylar/test_fiber.cpp
 
-CMakeFiles/test.dir/test_thread.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/test_thread.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/fql/Project/C++/sylar/test_thread.cpp > CMakeFiles/test.dir/test_thread.cpp.i
+CMakeFiles/test.dir/test_fiber.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/test_fiber.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/fql/Project/C++/sylar/test_fiber.cpp > CMakeFiles/test.dir/test_fiber.cpp.i
 
-CMakeFiles/test.dir/test_thread.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/test_thread.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/fql/Project/C++/sylar/test_thread.cpp -o CMakeFiles/test.dir/test_thread.cpp.s
+CMakeFiles/test.dir/test_fiber.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/test_fiber.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/fql/Project/C++/sylar/test_fiber.cpp -o CMakeFiles/test.dir/test_fiber.cpp.s
 
 # Object files for target test
 test_OBJECTS = \
-"CMakeFiles/test.dir/test_thread.cpp.o"
+"CMakeFiles/test.dir/test_fiber.cpp.o"
 
 # External object files for target test
 test_EXTERNAL_OBJECTS =
 
-../bin/test: CMakeFiles/test.dir/test_thread.cpp.o
+../bin/test: CMakeFiles/test.dir/test_fiber.cpp.o
 ../bin/test: CMakeFiles/test.dir/build.make
 ../bin/test: ../lib/libservercc.so
 ../bin/test: CMakeFiles/test.dir/link.txt

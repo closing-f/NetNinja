@@ -10,14 +10,15 @@
 #include<unordered_map>
 #include<unordered_set>
 #include<typeinfo>
-#include "logger.h"
-#include "utils.h"
 #include <sstream>
 #include <fstream>
 #include <iostream>
 #include <string>
 #include <vector>
 
+#include "logger.h"
+#include "utils.h"
+#include "thread.h"
 namespace server_cc{
     
 using boost::lexical_cast;

@@ -11,11 +11,12 @@
 #include<iostream>
 #include<functional>
 #include"utils.h"
-// #include"config.h"
+#include "mutex.h"
 #include <stdarg.h>
+#include "thread.h"
 #define SEVER_CC_LOG_LEVEL(logger,level) \
     if(logger->getLevel()<=level) \
-        server_cc::LogEventWrapper(server_cc::LogEvent::ptr(new server_cc::LogEvent(logger,level,__FILE__,server_cc::GetThreadId(),server_cc::GetFiberId(),time(0)))).getSS()
+        server_cc::LogEventWrapper(server_cc::LogEvent::ptr(new server_cc::LogEvent(logger,level,__FILE__, __LINE__ ,0,server_cc::GetThreadId(),server_cc::GetFiberId(),time(0),server_cc::Thread::GetName()))).getSS()
 
 #define SEVER_CC_LOG_DEBUG(logger) SEVER_CC_LOG_LEVEL(logger,server_cc::LogLevel::DEBUG)
 #define SEVER_CC_LOG_WARN(logger) SEVER_CC_LOG_LEVEL(logger,server_cc::LogLevel::WARNING)
@@ -82,9 +83,25 @@ public:
 class LogEvent {
     public:
         typedef std::shared_ptr<LogEvent> ptr;
-        LogEvent(std::shared_ptr<Logger> logger, LogLevel::Level level, const char* file, int32_t line, uint32_t elapse, uint32_t thread_id, uint32_t fiber_id, uint64_t time, const std::string& thread_name);//TODO
-        LogEvent(std::shared_ptr<Logger> logger, LogLevel::Level level, const char* file, uint32_t thread_id, uint32_t fiber_id, uint64_t time);//TODO
-        LogEvent(){};
+        /**
+     * @brief 构造函数
+     * @param[in] logger 日志器
+     * @param[in] level 日志级别
+     * @param[in] file 文件名
+     * @param[in] line 文件行号
+     * @param[in] elapse 程序启动依赖的耗时(毫秒)
+     * @param[in] thread_id 线程id
+     * @param[in] fiber_id 协程id
+     * @param[in] time 日志事件(秒)
+     * @param[in] thread_name 线程名称
+     */
+        LogEvent(std::shared_ptr<Logger> logger, LogLevel::Level level
+            ,const char* file, int32_t line, uint32_t elapse
+            ,uint32_t thread_id, uint32_t fiber_id, uint64_t time
+            ,const std::string& thread_name);
+        // LogEvent(std::shared_ptr<Logger> logger, LogLevel::Level level, const char* file, int32_t line, uint32_t elapse, uint32_t thread_id, uint32_t fiber_id, uint64_t time, const std::string& thread_name);//TODO
+        
+        
         const char* getFile() const { return m_filename; }
         int getLine() const { return m_line; }
         u_int32_t getElapse() const { return m_elapse; }
@@ -169,7 +186,7 @@ private:
 class LogAppender{
     public:
         typedef std::shared_ptr<LogAppender> ptr;
-        
+        typedef Mutex MutexType;
 
         virtual ~LogAppender();
         
@@ -184,10 +201,11 @@ class LogAppender{
     protected:
         LogLevel::Level m_level= LogLevel::DEBUG;
         
+        
     public:
         LogFormatter::ptr m_formatter;
         bool m_hasFormatter = false;
-
+        MutexType m_mutex;
 };
 class FileLogAppender : public LogAppender {
     public:
@@ -223,8 +241,10 @@ class StdoutLogAppender : public LogAppender {
 class Logger{
     public:
         typedef std::shared_ptr<Logger> ptr;
+        typedef Mutex MutexType;
         Logger(const std::string& name="root") : m_name(name), m_level(LogLevel::DEBUG){
-            m_formatter.reset(new LogFormatter("%d{%Y-%m-%d %H:%M:%S}%T%t%T%f%T[%p]%T[%c]:%T%m %n"));
+            // "%d{%Y-%m-%d %H:%M:%S}%T%t%T%N%T%F%T[%p]%T[%c]%T%f:%l%T%m%n"
+            m_formatter.reset(new LogFormatter("%d{%Y-%m-%d %H:%M:%S}%T%t%T%N%T%F%T[%p]%T[%c]%T%f:%l%T%m%n"));
         };
         
         void log(LogLevel::Level level, LogEvent::ptr event);
@@ -242,7 +262,7 @@ class Logger{
         void setName(const std::string& val) { m_name = val; }
         void setFormatter(const std::string&pattern);
         LogFormatter::ptr getFormatter() const { return m_formatter; }
-        std::string ToYamlString() const;
+        std::string ToYamlString();
         
     private:
         std::string m_name;//logger名称
@@ -250,22 +270,26 @@ class Logger{
         LogLevel::Level m_level;//日志级别
         std::list<LogAppender::ptr> m_appenders;//Appender集合
         LogFormatter::ptr m_formatter;
+        MutexType m_mutex;
 };
 
 //文件日志器
 
 class LoggerManager{
     public:
+        typedef Mutex MutexType;
         LoggerManager(const std::string& name="root");
         Logger::ptr getLogger(const std::string& name);
         void init();
         Logger::ptr getRoot(){return m_root;}
         // std::string toYamlString();
-        std::string ToYamlString() const;
+        std::string ToYamlString();
         
     private:
         std::map<std::string, Logger::ptr> m_loggers;
         Logger::ptr m_root;
+    public:
+        MutexType m_mutex;
 
 };
 

@@ -6,7 +6,7 @@
 #include "mutex.h"
 #include "logger.h"
 #include <string>
-namespace server_cc{
+namespace server_cc {
 class Thread
 {
 

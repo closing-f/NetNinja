@@ -1,6 +1,7 @@
 #include "src/logger.h"
 #include "src/thread.h"
 #include "src/config.h"
+#include "src/mutex.h"
 #include <yaml-cpp/yaml.h>
 server_cc::Logger::ptr g_logger = SEVER_CC_LOG_ROOT();
 int count = 0;
@@ -11,9 +12,9 @@ void fun1() {
                              << " this.name: " << server_cc::Thread::GetThis()->getName()
                              << " id: " << server_cc::GetThreadId()
                              << " this.id: " << server_cc::Thread::GetThis()->getPid();
-
-    for(int i = 0; i < 100000; ++i) {
-        //server_cc::RWMutex::WriteLock lock(s_mutex);
+    
+    for(int i = 0; i < 100; ++i) {
+        //server_cc::RWMutex::WriteLock lock(s_mutex); 
         server_cc::Mutex::Lock lock(mutex);
         ++count;
     }

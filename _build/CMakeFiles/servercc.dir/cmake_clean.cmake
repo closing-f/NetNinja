@@ -2,7 +2,10 @@ file(REMOVE_RECURSE
   "../lib/libservercc.pdb"
   "../lib/libservercc.so"
   "CMakeFiles/servercc.dir/src/config.cpp.o"
+  "CMakeFiles/servercc.dir/src/fiber.cpp.o"
   "CMakeFiles/servercc.dir/src/logger.cpp.o"
+  "CMakeFiles/servercc.dir/src/mutex.cpp.o"
+  "CMakeFiles/servercc.dir/src/thread.cpp.o"
   "CMakeFiles/servercc.dir/src/utils.cpp.o"
 )
 
