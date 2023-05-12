@@ -244,6 +244,33 @@ src/mutex.cpp.s:
 	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/mutex.cpp.s
 .PHONY : src/mutex.cpp.s
 
+src/scheduler.o: src/scheduler.cpp.o
+
+.PHONY : src/scheduler.o
+
+# target to build an object file
+src/scheduler.cpp.o:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/scheduler.cpp.o
+.PHONY : src/scheduler.cpp.o
+
+src/scheduler.i: src/scheduler.cpp.i
+
+.PHONY : src/scheduler.i
+
+# target to preprocess a source file
+src/scheduler.cpp.i:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/scheduler.cpp.i
+.PHONY : src/scheduler.cpp.i
+
+src/scheduler.s: src/scheduler.cpp.s
+
+.PHONY : src/scheduler.s
+
+# target to generate assembly for a file
+src/scheduler.cpp.s:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/scheduler.cpp.s
+.PHONY : src/scheduler.cpp.s
+
 src/thread.o: src/thread.cpp.o
 
 .PHONY : src/thread.o
@@ -298,32 +325,32 @@ src/utils.cpp.s:
 	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/utils.cpp.s
 .PHONY : src/utils.cpp.s
 
-test_fiber.o: test_fiber.cpp.o
+test_scheduler.o: test_scheduler.cpp.o
 
-.PHONY : test_fiber.o
+.PHONY : test_scheduler.o
 
 # target to build an object file
-test_fiber.cpp.o:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test_fiber.cpp.o
-.PHONY : test_fiber.cpp.o
+test_scheduler.cpp.o:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test_scheduler.cpp.o
+.PHONY : test_scheduler.cpp.o
 
-test_fiber.i: test_fiber.cpp.i
+test_scheduler.i: test_scheduler.cpp.i
 
-.PHONY : test_fiber.i
+.PHONY : test_scheduler.i
 
 # target to preprocess a source file
-test_fiber.cpp.i:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test_fiber.cpp.i
-.PHONY : test_fiber.cpp.i
+test_scheduler.cpp.i:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test_scheduler.cpp.i
+.PHONY : test_scheduler.cpp.i
 
-test_fiber.s: test_fiber.cpp.s
+test_scheduler.s: test_scheduler.cpp.s
 
-.PHONY : test_fiber.s
+.PHONY : test_scheduler.s
 
 # target to generate assembly for a file
-test_fiber.cpp.s:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test_fiber.cpp.s
-.PHONY : test_fiber.cpp.s
+test_scheduler.cpp.s:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test_scheduler.cpp.s
+.PHONY : test_scheduler.cpp.s
 
 # Help Target
 help:
@@ -347,15 +374,18 @@ help:
 	@echo "... src/mutex.o"
 	@echo "... src/mutex.i"
 	@echo "... src/mutex.s"
+	@echo "... src/scheduler.o"
+	@echo "... src/scheduler.i"
+	@echo "... src/scheduler.s"
 	@echo "... src/thread.o"
 	@echo "... src/thread.i"
 	@echo "... src/thread.s"
 	@echo "... src/utils.o"
 	@echo "... src/utils.i"
 	@echo "... src/utils.s"
-	@echo "... test_fiber.o"
-	@echo "... test_fiber.i"
-	@echo "... test_fiber.s"
+	@echo "... test_scheduler.o"
+	@echo "... test_scheduler.i"
+	@echo "... test_scheduler.s"
 .PHONY : help
 
 

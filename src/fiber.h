@@ -2,7 +2,7 @@
  * @Author: closing-f fql2018@bupt.edu.cn
  * @Date: 2023-05-09 09:48:20
  * @LastEditors: closing-f fql2018@bupt.edu.cn
- * @LastEditTime: 2023-05-09 20:46:34
+ * @LastEditTime: 2023-05-12 13:02:10
  * @FilePath: /sylar/src/fiber.h
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -44,7 +44,7 @@ class Fiber:public std::enable_shared_from_this<Fiber>{
         */
         Fiber();
     public:
-        Fiber(std::function<void()>cb,size_t stack_size=0);
+        Fiber(std::function<void()>cb,size_t stack_size=0,bool use_caller = false);
 
         ~Fiber();
 
@@ -53,6 +53,19 @@ class Fiber:public std::enable_shared_from_this<Fiber>{
         void swapIn();
 
         void swapOut();
+
+        /**
+     * @brief 将当前线程切换到执行状态
+     * @pre 执行的为当前线程的主协程
+     */
+    void call();
+
+    /**
+     * @brief 将当前线程切换到后台
+     * @pre 执行的为该协程
+     * @post 返回到线程的主协程
+     */
+    void back();
 
         /**
          * @brief 返回协程id
@@ -101,18 +114,26 @@ class Fiber:public std::enable_shared_from_this<Fiber>{
          * @post 执行完成返回到线程主协程
          */
         static void MainFunc();
-        
+
+
+        /**
+         * @brief 协程执行函数
+         * @post 执行完成返回到线程主协程
+         */
+        static void CallerMainFunc();
         /**
          * @brief 获取当前协程的id
          */
         static uint64_t GetFiberId();
+
+        State m_state = INIT;
     private:
         // 协程id
         uint64_t m_id = 0;
         // 协程运行栈大小
         uint32_t m_stacksize = 0;
         // 协程状态
-        State m_state = INIT;
+        
         // 协程上下文
         ucontext_t m_ctx;
         // 协程运行栈指针

@@ -2,7 +2,7 @@
  * @Author: closing-f fql2018@bupt.edu.cn
  * @Date: 2023-05-09 09:48:39
  * @LastEditors: closing-f fql2018@bupt.edu.cn
- * @LastEditTime: 2023-05-10 09:19:14
+ * @LastEditTime: 2023-05-12 20:19:02
  * @FilePath: /sylar/src/fiber.cpp
  * @Description: 
  */
@@ -11,6 +11,7 @@
 
 #include "logger.h"
 #include"config.h"
+#include "scheduler.h"
 #include <atomic>
 namespace server_cc{
     
@@ -51,7 +52,7 @@ Fiber::Fiber(){
     SEVER_CC_LOG_INFO(g_logger)<<"Fiber main construction completed";
 }
 
-Fiber::Fiber(std::function<void()>cb,size_t stack_size):m_id(++s_fiber_id),m_cb(cb){
+Fiber::Fiber(std::function<void()>cb,size_t stack_size,bool use_caller):m_id(++s_fiber_id),m_cb(cb){
     ++s_fiber_count;
     m_stacksize= stack_size? stack_size : g_fiber_stacksize->getValue();
     
@@ -67,12 +68,16 @@ Fiber::Fiber(std::function<void()>cb,size_t stack_size):m_id(++s_fiber_id),m_cb(
 
     //上下文通过setcontext或者swapcontext激活后，执行func函数，argc为func的参数个数，后面是func的参数序列。
     //当func执行返回后，继承的上下文被激活，如果继承上下文为NULL时，线程退出
-    makecontext(&m_ctx,&Fiber::MainFunc,0);
-
+    if(!use_caller) {
+        makecontext(&m_ctx, &Fiber::MainFunc, 0);
+    } else {
+        makecontext(&m_ctx, &Fiber::CallerMainFunc, 0);
+    }
     SEVER_CC_LOG_INFO(g_logger) << "Fiber::Fiber id=" << m_id;
 }
 
 Fiber::~Fiber(){
+    
     --s_fiber_count;
     if(m_stack) {
         SEVER_ASSERT(m_state == TERM
@@ -81,7 +86,7 @@ Fiber::~Fiber(){
 
         StackAllocator::Dealloc(m_stack, m_stacksize);
     } else {
-        //住协程退出
+        //主协程退出
         SEVER_ASSERT(!m_cb);
         SEVER_ASSERT(m_state == EXEC);
 
@@ -119,7 +124,7 @@ void Fiber::swapIn(){
     SetThis(this);
     SEVER_ASSERT(m_state != EXEC);
     m_state = EXEC;
-    if(swapcontext(&(t_threadFiber->m_ctx),&m_ctx)){
+    if(swapcontext(&(Scheduler::GetMainFiber()->m_ctx),&m_ctx)){
         SEVER_ASSERT2(false,"swap in context");
     }
 
@@ -129,12 +134,25 @@ void Fiber::swapIn(){
 void Fiber::swapOut(){
     SetThis(this);
     //swapcontext 把当前上下文保存到m_ctx中，然后激活t_threadFiber->m_ctx
-    if(swapcontext(&m_ctx,&(t_threadFiber->m_ctx))){
+    if(swapcontext(&m_ctx,&Scheduler::GetMainFiber()->m_ctx)){
         SEVER_ASSERT2(false,"swap in context");
     }
 }
 
-       
+void Fiber::call() {
+    SetThis(this);
+    m_state = EXEC;
+    if(swapcontext(&t_threadFiber->m_ctx, &m_ctx)) {
+        SEVER_ASSERT2(false, "swapcontext");
+    }
+}
+
+void Fiber::back() {
+    SetThis(t_threadFiber.get());
+    if(swapcontext(&m_ctx, &t_threadFiber->m_ctx)) {
+        SEVER_ASSERT2(false, "swapcontext");
+    }
+}
 /**
  * @description: 
  * @param {Fiber*} fiber
@@ -238,6 +256,34 @@ uint64_t Fiber::GetFiberId(){
     }
     // std::cout<<"not get fiberId "<<std::endl;
     return 0;
+}
+
+void Fiber::CallerMainFunc() {
+    Fiber::ptr cur = GetThis();
+    SEVER_ASSERT(cur);
+    try {
+        cur->m_cb();
+        cur->m_cb = nullptr;
+        cur->m_state = TERM;
+    } catch (std::exception& ex) {
+        cur->m_state = EXCEPT;
+        SEVER_CC_LOG_ERROR(g_logger) << "Fiber Except: " << ex.what()
+            << " fiber_id=" << cur->getId()
+            << std::endl
+            << server_cc::BackTraceToString();
+    } catch (...) {
+        cur->m_state = EXCEPT;
+        SEVER_CC_LOG_ERROR(g_logger) << "Fiber Except"
+            << " fiber_id=" << cur->getId()
+            << std::endl
+            << server_cc::BackTraceToString();
+    }
+
+    auto raw_ptr = cur.get();
+    cur.reset();
+    raw_ptr->back();
+    SEVER_ASSERT2(false, "never reach fiber_id=" + std::to_string(raw_ptr->getId()));
+
 }
 
 }

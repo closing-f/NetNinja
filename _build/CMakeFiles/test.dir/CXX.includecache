@@ -100,6 +100,14 @@ atomic
 list
 -
 
+/home/fql/Project/C++/sylar/src/scheduler.h
+fiber.h
+/home/fql/Project/C++/sylar/src/fiber.h
+thread.h
+/home/fql/Project/C++/sylar/src/thread.h
+mutex.h
+/home/fql/Project/C++/sylar/src/mutex.h
+
 /home/fql/Project/C++/sylar/src/thread.h
 mutex.h
 /home/fql/Project/C++/sylar/src/mutex.h
@@ -140,7 +148,7 @@ execinfo.h
 assert.h
 -
 
-/home/fql/Project/C++/sylar/test_fiber.cpp
+/home/fql/Project/C++/sylar/test_scheduler.cpp
 src/logger.h
 /home/fql/Project/C++/sylar/src/logger.h
 src/thread.h
@@ -153,6 +161,8 @@ src/fiber.h
 /home/fql/Project/C++/sylar/src/fiber.h
 src/utils.h
 /home/fql/Project/C++/sylar/src/utils.h
+src/scheduler.h
+/home/fql/Project/C++/sylar/src/scheduler.h
 yaml-cpp/yaml.h
 -
 

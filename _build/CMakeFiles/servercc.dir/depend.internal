@@ -14,6 +14,7 @@ CMakeFiles/servercc.dir/src/fiber.cpp.o
  /home/fql/Project/C++/sylar/src/fiber.h
  /home/fql/Project/C++/sylar/src/logger.h
  /home/fql/Project/C++/sylar/src/mutex.h
+ /home/fql/Project/C++/sylar/src/scheduler.h
  /home/fql/Project/C++/sylar/src/thread.h
  /home/fql/Project/C++/sylar/src/utils.h
 CMakeFiles/servercc.dir/src/logger.cpp.o
@@ -26,6 +27,14 @@ CMakeFiles/servercc.dir/src/logger.cpp.o
 CMakeFiles/servercc.dir/src/mutex.cpp.o
  /home/fql/Project/C++/sylar/src/mutex.cpp
  /home/fql/Project/C++/sylar/src/mutex.h
+CMakeFiles/servercc.dir/src/scheduler.cpp.o
+ /home/fql/Project/C++/sylar/src/fiber.h
+ /home/fql/Project/C++/sylar/src/logger.h
+ /home/fql/Project/C++/sylar/src/mutex.h
+ /home/fql/Project/C++/sylar/src/scheduler.cpp
+ /home/fql/Project/C++/sylar/src/scheduler.h
+ /home/fql/Project/C++/sylar/src/thread.h
+ /home/fql/Project/C++/sylar/src/utils.h
 CMakeFiles/servercc.dir/src/thread.cpp.o
  /home/fql/Project/C++/sylar/src/logger.h
  /home/fql/Project/C++/sylar/src/mutex.h
