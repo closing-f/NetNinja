@@ -52,6 +52,10 @@ ucontext.h
 functional
 -
 
+/home/fql/Project/C++/sylar/src/iomanager.h
+scheduler.h
+/home/fql/Project/C++/sylar/src/scheduler.h
+
 /home/fql/Project/C++/sylar/src/logger.h
 memory
 -
@@ -99,6 +103,14 @@ atomic
 -
 list
 -
+iostream
+-
+nocopy.h
+/home/fql/Project/C++/sylar/src/nocopy.h
+fiber.h
+/home/fql/Project/C++/sylar/src/fiber.h
+
+/home/fql/Project/C++/sylar/src/nocopy.h
 
 /home/fql/Project/C++/sylar/src/scheduler.h
 fiber.h
@@ -148,7 +160,7 @@ execinfo.h
 assert.h
 -
 
-/home/fql/Project/C++/sylar/test_scheduler.cpp
+/home/fql/Project/C++/sylar/test_iomanager.cpp
 src/logger.h
 /home/fql/Project/C++/sylar/src/logger.h
 src/thread.h
@@ -161,8 +173,22 @@ src/fiber.h
 /home/fql/Project/C++/sylar/src/fiber.h
 src/utils.h
 /home/fql/Project/C++/sylar/src/utils.h
-src/scheduler.h
-/home/fql/Project/C++/sylar/src/scheduler.h
+src/iomanager.h
+/home/fql/Project/C++/sylar/src/iomanager.h
 yaml-cpp/yaml.h
+-
+sys/types.h
+-
+sys/socket.h
+-
+arpa/inet.h
+-
+unistd.h
+-
+fcntl.h
+-
+iostream
+-
+sys/epoll.h
 -
 

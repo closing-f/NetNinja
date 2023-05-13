@@ -2,7 +2,7 @@
  * @Author: closing-f fql2018@bupt.edu.cn
  * @Date: 2023-05-11 11:34:53
  * @LastEditors: closing-f fql2018@bupt.edu.cn
- * @LastEditTime: 2023-05-12 20:19:31
+ * @LastEditTime: 2023-05-13 20:00:38
  * @FilePath: /sylar/src/scheduler.h
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -22,6 +22,7 @@ class Scheduler
         
         virtual ~Scheduler();
         
+        const std::string& getName() const { return m_name;}
         template<typename T>
         void schedule(T fc,int thread= -1){
             bool need_tickle = false;
@@ -63,11 +64,13 @@ class Scheduler
             
         void setThis();
     
-        void run();
+        virtual void run();
     
-        bool stopping();
+        virtual bool stopping();
 
         virtual void tickle();
+
+        bool hasIdleThreads() { return m_idleThreadCount > 0;}
         /**
      * @brief 协程无任务可调度时执行idle协程
      */

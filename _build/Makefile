@@ -190,6 +190,33 @@ src/fiber.cpp.s:
 	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/fiber.cpp.s
 .PHONY : src/fiber.cpp.s
 
+src/iomanager.o: src/iomanager.cpp.o
+
+.PHONY : src/iomanager.o
+
+# target to build an object file
+src/iomanager.cpp.o:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/iomanager.cpp.o
+.PHONY : src/iomanager.cpp.o
+
+src/iomanager.i: src/iomanager.cpp.i
+
+.PHONY : src/iomanager.i
+
+# target to preprocess a source file
+src/iomanager.cpp.i:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/iomanager.cpp.i
+.PHONY : src/iomanager.cpp.i
+
+src/iomanager.s: src/iomanager.cpp.s
+
+.PHONY : src/iomanager.s
+
+# target to generate assembly for a file
+src/iomanager.cpp.s:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/iomanager.cpp.s
+.PHONY : src/iomanager.cpp.s
+
 src/logger.o: src/logger.cpp.o
 
 .PHONY : src/logger.o
@@ -325,32 +352,32 @@ src/utils.cpp.s:
 	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/utils.cpp.s
 .PHONY : src/utils.cpp.s
 
-test_scheduler.o: test_scheduler.cpp.o
+test_iomanager.o: test_iomanager.cpp.o
 
-.PHONY : test_scheduler.o
+.PHONY : test_iomanager.o
 
 # target to build an object file
-test_scheduler.cpp.o:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test_scheduler.cpp.o
-.PHONY : test_scheduler.cpp.o
+test_iomanager.cpp.o:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test_iomanager.cpp.o
+.PHONY : test_iomanager.cpp.o
 
-test_scheduler.i: test_scheduler.cpp.i
+test_iomanager.i: test_iomanager.cpp.i
 
-.PHONY : test_scheduler.i
+.PHONY : test_iomanager.i
 
 # target to preprocess a source file
-test_scheduler.cpp.i:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test_scheduler.cpp.i
-.PHONY : test_scheduler.cpp.i
+test_iomanager.cpp.i:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test_iomanager.cpp.i
+.PHONY : test_iomanager.cpp.i
 
-test_scheduler.s: test_scheduler.cpp.s
+test_iomanager.s: test_iomanager.cpp.s
 
-.PHONY : test_scheduler.s
+.PHONY : test_iomanager.s
 
 # target to generate assembly for a file
-test_scheduler.cpp.s:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test_scheduler.cpp.s
-.PHONY : test_scheduler.cpp.s
+test_iomanager.cpp.s:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test_iomanager.cpp.s
+.PHONY : test_iomanager.cpp.s
 
 # Help Target
 help:
@@ -368,6 +395,9 @@ help:
 	@echo "... src/fiber.o"
 	@echo "... src/fiber.i"
 	@echo "... src/fiber.s"
+	@echo "... src/iomanager.o"
+	@echo "... src/iomanager.i"
+	@echo "... src/iomanager.s"
 	@echo "... src/logger.o"
 	@echo "... src/logger.i"
 	@echo "... src/logger.s"
@@ -383,9 +413,9 @@ help:
 	@echo "... src/utils.o"
 	@echo "... src/utils.i"
 	@echo "... src/utils.s"
-	@echo "... test_scheduler.o"
-	@echo "... test_scheduler.i"
-	@echo "... test_scheduler.s"
+	@echo "... test_iomanager.o"
+	@echo "... test_iomanager.i"
+	@echo "... test_iomanager.s"
 .PHONY : help
 
 
