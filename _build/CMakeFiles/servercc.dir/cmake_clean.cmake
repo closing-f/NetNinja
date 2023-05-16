@@ -8,6 +8,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/servercc.dir/src/mutex.cpp.o"
   "CMakeFiles/servercc.dir/src/scheduler.cpp.o"
   "CMakeFiles/servercc.dir/src/thread.cpp.o"
+  "CMakeFiles/servercc.dir/src/timer.cpp.o"
   "CMakeFiles/servercc.dir/src/utils.cpp.o"
 )
 

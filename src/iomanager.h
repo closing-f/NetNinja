@@ -2,16 +2,16 @@
  * @Author: closing-f fql2018@bupt.edu.cn
  * @Date: 2023-05-13 07:48:17
  * @LastEditors: closing-f fql2018@bupt.edu.cn
- * @LastEditTime: 2023-05-13 20:59:09
+ * @LastEditTime: 2023-05-15 07:43:44
  * @FilePath: /sylar/src/iomanager.h
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
 #ifndef _IOMANAGER_H
 #define _IOMANAGER_H
 #include "scheduler.h"
-
+#include "timer.h"
 namespace server_cc{
-class IOManager : public Scheduler {
+class IOManager : public Scheduler , public TimerManager{
 public:
     typedef std::shared_ptr<IOManager> ptr;
     typedef RWMutex RWMutexType;
@@ -70,8 +70,8 @@ protected:
     void tickle() override;
     bool stopping() override;
     void idle() override;
-    // bool stopping(uint64_t& timeout);
-    
+    bool stopping(uint64_t& timeout);
+    void onTimerInsertedAtFront() override;
     /**
      * @brief 重置socket句柄上下文的容器大小
      * @param[in] size 容量大小

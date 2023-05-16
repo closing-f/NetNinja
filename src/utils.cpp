@@ -2,10 +2,20 @@
  * @Author: closing-f fql2018@bupt.edu.cn
  * @Date: 2023-04-09 00:57:42
  * @LastEditors: closing-f fql2018@bupt.edu.cn
- * @LastEditTime: 2023-05-09 22:38:42
+ * @LastEditTime: 2023-05-14 21:02:58
  * @FilePath: /sylar/src/utils.cpp
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
+#include <execinfo.h>
+#include <sys/time.h>
+#include <dirent.h>
+#include <unistd.h>
+#include <string.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <arpa/inet.h>
+#include <ifaddrs.h>
+#include <google/protobuf/unknown_field_set.h>
 #include "utils.h"
 #include "logger.h"
 #include "fiber.h"
@@ -20,6 +30,19 @@ uint32_t GetFiberId(){
     // SEVER_CC_LOG_INFO(SEVER_CC_LOG_ROOT())<<"not get fiberId "<<std::endl;
     return server_cc::Fiber::GetFiberId();
 }
+
+uint64_t GetCurrentMS() {
+    struct timeval tv;
+    gettimeofday(&tv, NULL);
+    return tv.tv_sec * 1000ul  + tv.tv_usec / 1000;
+}
+
+uint64_t GetCurrentUS() {
+    struct timeval tv;
+    gettimeofday(&tv, NULL);
+    return tv.tv_sec * 1000 * 1000ul  + tv.tv_usec;
+}
+
 void BackTrace(std::vector<std::string>&bt, int size,int skip){
     void** buffer=(void**)malloc(sizeof(void*)*size);
     size_t size_=backtrace(buffer,size);

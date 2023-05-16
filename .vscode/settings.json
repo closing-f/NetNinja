@@ -60,7 +60,9 @@
         "typeinfo": "cpp",
         "strstream": "cpp",
         "unordered_set": "cpp",
-        "cfenv": "cpp"
+        "cfenv": "cpp",
+        "typeindex": "cpp",
+        "variant": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }

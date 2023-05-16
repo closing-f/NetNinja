@@ -7,7 +7,7 @@ project(test)
 #     logger/logger.cpp
 #     utils.cpp)
 
-add_library(servercc SHARED src/logger.cpp src/utils.cpp src/config.cpp src/mutex.cpp src/thread.cpp src/fiber.cpp src/scheduler.cpp src/iomanager.cpp)
+add_library(servercc SHARED src/logger.cpp src/utils.cpp src/config.cpp src/mutex.cpp src/thread.cpp src/fiber.cpp src/scheduler.cpp src/iomanager.cpp src/timer.cpp)
 # add_subdirectory(logger)
 
 include_directories(/usr/local/include/yaml-cpp)

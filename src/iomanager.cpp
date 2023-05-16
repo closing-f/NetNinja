@@ -2,7 +2,7 @@
  * @Author: closing-f fql2018@bupt.edu.cn
  * @Date: 2023-05-13 07:48:12
  * @LastEditors: closing-f fql2018@bupt.edu.cn
- * @LastEditTime: 2023-05-13 22:48:16
+ * @LastEditTime: 2023-05-15 08:28:05
  * @FilePath: /sylar/src/iomanager.cpp
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -275,17 +275,18 @@ void IOManager::tickle() {
     SEVER_ASSERT(rt == 1);
 }
 bool IOManager::stopping() {
-    return m_pendingEventCount == 0
-        && Scheduler::stopping();
+    uint64_t timeout = 0;
+    return stopping(timeout);
 }
-// bool IOManager::stopping(uint64_t& timeout) {
-//     timeout = getNextTimer();
-//     return timeout == ~0ull
-//         && m_pendingEventCount == 0
-//         && Scheduler::stopping();
+bool IOManager::stopping(uint64_t& timeout) {
+    timeout = getTimerNext();
+    return timeout == ~0ull
+        && m_pendingEventCount == 0
+        && Scheduler::stopping();
 
-// }
+}
 void IOManager::idle() {
+    SEVER_CC_LOG_DEBUG(g_logger)<<"idle";
   const uint64_t MAX_EVNETS = 256;
     epoll_event* events = new epoll_event[MAX_EVNETS]();
     std::shared_ptr<epoll_event> shared_events(events, [](epoll_event* ptr){
@@ -293,38 +294,38 @@ void IOManager::idle() {
     });
 
     while(true) {
-        uint64_t next_timeout = 3000;
+        uint64_t next_timeout = 0;
         //TODO stopping
-        if(SEVER_UNLIKELY(stopping())) {
+        if(SEVER_UNLIKELY(stopping(next_timeout))) {
             SEVER_CC_LOG_INFO(g_logger) << "name=" << getName()
                                      << " idle stopping exit";
             break;
         }
 
+
         int rt = 0;
         do {
             static const int MAX_TIMEOUT = 3000;
-            //TODO
-            // if(next_timeout != ~0ull) {
-            //     next_timeout = (int)next_timeout > MAX_TIMEOUT
-            //                     ? MAX_TIMEOUT : next_timeout;
-            // } else {
-            //     next_timeout = MAX_TIMEOUT;
-            // }
+            if(next_timeout != ~0ull) {
+                next_timeout = (int)next_timeout > MAX_TIMEOUT
+                                ? MAX_TIMEOUT : next_timeout;
+            } else {
+                next_timeout = MAX_TIMEOUT;
+            }
             rt = epoll_wait(m_epfd, events, MAX_EVNETS, (int)next_timeout);
             if(rt < 0 && errno == EINTR) {
             } else {
                 break;
             }
-        } while(true);
+        } while(true);;
 
-        // std::vector<std::function<void()> > cbs;
-        // listExpiredCb(cbs);
-        // if(!cbs.empty()) {
-        //     //SEVER_CC_LOG_DEBUG(g_logger) << "on timer cbs.size=" << cbs.size();
-        //     schedule(cbs.begin(), cbs.end());
-        //     cbs.clear();
-        // }
+        std::vector<std::function<void()> > cbs;
+        listExpiredCb(cbs);
+        if(!cbs.empty()) {
+            SEVER_CC_LOG_DEBUG(g_logger) << "on timer cbs.size=" << cbs.size();
+            schedule(cbs.begin(), cbs.end());
+            cbs.clear();
+        }
 
         //if(SEVER_CC_UNLIKELY(rt == MAX_EVNETS)) {
         //    SEVER_CC_LOG_INFO(g_logger) << "epoll wait events=" << rt;
@@ -333,6 +334,8 @@ void IOManager::idle() {
         for(int i = 0; i < rt; ++i) {
             epoll_event& event = events[i];
             if(event.data.fd == m_tickleFds[0]) {
+                SEVER_CC_LOG_INFO(g_logger) << "name=" << getName()
+                                         << " idle tickle";
                 uint8_t dummy[256];
                 while(read(m_tickleFds[0], dummy, sizeof(dummy)) > 0);
 
@@ -387,4 +390,9 @@ void IOManager::idle() {
         raw_ptr->swapOut();
     }
 }
+
+void IOManager::onTimerInsertedAtFront() {
+    tickle();
+}
+
 }

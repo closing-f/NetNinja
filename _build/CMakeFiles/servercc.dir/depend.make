@@ -28,6 +28,7 @@ CMakeFiles/servercc.dir/src/iomanager.cpp.o: ../src/mutex.h
 CMakeFiles/servercc.dir/src/iomanager.cpp.o: ../src/nocopy.h
 CMakeFiles/servercc.dir/src/iomanager.cpp.o: ../src/scheduler.h
 CMakeFiles/servercc.dir/src/iomanager.cpp.o: ../src/thread.h
+CMakeFiles/servercc.dir/src/iomanager.cpp.o: ../src/timer.h
 CMakeFiles/servercc.dir/src/iomanager.cpp.o: ../src/utils.h
 
 CMakeFiles/servercc.dir/src/logger.cpp.o: ../src/config.h
@@ -60,6 +61,15 @@ CMakeFiles/servercc.dir/src/thread.cpp.o: ../src/nocopy.h
 CMakeFiles/servercc.dir/src/thread.cpp.o: ../src/thread.cpp
 CMakeFiles/servercc.dir/src/thread.cpp.o: ../src/thread.h
 CMakeFiles/servercc.dir/src/thread.cpp.o: ../src/utils.h
+
+CMakeFiles/servercc.dir/src/timer.cpp.o: ../src/fiber.h
+CMakeFiles/servercc.dir/src/timer.cpp.o: ../src/logger.h
+CMakeFiles/servercc.dir/src/timer.cpp.o: ../src/mutex.h
+CMakeFiles/servercc.dir/src/timer.cpp.o: ../src/nocopy.h
+CMakeFiles/servercc.dir/src/timer.cpp.o: ../src/thread.h
+CMakeFiles/servercc.dir/src/timer.cpp.o: ../src/timer.cpp
+CMakeFiles/servercc.dir/src/timer.cpp.o: ../src/timer.h
+CMakeFiles/servercc.dir/src/timer.cpp.o: ../src/utils.h
 
 CMakeFiles/servercc.dir/src/utils.cpp.o: ../src/fiber.h
 CMakeFiles/servercc.dir/src/utils.cpp.o: ../src/logger.h

@@ -2,7 +2,7 @@
  * @Author: closing-f fql2018@bupt.edu.cn
  * @Date: 2023-05-13 11:49:54
  * @LastEditors: closing-f fql2018@bupt.edu.cn
- * @LastEditTime: 2023-05-13 22:43:59
+ * @LastEditTime: 2023-05-15 08:14:52
  * @FilePath: /server_cc/test_iomanager.cpp
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -12,7 +12,6 @@
 #include "src/mutex.h"
 #include "src/fiber.h"
 #include "src/utils.h"
-// #include "src/scheduler.h"
 #include "src/iomanager.h"
 #include <yaml-cpp/yaml.h>
 
@@ -23,6 +22,7 @@
 #include <fcntl.h>
 #include <iostream>
 #include <sys/epoll.h>
+#include "src/timer.h"
 
 server_cc::Logger::ptr g_logger = SEVER_CC_LOG_ROOT();
 
@@ -72,21 +72,25 @@ void test1() {
     iom.schedule(&test_fiber);
 }
 
-// server_cc::Timer::ptr s_timer;
-// void test_timer() {
-//     server_cc::IOManager iom(2);
-//     s_timer = iom.addTimer(1000, [](){
-//         static int i = 0;
-//         SEVER_CC_LOG_INFO(g_logger) << "hello timer i=" << i;
-//         if(++i == 3) {
-//             s_timer->reset(2000, true);
-//             //s_timer->cancel();
-//         }
-//     }, true);
-// }
+server_cc::Timer::ptr s_timer;
+void test_timer() {
+    server_cc::IOManager iom(2);
+    
+    s_timer = iom.addTimer(1000, [](){
+        static int i = 0;
+
+        SEVER_CC_LOG_INFO(g_logger) << "hello timer i=" << i;
+        if(++i == 3) {
+            // s_timer->reset(2000, true);
+            s_timer->cancel();
+        }
+        
+    }, true);
+    
+}
 
 int main(int argc, char** argv) {
-    test1();
-    // test_timer();
+    // test1();
+    test_timer();
     return 0;
 }

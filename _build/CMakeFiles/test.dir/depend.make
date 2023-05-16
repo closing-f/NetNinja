@@ -9,6 +9,7 @@ CMakeFiles/test.dir/test_iomanager.cpp.o: ../src/mutex.h
 CMakeFiles/test.dir/test_iomanager.cpp.o: ../src/nocopy.h
 CMakeFiles/test.dir/test_iomanager.cpp.o: ../src/scheduler.h
 CMakeFiles/test.dir/test_iomanager.cpp.o: ../src/thread.h
+CMakeFiles/test.dir/test_iomanager.cpp.o: ../src/timer.h
 CMakeFiles/test.dir/test_iomanager.cpp.o: ../src/utils.h
 CMakeFiles/test.dir/test_iomanager.cpp.o: ../test_iomanager.cpp
 
