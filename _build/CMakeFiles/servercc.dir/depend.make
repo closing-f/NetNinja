@@ -10,6 +10,16 @@ CMakeFiles/servercc.dir/src/config.cpp.o: ../src/nocopy.h
 CMakeFiles/servercc.dir/src/config.cpp.o: ../src/thread.h
 CMakeFiles/servercc.dir/src/config.cpp.o: ../src/utils.h
 
+CMakeFiles/servercc.dir/src/fd_manager.cpp.o: ../src/fd_manager.cpp
+CMakeFiles/servercc.dir/src/fd_manager.cpp.o: ../src/fd_manager.h
+CMakeFiles/servercc.dir/src/fd_manager.cpp.o: ../src/fiber.h
+CMakeFiles/servercc.dir/src/fd_manager.cpp.o: ../src/hook.h
+CMakeFiles/servercc.dir/src/fd_manager.cpp.o: ../src/logger.h
+CMakeFiles/servercc.dir/src/fd_manager.cpp.o: ../src/mutex.h
+CMakeFiles/servercc.dir/src/fd_manager.cpp.o: ../src/nocopy.h
+CMakeFiles/servercc.dir/src/fd_manager.cpp.o: ../src/thread.h
+CMakeFiles/servercc.dir/src/fd_manager.cpp.o: ../src/utils.h
+
 CMakeFiles/servercc.dir/src/fiber.cpp.o: ../src/config.h
 CMakeFiles/servercc.dir/src/fiber.cpp.o: ../src/fiber.cpp
 CMakeFiles/servercc.dir/src/fiber.cpp.o: ../src/fiber.h
@@ -19,6 +29,20 @@ CMakeFiles/servercc.dir/src/fiber.cpp.o: ../src/nocopy.h
 CMakeFiles/servercc.dir/src/fiber.cpp.o: ../src/scheduler.h
 CMakeFiles/servercc.dir/src/fiber.cpp.o: ../src/thread.h
 CMakeFiles/servercc.dir/src/fiber.cpp.o: ../src/utils.h
+
+CMakeFiles/servercc.dir/src/hook.cpp.o: ../src/config.h
+CMakeFiles/servercc.dir/src/hook.cpp.o: ../src/fd_manager.h
+CMakeFiles/servercc.dir/src/hook.cpp.o: ../src/fiber.h
+CMakeFiles/servercc.dir/src/hook.cpp.o: ../src/hook.cpp
+CMakeFiles/servercc.dir/src/hook.cpp.o: ../src/hook.h
+CMakeFiles/servercc.dir/src/hook.cpp.o: ../src/iomanager.h
+CMakeFiles/servercc.dir/src/hook.cpp.o: ../src/logger.h
+CMakeFiles/servercc.dir/src/hook.cpp.o: ../src/mutex.h
+CMakeFiles/servercc.dir/src/hook.cpp.o: ../src/nocopy.h
+CMakeFiles/servercc.dir/src/hook.cpp.o: ../src/scheduler.h
+CMakeFiles/servercc.dir/src/hook.cpp.o: ../src/thread.h
+CMakeFiles/servercc.dir/src/hook.cpp.o: ../src/timer.h
+CMakeFiles/servercc.dir/src/hook.cpp.o: ../src/utils.h
 
 CMakeFiles/servercc.dir/src/iomanager.cpp.o: ../src/fiber.h
 CMakeFiles/servercc.dir/src/iomanager.cpp.o: ../src/iomanager.cpp

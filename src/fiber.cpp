@@ -2,7 +2,7 @@
  * @Author: closing-f fql2018@bupt.edu.cn
  * @Date: 2023-05-09 09:48:39
  * @LastEditors: closing-f fql2018@bupt.edu.cn
- * @LastEditTime: 2023-05-12 20:19:02
+ * @LastEditTime: 2023-05-16 11:46:50
  * @FilePath: /sylar/src/fiber.cpp
  * @Description: 
  */
@@ -199,7 +199,6 @@ void Fiber::YieldToHold(){
     SEVER_ASSERT(cur->m_state == EXEC);
     cur->m_state = HOLD;
     cur->swapOut();
-
 }
 
 /**

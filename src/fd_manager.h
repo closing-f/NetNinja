@@ -4,7 +4,7 @@
 #include <memory>
 #include <vector>
 #include "thread.h"
-#include "singleton.h"
+#include "utils.h"
 
 namespace server_cc {
 

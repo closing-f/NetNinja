@@ -163,6 +163,33 @@ src/config.cpp.s:
 	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/config.cpp.s
 .PHONY : src/config.cpp.s
 
+src/fd_manager.o: src/fd_manager.cpp.o
+
+.PHONY : src/fd_manager.o
+
+# target to build an object file
+src/fd_manager.cpp.o:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/fd_manager.cpp.o
+.PHONY : src/fd_manager.cpp.o
+
+src/fd_manager.i: src/fd_manager.cpp.i
+
+.PHONY : src/fd_manager.i
+
+# target to preprocess a source file
+src/fd_manager.cpp.i:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/fd_manager.cpp.i
+.PHONY : src/fd_manager.cpp.i
+
+src/fd_manager.s: src/fd_manager.cpp.s
+
+.PHONY : src/fd_manager.s
+
+# target to generate assembly for a file
+src/fd_manager.cpp.s:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/fd_manager.cpp.s
+.PHONY : src/fd_manager.cpp.s
+
 src/fiber.o: src/fiber.cpp.o
 
 .PHONY : src/fiber.o
@@ -189,6 +216,33 @@ src/fiber.s: src/fiber.cpp.s
 src/fiber.cpp.s:
 	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/fiber.cpp.s
 .PHONY : src/fiber.cpp.s
+
+src/hook.o: src/hook.cpp.o
+
+.PHONY : src/hook.o
+
+# target to build an object file
+src/hook.cpp.o:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/hook.cpp.o
+.PHONY : src/hook.cpp.o
+
+src/hook.i: src/hook.cpp.i
+
+.PHONY : src/hook.i
+
+# target to preprocess a source file
+src/hook.cpp.i:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/hook.cpp.i
+.PHONY : src/hook.cpp.i
+
+src/hook.s: src/hook.cpp.s
+
+.PHONY : src/hook.s
+
+# target to generate assembly for a file
+src/hook.cpp.s:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/hook.cpp.s
+.PHONY : src/hook.cpp.s
 
 src/iomanager.o: src/iomanager.cpp.o
 
@@ -379,32 +433,32 @@ src/utils.cpp.s:
 	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/utils.cpp.s
 .PHONY : src/utils.cpp.s
 
-test_iomanager.o: test_iomanager.cpp.o
+test_hook.o: test_hook.cpp.o
 
-.PHONY : test_iomanager.o
+.PHONY : test_hook.o
 
 # target to build an object file
-test_iomanager.cpp.o:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test_iomanager.cpp.o
-.PHONY : test_iomanager.cpp.o
+test_hook.cpp.o:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test_hook.cpp.o
+.PHONY : test_hook.cpp.o
 
-test_iomanager.i: test_iomanager.cpp.i
+test_hook.i: test_hook.cpp.i
 
-.PHONY : test_iomanager.i
+.PHONY : test_hook.i
 
 # target to preprocess a source file
-test_iomanager.cpp.i:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test_iomanager.cpp.i
-.PHONY : test_iomanager.cpp.i
+test_hook.cpp.i:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test_hook.cpp.i
+.PHONY : test_hook.cpp.i
 
-test_iomanager.s: test_iomanager.cpp.s
+test_hook.s: test_hook.cpp.s
 
-.PHONY : test_iomanager.s
+.PHONY : test_hook.s
 
 # target to generate assembly for a file
-test_iomanager.cpp.s:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test_iomanager.cpp.s
-.PHONY : test_iomanager.cpp.s
+test_hook.cpp.s:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test_hook.cpp.s
+.PHONY : test_hook.cpp.s
 
 # Help Target
 help:
@@ -419,9 +473,15 @@ help:
 	@echo "... src/config.o"
 	@echo "... src/config.i"
 	@echo "... src/config.s"
+	@echo "... src/fd_manager.o"
+	@echo "... src/fd_manager.i"
+	@echo "... src/fd_manager.s"
 	@echo "... src/fiber.o"
 	@echo "... src/fiber.i"
 	@echo "... src/fiber.s"
+	@echo "... src/hook.o"
+	@echo "... src/hook.i"
+	@echo "... src/hook.s"
 	@echo "... src/iomanager.o"
 	@echo "... src/iomanager.i"
 	@echo "... src/iomanager.s"
@@ -443,9 +503,9 @@ help:
 	@echo "... src/utils.o"
 	@echo "... src/utils.i"
 	@echo "... src/utils.s"
-	@echo "... test_iomanager.o"
-	@echo "... test_iomanager.i"
-	@echo "... test_iomanager.s"
+	@echo "... test_hook.o"
+	@echo "... test_hook.i"
+	@echo "... test_hook.s"
 .PHONY : help
 
 

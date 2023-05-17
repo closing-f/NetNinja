@@ -10,6 +10,16 @@ CMakeFiles/servercc.dir/src/config.cpp.o
  /home/fql/Project/C++/sylar/src/nocopy.h
  /home/fql/Project/C++/sylar/src/thread.h
  /home/fql/Project/C++/sylar/src/utils.h
+CMakeFiles/servercc.dir/src/fd_manager.cpp.o
+ /home/fql/Project/C++/sylar/src/fd_manager.cpp
+ /home/fql/Project/C++/sylar/src/fd_manager.h
+ /home/fql/Project/C++/sylar/src/fiber.h
+ /home/fql/Project/C++/sylar/src/hook.h
+ /home/fql/Project/C++/sylar/src/logger.h
+ /home/fql/Project/C++/sylar/src/mutex.h
+ /home/fql/Project/C++/sylar/src/nocopy.h
+ /home/fql/Project/C++/sylar/src/thread.h
+ /home/fql/Project/C++/sylar/src/utils.h
 CMakeFiles/servercc.dir/src/fiber.cpp.o
  /home/fql/Project/C++/sylar/src/config.h
  /home/fql/Project/C++/sylar/src/fiber.cpp
@@ -19,6 +29,20 @@ CMakeFiles/servercc.dir/src/fiber.cpp.o
  /home/fql/Project/C++/sylar/src/nocopy.h
  /home/fql/Project/C++/sylar/src/scheduler.h
  /home/fql/Project/C++/sylar/src/thread.h
+ /home/fql/Project/C++/sylar/src/utils.h
+CMakeFiles/servercc.dir/src/hook.cpp.o
+ /home/fql/Project/C++/sylar/src/config.h
+ /home/fql/Project/C++/sylar/src/fd_manager.h
+ /home/fql/Project/C++/sylar/src/fiber.h
+ /home/fql/Project/C++/sylar/src/hook.cpp
+ /home/fql/Project/C++/sylar/src/hook.h
+ /home/fql/Project/C++/sylar/src/iomanager.h
+ /home/fql/Project/C++/sylar/src/logger.h
+ /home/fql/Project/C++/sylar/src/mutex.h
+ /home/fql/Project/C++/sylar/src/nocopy.h
+ /home/fql/Project/C++/sylar/src/scheduler.h
+ /home/fql/Project/C++/sylar/src/thread.h
+ /home/fql/Project/C++/sylar/src/timer.h
  /home/fql/Project/C++/sylar/src/utils.h
 CMakeFiles/servercc.dir/src/iomanager.cpp.o
  /home/fql/Project/C++/sylar/src/fiber.h

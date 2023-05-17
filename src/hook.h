@@ -2,7 +2,7 @@
  * @Author: closing-f fql2018@bupt.edu.cn
  * @Date: 2023-05-15 08:57:03
  * @LastEditors: closing-f fql2018@bupt.edu.cn
- * @LastEditTime: 2023-05-15 21:16:39
+ * @LastEditTime: 2023-05-16 11:08:39
  * @FilePath: /sylar/src/hook.h
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%A
  */
@@ -15,6 +15,7 @@
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <stdint.h>
+//? 怎么实现在查找函数时先查找自己的函数表，再查找libc的函数表
 namespace server_cc{
     bool is_hook_enable();
     void set_hook_enable(bool flag);
