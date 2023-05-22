@@ -1,11 +1,4 @@
-/*
- * @Author: closing-f fql2018@bupt.edu.cn
- * @Date: 2023-05-11 11:34:53
- * @LastEditors: closing-f fql2018@bupt.edu.cn
- * @LastEditTime: 2023-05-13 20:00:38
- * @FilePath: /sylar/src/scheduler.h
- * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
- */
+
 #include "fiber.h"
 #include "thread.h"
 #include "mutex.h"
@@ -18,6 +11,13 @@ class Scheduler
         typedef std::shared_ptr<Scheduler> ptr;
         typedef Mutex MutexType;
         
+        /**
+         * @description: 构造函数 
+         * @param {size_t} thread_num 线程数量
+         * @param {bool} use_caller 是否在当前线程中创建协程
+         * @param {string&} name    
+         * @return {*}
+         */        
         Scheduler(size_t thread_num = 1, bool use_caller = true, const std::string& name = "");
         
         virtual ~Scheduler();
@@ -50,9 +50,15 @@ class Scheduler
             tickle();
         }
     }
-
+        /**
+         * @description: 启动调度器
+         * @return {*}
+         */        
         void start();
-
+        /**
+         * @description: 停止调度器
+         * @return {*}
+         */        
         void stop();
 
         static Scheduler* GetThis();

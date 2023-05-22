@@ -157,6 +157,10 @@ const char* LogLevel::getLevel(LogLevel::Level level) {
 LogEventWrapper::LogEventWrapper(LogEvent::ptr e)
     :m_event(e) {
 }
+/**
+ * @description: 析构函数，调用log方法
+ * @return {*}
+ */
 LogEventWrapper::~LogEventWrapper() {
 
     m_event->getLogger()->log(m_event->getLevel(), m_event);
@@ -309,12 +313,6 @@ std::string StdoutLogAppender::ToYamlString() {
 LogFormatter::LogFormatter(const std::string& pattern) : m_pattern(pattern) {
     init();
 }
-// void LogFormatter::resetPattern(const std::string& pattern) {
-//     m_items.clear();
-//     m_pattern = pattern;
-//     init();
-// }
-//string格式化
 std::string LogFormatter::format(LogLevel::Level level,LogEvent::ptr event) {
     std::stringstream ss;
     for(auto& i : m_items) {
@@ -471,10 +469,8 @@ void LogFormatter::init(){
 LoggerManager::LoggerManager(const std::string& name) {
     m_root.reset(new Logger(name));
     m_root->addAppender(LogAppender::ptr(new StdoutLogAppender()));
-   
     m_loggers[m_root->getName()] = m_root;
-    init();
-    }
+}
 
 Logger::ptr LoggerManager::getLogger(const std::string& name) {
     MutexType::Lock lock(m_mutex);
@@ -489,7 +485,6 @@ Logger::ptr LoggerManager::getLogger(const std::string& name) {
     return logger;
 }
 
-void LoggerManager::init(){}
 
 
 

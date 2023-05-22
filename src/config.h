@@ -278,7 +278,10 @@ public:
     }
 };
 
-
+/**
+ * @description: 配置参数类
+ * @return {*}
+ */
 template<class T,class FromStr = LexicalCast<std::string, T>
                 ,class ToStr = LexicalCast<T, std::string> >
 class ConfigVar : public ConfigVarBase{
@@ -350,7 +353,10 @@ class Config{
         typedef std::shared_ptr<Config> ptr;
         
         public:
-       
+        /**
+         * @description: 如果存在就返回，不存在就创建
+         * @return {*} 返回ConfigVar<T>::ptr
+         */        
         template<class T>
         static typename ConfigVar<T>::ptr Lookup(const std::string& name,const T& default_value,const std::string& description=""){
             //将name转换为小写
@@ -362,11 +368,11 @@ class Config{
                 //存在，判断类型是否一致
                 auto tmp = std::dynamic_pointer_cast<ConfigVar<T>>(it->second);
                 if(tmp){
-                    SEVER_CC_LOG_INFO(SEVER_CC_LOG_ROOT()) << "Lookup name=" << name << " exists";
+                    SERVER_CC_LOG_INFO(SERVER_CC_LOG_ROOT()) << "Lookup name=" << name << " exists";
                     return tmp;
                 }
                 else{
-                    SEVER_CC_LOG_ERROR(SEVER_CC_LOG_ROOT()) << "Lookup name=" << name << " exists but type not "
+                    SERVER_CC_LOG_ERROR(SERVER_CC_LOG_ROOT()) << "Lookup name=" << name << " exists but type not "
                         << typeid(T).name() << " real_type= " << it->second->getTypeName()
                         << " " << it->second->toString();
                     return nullptr;
@@ -374,7 +380,7 @@ class Config{
             }
             //如果不存在，就创建一个
             if(name.find_first_not_of("abcdefghijklmnopqrstuvwxyz._0123456789") != std::string::npos){
-                SEVER_CC_LOG_ERROR(SEVER_CC_LOG_ROOT()) << "Lookup name invalid " << name;
+                SERVER_CC_LOG_ERROR(SERVER_CC_LOG_ROOT()) << "Lookup name invalid " << name;
                 throw std::invalid_argument(name);
             }
             typename ConfigVar<T>::ptr v(new ConfigVar<T>(tmp_name,default_value,description));
@@ -382,6 +388,11 @@ class Config{
             GetDatas()[tmp_name] = v;
             return v;
         }
+        
+         /**
+         * @description: 查找name是否存在，不存在返回nullptr
+         * @return {*} 返回ConfigVar<T>::ptr
+         */ 
         template<class T>
         static typename ConfigVar<T>::ptr Lookup(const std::string& name){
             //将name转换为小写

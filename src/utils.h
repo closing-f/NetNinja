@@ -1,8 +1,8 @@
 /*
  * @Author: closing-f fql2018@bupt.edu.cn
  * @Date: 2023-04-09 00:57:42
- * @LastEditors: closing-f fql2018@bupt.edu.cn
- * @LastEditTime: 2023-05-14 21:02:41
+ * @LastEditors: closing
+ * @LastEditTime: 2023-05-22 15:50:02
  * @FilePath: /sylar/src/utils.h
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -23,28 +23,20 @@
 #include <iomanip>
 #include <execinfo.h>	/* for backtrace() */
 #include <assert.h>
-#if defined __GNUC__ || defined __llvm__
-/// LIKCLY 宏的封装, 告诉编译器优化,条件大概率成立
-#   define SYLAR_LIKELY(x)       __builtin_expect(!!(x), 1)
-/// LIKCLY 宏的封装, 告诉编译器优化,条件大概率不成立
-#   define SEVER_UNLIKELY(x)     __builtin_expect(!!(x), 0)
-#else
-#   define SYLAR_LIKELY(x)      (x)
-#   define SYLAR_UNLIKELY(x)      (x)
-#endif
+
 
 //? 下面if 中 x两边必须加括号，为啥
-#define SEVER_ASSERT(x) \
+#define SERVER_CC_ASSERT(x) \
     if(!(x)){\
-        SEVER_CC_LOG_ERROR(SEVER_CC_LOG_ROOT()) << "ASSERTION: "<< #x \
+        SERVER_CC_LOG_ERROR(SERVER_CC_LOG_ROOT()) << "ASSERTION: "<< #x \
             << "\nbacktrace:\n" \
             << server_cc::BackTraceToString(100, 2, "    "); \
         assert(x); \
     }
 //? #x 和 x的差别
-#define SEVER_ASSERT2(x,w) \
+#define SERVER_CC_ASSERT2(x,w) \
     if(!(x)){\
-        SEVER_CC_LOG_ERROR(SEVER_CC_LOG_ROOT()) << "ASSERTION: "<< #x \
+        SERVER_CC_LOG_ERROR(SERVER_CC_LOG_ROOT()) << "ASSERTION: "<< #x \
             << "\n"<< w \
             << "\nbacktrace:\n" \
             << server_cc::BackTraceToString(100, 2, "    "); \

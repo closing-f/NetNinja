@@ -1,13 +1,12 @@
 /*
- * @Author: closing-f fql2018@bupt.edu.cn
+ * @Author: closing
  * @Date: 2023-05-09 09:48:20
- * @LastEditors: closing-f fql2018@bupt.edu.cn
- * @LastEditTime: 2023-05-16 11:00:05
- * @FilePath: /sylar/src/fiber.h
- * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @LastEditors: closing
+ * @LastEditTime: 2023-05-22 14:54:18
+ * @Description: Fiber类的实现
  */
-/**
-*/
+ */
+
 #ifndef _FIBER_H
 #define _FIBER_H
 
@@ -40,11 +39,17 @@ class Fiber:public std::enable_shared_from_this<Fiber>{
 
     private:
         /**
-         * @brief 无参构造函数
-         * @attention 线程中第一个协程（主协程）的构造
-        */
+         * @description: 无参构造函数，用于生成主协程
+         * @return {*}
+         */        
         Fiber();
     public:
+        /**
+         * @description: 构造函数
+         * @param {size_t} stack_size 协程栈大小
+         * @param {bool} use_caller //? 是否在当前线程中创建协程
+         * @return {*}
+         */        
         Fiber(std::function<void()>cb,size_t stack_size=0,bool use_caller = false);
 
         ~Fiber();

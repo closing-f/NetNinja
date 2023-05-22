@@ -1,6 +1,11 @@
 /*
-*@thread.h
-*/
+ * @Author: closing
+ * @Date: 2023-05-08 08:37:20
+ * @LastEditors: closing
+ * @LastEditTime: 2023-05-22 11:34:55
+ * @Description: 线程类，封装了线程的创建，执行，销毁
+ */
+
 #ifndef _THREAD_H
 #define _THREAD_H
 #include "mutex.h"
@@ -15,16 +20,31 @@ class Thread
         
         Thread(std::function<void()> cb,const std::string& name);
         ~Thread();
+
+        /**
+         * @description: 返回线程id
+         * @return {*}
+         */        
         pid_t getPid(){return m_pid;}
 
         std::string getName(){return m_name;}
 
         void join();
-
+        /**
+         * @description: 返回当前线程
+         * @return {*}
+         */        
         static Thread* GetThis();
-
+        /**
+         * @description: 返回当前线程名称
+         * @return {*}
+         */        
         static const std::string& GetName();
-
+        /**
+         * @description: 设置当前线程名称
+         * @param {string&} name
+         * @return {*}
+         */        
         static void SetName(const std::string& name);
 
 

@@ -1,9 +1,16 @@
+/*
+ * @Author: closing
+ * @Date: 2023-05-08 08:37:29
+ * @LastEditors: closing
+ * @LastEditTime: 2023-05-22 11:45:46
+ * @Description: 请填写简介
+ */
 #include"thread.h"
 namespace server_cc{
 
 static thread_local Thread* t_thread=nullptr;
 static thread_local std::string t_thread_name="UNKNOWN";
-static Logger::ptr g_logger = SEVER_CC_LOG_NAME("system");
+static Logger::ptr g_logger = SERVER_CC_LOG_NAME("system");
 
 Thread::Thread(std::function<void()> cb,const std::string&name):m_cb(cb),m_name(name){
     if(name.empty()){
@@ -27,7 +34,7 @@ void* Thread::run(void*arg){
     //? 减少引用次数
     std::function<void()> cb;
     cb.swap(thread->m_cb);
-
+    
     thread->m_semaphore.notify();
     cb();
     return 0;
@@ -58,7 +65,7 @@ void Thread::join() {
     if(m_thread) {
         int rt = pthread_join(m_thread, nullptr);
         if(rt) {
-            SEVER_CC_LOG_ERROR(g_logger) << "pthread_join thread fail, rt=" << rt
+            SERVER_CC_LOG_ERROR(g_logger) << "pthread_join thread fail, rt=" << rt
                 << " name=" << m_name;
             throw std::logic_error("pthread_join error");
         }

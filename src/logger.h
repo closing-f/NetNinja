@@ -1,3 +1,11 @@
+/*
+ * @Author: closing
+ * @Date: 2023-04-09 00:57:34
+ * @LastEditors: closing
+ * @LastEditTime: 2023-05-22 11:09:47
+ * @Description: logger头文件，定义logger的相关类
+ */
+
 #ifndef LOGGER_H
 #define LOGGER_H
 #include<memory>
@@ -14,37 +22,38 @@
 #include "mutex.h"
 #include <stdarg.h>
 #include "thread.h"
-#define SEVER_CC_LOG_LEVEL(logger,level) \
+#define SERVER_CC_LOG_LEVEL(logger,level) \
     if(logger->getLevel()<=level) \
         server_cc::LogEventWrapper(server_cc::LogEvent::ptr(new server_cc::LogEvent(logger,level,__FILE__, __LINE__ ,0,server_cc::GetThreadId(),server_cc::GetFiberId(),time(0),server_cc::Thread::GetName()))).getSS()
 
-#define SEVER_CC_LOG_DEBUG(logger) SEVER_CC_LOG_LEVEL(logger,server_cc::LogLevel::DEBUG)
-#define SEVER_CC_LOG_WARN(logger) SEVER_CC_LOG_LEVEL(logger,server_cc::LogLevel::WARNING)
-#define SEVER_CC_LOG_INFO(logger) SEVER_CC_LOG_LEVEL(logger,server_cc::LogLevel::INFO)
-#define SEVER_CC_LOG_ERROR(logger) SEVER_CC_LOG_LEVEL(logger,server_cc::LogLevel::ERROR)
-#define SEVER_CC_LOG_FATAL(logger) SEVER_CC_LOG_LEVEL(logger,server_cc::LogLevel::FATAL)
+#define SERVER_CC_LOG_DEBUG(logger) SERVER_CC_LOG_LEVEL(logger,server_cc::LogLevel::DEBUG)
+#define SERVER_CC_LOG_WARN(logger) SERVER_CC_LOG_LEVEL(logger,server_cc::LogLevel::WARNING)
+#define SERVER_CC_LOG_INFO(logger) SERVER_CC_LOG_LEVEL(logger,server_cc::LogLevel::INFO)
+#define SERVER_CC_LOG_ERROR(logger) SERVER_CC_LOG_LEVEL(logger,server_cc::LogLevel::ERROR)
+#define SERVER_CC_LOG_FATAL(logger) SERVER_CC_LOG_LEVEL(logger,server_cc::LogLevel::FATAL)
 
 
-#define SEVER_CC_LOG_FMT_LEVEL(logger,level,fmt,...) \
+#define SERVER_CC_LOG_FMT_LEVEL(logger,level,fmt,...) \
     if(logger->getLevel()<=level) \
         server_cc::LogEventWrapper(server_cc::LogEvent::ptr(new server_cc::LogEvent(logger,level,__FILE__,server_cc::GetThreadId(),server_cc::GetFiberId(),time(0)))).getEvent()->format(fmt,__VA_ARGS__)
 
-#define SEVER_CC_LOG_FMT_DEBUG(logger,fmt,...) SEVER_CC_LOG_FMT_LEVEL(logger,server_cc::LogLevel::DEBUG,fmt,__VA_ARGS__)
-#define SEVER_CC_LOG_FMT_INFO(logger,fmt,...) SEVER_CC_LOG_FMT_LEVEL(logger,server_cc::LogLevel::INFO,fmt,__VA_ARGS__)
-#define SEVER_CC_LOG_FMT_WARN(logger,fmt,...) SEVER_CC_LOG_FMT_LEVEL(logger,server_cc::LogLevel::WARNING,fmt,__VA_ARGS__)
-#define SEVER_CC_LOG_FMT_ERROR(logger,fmt,...) SEVER_CC_LOG_FMT_LEVEL(logger,server_cc::LogLevel::ERROR,fmt,__VA_ARGS__)
-#define SEVER_CC_LOG_FMT_FATAL(logger,fmt,...) SEVER_CC_LOG_FMT_LEVEL(logger,server_cc::LogLevel::FATAL,fmt,__VA_ARGS__)
+#define SERVER_CC_LOG_FMT_DEBUG(logger,fmt,...) SERVER_CC_LOG_FMT_LEVEL(logger,server_cc::LogLevel::DEBUG,fmt,__VA_ARGS__)
+#define SERVER_CC_LOG_FMT_INFO(logger,fmt,...) SERVER_CC_LOG_FMT_LEVEL(logger,server_cc::LogLevel::INFO,fmt,__VA_ARGS__)
+#define SERVER_CC_LOG_FMT_WARN(logger,fmt,...) SERVER_CC_LOG_FMT_LEVEL(logger,server_cc::LogLevel::WARNING,fmt,__VA_ARGS__)
+#define SERVER_CC_LOG_FMT_ERROR(logger,fmt,...) SERVER_CC_LOG_FMT_LEVEL(logger,server_cc::LogLevel::ERROR,fmt,__VA_ARGS__)
+#define SERVER_CC_LOG_FMT_FATAL(logger,fmt,...) SERVER_CC_LOG_FMT_LEVEL(logger,server_cc::LogLevel::FATAL,fmt,__VA_ARGS__)
 
 
 
-#define SEVER_CC_LOG_ROOT() server_cc::LoggerMgr::GetInstance().getRoot()
+#define SERVER_CC_LOG_ROOT() server_cc::LoggerMgr::GetInstance().getRoot()
 
-#define SEVER_CC_LOG_NAME(name) server_cc::LoggerMgr::GetInstance().getLogger(name)
+#define SERVER_CC_LOG_NAME(name) server_cc::LoggerMgr::GetInstance().getLogger(name)
 namespace server_cc{
-class Logger;
+
+
 class LogLevel {
 public:
-
+    
     enum Level {
         UNKNOWN = 0,
         DEBUG=1,
@@ -53,6 +62,7 @@ public:
         ERROR=4,
         FATAL=5
     };
+    
     static const char* getLevel(Level level);
     static Level FromString(const std::string& str){
         if(str=="DEBUG") return Level::DEBUG;
@@ -62,6 +72,7 @@ public:
         if(str=="FATAL") return Level::FATAL;
         return Level::FATAL;
     }
+    
     static std::string ToString(Level level){
         switch(level){
             case Level::DEBUG:
@@ -80,27 +91,29 @@ public:
     }
 
 };
+
+class Logger;
 class LogEvent {
     public:
         typedef std::shared_ptr<LogEvent> ptr;
+
         /**
-     * @brief 构造函数
-     * @param[in] logger 日志器
-     * @param[in] level 日志级别
-     * @param[in] file 文件名
-     * @param[in] line 文件行号
-     * @param[in] elapse 程序启动依赖的耗时(毫秒)
-     * @param[in] thread_id 线程id
-     * @param[in] fiber_id 协程id
-     * @param[in] time 日志事件(秒)
-     * @param[in] thread_name 线程名称
-     */
+         * @description: 构造函数
+         * @param {std::shared_ptr<Logger>} logger 日志器
+         * @param {LogLevel::Level} level 日志级别
+         * @param {const char*} file 文件名
+         * @param {int32_t} line 行号
+         * @param {uint32_t} elapse 程序启动到现在的毫秒数
+         * @param {uint32_t} thread_id  线程id
+         * @param {uint32_t} fiber_id   协程id
+         * @param {uint64_t} time   时间戳
+         * @param {const std::string&} thread_name  线程名称
+         * @return {*}
+         */ 
         LogEvent(std::shared_ptr<Logger> logger, LogLevel::Level level
             ,const char* file, int32_t line, uint32_t elapse
             ,uint32_t thread_id, uint32_t fiber_id, uint64_t time
             ,const std::string& thread_name);
-        // LogEvent(std::shared_ptr<Logger> logger, LogLevel::Level level, const char* file, int32_t line, uint32_t elapse, uint32_t thread_id, uint32_t fiber_id, uint64_t time, const std::string& thread_name);//TODO
-        
         
         const char* getFile() const { return m_filename; }
         int getLine() const { return m_line; }
@@ -112,9 +125,19 @@ class LogEvent {
         std::shared_ptr<Logger> getLogger() const { return m_logger; }
         LogLevel::Level getLevel() const { return m_level; }
         const std::string& getThreadName() const { return m_threadName; }
+        /**
+         * @description: 
+         * @param {char*} fmt 格式
+         * @param {va_list} al 可变参数列表
+         * @return {*}
+         */ 
         void format(const char* fmt, ...);
         void format(const char* fmt, va_list al);
-        //实现流式风格日志
+        
+        /**
+         * @description: 获取日志内容字符串流
+         * @return {*}
+         */        
         std::stringstream& getSS() { return m_ss; }
 
         
@@ -136,11 +159,14 @@ class LogEvent {
 
 };
 
-//?为什么要用wrapper来实现流式风格日志，不直接用LogEvent？
-//在析构函数中，将日志内容写入到日志文件中，妙啊
+
+/**
+ * @description: 在析构函数中，将日志内容写入到日志文件中. //?为什么要用wrapper来实现流式风格日志，不直接用LogEvent？
+ * @return {*}
+ */
 class LogEventWrapper{
     public:
-        // LogEventWrapper(std::shared_ptr<Logger> logger, LogLevel::Level level, const char* file, int32_t line);
+        
         LogEventWrapper(LogEvent::ptr event);
         ~LogEventWrapper();
         std::stringstream& getSS();
@@ -162,15 +188,11 @@ public:
 
     void resetPattern(const std::string& pattern);
     
-
-
-
-    
-
 public:
     std::string m_pattern;//日志格式
     class FormatItem {
     public:
+        
         typedef std::shared_ptr<FormatItem> ptr;
         virtual ~FormatItem() {}
         virtual void format(std::ostream& os, LogEvent::ptr event) = 0;
@@ -182,7 +204,7 @@ private:
     std::vector<FormatItem::ptr> m_items;
 };
 
-//日志输出地
+
 class LogAppender{
     public:
         typedef std::shared_ptr<LogAppender> ptr;
@@ -225,11 +247,14 @@ class FileLogAppender : public LogAppender {
 
 };
 
-//标准输出日志器
+/**
+ * @description: 输出到控制台的Appender
+ * @return {*}
+ */
 class StdoutLogAppender : public LogAppender {
     public:
         
-        // StdoutLogAppender(LogLevel::Level level = LogLevel::DEBUG) : m_level(level) {}
+        
         typedef std::shared_ptr<StdoutLogAppender> ptr;
         void log(LogLevel::Level level, LogEvent::ptr event) override;
         std::string ToYamlString() override;
@@ -237,16 +262,17 @@ class StdoutLogAppender : public LogAppender {
         ~StdoutLogAppender(){};
 };
 
-//日志器
+/**
+ * @description: 日志器
+ * @return {*}
+ */
 class Logger{
     public:
         typedef std::shared_ptr<Logger> ptr;
         typedef Mutex MutexType;
         Logger(const std::string& name="root") : m_name(name), m_level(LogLevel::DEBUG){
-            // "%d{%Y-%m-%d %H:%M:%S}%T%t%T%N%T%F%T[%p]%T[%c]%T%f:%l%T%m%n"
             m_formatter.reset(new LogFormatter("%d{%Y-%m-%d %H:%M:%S}%T%t%T%N%T%F%T[%p]%T[%c]%T%f:%l%T%m%n"));
         };
-        
         void log(LogLevel::Level level, LogEvent::ptr event);
         void debug(LogEvent::ptr event);
         void info(LogEvent::ptr event);
@@ -273,14 +299,15 @@ class Logger{
         MutexType m_mutex;
 };
 
-//文件日志器
-
+/**
+ * @description: 日志器管理类
+ * @return {*}
+ */
 class LoggerManager{
     public:
         typedef Mutex MutexType;
         LoggerManager(const std::string& name="root");
         Logger::ptr getLogger(const std::string& name);
-        void init();
         Logger::ptr getRoot(){return m_root;}
         // std::string toYamlString();
         std::string ToYamlString();

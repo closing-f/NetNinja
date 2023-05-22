@@ -8,7 +8,7 @@
 #include "fd_manager.h"
 #include "utils.h"
 
-server_cc::Logger::ptr g_logger = SEVER_CC_LOG_NAME("system");
+server_cc::Logger::ptr g_logger = SERVER_CC_LOG_NAME("system");
 
 namespace server_cc{
 
@@ -56,7 +56,7 @@ struct _HookIniter {
         s_connect_timeout = g_tcp_connect_timeout->getValue();
 
         g_tcp_connect_timeout->addListener([](const int& old_value, const int& new_value){
-                SEVER_CC_LOG_ERROR(g_logger) << "tcp connect timeout changed from "
+                SERVER_CC_LOG_ERROR(g_logger) << "tcp connect timeout changed from "
                                          << old_value << " to " << new_value;
                 s_connect_timeout = new_value;
         });
@@ -125,8 +125,8 @@ retry:
         }
 
         int rt = iom->addEvent(fd, (server_cc::IOManager::Event)(event));
-        if(SEVER_UNLIKELY(rt)) {
-            SEVER_CC_LOG_ERROR(g_logger) << hook_fun_name << " addEvent("
+        if((rt)) {
+            SERVER_CC_LOG_ERROR(g_logger) << hook_fun_name << " addEvent("
                 << fd << ", " << event << ")";
             if(timer) {
                 timer->cancel();
@@ -209,7 +209,7 @@ int socket(int domain, int type, int protocol) {
 }
 
 int connect_with_timeout(int fd, const struct sockaddr* addr, socklen_t addrlen, uint64_t timeout_ms) {
-    SEVER_CC_LOG_DEBUG(g_logger)<<"connect_with_timeout";
+    SERVER_CC_LOG_DEBUG(g_logger)<<"connect_with_timeout";
     if(!server_cc::t_hook_enable) {
         return connect_f(fd, addr, addrlen);
     }
@@ -228,7 +228,7 @@ int connect_with_timeout(int fd, const struct sockaddr* addr, socklen_t addrlen,
     }
 
     int n = connect_f(fd, addr, addrlen);
-    // SEVER_CC_LOG_DEBUG(g_logger)<<"connect_with_timeout n = "<<n;
+    // SERVER_CC_LOG_DEBUG(g_logger)<<"connect_with_timeout n = "<<n;
     if(n == 0) {
         return 0;
     } else if(n != -1 || errno != EINPROGRESS) {
@@ -239,7 +239,7 @@ int connect_with_timeout(int fd, const struct sockaddr* addr, socklen_t addrlen,
     server_cc::Timer::ptr timer;
     std::shared_ptr<timer_info> tinfo(new timer_info);
     std::weak_ptr<timer_info> winfo(tinfo);
-    SEVER_CC_LOG_DEBUG(g_logger)<<"Connect timeout_ms = "<<timeout_ms;
+    SERVER_CC_LOG_DEBUG(g_logger)<<"Connect timeout_ms = "<<timeout_ms;
     if(timeout_ms != (uint64_t)-1) {
         timer = iom->addConditionTimer(timeout_ms, [winfo, fd, iom]() {
                 auto t = winfo.lock();
@@ -250,7 +250,7 @@ int connect_with_timeout(int fd, const struct sockaddr* addr, socklen_t addrlen,
                 iom->cancelEvent(fd, server_cc::IOManager::WRITE);
         }, winfo);
     }
-    // SEVER_CC_LOG_DEBUG(g_logger)<< "addEvent(" << fd<< ", WRITE)";
+    // SERVER_CC_LOG_DEBUG(g_logger)<< "addEvent(" << fd<< ", WRITE)";
     int rt = iom->addEvent(fd, server_cc::IOManager::WRITE);
     if(rt == 0) {
        
@@ -266,7 +266,7 @@ int connect_with_timeout(int fd, const struct sockaddr* addr, socklen_t addrlen,
         if(timer) {
             timer->cancel();
         }
-        SEVER_CC_LOG_ERROR(g_logger) << "connect addEvent(" << fd << ", WRITE) error";
+        SERVER_CC_LOG_ERROR(g_logger) << "connect addEvent(" << fd << ", WRITE) error";
     }
 
     int error = 0;
