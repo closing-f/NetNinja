@@ -1,8 +1,8 @@
 /*
  * @Author: closing-f fql2018@bupt.edu.cn
  * @Date: 2023-05-16 14:54:06
- * @LastEditors: closing-f fql2018@bupt.edu.cn
- * @LastEditTime: 2023-05-16 14:54:08
+ * @LastEditors: closing
+ * @LastEditTime: 2023-05-23 09:59:53
  * @FilePath: /sylar/src/endian.h
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -17,13 +17,13 @@
 #ifndef __ENDIAN_H__
 #define __ENDIAN_H__
 
-#define SYLAR_LITTLE_ENDIAN 1
-#define SYLAR_BIG_ENDIAN 2
+#define SERVER_CC_LITTLE_ENDIAN 1
+#define SERVER_CC_BIG_ENDIAN 2
 
 #include <byteswap.h>
 #include <stdint.h>
 
-namespace sylar {
+namespace server_cc {
 
 /**
  * @brief 8字节类型的字节序转化
@@ -53,12 +53,12 @@ byteswap(T value) {
 }
 
 #if BYTE_ORDER == BIG_ENDIAN
-#define SYLAR_BYTE_ORDER SYLAR_BIG_ENDIAN
+#define SERVER_CC_BYTE_ORDER SERVER_CC_BIG_ENDIAN
 #else
-#define SYLAR_BYTE_ORDER SYLAR_LITTLE_ENDIAN
+#define SERVER_CC_BYTE_ORDER SERVER_CC_LITTLE_ENDIAN
 #endif
 
-#if SYLAR_BYTE_ORDER == SYLAR_BIG_ENDIAN
+#if SERVER_CC_BYTE_ORDER == SERVER_CC_BIG_ENDIAN
 
 /**
  * @brief 只在小端机器上执行byteswap, 在大端机器上什么都不做

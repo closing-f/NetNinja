@@ -136,6 +136,60 @@ servercc/fast:
 	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/build
 .PHONY : servercc/fast
 
+src/address.o: src/address.cpp.o
+
+.PHONY : src/address.o
+
+# target to build an object file
+src/address.cpp.o:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/address.cpp.o
+.PHONY : src/address.cpp.o
+
+src/address.i: src/address.cpp.i
+
+.PHONY : src/address.i
+
+# target to preprocess a source file
+src/address.cpp.i:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/address.cpp.i
+.PHONY : src/address.cpp.i
+
+src/address.s: src/address.cpp.s
+
+.PHONY : src/address.s
+
+# target to generate assembly for a file
+src/address.cpp.s:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/address.cpp.s
+.PHONY : src/address.cpp.s
+
+src/bytearray.o: src/bytearray.cpp.o
+
+.PHONY : src/bytearray.o
+
+# target to build an object file
+src/bytearray.cpp.o:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/bytearray.cpp.o
+.PHONY : src/bytearray.cpp.o
+
+src/bytearray.i: src/bytearray.cpp.i
+
+.PHONY : src/bytearray.i
+
+# target to preprocess a source file
+src/bytearray.cpp.i:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/bytearray.cpp.i
+.PHONY : src/bytearray.cpp.i
+
+src/bytearray.s: src/bytearray.cpp.s
+
+.PHONY : src/bytearray.s
+
+# target to generate assembly for a file
+src/bytearray.cpp.s:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/bytearray.cpp.s
+.PHONY : src/bytearray.cpp.s
+
 src/config.o: src/config.cpp.o
 
 .PHONY : src/config.o
@@ -243,6 +297,87 @@ src/hook.s: src/hook.cpp.s
 src/hook.cpp.s:
 	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/hook.cpp.s
 .PHONY : src/hook.cpp.s
+
+src/http/http.o: src/http/http.cpp.o
+
+.PHONY : src/http/http.o
+
+# target to build an object file
+src/http/http.cpp.o:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/http/http.cpp.o
+.PHONY : src/http/http.cpp.o
+
+src/http/http.i: src/http/http.cpp.i
+
+.PHONY : src/http/http.i
+
+# target to preprocess a source file
+src/http/http.cpp.i:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/http/http.cpp.i
+.PHONY : src/http/http.cpp.i
+
+src/http/http.s: src/http/http.cpp.s
+
+.PHONY : src/http/http.s
+
+# target to generate assembly for a file
+src/http/http.cpp.s:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/http/http.cpp.s
+.PHONY : src/http/http.cpp.s
+
+src/http/http11_parser.o: src/http/http11_parser.cc.o
+
+.PHONY : src/http/http11_parser.o
+
+# target to build an object file
+src/http/http11_parser.cc.o:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/http/http11_parser.cc.o
+.PHONY : src/http/http11_parser.cc.o
+
+src/http/http11_parser.i: src/http/http11_parser.cc.i
+
+.PHONY : src/http/http11_parser.i
+
+# target to preprocess a source file
+src/http/http11_parser.cc.i:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/http/http11_parser.cc.i
+.PHONY : src/http/http11_parser.cc.i
+
+src/http/http11_parser.s: src/http/http11_parser.cc.s
+
+.PHONY : src/http/http11_parser.s
+
+# target to generate assembly for a file
+src/http/http11_parser.cc.s:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/http/http11_parser.cc.s
+.PHONY : src/http/http11_parser.cc.s
+
+src/http/httpclient_parser.rl.o: src/http/httpclient_parser.rl.cc.o
+
+.PHONY : src/http/httpclient_parser.rl.o
+
+# target to build an object file
+src/http/httpclient_parser.rl.cc.o:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/http/httpclient_parser.rl.cc.o
+.PHONY : src/http/httpclient_parser.rl.cc.o
+
+src/http/httpclient_parser.rl.i: src/http/httpclient_parser.rl.cc.i
+
+.PHONY : src/http/httpclient_parser.rl.i
+
+# target to preprocess a source file
+src/http/httpclient_parser.rl.cc.i:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/http/httpclient_parser.rl.cc.i
+.PHONY : src/http/httpclient_parser.rl.cc.i
+
+src/http/httpclient_parser.rl.s: src/http/httpclient_parser.rl.cc.s
+
+.PHONY : src/http/httpclient_parser.rl.s
+
+# target to generate assembly for a file
+src/http/httpclient_parser.rl.cc.s:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/http/httpclient_parser.rl.cc.s
+.PHONY : src/http/httpclient_parser.rl.cc.s
 
 src/iomanager.o: src/iomanager.cpp.o
 
@@ -433,32 +568,32 @@ src/utils.cpp.s:
 	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/utils.cpp.s
 .PHONY : src/utils.cpp.s
 
-test_hook.o: test_hook.cpp.o
+test_address.o: test_address.cpp.o
 
-.PHONY : test_hook.o
+.PHONY : test_address.o
 
 # target to build an object file
-test_hook.cpp.o:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test_hook.cpp.o
-.PHONY : test_hook.cpp.o
+test_address.cpp.o:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test_address.cpp.o
+.PHONY : test_address.cpp.o
 
-test_hook.i: test_hook.cpp.i
+test_address.i: test_address.cpp.i
 
-.PHONY : test_hook.i
+.PHONY : test_address.i
 
 # target to preprocess a source file
-test_hook.cpp.i:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test_hook.cpp.i
-.PHONY : test_hook.cpp.i
+test_address.cpp.i:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test_address.cpp.i
+.PHONY : test_address.cpp.i
 
-test_hook.s: test_hook.cpp.s
+test_address.s: test_address.cpp.s
 
-.PHONY : test_hook.s
+.PHONY : test_address.s
 
 # target to generate assembly for a file
-test_hook.cpp.s:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test_hook.cpp.s
-.PHONY : test_hook.cpp.s
+test_address.cpp.s:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test_address.cpp.s
+.PHONY : test_address.cpp.s
 
 # Help Target
 help:
@@ -470,6 +605,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... test"
 	@echo "... servercc"
+	@echo "... src/address.o"
+	@echo "... src/address.i"
+	@echo "... src/address.s"
+	@echo "... src/bytearray.o"
+	@echo "... src/bytearray.i"
+	@echo "... src/bytearray.s"
 	@echo "... src/config.o"
 	@echo "... src/config.i"
 	@echo "... src/config.s"
@@ -482,6 +623,15 @@ help:
 	@echo "... src/hook.o"
 	@echo "... src/hook.i"
 	@echo "... src/hook.s"
+	@echo "... src/http/http.o"
+	@echo "... src/http/http.i"
+	@echo "... src/http/http.s"
+	@echo "... src/http/http11_parser.o"
+	@echo "... src/http/http11_parser.i"
+	@echo "... src/http/http11_parser.s"
+	@echo "... src/http/httpclient_parser.rl.o"
+	@echo "... src/http/httpclient_parser.rl.i"
+	@echo "... src/http/httpclient_parser.rl.s"
 	@echo "... src/iomanager.o"
 	@echo "... src/iomanager.i"
 	@echo "... src/iomanager.s"
@@ -503,9 +653,9 @@ help:
 	@echo "... src/utils.o"
 	@echo "... src/utils.i"
 	@echo "... src/utils.s"
-	@echo "... test_hook.o"
-	@echo "... test_hook.i"
-	@echo "... test_hook.s"
+	@echo "... test_address.o"
+	@echo "... test_address.i"
+	@echo "... test_address.s"
 .PHONY : help
 
 

@@ -2,14 +2,13 @@
  * @Author: closing
  * @Date: 2023-05-08 08:37:20
  * @LastEditors: closing
- * @LastEditTime: 2023-05-22 11:34:55
+ * @LastEditTime: 2023-05-23 09:54:25
  * @Description: 线程类，封装了线程的创建，执行，销毁
  */
 
 #ifndef _THREAD_H
 #define _THREAD_H
 #include "mutex.h"
-#include "logger.h"
 #include <string>
 namespace server_cc {
 class Thread

@@ -200,6 +200,71 @@ CMakeFiles/servercc.dir/src/fd_manager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/servercc.dir/src/fd_manager.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/fql/Project/C++/sylar/src/fd_manager.cpp -o CMakeFiles/servercc.dir/src/fd_manager.cpp.s
 
+CMakeFiles/servercc.dir/src/address.cpp.o: CMakeFiles/servercc.dir/flags.make
+CMakeFiles/servercc.dir/src/address.cpp.o: ../src/address.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fql/Project/C++/sylar/_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/servercc.dir/src/address.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/servercc.dir/src/address.cpp.o -c /home/fql/Project/C++/sylar/src/address.cpp
+
+CMakeFiles/servercc.dir/src/address.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/servercc.dir/src/address.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/fql/Project/C++/sylar/src/address.cpp > CMakeFiles/servercc.dir/src/address.cpp.i
+
+CMakeFiles/servercc.dir/src/address.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/servercc.dir/src/address.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/fql/Project/C++/sylar/src/address.cpp -o CMakeFiles/servercc.dir/src/address.cpp.s
+
+CMakeFiles/servercc.dir/src/bytearray.cpp.o: CMakeFiles/servercc.dir/flags.make
+CMakeFiles/servercc.dir/src/bytearray.cpp.o: ../src/bytearray.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fql/Project/C++/sylar/_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/servercc.dir/src/bytearray.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/servercc.dir/src/bytearray.cpp.o -c /home/fql/Project/C++/sylar/src/bytearray.cpp
+
+CMakeFiles/servercc.dir/src/bytearray.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/servercc.dir/src/bytearray.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/fql/Project/C++/sylar/src/bytearray.cpp > CMakeFiles/servercc.dir/src/bytearray.cpp.i
+
+CMakeFiles/servercc.dir/src/bytearray.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/servercc.dir/src/bytearray.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/fql/Project/C++/sylar/src/bytearray.cpp -o CMakeFiles/servercc.dir/src/bytearray.cpp.s
+
+CMakeFiles/servercc.dir/src/http/http.cpp.o: CMakeFiles/servercc.dir/flags.make
+CMakeFiles/servercc.dir/src/http/http.cpp.o: ../src/http/http.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fql/Project/C++/sylar/_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/servercc.dir/src/http/http.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/servercc.dir/src/http/http.cpp.o -c /home/fql/Project/C++/sylar/src/http/http.cpp
+
+CMakeFiles/servercc.dir/src/http/http.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/servercc.dir/src/http/http.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/fql/Project/C++/sylar/src/http/http.cpp > CMakeFiles/servercc.dir/src/http/http.cpp.i
+
+CMakeFiles/servercc.dir/src/http/http.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/servercc.dir/src/http/http.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/fql/Project/C++/sylar/src/http/http.cpp -o CMakeFiles/servercc.dir/src/http/http.cpp.s
+
+CMakeFiles/servercc.dir/src/http/http11_parser.cc.o: CMakeFiles/servercc.dir/flags.make
+CMakeFiles/servercc.dir/src/http/http11_parser.cc.o: ../src/http/http11_parser.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fql/Project/C++/sylar/_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/servercc.dir/src/http/http11_parser.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/servercc.dir/src/http/http11_parser.cc.o -c /home/fql/Project/C++/sylar/src/http/http11_parser.cc
+
+CMakeFiles/servercc.dir/src/http/http11_parser.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/servercc.dir/src/http/http11_parser.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/fql/Project/C++/sylar/src/http/http11_parser.cc > CMakeFiles/servercc.dir/src/http/http11_parser.cc.i
+
+CMakeFiles/servercc.dir/src/http/http11_parser.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/servercc.dir/src/http/http11_parser.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/fql/Project/C++/sylar/src/http/http11_parser.cc -o CMakeFiles/servercc.dir/src/http/http11_parser.cc.s
+
+CMakeFiles/servercc.dir/src/http/httpclient_parser.rl.cc.o: CMakeFiles/servercc.dir/flags.make
+CMakeFiles/servercc.dir/src/http/httpclient_parser.rl.cc.o: ../src/http/httpclient_parser.rl.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fql/Project/C++/sylar/_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/servercc.dir/src/http/httpclient_parser.rl.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/servercc.dir/src/http/httpclient_parser.rl.cc.o -c /home/fql/Project/C++/sylar/src/http/httpclient_parser.rl.cc
+
+CMakeFiles/servercc.dir/src/http/httpclient_parser.rl.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/servercc.dir/src/http/httpclient_parser.rl.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/fql/Project/C++/sylar/src/http/httpclient_parser.rl.cc > CMakeFiles/servercc.dir/src/http/httpclient_parser.rl.cc.i
+
+CMakeFiles/servercc.dir/src/http/httpclient_parser.rl.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/servercc.dir/src/http/httpclient_parser.rl.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/fql/Project/C++/sylar/src/http/httpclient_parser.rl.cc -o CMakeFiles/servercc.dir/src/http/httpclient_parser.rl.cc.s
+
 # Object files for target servercc
 servercc_OBJECTS = \
 "CMakeFiles/servercc.dir/src/logger.cpp.o" \
@@ -212,7 +277,12 @@ servercc_OBJECTS = \
 "CMakeFiles/servercc.dir/src/iomanager.cpp.o" \
 "CMakeFiles/servercc.dir/src/timer.cpp.o" \
 "CMakeFiles/servercc.dir/src/hook.cpp.o" \
-"CMakeFiles/servercc.dir/src/fd_manager.cpp.o"
+"CMakeFiles/servercc.dir/src/fd_manager.cpp.o" \
+"CMakeFiles/servercc.dir/src/address.cpp.o" \
+"CMakeFiles/servercc.dir/src/bytearray.cpp.o" \
+"CMakeFiles/servercc.dir/src/http/http.cpp.o" \
+"CMakeFiles/servercc.dir/src/http/http11_parser.cc.o" \
+"CMakeFiles/servercc.dir/src/http/httpclient_parser.rl.cc.o"
 
 # External object files for target servercc
 servercc_EXTERNAL_OBJECTS =
@@ -228,9 +298,14 @@ servercc_EXTERNAL_OBJECTS =
 ../lib/libservercc.so: CMakeFiles/servercc.dir/src/timer.cpp.o
 ../lib/libservercc.so: CMakeFiles/servercc.dir/src/hook.cpp.o
 ../lib/libservercc.so: CMakeFiles/servercc.dir/src/fd_manager.cpp.o
+../lib/libservercc.so: CMakeFiles/servercc.dir/src/address.cpp.o
+../lib/libservercc.so: CMakeFiles/servercc.dir/src/bytearray.cpp.o
+../lib/libservercc.so: CMakeFiles/servercc.dir/src/http/http.cpp.o
+../lib/libservercc.so: CMakeFiles/servercc.dir/src/http/http11_parser.cc.o
+../lib/libservercc.so: CMakeFiles/servercc.dir/src/http/httpclient_parser.rl.cc.o
 ../lib/libservercc.so: CMakeFiles/servercc.dir/build.make
 ../lib/libservercc.so: CMakeFiles/servercc.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/fql/Project/C++/sylar/_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX shared library ../lib/libservercc.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/fql/Project/C++/sylar/_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX shared library ../lib/libservercc.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/servercc.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

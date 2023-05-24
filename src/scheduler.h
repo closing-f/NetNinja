@@ -2,6 +2,7 @@
 #include "fiber.h"
 #include "thread.h"
 #include "mutex.h"
+#include <vector>
 namespace server_cc
 {
 

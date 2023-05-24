@@ -2,10 +2,11 @@
  * @Author: closing
  * @Date: 2023-05-08 08:37:29
  * @LastEditors: closing
- * @LastEditTime: 2023-05-22 11:45:46
+ * @LastEditTime: 2023-05-23 09:58:16
  * @Description: 请填写简介
  */
 #include"thread.h"
+#include "logger.h"
 namespace server_cc{
 
 static thread_local Thread* t_thread=nullptr;

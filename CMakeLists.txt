@@ -7,12 +7,12 @@ project(test)
 #     logger/logger.cpp
 #     utils.cpp)
 
-add_library(servercc SHARED src/logger.cpp src/utils.cpp src/config.cpp src/mutex.cpp src/thread.cpp src/fiber.cpp src/scheduler.cpp src/iomanager.cpp src/timer.cpp src/hook.cpp src/fd_manager.cpp src/address.cpp)
+add_library(servercc SHARED src/logger.cpp src/utils.cpp src/config.cpp src/mutex.cpp src/thread.cpp src/fiber.cpp src/scheduler.cpp src/iomanager.cpp src/timer.cpp src/hook.cpp src/fd_manager.cpp src/address.cpp src/socket.cpp src/bytearray.cpp src/http/http.cpp src/http/http11_parser.cc src/http/httpclient_parser.rl.cc)
 # add_subdirectory(logger)
 
 include_directories(/usr/local/include/yaml-cpp)
 # test.cpp代表你的测试文件
-add_executable(test test_hook.cpp)
+add_executable(test test_address.cpp)
 add_dependencies(test servercc)
 target_link_libraries(test servercc libyaml-cpp.so pthread dl)
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
