@@ -1,13 +1,13 @@
-/**
- * @file socket.h
- * @brief Socket封装
- * @author server_cc.yin
- * @email 564628276@qq.com
- * @date 2019-06-05
- * @copyright Copyright (c) 2019年 server_cc.yin All rights reserved (www.server_cc.top)
+/*
+ * @Author: closing
+ * @Date: 2023-05-24 21:37:04
+ * @LastEditors: closing
+ * @LastEditTime: 2023-05-27 16:58:29
+ * @Description: socket封装类
  */
-#ifndef __SYLAR_SOCKET_H__
-#define __SYLAR_SOCKET_H__
+
+#ifndef __SOCKET_H__
+#define __SOCKET_H__
 
 #include <memory>
 #include <netinet/tcp.h>
@@ -16,7 +16,7 @@
 #include <openssl/err.h>
 #include <openssl/ssl.h>
 #include "address.h"
-#include "noncopyable.h"
+#include "nocopy.h"
 
 namespace server_cc {
 
@@ -51,15 +51,17 @@ public:
     };
 
     /**
-     * @brief 创建TCP Socket(满足地址类型)
-     * @param[in] address 地址
+     * @description:    创建TCP Socket(满足地址类型)
+     * @param {Address::ptr} address 地址
+     * @return {*}
      */
     static Socket::ptr CreateTCP(server_cc::Address::ptr address);
 
     /**
-     * @brief 创建UDP Socket(满足地址类型)
-     * @param[in] address 地址
-     */
+     * @description:   创建UDP Socket(满足地址类型)
+     * @param {ptr} address 地址
+     * @return {*}
+     */    
     static Socket::ptr CreateUDP(server_cc::Address::ptr address);
 
     /**
@@ -93,11 +95,12 @@ public:
     static Socket::ptr CreateUnixUDPSocket();
 
     /**
-     * @brief Socket构造函数
-     * @param[in] family 协议簇
-     * @param[in] type 类型
-     * @param[in] protocol 协议
-     */
+     * @description: 创建Socket
+     * @param {int} family  协议簇
+     * @param {int} type    类型：TCP/UDP
+     * @param {int} protocol    协议：IPPROTO_TCP/IPPROTO_UDP
+     * @return {*}
+     */    
     Socket(int family, int type, int protocol = 0);
 
     /**
@@ -189,7 +192,7 @@ public:
     virtual bool close();
 
     /**
-     * @brief 发送数据
+     * @brief 发送数据 TCP Socket
      * @param[in] buffer 待发送数据的内存
      * @param[in] length 待发送数据的长度
      * @param[in] flags 标志字
@@ -213,7 +216,7 @@ public:
     virtual int send(const iovec* buffers, size_t length, int flags = 0);
 
     /**
-     * @brief 发送数据
+     * @brief 发送数据 UDP
      * @param[in] buffer 待发送数据的内存
      * @param[in] length 待发送数据的长度
      * @param[in] to 发送的目标地址
@@ -239,7 +242,7 @@ public:
     virtual int sendTo(const iovec* buffers, size_t length, const Address::ptr to, int flags = 0);
 
     /**
-     * @brief 接受数据
+     * @brief 接受数据 TCP Socket
      * @param[out] buffer 接收数据的内存
      * @param[in] length 接收数据的内存大小
      * @param[in] flags 标志字
@@ -263,7 +266,7 @@ public:
     virtual int recv(iovec* buffers, size_t length, int flags = 0);
 
     /**
-     * @brief 接受数据
+     * @brief 接受数据 UDP Socket
      * @param[out] buffer 接收数据的内存
      * @param[in] length 接收数据的内存大小
      * @param[out] from 发送端地址
@@ -353,6 +356,7 @@ public:
     /**
      * @brief 取消accept
      */
+    //? 为什么取消acccept是取消读
     bool cancelAccept();
 
     /**
@@ -391,6 +395,7 @@ protected:
     Address::ptr m_remoteAddress;
 };
 
+//SSL Socket不同之处：1.需要初始化SSL库 2.需要初始化SSL_CTX 3.需要初始化SSL
 class SSLSocket : public Socket {
 public:
     typedef std::shared_ptr<SSLSocket> ptr;
