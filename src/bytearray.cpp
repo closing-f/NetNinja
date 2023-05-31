@@ -388,7 +388,7 @@ void ByteArray::read(void* buf, size_t size) {
     size_t bpos = 0;//buf的偏移量
     while(size > 0) {
         if(ncap >= size) {
-            
+            // memcpy(void* dest, const void* src, size_t count)
             memcpy((char*)buf + bpos, m_cur->ptr + npos, size);
             if(m_cur->size == (npos + size)) {
                 m_cur = m_cur->next;
@@ -627,8 +627,8 @@ uint64_t ByteArray::getWriteBuffers(std::vector<iovec>& buffers, uint64_t len) {
     addCapacity(len);
     uint64_t size = len;
 
-    size_t npos = m_position % m_baseSize;
-    size_t ncap = m_cur->size - npos;
+    size_t npos = m_position % m_baseSize;//当前节点的偏移量
+    size_t ncap = m_cur->size - npos;//当前节点的剩余容量
     struct iovec iov;
     Node* cur = m_cur;
     while(len > 0) {

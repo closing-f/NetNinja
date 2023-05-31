@@ -11,11 +11,14 @@ namespace server_cc {
 
 static server_cc::Logger::ptr g_logger = SERVER_CC_LOG_NAME("system");
 
+// CreateMask<uint32_t>(24) = 0x000000ff
+//讲T类型的前bits位设置为0,后面的位设置为1
 template<class T>
 static T CreateMask(uint32_t bits) {
     return (1 << (sizeof(T) * 8 - bits)) - 1;
 }
 
+// CountBytes(0x01010101) = 4
 template<class T>
 static uint32_t CountBytes(T value) {
     uint32_t result = 0;
@@ -54,6 +57,7 @@ IPAddress::ptr Address::LookupAnyIPAddress(const std::string& host,
 
 bool Address::Lookup(std::vector<Address::ptr>& result, const std::string& host,
                      int family, int type, int protocol) {
+    
     addrinfo hints, *results, *next;
     hints.ai_flags = 0;
     hints.ai_family = family;
@@ -67,7 +71,7 @@ bool Address::Lookup(std::vector<Address::ptr>& result, const std::string& host,
     std::string node;
     const char* service = NULL;
 
-    //检查 ipv6address serivce
+    //检查 ipv6address serivce [x:x:x:x:x:x:x:x:]:80
     if(!host.empty() && host[0] == '[') {
         const char* endipv6 = (const char*)memchr(host.c_str() + 1, ']', host.size() - 1);
         if(endipv6) {
@@ -81,6 +85,7 @@ bool Address::Lookup(std::vector<Address::ptr>& result, const std::string& host,
 
     //检查 node serivce
     if(node.empty()) {
+        //在host.c_str()中搜索：第一次出现的位置
         service = (const char*)memchr(host.c_str(), ':', host.size());
         if(service) {
             if(!memchr(service + 1, ':', host.c_str() + host.size() - service - 1)) {
@@ -93,6 +98,7 @@ bool Address::Lookup(std::vector<Address::ptr>& result, const std::string& host,
     if(node.empty()) {
         node = host;
     }
+    // getaddrinfo(hostname,port,)
     int error = getaddrinfo(node.c_str(), service, &hints, &results);
     if(error) {
         SERVER_CC_LOG_DEBUG(g_logger) << "Address::Lookup getaddress(" << host << ", "
@@ -116,6 +122,7 @@ bool Address::GetInterfaceAddresses(std::multimap<std::string
                     ,std::pair<Address::ptr, uint32_t> >& result,
                     int family) {
     struct ifaddrs *next, *results;
+    
     if(getifaddrs(&results) != 0) {
         SERVER_CC_LOG_DEBUG(g_logger) << "Address::GetInterfaceAddresses getifaddrs "
             " err=" << errno << " errstr=" << strerror(errno);
@@ -126,6 +133,7 @@ bool Address::GetInterfaceAddresses(std::multimap<std::string
         for(next = results; next; next = next->ifa_next) {
             Address::ptr addr;
             uint32_t prefix_len = ~0u;
+            //排除掉非指定协议族的地址 当family为AF_UNSPEC时,不排除
             if(family != AF_UNSPEC && family != next->ifa_addr->sa_family) {
                 continue;
             }
@@ -133,6 +141,7 @@ bool Address::GetInterfaceAddresses(std::multimap<std::string
                 case AF_INET:
                     {
                         addr = Create(next->ifa_addr, sizeof(sockaddr_in));
+                        //获取子网掩码
                         uint32_t netmask = ((sockaddr_in*)next->ifa_netmask)->sin_addr.s_addr;
                         prefix_len = CountBytes(netmask);
                     }
@@ -156,7 +165,8 @@ bool Address::GetInterfaceAddresses(std::multimap<std::string
                             std::make_pair(addr, prefix_len)));
             }
         }
-    } catch (...) {
+        
+    } catch (...) {//获取所有异常
         SERVER_CC_LOG_ERROR(g_logger) << "Address::GetInterfaceAddresses exception";
         freeifaddrs(results);
         return false;
@@ -324,6 +334,7 @@ IPAddress::ptr IPv4Address::broadcastAddress(uint32_t prefix_len) {
     }
 
     sockaddr_in baddr(m_addr);
+    //根据前缀长度设置网络地址
     baddr.sin_addr.s_addr |= byteswapOnLittleEndian(
             CreateMask<uint32_t>(prefix_len));
     return IPv4Address::ptr(new IPv4Address(baddr));

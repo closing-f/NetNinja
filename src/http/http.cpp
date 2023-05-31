@@ -2,7 +2,7 @@
  * @Author: closing
  * @Date: 2023-05-23 15:01:51
  * @LastEditors: closing
- * @LastEditTime: 2023-05-23 21:30:42
+ * @LastEditTime: 2023-05-31 09:26:22
  * @Description: 请填写简介
  */
 #include "http.h"
@@ -177,6 +177,11 @@ std::ostream& HttpRequest::dump(std::ostream& os){
     return os;
 
 }
+std::shared_ptr<HttpResponse> HttpRequest::createResponse() {
+    HttpResponse::ptr rsp(new HttpResponse(getVersion()
+                            ,isClose()));
+    return rsp;
+}
 
 HttpResponse::HttpResponse(uint8_t version,bool close)
     :m_status(HttpStatus::OK)
@@ -232,7 +237,18 @@ std::ostream& HttpResponse::dump(std::ostream& os){
     
 }
 
+std::ostream& operator<<(std::ostream& os, HttpRequest& req) {
+    return req.dump(os);
+}
 
+std::ostream& operator<<(std::ostream& os, HttpResponse& rsp) {
+    return rsp.dump(os);
+}
+std::string HttpResponse::toString() {
+    std::stringstream ss;
+    dump(ss);
+    return ss.str();
+}
 
 
 

@@ -2,7 +2,7 @@
  * @Author: closing
  * @Date: 2023-05-23 10:51:10
  * @LastEditors: closing
- * @LastEditTime: 2023-05-23 21:34:25
+ * @LastEditTime: 2023-05-31 09:42:07
  * @Description: http结构体的封装
  */
 #ifndef _HTTP_HTTP_H
@@ -550,6 +550,8 @@ public:
     void delHeader(const std::string& key);
 
     std::ostream& dump(std::ostream& os);
+    //? toString const会报错
+    std::string toString();
     template <class T>
     bool checkGetHeaderAs(const std::string& key, T& val, const T& def = T()) {
         return checkGetAs(m_headers, key, val, def);
@@ -578,6 +580,22 @@ private:
     std::vector<std::string> m_cookies;
 };
 //? telnet模拟发送http报文
+
+/**
+ * @brief 流式输出HttpRequest
+ * @param[in, out] os 输出流
+ * @param[in] req HTTP请求
+ * @return 输出流
+ */
+std::ostream& operator<<(std::ostream& os, HttpRequest& req);
+
+/**
+ * @brief 流式输出HttpResponse
+ * @param[in, out] os 输出流
+ * @param[in] rsp HTTP响应
+ * @return 输出流
+ */
+std::ostream& operator<<(std::ostream& os, HttpResponse& rsp);
 
 } // namespace http
 } // namespace server_cc

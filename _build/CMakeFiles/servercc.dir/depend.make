@@ -65,13 +65,119 @@ CMakeFiles/servercc.dir/src/hook.cpp.o: ../src/utils.h
 
 CMakeFiles/servercc.dir/src/http/http.cpp.o: ../src/http/http.cpp
 CMakeFiles/servercc.dir/src/http/http.cpp.o: ../src/http/http.h
+CMakeFiles/servercc.dir/src/http/http.cpp.o: ../src/http/http11_common.h
+CMakeFiles/servercc.dir/src/http/http.cpp.o: ../src/http/http11_parser.h
+CMakeFiles/servercc.dir/src/http/http.cpp.o: ../src/http/httpclient_parser.h
 
 CMakeFiles/servercc.dir/src/http/http11_parser.cc.o: ../src/http/http11_common.h
 CMakeFiles/servercc.dir/src/http/http11_parser.cc.o: ../src/http/http11_parser.cc
 CMakeFiles/servercc.dir/src/http/http11_parser.cc.o: ../src/http/http11_parser.h
 
+CMakeFiles/servercc.dir/src/http/http_parser.cpp.o: ../src/config.h
+CMakeFiles/servercc.dir/src/http/http_parser.cpp.o: ../src/fiber.h
+CMakeFiles/servercc.dir/src/http/http_parser.cpp.o: ../src/http/http.h
+CMakeFiles/servercc.dir/src/http/http_parser.cpp.o: ../src/http/http11_common.h
+CMakeFiles/servercc.dir/src/http/http_parser.cpp.o: ../src/http/http11_parser.h
+CMakeFiles/servercc.dir/src/http/http_parser.cpp.o: ../src/http/http_parser.cpp
+CMakeFiles/servercc.dir/src/http/http_parser.cpp.o: ../src/http/http_parser.h
+CMakeFiles/servercc.dir/src/http/http_parser.cpp.o: ../src/http/httpclient_parser.h
+CMakeFiles/servercc.dir/src/http/http_parser.cpp.o: ../src/logger.h
+CMakeFiles/servercc.dir/src/http/http_parser.cpp.o: ../src/mutex.h
+CMakeFiles/servercc.dir/src/http/http_parser.cpp.o: ../src/nocopy.h
+CMakeFiles/servercc.dir/src/http/http_parser.cpp.o: ../src/thread.h
+CMakeFiles/servercc.dir/src/http/http_parser.cpp.o: ../src/utils.h
+
+CMakeFiles/servercc.dir/src/http/httpclient_parser.rl.cc.o: ../src/http/http11_common.h
 CMakeFiles/servercc.dir/src/http/httpclient_parser.rl.cc.o: ../src/http/httpclient_parser.h
 CMakeFiles/servercc.dir/src/http/httpclient_parser.rl.cc.o: ../src/http/httpclient_parser.rl.cc
+
+CMakeFiles/servercc.dir/src/http_connection.cpp.o: ../src/address.h
+CMakeFiles/servercc.dir/src/http_connection.cpp.o: ../src/bytearray.h
+CMakeFiles/servercc.dir/src/http_connection.cpp.o: ../src/fiber.h
+CMakeFiles/servercc.dir/src/http_connection.cpp.o: ../src/http/http.h
+CMakeFiles/servercc.dir/src/http_connection.cpp.o: ../src/http/http11_common.h
+CMakeFiles/servercc.dir/src/http_connection.cpp.o: ../src/http/http11_parser.h
+CMakeFiles/servercc.dir/src/http_connection.cpp.o: ../src/http/http_parser.h
+CMakeFiles/servercc.dir/src/http_connection.cpp.o: ../src/http/httpclient_parser.h
+CMakeFiles/servercc.dir/src/http_connection.cpp.o: ../src/http_connection.cpp
+CMakeFiles/servercc.dir/src/http_connection.cpp.o: ../src/http_connection.h
+CMakeFiles/servercc.dir/src/http_connection.cpp.o: ../src/iomanager.h
+CMakeFiles/servercc.dir/src/http_connection.cpp.o: ../src/logger.h
+CMakeFiles/servercc.dir/src/http_connection.cpp.o: ../src/mutex.h
+CMakeFiles/servercc.dir/src/http_connection.cpp.o: ../src/nocopy.h
+CMakeFiles/servercc.dir/src/http_connection.cpp.o: ../src/scheduler.h
+CMakeFiles/servercc.dir/src/http_connection.cpp.o: ../src/socket.h
+CMakeFiles/servercc.dir/src/http_connection.cpp.o: ../src/socket_stream.h
+CMakeFiles/servercc.dir/src/http_connection.cpp.o: ../src/stream.h
+CMakeFiles/servercc.dir/src/http_connection.cpp.o: ../src/thread.h
+CMakeFiles/servercc.dir/src/http_connection.cpp.o: ../src/timer.h
+CMakeFiles/servercc.dir/src/http_connection.cpp.o: ../src/uri.h
+CMakeFiles/servercc.dir/src/http_connection.cpp.o: ../src/utils.h
+
+CMakeFiles/servercc.dir/src/http_server.cpp.o: ../src/address.h
+CMakeFiles/servercc.dir/src/http_server.cpp.o: ../src/bytearray.h
+CMakeFiles/servercc.dir/src/http_server.cpp.o: ../src/fiber.h
+CMakeFiles/servercc.dir/src/http_server.cpp.o: ../src/http/http.h
+CMakeFiles/servercc.dir/src/http_server.cpp.o: ../src/http/http11_common.h
+CMakeFiles/servercc.dir/src/http_server.cpp.o: ../src/http/http11_parser.h
+CMakeFiles/servercc.dir/src/http_server.cpp.o: ../src/http/httpclient_parser.h
+CMakeFiles/servercc.dir/src/http_server.cpp.o: ../src/http_server.cpp
+CMakeFiles/servercc.dir/src/http_server.cpp.o: ../src/http_server.h
+CMakeFiles/servercc.dir/src/http_server.cpp.o: ../src/http_servlet.h
+CMakeFiles/servercc.dir/src/http_server.cpp.o: ../src/http_session.h
+CMakeFiles/servercc.dir/src/http_server.cpp.o: ../src/iomanager.h
+CMakeFiles/servercc.dir/src/http_server.cpp.o: ../src/logger.h
+CMakeFiles/servercc.dir/src/http_server.cpp.o: ../src/mutex.h
+CMakeFiles/servercc.dir/src/http_server.cpp.o: ../src/nocopy.h
+CMakeFiles/servercc.dir/src/http_server.cpp.o: ../src/scheduler.h
+CMakeFiles/servercc.dir/src/http_server.cpp.o: ../src/socket.h
+CMakeFiles/servercc.dir/src/http_server.cpp.o: ../src/socket_stream.h
+CMakeFiles/servercc.dir/src/http_server.cpp.o: ../src/stream.h
+CMakeFiles/servercc.dir/src/http_server.cpp.o: ../src/tcpserver.h
+CMakeFiles/servercc.dir/src/http_server.cpp.o: ../src/thread.h
+CMakeFiles/servercc.dir/src/http_server.cpp.o: ../src/timer.h
+CMakeFiles/servercc.dir/src/http_server.cpp.o: ../src/utils.h
+
+CMakeFiles/servercc.dir/src/http_servlet.cpp.o: ../src/address.h
+CMakeFiles/servercc.dir/src/http_servlet.cpp.o: ../src/bytearray.h
+CMakeFiles/servercc.dir/src/http_servlet.cpp.o: ../src/fiber.h
+CMakeFiles/servercc.dir/src/http_servlet.cpp.o: ../src/http/http.h
+CMakeFiles/servercc.dir/src/http_servlet.cpp.o: ../src/http/http11_common.h
+CMakeFiles/servercc.dir/src/http_servlet.cpp.o: ../src/http/http11_parser.h
+CMakeFiles/servercc.dir/src/http_servlet.cpp.o: ../src/http/httpclient_parser.h
+CMakeFiles/servercc.dir/src/http_servlet.cpp.o: ../src/http_servlet.cpp
+CMakeFiles/servercc.dir/src/http_servlet.cpp.o: ../src/http_servlet.h
+CMakeFiles/servercc.dir/src/http_servlet.cpp.o: ../src/http_session.h
+CMakeFiles/servercc.dir/src/http_servlet.cpp.o: ../src/iomanager.h
+CMakeFiles/servercc.dir/src/http_servlet.cpp.o: ../src/mutex.h
+CMakeFiles/servercc.dir/src/http_servlet.cpp.o: ../src/nocopy.h
+CMakeFiles/servercc.dir/src/http_servlet.cpp.o: ../src/scheduler.h
+CMakeFiles/servercc.dir/src/http_servlet.cpp.o: ../src/socket.h
+CMakeFiles/servercc.dir/src/http_servlet.cpp.o: ../src/socket_stream.h
+CMakeFiles/servercc.dir/src/http_servlet.cpp.o: ../src/stream.h
+CMakeFiles/servercc.dir/src/http_servlet.cpp.o: ../src/thread.h
+CMakeFiles/servercc.dir/src/http_servlet.cpp.o: ../src/timer.h
+CMakeFiles/servercc.dir/src/http_servlet.cpp.o: ../src/utils.h
+
+CMakeFiles/servercc.dir/src/http_session.cpp.o: ../src/address.h
+CMakeFiles/servercc.dir/src/http_session.cpp.o: ../src/bytearray.h
+CMakeFiles/servercc.dir/src/http_session.cpp.o: ../src/fiber.h
+CMakeFiles/servercc.dir/src/http_session.cpp.o: ../src/http/http.h
+CMakeFiles/servercc.dir/src/http_session.cpp.o: ../src/http/http11_common.h
+CMakeFiles/servercc.dir/src/http_session.cpp.o: ../src/http/http11_parser.h
+CMakeFiles/servercc.dir/src/http_session.cpp.o: ../src/http/http_parser.h
+CMakeFiles/servercc.dir/src/http_session.cpp.o: ../src/http/httpclient_parser.h
+CMakeFiles/servercc.dir/src/http_session.cpp.o: ../src/http_session.cpp
+CMakeFiles/servercc.dir/src/http_session.cpp.o: ../src/http_session.h
+CMakeFiles/servercc.dir/src/http_session.cpp.o: ../src/iomanager.h
+CMakeFiles/servercc.dir/src/http_session.cpp.o: ../src/mutex.h
+CMakeFiles/servercc.dir/src/http_session.cpp.o: ../src/nocopy.h
+CMakeFiles/servercc.dir/src/http_session.cpp.o: ../src/scheduler.h
+CMakeFiles/servercc.dir/src/http_session.cpp.o: ../src/socket.h
+CMakeFiles/servercc.dir/src/http_session.cpp.o: ../src/socket_stream.h
+CMakeFiles/servercc.dir/src/http_session.cpp.o: ../src/stream.h
+CMakeFiles/servercc.dir/src/http_session.cpp.o: ../src/thread.h
+CMakeFiles/servercc.dir/src/http_session.cpp.o: ../src/timer.h
 
 CMakeFiles/servercc.dir/src/iomanager.cpp.o: ../src/fiber.h
 CMakeFiles/servercc.dir/src/iomanager.cpp.o: ../src/iomanager.cpp
@@ -107,6 +213,55 @@ CMakeFiles/servercc.dir/src/scheduler.cpp.o: ../src/scheduler.h
 CMakeFiles/servercc.dir/src/scheduler.cpp.o: ../src/thread.h
 CMakeFiles/servercc.dir/src/scheduler.cpp.o: ../src/utils.h
 
+CMakeFiles/servercc.dir/src/socket.cpp.o: ../src/address.h
+CMakeFiles/servercc.dir/src/socket.cpp.o: ../src/fd_manager.h
+CMakeFiles/servercc.dir/src/socket.cpp.o: ../src/fiber.h
+CMakeFiles/servercc.dir/src/socket.cpp.o: ../src/hook.h
+CMakeFiles/servercc.dir/src/socket.cpp.o: ../src/iomanager.h
+CMakeFiles/servercc.dir/src/socket.cpp.o: ../src/logger.h
+CMakeFiles/servercc.dir/src/socket.cpp.o: ../src/mutex.h
+CMakeFiles/servercc.dir/src/socket.cpp.o: ../src/nocopy.h
+CMakeFiles/servercc.dir/src/socket.cpp.o: ../src/scheduler.h
+CMakeFiles/servercc.dir/src/socket.cpp.o: ../src/socket.cpp
+CMakeFiles/servercc.dir/src/socket.cpp.o: ../src/socket.h
+CMakeFiles/servercc.dir/src/socket.cpp.o: ../src/thread.h
+CMakeFiles/servercc.dir/src/socket.cpp.o: ../src/timer.h
+CMakeFiles/servercc.dir/src/socket.cpp.o: ../src/utils.h
+
+CMakeFiles/servercc.dir/src/socket_stream.cpp.o: ../src/address.h
+CMakeFiles/servercc.dir/src/socket_stream.cpp.o: ../src/bytearray.h
+CMakeFiles/servercc.dir/src/socket_stream.cpp.o: ../src/fiber.h
+CMakeFiles/servercc.dir/src/socket_stream.cpp.o: ../src/iomanager.h
+CMakeFiles/servercc.dir/src/socket_stream.cpp.o: ../src/mutex.h
+CMakeFiles/servercc.dir/src/socket_stream.cpp.o: ../src/nocopy.h
+CMakeFiles/servercc.dir/src/socket_stream.cpp.o: ../src/scheduler.h
+CMakeFiles/servercc.dir/src/socket_stream.cpp.o: ../src/socket.h
+CMakeFiles/servercc.dir/src/socket_stream.cpp.o: ../src/socket_stream.cpp
+CMakeFiles/servercc.dir/src/socket_stream.cpp.o: ../src/socket_stream.h
+CMakeFiles/servercc.dir/src/socket_stream.cpp.o: ../src/stream.h
+CMakeFiles/servercc.dir/src/socket_stream.cpp.o: ../src/thread.h
+CMakeFiles/servercc.dir/src/socket_stream.cpp.o: ../src/timer.h
+CMakeFiles/servercc.dir/src/socket_stream.cpp.o: ../src/utils.h
+
+CMakeFiles/servercc.dir/src/stream.cpp.o: ../src/bytearray.h
+CMakeFiles/servercc.dir/src/stream.cpp.o: ../src/stream.cpp
+CMakeFiles/servercc.dir/src/stream.cpp.o: ../src/stream.h
+
+CMakeFiles/servercc.dir/src/tcpserver.cpp.o: ../src/address.h
+CMakeFiles/servercc.dir/src/tcpserver.cpp.o: ../src/config.h
+CMakeFiles/servercc.dir/src/tcpserver.cpp.o: ../src/fiber.h
+CMakeFiles/servercc.dir/src/tcpserver.cpp.o: ../src/iomanager.h
+CMakeFiles/servercc.dir/src/tcpserver.cpp.o: ../src/logger.h
+CMakeFiles/servercc.dir/src/tcpserver.cpp.o: ../src/mutex.h
+CMakeFiles/servercc.dir/src/tcpserver.cpp.o: ../src/nocopy.h
+CMakeFiles/servercc.dir/src/tcpserver.cpp.o: ../src/scheduler.h
+CMakeFiles/servercc.dir/src/tcpserver.cpp.o: ../src/socket.h
+CMakeFiles/servercc.dir/src/tcpserver.cpp.o: ../src/tcpserver.cpp
+CMakeFiles/servercc.dir/src/tcpserver.cpp.o: ../src/tcpserver.h
+CMakeFiles/servercc.dir/src/tcpserver.cpp.o: ../src/thread.h
+CMakeFiles/servercc.dir/src/tcpserver.cpp.o: ../src/timer.h
+CMakeFiles/servercc.dir/src/tcpserver.cpp.o: ../src/utils.h
+
 CMakeFiles/servercc.dir/src/thread.cpp.o: ../src/fiber.h
 CMakeFiles/servercc.dir/src/thread.cpp.o: ../src/logger.h
 CMakeFiles/servercc.dir/src/thread.cpp.o: ../src/mutex.h
@@ -122,6 +277,10 @@ CMakeFiles/servercc.dir/src/timer.cpp.o: ../src/thread.h
 CMakeFiles/servercc.dir/src/timer.cpp.o: ../src/timer.cpp
 CMakeFiles/servercc.dir/src/timer.cpp.o: ../src/timer.h
 CMakeFiles/servercc.dir/src/timer.cpp.o: ../src/utils.h
+
+CMakeFiles/servercc.dir/src/uri.rl.cc.o: ../src/address.h
+CMakeFiles/servercc.dir/src/uri.rl.cc.o: ../src/uri.h
+CMakeFiles/servercc.dir/src/uri.rl.cc.o: ../src/uri.rl.cc
 
 CMakeFiles/servercc.dir/src/utils.cpp.o: ../src/fiber.h
 CMakeFiles/servercc.dir/src/utils.cpp.o: ../src/logger.h

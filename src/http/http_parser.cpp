@@ -1,6 +1,6 @@
 #include "http_parser.h"
-#include "src/logger.h"
-#include "src/config.h"
+#include "../logger.h"
+#include "../config.h"
 #include <string.h>
 
 namespace server_cc {
@@ -8,12 +8,10 @@ namespace http {
 
 static server_cc::Logger::ptr g_logger = SERVER_CC_LOG_NAME("system");
 
-// 请求buffer大小，默认4M
 static server_cc::ConfigVar<uint64_t>::ptr g_http_request_buffer_size =
     server_cc::Config::Lookup("http.request.buffer_size"
                 ,(uint64_t)(4 * 1024), "http request buffer size");
 
-// 请求body最大长度，默认64M
 static server_cc::ConfigVar<uint64_t>::ptr g_http_request_max_body_size =
     server_cc::Config::Lookup("http.request.max_body_size"
                 ,(uint64_t)(64 * 1024 * 1024), "http request max body size");
@@ -49,8 +47,6 @@ uint64_t HttpResponseParser::GetHttpResponseMaxBodySize() {
 
 
 namespace {
-    // 初始化；配置监听器，用于监听配置变化，变化时修改对应的变量
-    // 不加锁，因为会有性能损失，且不重要
 struct _RequestSizeIniter {
     _RequestSizeIniter() {
         s_http_request_buffer_size = g_http_request_buffer_size->getValue();
@@ -79,6 +75,7 @@ struct _RequestSizeIniter {
         });
     }
 };
+//先于main函数执行
 static _RequestSizeIniter _init;
 }
 
@@ -170,7 +167,7 @@ uint64_t HttpRequestParser::getContentLength() {
 //>0: 已处理的字节数，且data有效数据为len - v;
 size_t HttpRequestParser::execute(char* data, size_t len) {
     size_t offset = http_parser_execute(&m_parser, data, len, 0);
-    //腾出空间继续解析 //? memmove用法
+    // memmove能够保证源串在被覆盖之前将重叠区域的字节拷贝到目标区域中，复制后源区域的内容会被更改
     memmove(data, data + offset, (len - offset));
     return offset;
 }
@@ -182,7 +179,7 @@ int HttpRequestParser::isFinished() {
 int HttpRequestParser::hasError() {
     return m_error || http_parser_has_error(&m_parser);
 }
-//? static_cast用法
+
 void on_response_reason(void *data, const char *at, size_t length) {
     HttpResponseParser* parser = static_cast<HttpResponseParser*>(data);
     parser->getData()->setReason(std::string(at, length));

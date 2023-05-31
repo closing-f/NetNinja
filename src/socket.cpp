@@ -69,7 +69,7 @@ Socket::~Socket() {
 }
 
 int64_t Socket::getSendTimeout() {
-    FdCtx::ptr ctx = FdMgr::GetInstance()->get(m_sock);
+    FdCtx::ptr ctx = FdMgr::GetInstance().get(m_sock);
     if(ctx) {
         return ctx->getTimeout(SO_SNDTIMEO);
     }
@@ -82,7 +82,7 @@ void Socket::setSendTimeout(int64_t v) {
 }
 
 int64_t Socket::getRecvTimeout() {
-    FdCtx::ptr ctx = FdMgr::GetInstance()->get(m_sock);
+    FdCtx::ptr ctx = FdMgr::GetInstance().get(m_sock);
     if(ctx) {
         return ctx->getTimeout(SO_RCVTIMEO);
     }
@@ -130,13 +130,14 @@ Socket::ptr Socket::accept() {
 }
 
 bool Socket::init(int sock) {
-    FdCtx::ptr ctx = FdMgr::GetInstance()->get(sock);
+    FdCtx::ptr ctx = FdMgr::GetInstance().get(sock);
     if(ctx && ctx->isSocket() && !ctx->isClose()) {
         m_sock = sock;
         m_isConnected = true;
-        initSock();
-        getLocalAddress();
-        getRemoteAddress();
+        
+        initSock();//TCP:非阻塞；地址复用
+        getLocalAddress();//获取本地地址
+        getRemoteAddress();//获取远端地址
         return true;
     }
     return false;
@@ -146,12 +147,12 @@ bool Socket::bind(const Address::ptr addr) {
     //m_localAddress = addr;
     if(!isValid()) {
         newSock();
-        if(SERVER_CC_UNLIKELY(!isValid())) {
+        if((!isValid())) {
             return false;
         }
     }
 
-    if(SERVER_CC_UNLIKELY(addr->getFamily() != m_family)) {
+    if((addr->getFamily() != m_family)) {
         SERVER_CC_LOG_ERROR(g_logger) << "bind sock.family("
             << m_family << ") addr.family(" << addr->getFamily()
             << ") not equal, addr=" << addr->toString();
@@ -164,7 +165,9 @@ bool Socket::bind(const Address::ptr addr) {
         if(sock->connect(uaddr)) {
             return false;
         } else {
-            server_cc::FSUtil::Unlink(uaddr->getPath(), true);
+            SERVER_CC_LOG_ERROR(g_logger) << "UnixAddress is in TODO list";
+            //TODO UnixAddress
+            // server_cc::FSUtil::Unlink(uaddr->getPath(), true);
         }
     }
 
@@ -190,12 +193,12 @@ bool Socket::connect(const Address::ptr addr, uint64_t timeout_ms) {
     m_remoteAddress = addr;
     if(!isValid()) {
         newSock();
-        if(SERVER_CC_UNLIKELY(!isValid())) {
+        if((!isValid())) {
             return false;
         }
     }
 
-    if(SERVER_CC_UNLIKELY(addr->getFamily() != m_family)) {
+    if((addr->getFamily() != m_family)) {
         SERVER_CC_LOG_ERROR(g_logger) << "connect sock.family("
             << m_family << ") addr.family(" << addr->getFamily()
             << ") not equal, addr=" << addr->toString();
@@ -229,6 +232,7 @@ bool Socket::listen(int backlog) {
         SERVER_CC_LOG_ERROR(g_logger) << "listen error sock=-1";
         return false;
     }
+    //? ::作用域在哪
     if(::listen(m_sock, backlog)) {
         SERVER_CC_LOG_ERROR(g_logger) << "listen error errno=" << errno
             << " errstr=" << strerror(errno);
@@ -347,6 +351,7 @@ Address::ptr Socket::getRemoteAddress() {
             break;
     }
     socklen_t addrlen = result->getAddrLen();
+    //getpeername获取sockfd对应的远端socket地址，并将其存储于addr参数指定的内存中
     if(getpeername(m_sock, result->getAddr(), &addrlen)) {
         //SERVER_CC_LOG_ERROR(g_logger) << "getpeername error sock=" << m_sock
         //    << " errno=" << errno << " errstr=" << strerror(errno);
@@ -381,6 +386,7 @@ Address::ptr Socket::getLocalAddress() {
             break;
     }
     socklen_t addrlen = result->getAddrLen();
+    //获取sockfd对应的本端socket地址，并将其存储于addr参数指定的内存中
     if(getsockname(m_sock, result->getAddr(), &addrlen)) {
         SERVER_CC_LOG_ERROR(g_logger) << "getsockname error sock=" << m_sock
             << " errno=" << errno << " errstr=" << strerror(errno);
@@ -447,6 +453,7 @@ bool Socket::cancelAll() {
 
 void Socket::initSock() {
     int val = 1;
+    //SO_REUSEADDR: 端口复用
     setOption(SOL_SOCKET, SO_REUSEADDR, val);
     if(m_type == SOCK_STREAM) {
         setOption(IPPROTO_TCP, TCP_NODELAY, val);
@@ -455,200 +462,13 @@ void Socket::initSock() {
 
 void Socket::newSock() {
     m_sock = socket(m_family, m_type, m_protocol);
-    if(SERVER_CC_LIKELY(m_sock != -1)) {
+    if((m_sock != -1)) {
         initSock();
     } else {
         SERVER_CC_LOG_ERROR(g_logger) << "socket(" << m_family
             << ", " << m_type << ", " << m_protocol << ") errno="
             << errno << " errstr=" << strerror(errno);
     }
-}
-
-namespace {
-
-struct _SSLInit {
-    _SSLInit() {
-        SSL_library_init();
-        SSL_load_error_strings();
-        OpenSSL_add_all_algorithms();
-    }
-};
-
-static _SSLInit s_init;
-
-}
-
-SSLSocket::SSLSocket(int family, int type, int protocol)
-    :Socket(family, type, protocol) {
-}
-
-Socket::ptr SSLSocket::accept() {
-    SSLSocket::ptr sock(new SSLSocket(m_family, m_type, m_protocol));
-    int newsock = ::accept(m_sock, nullptr, nullptr);
-    if(newsock == -1) {
-        SERVER_CC_LOG_ERROR(g_logger) << "accept(" << m_sock << ") errno="
-            << errno << " errstr=" << strerror(errno);
-        return nullptr;
-    }
-    sock->m_ctx = m_ctx;
-    if(sock->init(newsock)) {
-        return sock;
-    }
-    return nullptr;
-}
-
-bool SSLSocket::bind(const Address::ptr addr) {
-    return Socket::bind(addr);
-}
-
-bool SSLSocket::connect(const Address::ptr addr, uint64_t timeout_ms) {
-    bool v = Socket::connect(addr, timeout_ms);
-    if(v) {
-        m_ctx.reset(SSL_CTX_new(SSLv23_client_method()), SSL_CTX_free);
-        m_ssl.reset(SSL_new(m_ctx.get()),  SSL_free);
-        SSL_set_fd(m_ssl.get(), m_sock);
-        v = (SSL_connect(m_ssl.get()) == 1);
-    }
-    return v;
-}
-
-bool SSLSocket::listen(int backlog) {
-    return Socket::listen(backlog);
-}
-
-bool SSLSocket::close() {
-    return Socket::close();
-}
-
-int SSLSocket::send(const void* buffer, size_t length, int flags) {
-    if(m_ssl) {
-        return SSL_write(m_ssl.get(), buffer, length);
-    }
-    return -1;
-}
-
-int SSLSocket::send(const iovec* buffers, size_t length, int flags) {
-    if(!m_ssl) {
-        return -1;
-    }
-    int total = 0;
-    for(size_t i = 0; i < length; ++i) {
-        int tmp = SSL_write(m_ssl.get(), buffers[i].iov_base, buffers[i].iov_len);
-        if(tmp <= 0) {
-            return tmp;
-        }
-        total += tmp;
-        if(tmp != (int)buffers[i].iov_len) {
-            break;
-        }
-    }
-    return total;
-}
-
-int SSLSocket::sendTo(const void* buffer, size_t length, const Address::ptr to, int flags) {
-    SERVER_CC_ASSERT(false);
-    return -1;
-}
-
-int SSLSocket::sendTo(const iovec* buffers, size_t length, const Address::ptr to, int flags) {
-    SERVER_CC_ASSERT(false);
-    return -1;
-}
-
-int SSLSocket::recv(void* buffer, size_t length, int flags) {
-    if(m_ssl) {
-        return SSL_read(m_ssl.get(), buffer, length);
-    }
-    return -1;
-}
-
-int SSLSocket::recv(iovec* buffers, size_t length, int flags) {
-    if(!m_ssl) {
-        return -1;
-    }
-    int total = 0;
-    for(size_t i = 0; i < length; ++i) {
-        int tmp = SSL_read(m_ssl.get(), buffers[i].iov_base, buffers[i].iov_len);
-        if(tmp <= 0) {
-            return tmp;
-        }
-        total += tmp;
-        if(tmp != (int)buffers[i].iov_len) {
-            break;
-        }
-    }
-    return total;
-}
-
-int SSLSocket::recvFrom(void* buffer, size_t length, Address::ptr from, int flags) {
-    SERVER_CC_ASSERT(false);
-    return -1;
-}
-
-int SSLSocket::recvFrom(iovec* buffers, size_t length, Address::ptr from, int flags) {
-    SERVER_CC_ASSERT(false);
-    return -1;
-}
-
-bool SSLSocket::init(int sock) {
-    bool v = Socket::init(sock);
-    if(v) {
-        m_ssl.reset(SSL_new(m_ctx.get()),  SSL_free);
-        SSL_set_fd(m_ssl.get(), m_sock);
-        v = (SSL_accept(m_ssl.get()) == 1);
-    }
-    return v;
-}
-
-bool SSLSocket::loadCertificates(const std::string& cert_file, const std::string& key_file) {
-    m_ctx.reset(SSL_CTX_new(SSLv23_server_method()), SSL_CTX_free);
-    if(SSL_CTX_use_certificate_chain_file(m_ctx.get(), cert_file.c_str()) != 1) {
-        SERVER_CC_LOG_ERROR(g_logger) << "SSL_CTX_use_certificate_chain_file("
-            << cert_file << ") error";
-        return false;
-    }
-    if(SSL_CTX_use_PrivateKey_file(m_ctx.get(), key_file.c_str(), SSL_FILETYPE_PEM) != 1) {
-        SERVER_CC_LOG_ERROR(g_logger) << "SSL_CTX_use_PrivateKey_file("
-            << key_file << ") error";
-        return false;
-    }
-    if(SSL_CTX_check_private_key(m_ctx.get()) != 1) {
-        SERVER_CC_LOG_ERROR(g_logger) << "SSL_CTX_check_private_key cert_file="
-            << cert_file << " key_file=" << key_file;
-        return false;
-    }
-    return true;
-}
-
-SSLSocket::ptr SSLSocket::CreateTCP(server_cc::Address::ptr address) {
-    SSLSocket::ptr sock(new SSLSocket(address->getFamily(), TCP, 0));
-    return sock;
-}
-
-SSLSocket::ptr SSLSocket::CreateTCPSocket() {
-    SSLSocket::ptr sock(new SSLSocket(IPv4, TCP, 0));
-    return sock;
-}
-
-SSLSocket::ptr SSLSocket::CreateTCPSocket6() {
-    SSLSocket::ptr sock(new SSLSocket(IPv6, TCP, 0));
-    return sock;
-}
-
-std::ostream& SSLSocket::dump(std::ostream& os) const {
-    os << "[SSLSocket sock=" << m_sock
-       << " is_connected=" << m_isConnected
-       << " family=" << m_family
-       << " type=" << m_type
-       << " protocol=" << m_protocol;
-    if(m_localAddress) {
-        os << " local_address=" << m_localAddress->toString();
-    }
-    if(m_remoteAddress) {
-        os << " remote_address=" << m_remoteAddress->toString();
-    }
-    os << "]";
-    return os;
 }
 
 std::ostream& operator<<(std::ostream& os, const Socket& sock) {

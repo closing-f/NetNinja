@@ -352,6 +352,33 @@ src/http/http11_parser.cc.s:
 	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/http/http11_parser.cc.s
 .PHONY : src/http/http11_parser.cc.s
 
+src/http/http_parser.o: src/http/http_parser.cpp.o
+
+.PHONY : src/http/http_parser.o
+
+# target to build an object file
+src/http/http_parser.cpp.o:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/http/http_parser.cpp.o
+.PHONY : src/http/http_parser.cpp.o
+
+src/http/http_parser.i: src/http/http_parser.cpp.i
+
+.PHONY : src/http/http_parser.i
+
+# target to preprocess a source file
+src/http/http_parser.cpp.i:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/http/http_parser.cpp.i
+.PHONY : src/http/http_parser.cpp.i
+
+src/http/http_parser.s: src/http/http_parser.cpp.s
+
+.PHONY : src/http/http_parser.s
+
+# target to generate assembly for a file
+src/http/http_parser.cpp.s:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/http/http_parser.cpp.s
+.PHONY : src/http/http_parser.cpp.s
+
 src/http/httpclient_parser.rl.o: src/http/httpclient_parser.rl.cc.o
 
 .PHONY : src/http/httpclient_parser.rl.o
@@ -378,6 +405,114 @@ src/http/httpclient_parser.rl.s: src/http/httpclient_parser.rl.cc.s
 src/http/httpclient_parser.rl.cc.s:
 	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/http/httpclient_parser.rl.cc.s
 .PHONY : src/http/httpclient_parser.rl.cc.s
+
+src/http_connection.o: src/http_connection.cpp.o
+
+.PHONY : src/http_connection.o
+
+# target to build an object file
+src/http_connection.cpp.o:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/http_connection.cpp.o
+.PHONY : src/http_connection.cpp.o
+
+src/http_connection.i: src/http_connection.cpp.i
+
+.PHONY : src/http_connection.i
+
+# target to preprocess a source file
+src/http_connection.cpp.i:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/http_connection.cpp.i
+.PHONY : src/http_connection.cpp.i
+
+src/http_connection.s: src/http_connection.cpp.s
+
+.PHONY : src/http_connection.s
+
+# target to generate assembly for a file
+src/http_connection.cpp.s:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/http_connection.cpp.s
+.PHONY : src/http_connection.cpp.s
+
+src/http_server.o: src/http_server.cpp.o
+
+.PHONY : src/http_server.o
+
+# target to build an object file
+src/http_server.cpp.o:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/http_server.cpp.o
+.PHONY : src/http_server.cpp.o
+
+src/http_server.i: src/http_server.cpp.i
+
+.PHONY : src/http_server.i
+
+# target to preprocess a source file
+src/http_server.cpp.i:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/http_server.cpp.i
+.PHONY : src/http_server.cpp.i
+
+src/http_server.s: src/http_server.cpp.s
+
+.PHONY : src/http_server.s
+
+# target to generate assembly for a file
+src/http_server.cpp.s:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/http_server.cpp.s
+.PHONY : src/http_server.cpp.s
+
+src/http_servlet.o: src/http_servlet.cpp.o
+
+.PHONY : src/http_servlet.o
+
+# target to build an object file
+src/http_servlet.cpp.o:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/http_servlet.cpp.o
+.PHONY : src/http_servlet.cpp.o
+
+src/http_servlet.i: src/http_servlet.cpp.i
+
+.PHONY : src/http_servlet.i
+
+# target to preprocess a source file
+src/http_servlet.cpp.i:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/http_servlet.cpp.i
+.PHONY : src/http_servlet.cpp.i
+
+src/http_servlet.s: src/http_servlet.cpp.s
+
+.PHONY : src/http_servlet.s
+
+# target to generate assembly for a file
+src/http_servlet.cpp.s:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/http_servlet.cpp.s
+.PHONY : src/http_servlet.cpp.s
+
+src/http_session.o: src/http_session.cpp.o
+
+.PHONY : src/http_session.o
+
+# target to build an object file
+src/http_session.cpp.o:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/http_session.cpp.o
+.PHONY : src/http_session.cpp.o
+
+src/http_session.i: src/http_session.cpp.i
+
+.PHONY : src/http_session.i
+
+# target to preprocess a source file
+src/http_session.cpp.i:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/http_session.cpp.i
+.PHONY : src/http_session.cpp.i
+
+src/http_session.s: src/http_session.cpp.s
+
+.PHONY : src/http_session.s
+
+# target to generate assembly for a file
+src/http_session.cpp.s:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/http_session.cpp.s
+.PHONY : src/http_session.cpp.s
 
 src/iomanager.o: src/iomanager.cpp.o
 
@@ -487,6 +622,114 @@ src/scheduler.cpp.s:
 	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/scheduler.cpp.s
 .PHONY : src/scheduler.cpp.s
 
+src/socket.o: src/socket.cpp.o
+
+.PHONY : src/socket.o
+
+# target to build an object file
+src/socket.cpp.o:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/socket.cpp.o
+.PHONY : src/socket.cpp.o
+
+src/socket.i: src/socket.cpp.i
+
+.PHONY : src/socket.i
+
+# target to preprocess a source file
+src/socket.cpp.i:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/socket.cpp.i
+.PHONY : src/socket.cpp.i
+
+src/socket.s: src/socket.cpp.s
+
+.PHONY : src/socket.s
+
+# target to generate assembly for a file
+src/socket.cpp.s:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/socket.cpp.s
+.PHONY : src/socket.cpp.s
+
+src/socket_stream.o: src/socket_stream.cpp.o
+
+.PHONY : src/socket_stream.o
+
+# target to build an object file
+src/socket_stream.cpp.o:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/socket_stream.cpp.o
+.PHONY : src/socket_stream.cpp.o
+
+src/socket_stream.i: src/socket_stream.cpp.i
+
+.PHONY : src/socket_stream.i
+
+# target to preprocess a source file
+src/socket_stream.cpp.i:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/socket_stream.cpp.i
+.PHONY : src/socket_stream.cpp.i
+
+src/socket_stream.s: src/socket_stream.cpp.s
+
+.PHONY : src/socket_stream.s
+
+# target to generate assembly for a file
+src/socket_stream.cpp.s:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/socket_stream.cpp.s
+.PHONY : src/socket_stream.cpp.s
+
+src/stream.o: src/stream.cpp.o
+
+.PHONY : src/stream.o
+
+# target to build an object file
+src/stream.cpp.o:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/stream.cpp.o
+.PHONY : src/stream.cpp.o
+
+src/stream.i: src/stream.cpp.i
+
+.PHONY : src/stream.i
+
+# target to preprocess a source file
+src/stream.cpp.i:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/stream.cpp.i
+.PHONY : src/stream.cpp.i
+
+src/stream.s: src/stream.cpp.s
+
+.PHONY : src/stream.s
+
+# target to generate assembly for a file
+src/stream.cpp.s:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/stream.cpp.s
+.PHONY : src/stream.cpp.s
+
+src/tcpserver.o: src/tcpserver.cpp.o
+
+.PHONY : src/tcpserver.o
+
+# target to build an object file
+src/tcpserver.cpp.o:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/tcpserver.cpp.o
+.PHONY : src/tcpserver.cpp.o
+
+src/tcpserver.i: src/tcpserver.cpp.i
+
+.PHONY : src/tcpserver.i
+
+# target to preprocess a source file
+src/tcpserver.cpp.i:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/tcpserver.cpp.i
+.PHONY : src/tcpserver.cpp.i
+
+src/tcpserver.s: src/tcpserver.cpp.s
+
+.PHONY : src/tcpserver.s
+
+# target to generate assembly for a file
+src/tcpserver.cpp.s:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/tcpserver.cpp.s
+.PHONY : src/tcpserver.cpp.s
+
 src/thread.o: src/thread.cpp.o
 
 .PHONY : src/thread.o
@@ -540,6 +783,33 @@ src/timer.s: src/timer.cpp.s
 src/timer.cpp.s:
 	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/timer.cpp.s
 .PHONY : src/timer.cpp.s
+
+src/uri.rl.o: src/uri.rl.cc.o
+
+.PHONY : src/uri.rl.o
+
+# target to build an object file
+src/uri.rl.cc.o:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/uri.rl.cc.o
+.PHONY : src/uri.rl.cc.o
+
+src/uri.rl.i: src/uri.rl.cc.i
+
+.PHONY : src/uri.rl.i
+
+# target to preprocess a source file
+src/uri.rl.cc.i:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/uri.rl.cc.i
+.PHONY : src/uri.rl.cc.i
+
+src/uri.rl.s: src/uri.rl.cc.s
+
+.PHONY : src/uri.rl.s
+
+# target to generate assembly for a file
+src/uri.rl.cc.s:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/uri.rl.cc.s
+.PHONY : src/uri.rl.cc.s
 
 src/utils.o: src/utils.cpp.o
 
@@ -629,9 +899,24 @@ help:
 	@echo "... src/http/http11_parser.o"
 	@echo "... src/http/http11_parser.i"
 	@echo "... src/http/http11_parser.s"
+	@echo "... src/http/http_parser.o"
+	@echo "... src/http/http_parser.i"
+	@echo "... src/http/http_parser.s"
 	@echo "... src/http/httpclient_parser.rl.o"
 	@echo "... src/http/httpclient_parser.rl.i"
 	@echo "... src/http/httpclient_parser.rl.s"
+	@echo "... src/http_connection.o"
+	@echo "... src/http_connection.i"
+	@echo "... src/http_connection.s"
+	@echo "... src/http_server.o"
+	@echo "... src/http_server.i"
+	@echo "... src/http_server.s"
+	@echo "... src/http_servlet.o"
+	@echo "... src/http_servlet.i"
+	@echo "... src/http_servlet.s"
+	@echo "... src/http_session.o"
+	@echo "... src/http_session.i"
+	@echo "... src/http_session.s"
 	@echo "... src/iomanager.o"
 	@echo "... src/iomanager.i"
 	@echo "... src/iomanager.s"
@@ -644,12 +929,27 @@ help:
 	@echo "... src/scheduler.o"
 	@echo "... src/scheduler.i"
 	@echo "... src/scheduler.s"
+	@echo "... src/socket.o"
+	@echo "... src/socket.i"
+	@echo "... src/socket.s"
+	@echo "... src/socket_stream.o"
+	@echo "... src/socket_stream.i"
+	@echo "... src/socket_stream.s"
+	@echo "... src/stream.o"
+	@echo "... src/stream.i"
+	@echo "... src/stream.s"
+	@echo "... src/tcpserver.o"
+	@echo "... src/tcpserver.i"
+	@echo "... src/tcpserver.s"
 	@echo "... src/thread.o"
 	@echo "... src/thread.i"
 	@echo "... src/thread.s"
 	@echo "... src/timer.o"
 	@echo "... src/timer.i"
 	@echo "... src/timer.s"
+	@echo "... src/uri.rl.o"
+	@echo "... src/uri.rl.i"
+	@echo "... src/uri.rl.s"
 	@echo "... src/utils.o"
 	@echo "... src/utils.i"
 	@echo "... src/utils.s"

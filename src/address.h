@@ -31,33 +31,64 @@ class Address {
 public:
     typedef std::shared_ptr<Address> ptr;
 
+
     /**
-     * @brief 通过sockaddr指针创建Address
-     * @param[in] addr sockaddr指针
-     * @param[in] addrlen sockaddr的长度
-     * @return 返回和sockaddr相匹配的Address,失败返回nullptr
-     */
+     * struct sockaddr_in{
+     *      sa_family_t sin_family; //地址族
+     *      uint16_t sin_port;  //端口号
+     *      struct in_addr sin_addr;    //IP地址
+     * }
+     * struct in_addr{
+     *      uint32_t s_addr;    //32位IP地址
+     * }
+     * 
+     * struct sockaddr_in6{
+     *      sa_family_t sin6_family;    //地址族
+     *      uint16_t sin6_port; //端口号
+     *      uint32_t sin6_flowinfo; //流信息
+     *      struct in6_addr sin6_addr;  //IPv6地址
+     *      uint32_t sin6_scope_id; //范围ID
+     * }
+     * struct in6_addr{
+     *      uint8_t s6_addr[16];    //16位IP地址
+     * }
+     * 
+     * struct sockaddr{
+     *    sa_family_t sa_family;  //地址族
+     *      char sa_data[14];   //14字节协议地址
+     * 
+     * }
+     * 
+    */
+
+    /**
+     * @description: 通过sockaddr指针创建Address
+     * @param {sockaddr*} addr  sockaddr指针
+     * @param {socklen_t} addrlen   sockaddr的长度
+     * @return {*}  返回和sockaddr相匹配的Address,失败返回nullptr
+     */    
     static Address::ptr Create(const sockaddr* addr, socklen_t addrlen);
 
     /**
-     * @brief 通过host地址返回对应条件的所有Address
-     * @param[out] result 保存满足条件的Address
-     * @param[in] host 域名,服务器名等.举例: www.server_cc.top[:80] (方括号为可选内容)
-     * @param[in] family 协议族(AF_INT, AF_INT6, AF_UNIX)
-     * @param[in] type socketl类型SOCK_STREAM、SOCK_DGRAM 等
-     * @param[in] protocol 协议,IPPROTO_TCP、IPPROTO_UDP 等
-     * @return 返回是否转换成功
-     */
+     * @description: 通过host地址返回对应条件的所有Address
+     * @param {std::vector<Address::ptr>&} result 保存满足条件的Address
+     * @param {const std::string&} host 域名,服务器名等.举例: www.server_cc.top[:80] (方括号为可选内容)
+     * @param {int} family 协议族(AF_INT, AF_INT6, AF_UNIX)
+     * @param {int} type socketl类型SOCK_STREAM、SOCK_DGRAM 等
+     * @param {int} protocol 协议,IPPROTO_TCP、IPPROTO_UDP 等
+     * @return {*}
+     */    
     static bool Lookup(std::vector<Address::ptr>& result, const std::string& host,
             int family = AF_INET, int type = 0, int protocol = 0);
+    
     /**
-     * @brief 通过host地址返回对应条件的任意Address
-     * @param[in] host 域名,服务器名等.举例: www.server_cc.top[:80] (方括号为可选内容)
-     * @param[in] family 协议族(AF_INT, AF_INT6, AF_UNIX)
-     * @param[in] type socketl类型SOCK_STREAM、SOCK_DGRAM 等
-     * @param[in] protocol 协议,IPPROTO_TCP、IPPROTO_UDP 等
-     * @return 返回满足条件的任意Address,失败返回nullptr
-     */
+     * @description:  通过host地址返回对应条件的任意Address
+     * @param {const std::string&} host 域名,服务器名等.举例: www.server_cc.top[:80] (方括号为可选内容)
+     * @param {int} family 协议族(AF_INT, AF_INT6, AF_UNIX)
+     * @param {int} type socketl类型SOCK_STREAM、SOCK_DGRAM 等
+     * @param {int} protocol 协议,IPPROTO_TCP、IPPROTO_UDP 等
+     * @return {*}
+     */    
     static Address::ptr LookupAny(const std::string& host,
             int family = AF_INET, int type = 0, int protocol = 0);
     /**
@@ -80,6 +111,7 @@ public:
     static bool GetInterfaceAddresses(std::multimap<std::string
                     ,std::pair<Address::ptr, uint32_t> >& result,
                     int family = AF_INET);
+    
     /**
      * @brief 获取指定网卡的地址和子网掩码位数
      * @param[out] result 保存指定网卡所有地址
@@ -149,11 +181,11 @@ public:
     typedef std::shared_ptr<IPAddress> ptr;
 
     /**
-     * @brief 通过域名,IP,服务器名创建IPAddress
-     * @param[in] address 域名,IP,服务器名等.举例: www.server_cc.top
-     * @param[in] port 端口号
-     * @return 调用成功返回IPAddress,失败返回nullptr
-     */
+     * @description: 通过域名,IP,服务器名创建IPAddress
+     * @param {char*} address 域名,IP,服务器名等: www.baidu.com
+     * @param {uint16_t} port 端口号
+     * @return {*} 调用成功返回IPAddress,失败返回nullptr
+     */    
     static IPAddress::ptr Create(const char* address, uint16_t port = 0);
 
     /**
@@ -222,6 +254,7 @@ public:
     std::ostream& insert(std::ostream& os) const override;
 
     IPAddress::ptr broadcastAddress(uint32_t prefix_len) override;
+    //? 笔误？networkAddress
     IPAddress::ptr networdAddress(uint32_t prefix_len) override;
     IPAddress::ptr subnetMask(uint32_t prefix_len) override;
     uint32_t getPort() const override;

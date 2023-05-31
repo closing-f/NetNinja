@@ -2,7 +2,7 @@
  * @Author: closing-f fql2018@bupt.edu.cn
  * @Date: 2023-04-09 00:57:42
  * @LastEditors: closing
- * @LastEditTime: 2023-05-22 10:25:40
+ * @LastEditTime: 2023-05-31 09:13:27
  * @FilePath: /sylar/src/utils.cpp
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -66,4 +66,4 @@ std::string BackTraceToString(int size, int skip, const std::string&prefix){
     return ss.str();
 }
 
-}
+} // namespace server_cc

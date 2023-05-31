@@ -2,7 +2,7 @@
  * @Author: closing-f fql2018@bupt.edu.cn
  * @Date: 2023-04-09 00:57:42
  * @LastEditors: closing
- * @LastEditTime: 2023-05-22 15:50:02
+ * @LastEditTime: 2023-05-31 09:53:12
  * @FilePath: /sylar/src/utils.h
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -23,7 +23,7 @@
 #include <iomanip>
 #include <execinfo.h>	/* for backtrace() */
 #include <assert.h>
-
+#include <cxxabi.h>
 
 //? 下面if 中 x两边必须加括号，为啥
 #define SERVER_CC_ASSERT(x) \
@@ -45,6 +45,7 @@
 
 
 namespace server_cc{
+
 
 pid_t GetThreadId();
 
@@ -87,6 +88,11 @@ void BackTrace(std::vector<std::string>&bt,int size=64,int skip=1);
  */
 std::string BackTraceToString(int size=64,int skip=2,const std::string &prefix="");
 
+template<class T>
+const char* TypeToName() {
+    static const char* s_name = abi::__cxa_demangle(typeid(T).name(), nullptr, nullptr, nullptr);
+    return s_name;
+}
 
 }
 #endif // !

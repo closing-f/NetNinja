@@ -1,14 +1,14 @@
 /**
  * @file http_parser.h
  * @brief HTTP协议解析封装
- * @author sylar.yin
+ * @author server_cc.yin
  * @email 564628276@qq.com
  * @date 2019-06-11
- * @copyright Copyright (c) 2019年 sylar.yin All rights reserved (www.sylar.top)
+ * @copyright Copyright (c) 2019年 server_cc.yin All rights reserved (www.server_cc.top)
  */
 
-#ifndef __SYLAR_HTTP_PARSER_H__
-#define __SYLAR_HTTP_PARSER_H__
+#ifndef _HTTP_PARSER_H__
+#define _HTTP_PARSER_H__
 
 #include "http.h"
 #include "http11_parser.h"
