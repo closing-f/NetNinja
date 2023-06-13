@@ -838,32 +838,32 @@ src/utils.cpp.s:
 	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/utils.cpp.s
 .PHONY : src/utils.cpp.s
 
-test_address.o: test_address.cpp.o
+test.o: test.cpp.o
 
-.PHONY : test_address.o
+.PHONY : test.o
 
 # target to build an object file
-test_address.cpp.o:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test_address.cpp.o
-.PHONY : test_address.cpp.o
+test.cpp.o:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test.cpp.o
+.PHONY : test.cpp.o
 
-test_address.i: test_address.cpp.i
+test.i: test.cpp.i
 
-.PHONY : test_address.i
+.PHONY : test.i
 
 # target to preprocess a source file
-test_address.cpp.i:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test_address.cpp.i
-.PHONY : test_address.cpp.i
+test.cpp.i:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test.cpp.i
+.PHONY : test.cpp.i
 
-test_address.s: test_address.cpp.s
+test.s: test.cpp.s
 
-.PHONY : test_address.s
+.PHONY : test.s
 
 # target to generate assembly for a file
-test_address.cpp.s:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test_address.cpp.s
-.PHONY : test_address.cpp.s
+test.cpp.s:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test.cpp.s
+.PHONY : test.cpp.s
 
 # Help Target
 help:
@@ -953,9 +953,9 @@ help:
 	@echo "... src/utils.o"
 	@echo "... src/utils.i"
 	@echo "... src/utils.s"
-	@echo "... test_address.o"
-	@echo "... test_address.i"
-	@echo "... test_address.s"
+	@echo "... test.o"
+	@echo "... test.i"
+	@echo "... test.s"
 .PHONY : help
 
 

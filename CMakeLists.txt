@@ -14,7 +14,8 @@ src/uri.rl.cc)
 
 include_directories(/usr/local/include/yaml-cpp)
 # test.cpp代表你的测试文件
-add_executable(test test_bytearray.cpp)
+# add_executable(test_xx test_http_parser.cpp)
+add_executable(test test.cpp)
 add_dependencies(test servercc)
 target_link_libraries(test servercc libyaml-cpp.so pthread dl)
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)

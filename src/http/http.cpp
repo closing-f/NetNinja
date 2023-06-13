@@ -2,7 +2,7 @@
  * @Author: closing
  * @Date: 2023-05-23 15:01:51
  * @LastEditors: closing
- * @LastEditTime: 2023-05-31 09:26:22
+ * @LastEditTime: 2023-05-31 20:40:42
  * @Description: 请填写简介
  */
 #include "http.h"
@@ -36,7 +36,7 @@ static const char* s_method_string[]={
 #undef XX
 };
 
-std::string HttpMethodToString(const HttpMethod& m){
+const char* HttpMethodToString(const HttpMethod& m){
     uint32_t idx=(uint32_t)m;
     if(idx>=(sizeof(s_method_string)/sizeof(s_method_string[0]))){
         return "<unknown>";
@@ -44,7 +44,7 @@ std::string HttpMethodToString(const HttpMethod& m){
     return s_method_string[idx];
 }
 
-std::string HttpStatusToString(const HttpStatus& s){
+const char* HttpStatusToString(const HttpStatus& s){
     switch(s){
     #define XX(code,name,msg) \
     case HttpStatus::name:\
@@ -251,7 +251,11 @@ std::string HttpResponse::toString() {
 }
 
 
-
+std::string HttpRequest::toString() {
+    std::stringstream ss;
+    dump(ss);
+    return ss.str();
+}
 
 
 

@@ -2,7 +2,7 @@
  * @Author: closing
  * @Date: 2023-05-22 15:55:45
  * @LastEditors: closing
- * @LastEditTime: 2023-05-23 10:02:30
+ * @LastEditTime: 2023-05-31 22:37:54
  * @Description: byte数组类
  */
 #ifndef _BYTEARRAY_H
@@ -175,7 +175,6 @@ private:
     size_t m_baseSize;//Node基础大小
     size_t m_size;//当前数据大小
     int8_t m_endian;//是否是小端
-
 
     Node* m_root;//根节点
     Node* m_cur;//当前节点

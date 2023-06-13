@@ -2,7 +2,7 @@
  * @Author: closing-f fql2018@bupt.edu.cn
  * @Date: 2023-05-13 07:48:12
  * @LastEditors: closing
- * @LastEditTime: 2023-05-22 15:49:38
+ * @LastEditTime: 2023-06-02 10:07:45
  * @FilePath: /sylar/src/iomanager.cpp
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -44,9 +44,9 @@ void IOManager::FdContext::resetContext(EventContext& ctx) {
 void IOManager::FdContext::triggerEvent(IOManager::Event event) {
     
     SERVER_CC_ASSERT(events & event);
-   
-    events = (Event)(events & ~event);
-    EventContext& ctx = getContext(event);
+    
+    events = (Event)(events & ~event);//当前事件已经被触发，重置已经注册的事件
+    EventContext& ctx = getContext(event);//获取事件上下文，在添加事件时设置
     if(ctx.cb) {
         ctx.scheduler->schedule(&ctx.cb);
     } else {
@@ -102,8 +102,9 @@ void IOManager::contextResize(size_t size) {
     }
 }
 //0 success, -1 error
-int IOManager::addEvent(int fd, Event event, std::function<void()> cb){
+int IOManager::addEvent(int fd, Event new_event, std::function<void()> cb){
     
+    //扩展fd上下文数组(fdContexts)的容量
     FdContext* fd_ctx = nullptr;
     RWMutexType::ReadLock lock(m_mutex);
     if((int)m_fdContexts.size() > fd) {
@@ -116,17 +117,19 @@ int IOManager::addEvent(int fd, Event event, std::function<void()> cb){
         fd_ctx = m_fdContexts[fd];
     }
 
+    //判断fd_ctx是否已经注册事件new_event
     FdContext::MutexType::Lock lock2(fd_ctx->mutex);
-    if((fd_ctx->events & event)) {
+    if((fd_ctx->events & new_event)) {
         SERVER_CC_LOG_ERROR(g_logger) << "addEvent assert fd=" << fd
-                    << " event=" << (EPOLL_EVENTS)event
+                    << " new_event=" << (EPOLL_EVENTS)new_event
                     << " fd_ctx.event=" << (EPOLL_EVENTS)fd_ctx->events;
-        SERVER_CC_ASSERT(!(fd_ctx->events & event));
+        SERVER_CC_ASSERT(!(fd_ctx->events & new_event));
     }
 
+    //判断是修改事件还是添加事件，将fd_ctx作为data.ptr传入
     int op = fd_ctx->events ? EPOLL_CTL_MOD : EPOLL_CTL_ADD;
     epoll_event epevent;
-    epevent.events = EPOLLET | fd_ctx->events | event;
+    epevent.events = EPOLLET | fd_ctx->events | new_event;
     epevent.data.ptr = fd_ctx;
 
     int rt = epoll_ctl(m_epfd, op, fd, &epevent);
@@ -138,9 +141,11 @@ int IOManager::addEvent(int fd, Event event, std::function<void()> cb){
         return -1;
     }
 
+    //设置事件计数，设置fd_ctx的事件，事件上下文（scheduler，fiber，cb）
+    //有回调函数则设置，否则设置协程为当前协程
     ++m_pendingEventCount;
-    fd_ctx->events = (Event)(fd_ctx->events | event);
-    FdContext::EventContext& event_ctx = fd_ctx->getContext(event);
+    fd_ctx->events = (Event)(fd_ctx->events | new_event);
+    FdContext::EventContext& event_ctx = fd_ctx->getContext(new_event);
     SERVER_CC_ASSERT(!event_ctx.scheduler
                 && !event_ctx.fiber
                 && !event_ctx.cb);
@@ -221,6 +226,7 @@ bool IOManager::cancelEvent(int fd, Event event){
     return true;
 }
 bool IOManager::cancelAll(int fd){
+
     RWMutexType::ReadLock lock(m_mutex); 
     if((int)m_fdContexts.size() <= fd) {
         return false;
@@ -237,7 +243,7 @@ bool IOManager::cancelAll(int fd){
     epoll_event epevent;
     epevent.events = 0;
     epevent.data.ptr = fd_ctx;
-
+    
     int rt = epoll_ctl(m_epfd, op, fd, &epevent);
     if(rt) {
         SERVER_CC_LOG_ERROR(g_logger) << "epoll_ctl(" << m_epfd << ", "
@@ -293,13 +299,14 @@ void IOManager::idle() {
     while(true) {
         uint64_t next_timeout = 0;
         //TODO stopping
-        if((stopping(next_timeout))) {
+        //判断是否停止并获取下一个定时器的超时时间，当定时器没有任务而且没有要处理的事件时，返回true，idle线程退出
+        if((stopping(next_timeout))) {//
             SERVER_CC_LOG_INFO(g_logger) << "name=" << getName()
                                      << " idle stopping exit";
             break;
         }
 
-
+        //epoll_wait
         int rt = 0;
         do {
             static const int MAX_TIMEOUT = 3000;
@@ -310,12 +317,13 @@ void IOManager::idle() {
                 next_timeout = MAX_TIMEOUT;
             }
             rt = epoll_wait(m_epfd, events, MAX_EVNETS, (int)next_timeout);
-            if(rt < 0 && errno == EINTR) {
+            if(rt < 0 && errno == EINTR) {//? errno作用域
             } else {
                 break;
             }
         } while(true);;
 
+        //处理超时定时器，执行回调函数；如果为循环定时器，则重新添加到定时器容器
         std::vector<std::function<void()> > cbs;
         listExpiredCb(cbs);
         if(!cbs.empty()) {
@@ -334,7 +342,8 @@ void IOManager::idle() {
 
                 continue;
             }
-            
+
+            //获取事件上下文，在添加事件时，将fd_ctx作为data.ptr传入
             FdContext* fd_ctx = (FdContext*)event.data.ptr;
             FdContext::MutexType::Lock lock(fd_ctx->mutex);
             if(event.events & (EPOLLERR | EPOLLHUP)) {
@@ -351,7 +360,7 @@ void IOManager::idle() {
             if((fd_ctx->events & real_events) == NONE) {
                 continue;
             }
-            
+            //是否还有剩余未处理事件，有则op为修改事件，否则删除事件
             int left_events = (fd_ctx->events & ~real_events);
             int op = left_events ? EPOLL_CTL_MOD : EPOLL_CTL_DEL;
             event.events = EPOLLET | left_events;
@@ -366,6 +375,8 @@ void IOManager::idle() {
 
             //SERVER_CC_LOG_INFO(g_logger) << " fd=" << fd_ctx->fd << " events=" << fd_ctx->events
             //                         << " real_events=" << real_events;
+            
+            //触发读写事件，设置事件计数，重置事件上下文
             if(real_events & READ) {
                 fd_ctx->triggerEvent(READ);
                 --m_pendingEventCount;

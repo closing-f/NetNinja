@@ -2,7 +2,7 @@
  * @Author: closing
  * @Date: 2023-05-09 09:48:20
  * @LastEditors: closing
- * @LastEditTime: 2023-05-23 09:57:38
+ * @LastEditTime: 2023-06-01 21:02:24
  * @Description: Fiber类的实现
  */
 
@@ -28,7 +28,7 @@ class Fiber:public std::enable_shared_from_this<Fiber>{
         /// 暂停状态
         HOLD,
         /// 执行中状态
-        EXEC,
+        EXEC,   
         /// 结束状态
         TERM,
         /// 可执行状态
@@ -45,7 +45,7 @@ class Fiber:public std::enable_shared_from_this<Fiber>{
         Fiber();
     public:
         /**
-         * @description: 构造函数
+         * @description: 构造函数，用于生成子协程
          * @param {size_t} stack_size 协程栈大小
          * @param {bool} use_caller //? 是否在当前线程中创建协程
          * @return {*}
@@ -54,10 +54,22 @@ class Fiber:public std::enable_shared_from_this<Fiber>{
 
         ~Fiber();
 
+        /**
+         * @description: 重置协程函数，并重置状态
+         * @return {*}
+         */         
         void reset(std::function<void()>cb);
 
+        /**
+         * @description: 切换到当前协程执行
+         * @return {*}
+         */        
         void swapIn();
-
+        
+        /**
+         * @description: 切换到后台执行
+         * @return {*}
+         */        
         void swapOut();
 
         /**
@@ -124,7 +136,7 @@ class Fiber:public std::enable_shared_from_this<Fiber>{
 
         /**
          * @brief 协程执行函数
-         * @post 执行完成返回到线程主协程
+         * @post  执行完成返回到线程调度协程
          */
         static void CallerMainFunc();
         /**

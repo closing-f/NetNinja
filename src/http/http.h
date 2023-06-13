@@ -2,7 +2,7 @@
  * @Author: closing
  * @Date: 2023-05-23 10:51:10
  * @LastEditors: closing
- * @LastEditTime: 2023-05-31 09:42:07
+ * @LastEditTime: 2023-05-31 20:41:55
  * @Description: http结构体的封装
  */
 #ifndef _HTTP_HTTP_H
@@ -159,7 +159,7 @@ HttpMethod StringToHttpMethod(const std::string& m);
 HttpMethod CharsToHttpMethod(const char* m);
 
 
-std::string HttpMethodToString(const HttpMethod& m);
+const char* HttpMethodToString(const HttpMethod& m);
 
 
 /**
@@ -167,7 +167,7 @@ std::string HttpMethodToString(const HttpMethod& m);
  * @param {HttpStatus} s
  * @return {*}
  */
-std::string HttpStatusToString(const HttpStatus& s);
+const char* HttpStatusToString(const HttpStatus& s);
 
 
 /**
@@ -477,6 +477,7 @@ public:
      */
     std::ostream& dump(std::ostream& os);
 
+    std::string toString();
 private:
 
    

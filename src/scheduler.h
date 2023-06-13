@@ -15,7 +15,7 @@ class Scheduler
         /**
          * @description: 构造函数 
          * @param {size_t} thread_num 线程数量
-         * @param {bool} use_caller 是否在当前线程中创建协程
+         * @param {bool} use_caller 是否使用当前调用线程
          * @param {string&} name    
          * @return {*}
          */        
@@ -75,6 +75,10 @@ class Scheduler
     
         virtual bool stopping();
 
+        /**
+         * @description: 唤醒idle协程，如果有io事件则处理，否则将控制权返回到主协程
+         * @return {*}
+         */        
         virtual void tickle();
 
         bool hasIdleThreads() { return m_idleThreadCount > 0;}
@@ -155,7 +159,7 @@ class Scheduler
             return need_tickle;
         }
         
-        std::vector<Thread::ptr> m_threads;
+        std::vector<Thread::ptr> m_threads;//线程   数组
         
         std::list<FiberOrCb> m_fibers;
         
@@ -169,22 +173,23 @@ class Scheduler
 
     protected:
 
-        std::vector<int> m_threadIds;
+        std::vector<int> m_threadIds;//线程id数组
 
-        // size_t m_threadCount = 0;
+       
         /// 线程数量
         size_t m_threadNum = 0;
 
-        std::atomic<size_t> m_activeThreadCount = {0};
+        
+        std::atomic<size_t> m_activeThreadCount = {0};//正在执行的线程数量
 
-        std::atomic<size_t> m_idleThreadCount = {0};
+        std::atomic<size_t> m_idleThreadCount = {0};//空闲的线程数量
 
         
         bool m_stopping = true;//是否正在停止
 
-        bool m_autoStop = false;
+        bool m_autoStop = false;//是否自动停止
 
-        int m_rootThread = 0;
+        int m_rootThread = 0;//主线程id
         
 
 

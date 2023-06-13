@@ -2,7 +2,7 @@
  * @Author: closing-f fql2018@bupt.edu.cn
  * @Date: 2023-05-09 09:48:39
  * @LastEditors: closing
- * @LastEditTime: 2023-05-22 14:45:20
+ * @LastEditTime: 2023-06-02 08:49:19
  * @FilePath: /sylar/src/fiber.cpp
  * @Description: 
  */
@@ -18,10 +18,11 @@ namespace server_cc{
 static Logger::ptr g_logger = SERVER_CC_LOG_NAME("system");
 
 //? =运算符被禁止
-static std::atomic<uint64_t> s_fiber_count {0};
+static std::atomic<uint64_t> s_fiber_count {0};//协程总数
 static std::atomic<uint64_t> s_fiber_id {0};
 
 static thread_local Fiber* t_fiber=nullptr;//当前协程
+//? 为何用智能指针而t_fiber用原生指针
 static thread_local Fiber::ptr t_threadFiber=nullptr; //主协程
 
 static ConfigVar<uint32_t>::ptr g_fiber_stacksize = Config::Lookup<uint32_t>("fiber.stacksize",128*1024,"fiber_stacksize");
@@ -45,7 +46,8 @@ Fiber::Fiber(){
     m_state = EXEC;
     SetThis(this);
     
-    if(getcontext(&m_ctx)){
+    
+    if(getcontext(&m_ctx)){//获取当前上下文
         SERVER_CC_ASSERT2(false,"getcontext");
     }
     ++s_fiber_count;
@@ -70,6 +72,7 @@ Fiber::Fiber(std::function<void()>cb,size_t stack_size,bool use_caller):m_id(++s
     //上下文通过setcontext或者swapcontext激活后，执行func函数，argc为func的参数个数，后面是func的参数序列。
     //当func执行返回后，继承的上下文被激活，如果继承上下文为NULL时，线程退出
     if(!use_caller) {
+        //重定向上下文
         makecontext(&m_ctx, &Fiber::MainFunc, 0);
     } else {
         makecontext(&m_ctx, &Fiber::CallerMainFunc, 0);
@@ -125,6 +128,7 @@ void Fiber::swapIn(){
     SetThis(this);
     SERVER_CC_ASSERT(m_state != EXEC);
     m_state = EXEC;
+    //swapcontext 把当前上下文保存到GetMainFiber()->m_ctx中，然后激活m_ctx
     if(swapcontext(&(Scheduler::GetMainFiber()->m_ctx),&m_ctx)){
         SERVER_CC_ASSERT2(false,"swap in context");
     }
@@ -133,7 +137,7 @@ void Fiber::swapIn(){
 }
 
 void Fiber::swapOut(){
-    SetThis(this);
+    SetThis(Scheduler::GetMainFiber());
     //swapcontext 把当前上下文保存到m_ctx中，然后激活t_threadFiber->m_ctx
     if(swapcontext(&m_ctx,&Scheduler::GetMainFiber()->m_ctx)){
         SERVER_CC_ASSERT2(false,"swap in context");
@@ -170,6 +174,7 @@ void Fiber::SetThis(Fiber* fiber){
  */
 Fiber::ptr Fiber::GetThis(){
     if(t_fiber){
+
         return t_fiber->shared_from_this();
     }
     Fiber::ptr main_fiber(new Fiber);
@@ -260,7 +265,7 @@ void Fiber::CallerMainFunc() {
     Fiber::ptr cur = GetThis();
     SERVER_CC_ASSERT(cur);
     try {
-        cur->m_cb();
+        cur->m_cb();//执行协程函数,Scheduler::run()
         cur->m_cb = nullptr;
         cur->m_state = TERM;
     } catch (std::exception& ex) {

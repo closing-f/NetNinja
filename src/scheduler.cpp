@@ -2,7 +2,7 @@
  * @Author: closing-f fql2018@bupt.edu.cn
  * @Date: 2023-05-11 11:35:09
  * @LastEditors: closing
- * @LastEditTime: 2023-05-22 15:32:02
+ * @LastEditTime: 2023-06-02 10:51:05
  * @FilePath: /sylar/src/scheduler.cpp
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -75,7 +75,7 @@ void Scheduler::tickle(){
  */
 bool Scheduler::stopping(){
     MutexType::Lock lock(m_mutex);
-    return m_autoStop && m_stopping
+    return  m_stopping
         && m_fibers.empty() && m_activeThreadCount == 0;
 }
 
@@ -99,19 +99,20 @@ void Scheduler::start(){
 
 void Scheduler::stop(){
     SERVER_CC_LOG_INFO(g_logger) << "start stop";
-    m_autoStop = true;
+    // m_autoStop = true;
 
-    //
+    //当user_caller时，如果是当前为主线程，且没有其他线程，且没有协程任务，直接返回
     if(m_rootFiber && m_threadNum   == 0 && 
     (m_rootFiber->getState() == Fiber::TERM || m_rootFiber->getState() == Fiber::INIT)) {
         SERVER_CC_LOG_INFO(g_logger) << this << " stopped";
         m_stopping = true;
 
-        if(stopping()) {
+        if(stopping()) {//主要判断是否有协程任务
             return;
         }
     }
-    //?
+    //调用该stop的线程为user_caller的线程，所以如果user_caller==ture则设置了t_scheduler
+    //当user_caller为false时，未设置t_scheduler
     if(m_rootThread != -1) {
         SERVER_CC_ASSERT(GetThis() == this);
     } else {
@@ -120,18 +121,21 @@ void Scheduler::stop(){
 
     m_stopping = true;
     
+    //唤醒所有处于idle的线程
     for(size_t i = 0; i < m_threadNum; ++i) {
         tickle();
     }
-
     if(m_rootFiber) {
         tickle();
     }
+
+    //如果user_caller，则在当前线程执行call（调用run函数）
     if(m_rootFiber) {
-       
+        
         if(!stopping()) {
             // SERVER_CC_LOG_INFO(g_logger) << "m_rootFiber call";
-          
+            
+            //程序入口函数，主协程绑定了run函数
             m_rootFiber->call();
         }
     }
@@ -141,7 +145,7 @@ void Scheduler::stop(){
         MutexType::Lock lock(m_mutex);
         thrs.swap(m_threads);
     }
-
+    //线程池中每个thread会执行run方法，执行完后线程结束
     for(auto& i : thrs) {
         i->join();
     }
@@ -161,7 +165,7 @@ void Scheduler::run(){
     //设置空闲协程，当无任务时执行
     Fiber::ptr idle_fiber(new Fiber(std::bind(&Scheduler::idle, this)));
     Fiber::ptr cb_fiber;
-
+    
     FiberOrCb ft;
     while(true){
         ft.reset();
@@ -192,6 +196,9 @@ void Scheduler::run(){
             }
             tickle_me |= it != m_fibers.end();
         }
+        //当有其他线程的任务协程任务或取出的任务有效时触发tickle()函数
+        //（唤醒的协程不是要执行该任务的协程时，会再次调用tickle()函数，
+        //直到那个协程被唤醒）
         if(tickle_me){
             tickle();
         }

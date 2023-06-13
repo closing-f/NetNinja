@@ -2,12 +2,32 @@
  * @Author: closing
  * @Date: 2023-05-29 16:54:26
  * @LastEditors: closing
- * @LastEditTime: 2023-05-29 17:08:42
+ * @LastEditTime: 2023-06-06 21:44:43
  * @Description: 请填写简介
  */
-#include "src/http/http_server.h"
-#include "src/log.h"
+#include "src/http_server.h"
 
+#include "src/logger.h"
+#include "src/thread.h"
+#include "src/config.h"
+#include "src/mutex.h"
+#include "src/fiber.h"
+#include "src/utils.h"
+#include "src/iomanager.h"
+#include <yaml-cpp/yaml.h>
+
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <arpa/inet.h>
+#include <unistd.h>
+#include <fcntl.h>
+#include <iostream>
+#include <sys/epoll.h>
+#include "src/timer.h"
+
+#include "src/http_connection.h"
+#include "src/http/http_parser.h"
+// #include "src/scheduler.h"
 static server_cc::Logger::ptr g_logger = SERVER_CC_LOG_ROOT();
 
 #define XX(...) #__VA_ARGS__
@@ -22,6 +42,7 @@ void run() {
     while(!server->bind(addr)) {
         sleep(2);
     }
+
     auto sd = server->getServletDispatch();
     sd->addServlet("/server_cc/xx", [](server_cc::http::HttpRequest::ptr req
                 ,server_cc::http::HttpResponse::ptr rsp
@@ -56,8 +77,9 @@ void run() {
 ));
             return 0;
     });
-
+    SERVER_CC_LOG_INFO(g_logger)<< "server_cc start";
     server->start();
+    
 }
 //TODO test
 int main(int argc, char** argv) {

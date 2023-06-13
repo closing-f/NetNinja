@@ -1,8 +1,8 @@
 /*
  * @Author: closing-f fql2018@bupt.edu.cn
  * @Date: 2023-05-14 18:26:30
- * @LastEditors: closing-f fql2018@bupt.edu.cn
- * @LastEditTime: 2023-05-15 08:35:02
+ * @LastEditors: closing
+ * @LastEditTime: 2023-06-02 09:14:05
  * @FilePath: /sylar/src/timer.cpp
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -177,7 +177,7 @@ void TimerManager::listExpiredCb( std::vector<std::function<void()>>& cbs){
     expired.insert(expired.begin(),m_timers.begin(),it);
     m_timers.erase(m_timers.begin(),it);//清除过期的定时器
     
-    cbs.reserve(expired.size());//? reserve函数的作用
+    cbs.reserve(expired.size());
     for(auto& timer : expired){
         cbs.push_back(timer->m_cb);
         if(timer->m_recurring){

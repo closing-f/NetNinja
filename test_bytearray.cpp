@@ -2,7 +2,7 @@
  * @Author: closing
  * @Date: 2023-05-23 09:52:47
  * @LastEditors: closing
- * @LastEditTime: 2023-05-23 09:54:06
+ * @LastEditTime: 2023-05-31 20:21:24
  * @Description: 请填写简介
  */
 #include "src/bytearray.h"
@@ -12,6 +12,7 @@
 #include "src/fiber.h"
 #include "src/utils.h"
 #include "src/logger.h"
+#include "src/hook.h"
 
 static server_cc::Logger::ptr g_logger = SERVER_CC_LOG_ROOT();
 void test() {
