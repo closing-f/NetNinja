@@ -1,0 +1,61 @@
+\hypertarget{classserver__cc_1_1http_1_1Servlet}{}\doxysection{server\+\_\+cc\+::http\+::Servlet Class Reference}
+\label{classserver__cc_1_1http_1_1Servlet}\index{server\_cc::http::Servlet@{server\_cc::http::Servlet}}
+
+
+Inheritance diagram for server\+\_\+cc\+::http\+::Servlet\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classserver__cc_1_1http_1_1Servlet__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1http_1_1Servlet_a674a7c88773df0f3da741951ec9c7fbd}\label{classserver__cc_1_1http_1_1Servlet_a674a7c88773df0f3da741951ec9c7fbd}} 
+typedef std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classserver__cc_1_1http_1_1Servlet}{Servlet}} $>$ {\bfseries ptr}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1http_1_1Servlet_a2cdb4d936ba4ea6eb8360abca87250c7}\label{classserver__cc_1_1http_1_1Servlet_a2cdb4d936ba4ea6eb8360abca87250c7}} 
+{\bfseries Servlet} (const std\+::string \&name)
+\item 
+virtual int32\+\_\+t \mbox{\hyperlink{classserver__cc_1_1http_1_1Servlet_ae89a6615c57623cbc93a40787230d5e8}{handle}} (Http\+Request\+::ptr request, Http\+Response\+::ptr response, Http\+Session\+::ptr session)=0
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1http_1_1Servlet_ad8f3437e7bb52306cd90b2a4185f1954}\label{classserver__cc_1_1http_1_1Servlet_ad8f3437e7bb52306cd90b2a4185f1954}} 
+const std\+::string \& {\bfseries get\+Name} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1http_1_1Servlet_a547524060621f01184bb3480309d2bd2}\label{classserver__cc_1_1http_1_1Servlet_a547524060621f01184bb3480309d2bd2}} 
+std\+::string {\bfseries m\+\_\+name}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classserver__cc_1_1http_1_1Servlet_ae89a6615c57623cbc93a40787230d5e8}\label{classserver__cc_1_1http_1_1Servlet_ae89a6615c57623cbc93a40787230d5e8}} 
+\index{server\_cc::http::Servlet@{server\_cc::http::Servlet}!handle@{handle}}
+\index{handle@{handle}!server\_cc::http::Servlet@{server\_cc::http::Servlet}}
+\doxysubsubsection{\texorpdfstring{handle()}{handle()}}
+{\footnotesize\ttfamily virtual int32\+\_\+t server\+\_\+cc\+::http\+::\+Servlet\+::handle (\begin{DoxyParamCaption}\item[{Http\+Request\+::ptr}]{request,  }\item[{Http\+Response\+::ptr}]{response,  }\item[{Http\+Session\+::ptr}]{session }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+@description\+: 处理http请求 
+\begin{DoxyParams}{Parameters}
+{\em \{\+Http\+Request\+::ptr\}} & request 请求类 \\
+\hline
+{\em \{\+Http\+Response\+::ptr\}} & response 响应类 \\
+\hline
+{\em \{\+Http\+Session\+::ptr\}} & session 会话类 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\{$\ast$\} 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+http\+\_\+servlet.\+h\end{DoxyCompactItemize}

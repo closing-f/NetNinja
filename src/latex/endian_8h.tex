@@ -1,0 +1,61 @@
+\hypertarget{endian_8h}{}\doxysection{endian.\+h File Reference}
+\label{endian_8h}\index{endian.h@{endian.h}}
+
+
+字节序操作函数(大端/小端)  
+
+
+{\ttfamily \#include $<$byteswap.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+Include dependency graph for endian.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{endian_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{endian_8h_aad2723f2500303fbf77a5b54327abc75}\label{endian_8h_aad2723f2500303fbf77a5b54327abc75}} 
+\#define {\bfseries S\+E\+R\+V\+E\+R\+\_\+\+C\+C\+\_\+\+L\+I\+T\+T\+L\+E\+\_\+\+E\+N\+D\+I\+AN}~1
+\item 
+\mbox{\Hypertarget{endian_8h_ae44f6ea6fe7d6a063769bff5b130475e}\label{endian_8h_ae44f6ea6fe7d6a063769bff5b130475e}} 
+\#define {\bfseries S\+E\+R\+V\+E\+R\+\_\+\+C\+C\+\_\+\+B\+I\+G\+\_\+\+E\+N\+D\+I\+AN}~2
+\item 
+\mbox{\Hypertarget{endian_8h_a77701fde2e510bdaf2d3ad9e44a23b3d}\label{endian_8h_a77701fde2e510bdaf2d3ad9e44a23b3d}} 
+\#define {\bfseries S\+E\+R\+V\+E\+R\+\_\+\+C\+C\+\_\+\+B\+Y\+T\+E\+\_\+\+O\+R\+D\+ER}~S\+E\+R\+V\+E\+R\+\_\+\+C\+C\+\_\+\+B\+I\+G\+\_\+\+E\+N\+D\+I\+AN
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{endian_8h_a7bc7fdd05c04ac8db1d924e3b87128ba}\label{endian_8h_a7bc7fdd05c04ac8db1d924e3b87128ba}} 
+{\footnotesize template$<$class T $>$ }\\std\+::enable\+\_\+if$<$ sizeof(T)==sizeof(uint64\+\_\+t), T $>$\+::type \mbox{\hyperlink{endian_8h_a7bc7fdd05c04ac8db1d924e3b87128ba}{server\+\_\+cc\+::byteswap}} (T value)
+\begin{DoxyCompactList}\small\item\em 8字节类型的字节序转化 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{endian_8h_a4d5685dc0d2112444108f0f2021d6a02}\label{endian_8h_a4d5685dc0d2112444108f0f2021d6a02}} 
+{\footnotesize template$<$class T $>$ }\\std\+::enable\+\_\+if$<$ sizeof(T)==sizeof(uint32\+\_\+t), T $>$\+::type \mbox{\hyperlink{endian_8h_a4d5685dc0d2112444108f0f2021d6a02}{server\+\_\+cc\+::byteswap}} (T value)
+\begin{DoxyCompactList}\small\item\em 4字节类型的字节序转化 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{endian_8h_aa231c351ca9a24e645a88d005e7ed8ff}\label{endian_8h_aa231c351ca9a24e645a88d005e7ed8ff}} 
+{\footnotesize template$<$class T $>$ }\\std\+::enable\+\_\+if$<$ sizeof(T)==sizeof(uint16\+\_\+t), T $>$\+::type \mbox{\hyperlink{endian_8h_aa231c351ca9a24e645a88d005e7ed8ff}{server\+\_\+cc\+::byteswap}} (T value)
+\begin{DoxyCompactList}\small\item\em 2字节类型的字节序转化 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{endian_8h_a384a816d78579ddc9123b994e37684ca}\label{endian_8h_a384a816d78579ddc9123b994e37684ca}} 
+{\footnotesize template$<$class T $>$ }\\T \mbox{\hyperlink{endian_8h_a384a816d78579ddc9123b994e37684ca}{server\+\_\+cc\+::byteswap\+On\+Little\+Endian}} (T t)
+\begin{DoxyCompactList}\small\item\em 只在小端机器上执行byteswap, 在大端机器上什么都不做 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{endian_8h_ab1e5db0e1a4f46195cc9ef81ed4e1186}\label{endian_8h_ab1e5db0e1a4f46195cc9ef81ed4e1186}} 
+{\footnotesize template$<$class T $>$ }\\T \mbox{\hyperlink{endian_8h_ab1e5db0e1a4f46195cc9ef81ed4e1186}{server\+\_\+cc\+::byteswap\+On\+Big\+Endian}} (T t)
+\begin{DoxyCompactList}\small\item\em 只在大端机器上执行byteswap, 在小端机器上什么都不做 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+字节序操作函数(大端/小端) 
+
+\begin{DoxyAuthor}{Author}
+sylar.\+yin @email \href{mailto:564628276@qq.com}{\texttt{ 564628276@qq.\+com}} 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2019-\/06-\/01 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2019年 sylar.\+yin All rights reserved (www.\+sylar.\+top) 
+\end{DoxyCopyright}

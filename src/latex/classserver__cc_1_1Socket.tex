@@ -1,0 +1,703 @@
+\hypertarget{classserver__cc_1_1Socket}{}\doxysection{server\+\_\+cc\+::Socket Class Reference}
+\label{classserver__cc_1_1Socket}\index{server\_cc::Socket@{server\_cc::Socket}}
+
+
+Socket封装类  
+
+
+
+
+{\ttfamily \#include $<$socket.\+h$>$}
+
+
+
+Inheritance diagram for server\+\_\+cc\+::Socket\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classserver__cc_1_1Socket__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for server\+\_\+cc\+::Socket\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classserver__cc_1_1Socket__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classserver__cc_1_1Socket_a7a095de2fa2dfff108ed9043e1fcdd08}{Type}} \{ \mbox{\hyperlink{classserver__cc_1_1Socket_a7a095de2fa2dfff108ed9043e1fcdd08afcf7d1f08d2d38a4f986fec5c40276af}{T\+CP}} = S\+O\+C\+K\+\_\+\+S\+T\+R\+E\+AM, 
+\mbox{\hyperlink{classserver__cc_1_1Socket_a7a095de2fa2dfff108ed9043e1fcdd08a55fc53b48e942afc4c3f1d9d7521e42c}{U\+DP}} = S\+O\+C\+K\+\_\+\+D\+G\+R\+AM
+ \}
+\begin{DoxyCompactList}\small\item\em Socket类型 \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{classserver__cc_1_1Socket_a5f0e5b875db1e6fe4a86a96f64c9c3c4}{Family}} \{ \mbox{\hyperlink{classserver__cc_1_1Socket_a5f0e5b875db1e6fe4a86a96f64c9c3c4aa473868404e804752c167d667e641101}{I\+Pv4}} = A\+F\+\_\+\+I\+N\+ET, 
+\mbox{\hyperlink{classserver__cc_1_1Socket_a5f0e5b875db1e6fe4a86a96f64c9c3c4a6eaa04d13332f9bf868dedc8d5de7efe}{I\+Pv6}} = A\+F\+\_\+\+I\+N\+E\+T6, 
+\mbox{\hyperlink{classserver__cc_1_1Socket_a5f0e5b875db1e6fe4a86a96f64c9c3c4afcd0fc6a7208c2056784c1f12fea9e28}{U\+N\+IX}} = A\+F\+\_\+\+U\+N\+IX
+ \}
+\begin{DoxyCompactList}\small\item\em Socket协议簇 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1Socket_a72b48dc2c5c6c9a766a87003c633e959}\label{classserver__cc_1_1Socket_a72b48dc2c5c6c9a766a87003c633e959}} 
+typedef std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classserver__cc_1_1Socket}{Socket}} $>$ {\bfseries ptr}
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1Socket_ad5ca764905b66d531e27537093992a18}\label{classserver__cc_1_1Socket_ad5ca764905b66d531e27537093992a18}} 
+typedef std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{classserver__cc_1_1Socket}{Socket}} $>$ {\bfseries weak\+\_\+ptr}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classserver__cc_1_1Socket_a9114ca326b632956e746bfe5214489ec}{Socket}} (int family, int type, int protocol=0)
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1Socket_a439f8917b519fbeabbf534df0114e841}\label{classserver__cc_1_1Socket_a439f8917b519fbeabbf534df0114e841}} 
+virtual \mbox{\hyperlink{classserver__cc_1_1Socket_a439f8917b519fbeabbf534df0114e841}{$\sim$\+Socket}} ()
+\begin{DoxyCompactList}\small\item\em 析构函数 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1Socket_a94a748be851ee99976d1df18bd69ab91}\label{classserver__cc_1_1Socket_a94a748be851ee99976d1df18bd69ab91}} 
+int64\+\_\+t \mbox{\hyperlink{classserver__cc_1_1Socket_a94a748be851ee99976d1df18bd69ab91}{get\+Send\+Timeout}} ()
+\begin{DoxyCompactList}\small\item\em 获取发送超时时间(毫秒) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1Socket_ad452866603a9510d492e242a6d3a7454}\label{classserver__cc_1_1Socket_ad452866603a9510d492e242a6d3a7454}} 
+void \mbox{\hyperlink{classserver__cc_1_1Socket_ad452866603a9510d492e242a6d3a7454}{set\+Send\+Timeout}} (int64\+\_\+t v)
+\begin{DoxyCompactList}\small\item\em 设置发送超时时间(毫秒) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1Socket_a7abcbd39e21221bb24a554774c841163}\label{classserver__cc_1_1Socket_a7abcbd39e21221bb24a554774c841163}} 
+int64\+\_\+t \mbox{\hyperlink{classserver__cc_1_1Socket_a7abcbd39e21221bb24a554774c841163}{get\+Recv\+Timeout}} ()
+\begin{DoxyCompactList}\small\item\em 获取接受超时时间(毫秒) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1Socket_a247cbf81a00cc764f9dbe9fa55f448cf}\label{classserver__cc_1_1Socket_a247cbf81a00cc764f9dbe9fa55f448cf}} 
+void \mbox{\hyperlink{classserver__cc_1_1Socket_a247cbf81a00cc764f9dbe9fa55f448cf}{set\+Recv\+Timeout}} (int64\+\_\+t v)
+\begin{DoxyCompactList}\small\item\em 设置接受超时时间(毫秒) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classserver__cc_1_1Socket_ae546adbbb6d25e11f028ea76fcf49712}{get\+Option}} (int level, int option, void $\ast$result, socklen\+\_\+t $\ast$len)
+\begin{DoxyCompactList}\small\item\em 获取sockopt \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\bool \mbox{\hyperlink{classserver__cc_1_1Socket_a4a84162f837f9a2dc9905c6af507e1b0}{get\+Option}} (int level, int option, T \&result)
+\begin{DoxyCompactList}\small\item\em 获取sockopt模板 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classserver__cc_1_1Socket_aa60685badbe72a1c86d4d280e36e6d1c}{set\+Option}} (int level, int option, const void $\ast$result, socklen\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em 设置sockopt \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\bool \mbox{\hyperlink{classserver__cc_1_1Socket_ac114287c274d65ebafde7ef3cb0056ca}{set\+Option}} (int level, int option, const T \&value)
+\begin{DoxyCompactList}\small\item\em 设置sockopt模板 \end{DoxyCompactList}\item 
+virtual Socket\+::ptr \mbox{\hyperlink{classserver__cc_1_1Socket_ad6e9b7bc4ce245ddbd1a87d4555fe716}{accept}} ()
+\begin{DoxyCompactList}\small\item\em 接收connect链接 \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classserver__cc_1_1Socket_a8b5ebfc2e271a240b284c3697b41bbf3}{bind}} (const Address\+::ptr addr)
+\begin{DoxyCompactList}\small\item\em 绑定地址 \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classserver__cc_1_1Socket_a94a59540ac9c1f8f0060628d96ba8a63}{connect}} (const Address\+::ptr addr, uint64\+\_\+t timeout\+\_\+ms=-\/1)
+\begin{DoxyCompactList}\small\item\em 连接地址 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1Socket_a063be3ecf6c2b1b279fa3a99a1bc97f4}\label{classserver__cc_1_1Socket_a063be3ecf6c2b1b279fa3a99a1bc97f4}} 
+virtual bool {\bfseries reconnect} (uint64\+\_\+t timeout\+\_\+ms=-\/1)
+\item 
+virtual bool \mbox{\hyperlink{classserver__cc_1_1Socket_a9edfe83e3a7fdaf4a2f4a0106c55519d}{listen}} (int backlog=S\+O\+M\+A\+X\+C\+O\+NN)
+\begin{DoxyCompactList}\small\item\em 监听socket \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1Socket_a89677721f726069950b2a0f1a0399ede}\label{classserver__cc_1_1Socket_a89677721f726069950b2a0f1a0399ede}} 
+virtual bool \mbox{\hyperlink{classserver__cc_1_1Socket_a89677721f726069950b2a0f1a0399ede}{close}} ()
+\begin{DoxyCompactList}\small\item\em 关闭socket \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classserver__cc_1_1Socket_a15eaedcaf94c672d333e5616d26fedd6}{send}} (const void $\ast$buffer, size\+\_\+t length, int flags=0)
+\begin{DoxyCompactList}\small\item\em 发送数据 T\+CP \mbox{\hyperlink{classserver__cc_1_1Socket}{Socket}} \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classserver__cc_1_1Socket_a9d54b847fcb02992abdb1f946f1a5246}{send}} (const iovec $\ast$buffers, size\+\_\+t length, int flags=0)
+\begin{DoxyCompactList}\small\item\em 发送数据 \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classserver__cc_1_1Socket_ae654da2e338747a95b8ad4794115c06f}{send\+To}} (const void $\ast$buffer, size\+\_\+t length, const Address\+::ptr to, int flags=0)
+\begin{DoxyCompactList}\small\item\em 发送数据 U\+DP \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classserver__cc_1_1Socket_a8e2a367b5bb03ed9b22b6f2841aa9ec5}{send\+To}} (const iovec $\ast$buffers, size\+\_\+t length, const Address\+::ptr to, int flags=0)
+\begin{DoxyCompactList}\small\item\em 发送数据 \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classserver__cc_1_1Socket_a5cc68726c5672b7d217a16bd3c7dceef}{recv}} (void $\ast$buffer, size\+\_\+t length, int flags=0)
+\begin{DoxyCompactList}\small\item\em 接受数据 T\+CP \mbox{\hyperlink{classserver__cc_1_1Socket}{Socket}} \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classserver__cc_1_1Socket_ae384f825e9678d8471a9943a7b6f0d6b}{recv}} (iovec $\ast$buffers, size\+\_\+t length, int flags=0)
+\begin{DoxyCompactList}\small\item\em 接受数据 \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classserver__cc_1_1Socket_a231f490a9b1c1c250d67b1bd24012880}{recv\+From}} (void $\ast$buffer, size\+\_\+t length, Address\+::ptr from, int flags=0)
+\begin{DoxyCompactList}\small\item\em 接受数据 U\+DP \mbox{\hyperlink{classserver__cc_1_1Socket}{Socket}} \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classserver__cc_1_1Socket_a2e7cedb391c328ce68f31d0b33078ddf}{recv\+From}} (iovec $\ast$buffers, size\+\_\+t length, Address\+::ptr from, int flags=0)
+\begin{DoxyCompactList}\small\item\em 接受数据 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1Socket_ac616c6cd68597632ba7093e82a9b258e}\label{classserver__cc_1_1Socket_ac616c6cd68597632ba7093e82a9b258e}} 
+Address\+::ptr \mbox{\hyperlink{classserver__cc_1_1Socket_ac616c6cd68597632ba7093e82a9b258e}{get\+Remote\+Address}} ()
+\begin{DoxyCompactList}\small\item\em 获取远端地址 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1Socket_ac98cb2465225738aaf3cc9090f9cf58a}\label{classserver__cc_1_1Socket_ac98cb2465225738aaf3cc9090f9cf58a}} 
+Address\+::ptr \mbox{\hyperlink{classserver__cc_1_1Socket_ac98cb2465225738aaf3cc9090f9cf58a}{get\+Local\+Address}} ()
+\begin{DoxyCompactList}\small\item\em 获取本地地址 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1Socket_aa641f86ef76a679032b9c24d6618e88f}\label{classserver__cc_1_1Socket_aa641f86ef76a679032b9c24d6618e88f}} 
+int \mbox{\hyperlink{classserver__cc_1_1Socket_aa641f86ef76a679032b9c24d6618e88f}{get\+Family}} () const
+\begin{DoxyCompactList}\small\item\em 获取协议簇 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1Socket_a5f91b2622d91a2855bbb0b78a11dee62}\label{classserver__cc_1_1Socket_a5f91b2622d91a2855bbb0b78a11dee62}} 
+int \mbox{\hyperlink{classserver__cc_1_1Socket_a5f91b2622d91a2855bbb0b78a11dee62}{get\+Type}} () const
+\begin{DoxyCompactList}\small\item\em 获取类型 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1Socket_aca3c186890486d1a0c5fe187814b2028}\label{classserver__cc_1_1Socket_aca3c186890486d1a0c5fe187814b2028}} 
+int \mbox{\hyperlink{classserver__cc_1_1Socket_aca3c186890486d1a0c5fe187814b2028}{get\+Protocol}} () const
+\begin{DoxyCompactList}\small\item\em 获取协议 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1Socket_a10291ba9a276a352f978360ac69ebced}\label{classserver__cc_1_1Socket_a10291ba9a276a352f978360ac69ebced}} 
+bool \mbox{\hyperlink{classserver__cc_1_1Socket_a10291ba9a276a352f978360ac69ebced}{is\+Connected}} () const
+\begin{DoxyCompactList}\small\item\em 返回是否连接 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1Socket_a543f64279d43bbc4b98cc80f2d7360d0}\label{classserver__cc_1_1Socket_a543f64279d43bbc4b98cc80f2d7360d0}} 
+bool \mbox{\hyperlink{classserver__cc_1_1Socket_a543f64279d43bbc4b98cc80f2d7360d0}{is\+Valid}} () const
+\begin{DoxyCompactList}\small\item\em 是否有效(m\+\_\+sock != -\/1) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1Socket_a970bd4cde12037839d0b5bc0b41d24e0}\label{classserver__cc_1_1Socket_a970bd4cde12037839d0b5bc0b41d24e0}} 
+int \mbox{\hyperlink{classserver__cc_1_1Socket_a970bd4cde12037839d0b5bc0b41d24e0}{get\+Error}} ()
+\begin{DoxyCompactList}\small\item\em 返回\+Socket错误 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1Socket_acb5997b956427222278e048c52db811a}\label{classserver__cc_1_1Socket_acb5997b956427222278e048c52db811a}} 
+virtual std\+::ostream \& \mbox{\hyperlink{classserver__cc_1_1Socket_acb5997b956427222278e048c52db811a}{dump}} (std\+::ostream \&os) const
+\begin{DoxyCompactList}\small\item\em 输出信息到流中 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1Socket_a67fd4bf81f7d0629655ef481021743b2}\label{classserver__cc_1_1Socket_a67fd4bf81f7d0629655ef481021743b2}} 
+virtual std\+::string {\bfseries to\+String} () const
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1Socket_a2b4aa6434714b015248616c03ee112f9}\label{classserver__cc_1_1Socket_a2b4aa6434714b015248616c03ee112f9}} 
+int \mbox{\hyperlink{classserver__cc_1_1Socket_a2b4aa6434714b015248616c03ee112f9}{get\+Socket}} () const
+\begin{DoxyCompactList}\small\item\em 返回socket句柄 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1Socket_a18574f5ee419e737f63cab3c608df4af}\label{classserver__cc_1_1Socket_a18574f5ee419e737f63cab3c608df4af}} 
+bool \mbox{\hyperlink{classserver__cc_1_1Socket_a18574f5ee419e737f63cab3c608df4af}{cancel\+Read}} ()
+\begin{DoxyCompactList}\small\item\em 取消读 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1Socket_a466ac7fb101941d87e01879149043b1a}\label{classserver__cc_1_1Socket_a466ac7fb101941d87e01879149043b1a}} 
+bool \mbox{\hyperlink{classserver__cc_1_1Socket_a466ac7fb101941d87e01879149043b1a}{cancel\+Write}} ()
+\begin{DoxyCompactList}\small\item\em 取消写 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1Socket_a070f45a254278ad8ef80d1ada4507b7e}\label{classserver__cc_1_1Socket_a070f45a254278ad8ef80d1ada4507b7e}} 
+bool \mbox{\hyperlink{classserver__cc_1_1Socket_a070f45a254278ad8ef80d1ada4507b7e}{cancel\+Accept}} ()
+\begin{DoxyCompactList}\small\item\em 取消accept \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1Socket_addc4a6df86cdff7ee81dd2f08cec5338}\label{classserver__cc_1_1Socket_addc4a6df86cdff7ee81dd2f08cec5338}} 
+bool \mbox{\hyperlink{classserver__cc_1_1Socket_addc4a6df86cdff7ee81dd2f08cec5338}{cancel\+All}} ()
+\begin{DoxyCompactList}\small\item\em 取消所有事件 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Socket\+::ptr \mbox{\hyperlink{classserver__cc_1_1Socket_addfe8e1a6c58d063267667959581e1d7}{Create\+T\+CP}} (server\+\_\+cc\+::\+Address\+::ptr address)
+\item 
+static Socket\+::ptr \mbox{\hyperlink{classserver__cc_1_1Socket_afa42ce81d75e293d4d647caf2e8844c6}{Create\+U\+DP}} (server\+\_\+cc\+::\+Address\+::ptr address)
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1Socket_a235062231bad5242d6f279673f65d8d7}\label{classserver__cc_1_1Socket_a235062231bad5242d6f279673f65d8d7}} 
+static Socket\+::ptr \mbox{\hyperlink{classserver__cc_1_1Socket_a235062231bad5242d6f279673f65d8d7}{Create\+T\+C\+P\+Socket}} ()
+\begin{DoxyCompactList}\small\item\em 创建\+I\+Pv4的\+T\+CP \mbox{\hyperlink{classserver__cc_1_1Socket}{Socket}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1Socket_a1e9355d3782e58ee7f55801ea4e1798e}\label{classserver__cc_1_1Socket_a1e9355d3782e58ee7f55801ea4e1798e}} 
+static Socket\+::ptr \mbox{\hyperlink{classserver__cc_1_1Socket_a1e9355d3782e58ee7f55801ea4e1798e}{Create\+U\+D\+P\+Socket}} ()
+\begin{DoxyCompactList}\small\item\em 创建\+I\+Pv4的\+U\+DP \mbox{\hyperlink{classserver__cc_1_1Socket}{Socket}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1Socket_ad7fe537f09fbf9f372f68edd752e8fe0}\label{classserver__cc_1_1Socket_ad7fe537f09fbf9f372f68edd752e8fe0}} 
+static Socket\+::ptr \mbox{\hyperlink{classserver__cc_1_1Socket_ad7fe537f09fbf9f372f68edd752e8fe0}{Create\+T\+C\+P\+Socket6}} ()
+\begin{DoxyCompactList}\small\item\em 创建\+I\+Pv6的\+T\+CP \mbox{\hyperlink{classserver__cc_1_1Socket}{Socket}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1Socket_a7b41beaf96b6cd7fd15ef44c851f1fcc}\label{classserver__cc_1_1Socket_a7b41beaf96b6cd7fd15ef44c851f1fcc}} 
+static Socket\+::ptr \mbox{\hyperlink{classserver__cc_1_1Socket_a7b41beaf96b6cd7fd15ef44c851f1fcc}{Create\+U\+D\+P\+Socket6}} ()
+\begin{DoxyCompactList}\small\item\em 创建\+I\+Pv6的\+U\+DP \mbox{\hyperlink{classserver__cc_1_1Socket}{Socket}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1Socket_ad787aeee179f1b85d51e5c1a28e31d08}\label{classserver__cc_1_1Socket_ad787aeee179f1b85d51e5c1a28e31d08}} 
+static Socket\+::ptr \mbox{\hyperlink{classserver__cc_1_1Socket_ad787aeee179f1b85d51e5c1a28e31d08}{Create\+Unix\+T\+C\+P\+Socket}} ()
+\begin{DoxyCompactList}\small\item\em 创建\+Unix的\+T\+CP \mbox{\hyperlink{classserver__cc_1_1Socket}{Socket}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1Socket_a7b31fc9f4202a92f69813c59b60f3f66}\label{classserver__cc_1_1Socket_a7b31fc9f4202a92f69813c59b60f3f66}} 
+static Socket\+::ptr \mbox{\hyperlink{classserver__cc_1_1Socket_a7b31fc9f4202a92f69813c59b60f3f66}{Create\+Unix\+U\+D\+P\+Socket}} ()
+\begin{DoxyCompactList}\small\item\em 创建\+Unix的\+U\+DP \mbox{\hyperlink{classserver__cc_1_1Socket}{Socket}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1Socket_a02179b23afa55fb1f379455c12a47a81}\label{classserver__cc_1_1Socket_a02179b23afa55fb1f379455c12a47a81}} 
+void \mbox{\hyperlink{classserver__cc_1_1Socket_a02179b23afa55fb1f379455c12a47a81}{init\+Sock}} ()
+\begin{DoxyCompactList}\small\item\em 初始化socket \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1Socket_ae3fb966ca0fbe2fb28378345271d01b9}\label{classserver__cc_1_1Socket_ae3fb966ca0fbe2fb28378345271d01b9}} 
+void \mbox{\hyperlink{classserver__cc_1_1Socket_ae3fb966ca0fbe2fb28378345271d01b9}{new\+Sock}} ()
+\begin{DoxyCompactList}\small\item\em 创建socket \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1Socket_ad75461d8f90dad8406c44808b6266bf1}\label{classserver__cc_1_1Socket_ad75461d8f90dad8406c44808b6266bf1}} 
+virtual bool \mbox{\hyperlink{classserver__cc_1_1Socket_ad75461d8f90dad8406c44808b6266bf1}{init}} (int sock)
+\begin{DoxyCompactList}\small\item\em 初始化sock \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1Socket_a47b6d0c1598b264d47e18ad39b129c00}\label{classserver__cc_1_1Socket_a47b6d0c1598b264d47e18ad39b129c00}} 
+int \mbox{\hyperlink{classserver__cc_1_1Socket_a47b6d0c1598b264d47e18ad39b129c00}{m\+\_\+sock}}
+\begin{DoxyCompactList}\small\item\em socket句柄 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1Socket_ac0fcbffb7a3e69e4469b94efc30599bc}\label{classserver__cc_1_1Socket_ac0fcbffb7a3e69e4469b94efc30599bc}} 
+int \mbox{\hyperlink{classserver__cc_1_1Socket_ac0fcbffb7a3e69e4469b94efc30599bc}{m\+\_\+family}}
+\begin{DoxyCompactList}\small\item\em 协议簇 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1Socket_af3c03a3970b26fcab2ea0fdd7ceacc89}\label{classserver__cc_1_1Socket_af3c03a3970b26fcab2ea0fdd7ceacc89}} 
+int \mbox{\hyperlink{classserver__cc_1_1Socket_af3c03a3970b26fcab2ea0fdd7ceacc89}{m\+\_\+type}}
+\begin{DoxyCompactList}\small\item\em 类型 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1Socket_ac3674e73970c5bf7dba6f8ba6b6f0008}\label{classserver__cc_1_1Socket_ac3674e73970c5bf7dba6f8ba6b6f0008}} 
+int \mbox{\hyperlink{classserver__cc_1_1Socket_ac3674e73970c5bf7dba6f8ba6b6f0008}{m\+\_\+protocol}}
+\begin{DoxyCompactList}\small\item\em 协议 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1Socket_af0b8320e3ad253010866200fdbf21d2c}\label{classserver__cc_1_1Socket_af0b8320e3ad253010866200fdbf21d2c}} 
+bool \mbox{\hyperlink{classserver__cc_1_1Socket_af0b8320e3ad253010866200fdbf21d2c}{m\+\_\+is\+Connected}}
+\begin{DoxyCompactList}\small\item\em 是否连接 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1Socket_a305dfb517302dd4af897117a94557a30}\label{classserver__cc_1_1Socket_a305dfb517302dd4af897117a94557a30}} 
+Address\+::ptr \mbox{\hyperlink{classserver__cc_1_1Socket_a305dfb517302dd4af897117a94557a30}{m\+\_\+local\+Address}}
+\begin{DoxyCompactList}\small\item\em 本地地址 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1Socket_a496df9f2c29d26a545039664e09783fe}\label{classserver__cc_1_1Socket_a496df9f2c29d26a545039664e09783fe}} 
+Address\+::ptr \mbox{\hyperlink{classserver__cc_1_1Socket_a496df9f2c29d26a545039664e09783fe}{m\+\_\+remote\+Address}}
+\begin{DoxyCompactList}\small\item\em 远端地址 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Socket封装类 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classserver__cc_1_1Socket_a5f0e5b875db1e6fe4a86a96f64c9c3c4}\label{classserver__cc_1_1Socket_a5f0e5b875db1e6fe4a86a96f64c9c3c4}} 
+\index{server\_cc::Socket@{server\_cc::Socket}!Family@{Family}}
+\index{Family@{Family}!server\_cc::Socket@{server\_cc::Socket}}
+\doxysubsubsection{\texorpdfstring{Family}{Family}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classserver__cc_1_1Socket_a5f0e5b875db1e6fe4a86a96f64c9c3c4}{server\+\_\+cc\+::\+Socket\+::\+Family}}}
+
+
+
+Socket协议簇 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IPv4@{IPv4}!server\_cc::Socket@{server\_cc::Socket}}\index{server\_cc::Socket@{server\_cc::Socket}!IPv4@{IPv4}}}\mbox{\Hypertarget{classserver__cc_1_1Socket_a5f0e5b875db1e6fe4a86a96f64c9c3c4aa473868404e804752c167d667e641101}\label{classserver__cc_1_1Socket_a5f0e5b875db1e6fe4a86a96f64c9c3c4aa473868404e804752c167d667e641101}} 
+I\+Pv4&I\+Pv4 socket. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IPv6@{IPv6}!server\_cc::Socket@{server\_cc::Socket}}\index{server\_cc::Socket@{server\_cc::Socket}!IPv6@{IPv6}}}\mbox{\Hypertarget{classserver__cc_1_1Socket_a5f0e5b875db1e6fe4a86a96f64c9c3c4a6eaa04d13332f9bf868dedc8d5de7efe}\label{classserver__cc_1_1Socket_a5f0e5b875db1e6fe4a86a96f64c9c3c4a6eaa04d13332f9bf868dedc8d5de7efe}} 
+I\+Pv6&I\+Pv6 socket. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UNIX@{UNIX}!server\_cc::Socket@{server\_cc::Socket}}\index{server\_cc::Socket@{server\_cc::Socket}!UNIX@{UNIX}}}\mbox{\Hypertarget{classserver__cc_1_1Socket_a5f0e5b875db1e6fe4a86a96f64c9c3c4afcd0fc6a7208c2056784c1f12fea9e28}\label{classserver__cc_1_1Socket_a5f0e5b875db1e6fe4a86a96f64c9c3c4afcd0fc6a7208c2056784c1f12fea9e28}} 
+U\+N\+IX&Unix socket. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{classserver__cc_1_1Socket_a7a095de2fa2dfff108ed9043e1fcdd08}\label{classserver__cc_1_1Socket_a7a095de2fa2dfff108ed9043e1fcdd08}} 
+\index{server\_cc::Socket@{server\_cc::Socket}!Type@{Type}}
+\index{Type@{Type}!server\_cc::Socket@{server\_cc::Socket}}
+\doxysubsubsection{\texorpdfstring{Type}{Type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classserver__cc_1_1Socket_a7a095de2fa2dfff108ed9043e1fcdd08}{server\+\_\+cc\+::\+Socket\+::\+Type}}}
+
+
+
+Socket类型 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TCP@{TCP}!server\_cc::Socket@{server\_cc::Socket}}\index{server\_cc::Socket@{server\_cc::Socket}!TCP@{TCP}}}\mbox{\Hypertarget{classserver__cc_1_1Socket_a7a095de2fa2dfff108ed9043e1fcdd08afcf7d1f08d2d38a4f986fec5c40276af}\label{classserver__cc_1_1Socket_a7a095de2fa2dfff108ed9043e1fcdd08afcf7d1f08d2d38a4f986fec5c40276af}} 
+T\+CP&T\+C\+P类型 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UDP@{UDP}!server\_cc::Socket@{server\_cc::Socket}}\index{server\_cc::Socket@{server\_cc::Socket}!UDP@{UDP}}}\mbox{\Hypertarget{classserver__cc_1_1Socket_a7a095de2fa2dfff108ed9043e1fcdd08a55fc53b48e942afc4c3f1d9d7521e42c}\label{classserver__cc_1_1Socket_a7a095de2fa2dfff108ed9043e1fcdd08a55fc53b48e942afc4c3f1d9d7521e42c}} 
+U\+DP&U\+D\+P类型 \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classserver__cc_1_1Socket_a9114ca326b632956e746bfe5214489ec}\label{classserver__cc_1_1Socket_a9114ca326b632956e746bfe5214489ec}} 
+\index{server\_cc::Socket@{server\_cc::Socket}!Socket@{Socket}}
+\index{Socket@{Socket}!server\_cc::Socket@{server\_cc::Socket}}
+\doxysubsubsection{\texorpdfstring{Socket()}{Socket()}}
+{\footnotesize\ttfamily server\+\_\+cc\+::\+Socket\+::\+Socket (\begin{DoxyParamCaption}\item[{int}]{family,  }\item[{int}]{type,  }\item[{int}]{protocol = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+@description\+: 创建\+Socket 
+\begin{DoxyParams}{Parameters}
+{\em \{int\}} & family 协议簇 \\
+\hline
+{\em \{int\}} & type 类型：\+T\+C\+P/\+U\+DP \\
+\hline
+{\em \{int\}} & protocol 协议：\+I\+P\+P\+R\+O\+T\+O\+\_\+\+T\+C\+P/\+I\+P\+P\+R\+O\+T\+O\+\_\+\+U\+DP \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\{$\ast$\} 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classserver__cc_1_1Socket_ad6e9b7bc4ce245ddbd1a87d4555fe716}\label{classserver__cc_1_1Socket_ad6e9b7bc4ce245ddbd1a87d4555fe716}} 
+\index{server\_cc::Socket@{server\_cc::Socket}!accept@{accept}}
+\index{accept@{accept}!server\_cc::Socket@{server\_cc::Socket}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}}
+{\footnotesize\ttfamily Socket\+::ptr server\+\_\+cc\+::\+Socket\+::accept (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+接收connect链接 
+
+\begin{DoxyReturn}{Returns}
+成功返回新连接的socket,失败返回nullptr 
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+Socket必须 bind , listen 成功 
+\end{DoxyPrecond}
+\mbox{\Hypertarget{classserver__cc_1_1Socket_a8b5ebfc2e271a240b284c3697b41bbf3}\label{classserver__cc_1_1Socket_a8b5ebfc2e271a240b284c3697b41bbf3}} 
+\index{server\_cc::Socket@{server\_cc::Socket}!bind@{bind}}
+\index{bind@{bind}!server\_cc::Socket@{server\_cc::Socket}}
+\doxysubsubsection{\texorpdfstring{bind()}{bind()}}
+{\footnotesize\ttfamily bool server\+\_\+cc\+::\+Socket\+::bind (\begin{DoxyParamCaption}\item[{const Address\+::ptr}]{addr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+绑定地址 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em addr} & 地址 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+是否绑定成功 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classserver__cc_1_1Socket_a94a59540ac9c1f8f0060628d96ba8a63}\label{classserver__cc_1_1Socket_a94a59540ac9c1f8f0060628d96ba8a63}} 
+\index{server\_cc::Socket@{server\_cc::Socket}!connect@{connect}}
+\index{connect@{connect}!server\_cc::Socket@{server\_cc::Socket}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}}
+{\footnotesize\ttfamily bool server\+\_\+cc\+::\+Socket\+::connect (\begin{DoxyParamCaption}\item[{const Address\+::ptr}]{addr,  }\item[{uint64\+\_\+t}]{timeout\+\_\+ms = {\ttfamily -\/1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+连接地址 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em addr} & 目标地址 \\
+\hline
+\mbox{\texttt{ in}}  & {\em timeout\+\_\+ms} & 超时时间(毫秒) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classserver__cc_1_1Socket_addfe8e1a6c58d063267667959581e1d7}\label{classserver__cc_1_1Socket_addfe8e1a6c58d063267667959581e1d7}} 
+\index{server\_cc::Socket@{server\_cc::Socket}!CreateTCP@{CreateTCP}}
+\index{CreateTCP@{CreateTCP}!server\_cc::Socket@{server\_cc::Socket}}
+\doxysubsubsection{\texorpdfstring{CreateTCP()}{CreateTCP()}}
+{\footnotesize\ttfamily Socket\+::ptr server\+\_\+cc\+::\+Socket\+::\+Create\+T\+CP (\begin{DoxyParamCaption}\item[{server\+\_\+cc\+::\+Address\+::ptr}]{address }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+@description\+: 创建\+T\+CP \mbox{\hyperlink{classserver__cc_1_1Socket}{Socket}}(满足地址类型) 
+\begin{DoxyParams}{Parameters}
+{\em \{\+Address\+::ptr\}} & address 地址 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\{$\ast$\} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classserver__cc_1_1Socket_afa42ce81d75e293d4d647caf2e8844c6}\label{classserver__cc_1_1Socket_afa42ce81d75e293d4d647caf2e8844c6}} 
+\index{server\_cc::Socket@{server\_cc::Socket}!CreateUDP@{CreateUDP}}
+\index{CreateUDP@{CreateUDP}!server\_cc::Socket@{server\_cc::Socket}}
+\doxysubsubsection{\texorpdfstring{CreateUDP()}{CreateUDP()}}
+{\footnotesize\ttfamily Socket\+::ptr server\+\_\+cc\+::\+Socket\+::\+Create\+U\+DP (\begin{DoxyParamCaption}\item[{server\+\_\+cc\+::\+Address\+::ptr}]{address }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+@description\+: 创建\+U\+DP \mbox{\hyperlink{classserver__cc_1_1Socket}{Socket}}(满足地址类型) 
+\begin{DoxyParams}{Parameters}
+{\em \{ptr\}} & address 地址 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\{$\ast$\} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classserver__cc_1_1Socket_a4a84162f837f9a2dc9905c6af507e1b0}\label{classserver__cc_1_1Socket_a4a84162f837f9a2dc9905c6af507e1b0}} 
+\index{server\_cc::Socket@{server\_cc::Socket}!getOption@{getOption}}
+\index{getOption@{getOption}!server\_cc::Socket@{server\_cc::Socket}}
+\doxysubsubsection{\texorpdfstring{getOption()}{getOption()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool server\+\_\+cc\+::\+Socket\+::get\+Option (\begin{DoxyParamCaption}\item[{int}]{level,  }\item[{int}]{option,  }\item[{T \&}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+获取sockopt模板 
+
+\begin{DoxySeeAlso}{See also}
+getsockopt 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classserver__cc_1_1Socket_ae546adbbb6d25e11f028ea76fcf49712}\label{classserver__cc_1_1Socket_ae546adbbb6d25e11f028ea76fcf49712}} 
+\index{server\_cc::Socket@{server\_cc::Socket}!getOption@{getOption}}
+\index{getOption@{getOption}!server\_cc::Socket@{server\_cc::Socket}}
+\doxysubsubsection{\texorpdfstring{getOption()}{getOption()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool server\+\_\+cc\+::\+Socket\+::get\+Option (\begin{DoxyParamCaption}\item[{int}]{level,  }\item[{int}]{option,  }\item[{void $\ast$}]{result,  }\item[{socklen\+\_\+t $\ast$}]{len }\end{DoxyParamCaption})}
+
+
+
+获取sockopt 
+
+\begin{DoxySeeAlso}{See also}
+getsockopt 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classserver__cc_1_1Socket_a9edfe83e3a7fdaf4a2f4a0106c55519d}\label{classserver__cc_1_1Socket_a9edfe83e3a7fdaf4a2f4a0106c55519d}} 
+\index{server\_cc::Socket@{server\_cc::Socket}!listen@{listen}}
+\index{listen@{listen}!server\_cc::Socket@{server\_cc::Socket}}
+\doxysubsubsection{\texorpdfstring{listen()}{listen()}}
+{\footnotesize\ttfamily bool server\+\_\+cc\+::\+Socket\+::listen (\begin{DoxyParamCaption}\item[{int}]{backlog = {\ttfamily SOMAXCONN} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+监听socket 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em backlog} & 未完成连接队列的最大长度 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+返回监听是否成功 
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+必须先 bind 成功 
+\end{DoxyPrecond}
+\mbox{\Hypertarget{classserver__cc_1_1Socket_ae384f825e9678d8471a9943a7b6f0d6b}\label{classserver__cc_1_1Socket_ae384f825e9678d8471a9943a7b6f0d6b}} 
+\index{server\_cc::Socket@{server\_cc::Socket}!recv@{recv}}
+\index{recv@{recv}!server\_cc::Socket@{server\_cc::Socket}}
+\doxysubsubsection{\texorpdfstring{recv()}{recv()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int server\+\_\+cc\+::\+Socket\+::recv (\begin{DoxyParamCaption}\item[{iovec $\ast$}]{buffers,  }\item[{size\+\_\+t}]{length,  }\item[{int}]{flags = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+接受数据 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em buffers} & 接收数据的内存(iovec数组) \\
+\hline
+\mbox{\texttt{ in}}  & {\em length} & 接收数据的内存大小(iovec数组长度) \\
+\hline
+\mbox{\texttt{ in}}  & {\em flags} & 标志字 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em $>$0} & 接收到对应大小的数据 \\
+\hline
+{\em =0} & socket被关闭 \\
+\hline
+{\em $<$0} & socket出错 \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classserver__cc_1_1Socket_a5cc68726c5672b7d217a16bd3c7dceef}\label{classserver__cc_1_1Socket_a5cc68726c5672b7d217a16bd3c7dceef}} 
+\index{server\_cc::Socket@{server\_cc::Socket}!recv@{recv}}
+\index{recv@{recv}!server\_cc::Socket@{server\_cc::Socket}}
+\doxysubsubsection{\texorpdfstring{recv()}{recv()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int server\+\_\+cc\+::\+Socket\+::recv (\begin{DoxyParamCaption}\item[{void $\ast$}]{buffer,  }\item[{size\+\_\+t}]{length,  }\item[{int}]{flags = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+接受数据 T\+CP \mbox{\hyperlink{classserver__cc_1_1Socket}{Socket}} 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em buffer} & 接收数据的内存 \\
+\hline
+\mbox{\texttt{ in}}  & {\em length} & 接收数据的内存大小 \\
+\hline
+\mbox{\texttt{ in}}  & {\em flags} & 标志字 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em $>$0} & 接收到对应大小的数据 \\
+\hline
+{\em =0} & socket被关闭 \\
+\hline
+{\em $<$0} & socket出错 \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classserver__cc_1_1Socket_a2e7cedb391c328ce68f31d0b33078ddf}\label{classserver__cc_1_1Socket_a2e7cedb391c328ce68f31d0b33078ddf}} 
+\index{server\_cc::Socket@{server\_cc::Socket}!recvFrom@{recvFrom}}
+\index{recvFrom@{recvFrom}!server\_cc::Socket@{server\_cc::Socket}}
+\doxysubsubsection{\texorpdfstring{recvFrom()}{recvFrom()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int server\+\_\+cc\+::\+Socket\+::recv\+From (\begin{DoxyParamCaption}\item[{iovec $\ast$}]{buffers,  }\item[{size\+\_\+t}]{length,  }\item[{Address\+::ptr}]{from,  }\item[{int}]{flags = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+接受数据 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em buffers} & 接收数据的内存(iovec数组) \\
+\hline
+\mbox{\texttt{ in}}  & {\em length} & 接收数据的内存大小(iovec数组长度) \\
+\hline
+\mbox{\texttt{ out}}  & {\em from} & 发送端地址 \\
+\hline
+\mbox{\texttt{ in}}  & {\em flags} & 标志字 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em $>$0} & 接收到对应大小的数据 \\
+\hline
+{\em =0} & socket被关闭 \\
+\hline
+{\em $<$0} & socket出错 \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classserver__cc_1_1Socket_a231f490a9b1c1c250d67b1bd24012880}\label{classserver__cc_1_1Socket_a231f490a9b1c1c250d67b1bd24012880}} 
+\index{server\_cc::Socket@{server\_cc::Socket}!recvFrom@{recvFrom}}
+\index{recvFrom@{recvFrom}!server\_cc::Socket@{server\_cc::Socket}}
+\doxysubsubsection{\texorpdfstring{recvFrom()}{recvFrom()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int server\+\_\+cc\+::\+Socket\+::recv\+From (\begin{DoxyParamCaption}\item[{void $\ast$}]{buffer,  }\item[{size\+\_\+t}]{length,  }\item[{Address\+::ptr}]{from,  }\item[{int}]{flags = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+接受数据 U\+DP \mbox{\hyperlink{classserver__cc_1_1Socket}{Socket}} 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em buffer} & 接收数据的内存 \\
+\hline
+\mbox{\texttt{ in}}  & {\em length} & 接收数据的内存大小 \\
+\hline
+\mbox{\texttt{ out}}  & {\em from} & 发送端地址 \\
+\hline
+\mbox{\texttt{ in}}  & {\em flags} & 标志字 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em $>$0} & 接收到对应大小的数据 \\
+\hline
+{\em =0} & socket被关闭 \\
+\hline
+{\em $<$0} & socket出错 \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classserver__cc_1_1Socket_a9d54b847fcb02992abdb1f946f1a5246}\label{classserver__cc_1_1Socket_a9d54b847fcb02992abdb1f946f1a5246}} 
+\index{server\_cc::Socket@{server\_cc::Socket}!send@{send}}
+\index{send@{send}!server\_cc::Socket@{server\_cc::Socket}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int server\+\_\+cc\+::\+Socket\+::send (\begin{DoxyParamCaption}\item[{const iovec $\ast$}]{buffers,  }\item[{size\+\_\+t}]{length,  }\item[{int}]{flags = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+发送数据 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em buffers} & 待发送数据的内存(iovec数组) \\
+\hline
+\mbox{\texttt{ in}}  & {\em length} & 待发送数据的长度(iovec长度) \\
+\hline
+\mbox{\texttt{ in}}  & {\em flags} & 标志字 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em $>$0} & 发送成功对应大小的数据 \\
+\hline
+{\em =0} & socket被关闭 \\
+\hline
+{\em $<$0} & socket出错 \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classserver__cc_1_1Socket_a15eaedcaf94c672d333e5616d26fedd6}\label{classserver__cc_1_1Socket_a15eaedcaf94c672d333e5616d26fedd6}} 
+\index{server\_cc::Socket@{server\_cc::Socket}!send@{send}}
+\index{send@{send}!server\_cc::Socket@{server\_cc::Socket}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int server\+\_\+cc\+::\+Socket\+::send (\begin{DoxyParamCaption}\item[{const void $\ast$}]{buffer,  }\item[{size\+\_\+t}]{length,  }\item[{int}]{flags = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+发送数据 T\+CP \mbox{\hyperlink{classserver__cc_1_1Socket}{Socket}} 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em buffer} & 待发送数据的内存 \\
+\hline
+\mbox{\texttt{ in}}  & {\em length} & 待发送数据的长度 \\
+\hline
+\mbox{\texttt{ in}}  & {\em flags} & 标志字 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em $>$0} & 发送成功对应大小的数据 \\
+\hline
+{\em =0} & socket被关闭 \\
+\hline
+{\em $<$0} & socket出错 \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classserver__cc_1_1Socket_a8e2a367b5bb03ed9b22b6f2841aa9ec5}\label{classserver__cc_1_1Socket_a8e2a367b5bb03ed9b22b6f2841aa9ec5}} 
+\index{server\_cc::Socket@{server\_cc::Socket}!sendTo@{sendTo}}
+\index{sendTo@{sendTo}!server\_cc::Socket@{server\_cc::Socket}}
+\doxysubsubsection{\texorpdfstring{sendTo()}{sendTo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int server\+\_\+cc\+::\+Socket\+::send\+To (\begin{DoxyParamCaption}\item[{const iovec $\ast$}]{buffers,  }\item[{size\+\_\+t}]{length,  }\item[{const Address\+::ptr}]{to,  }\item[{int}]{flags = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+发送数据 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em buffers} & 待发送数据的内存(iovec数组) \\
+\hline
+\mbox{\texttt{ in}}  & {\em length} & 待发送数据的长度(iovec长度) \\
+\hline
+\mbox{\texttt{ in}}  & {\em to} & 发送的目标地址 \\
+\hline
+\mbox{\texttt{ in}}  & {\em flags} & 标志字 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em $>$0} & 发送成功对应大小的数据 \\
+\hline
+{\em =0} & socket被关闭 \\
+\hline
+{\em $<$0} & socket出错 \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classserver__cc_1_1Socket_ae654da2e338747a95b8ad4794115c06f}\label{classserver__cc_1_1Socket_ae654da2e338747a95b8ad4794115c06f}} 
+\index{server\_cc::Socket@{server\_cc::Socket}!sendTo@{sendTo}}
+\index{sendTo@{sendTo}!server\_cc::Socket@{server\_cc::Socket}}
+\doxysubsubsection{\texorpdfstring{sendTo()}{sendTo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int server\+\_\+cc\+::\+Socket\+::send\+To (\begin{DoxyParamCaption}\item[{const void $\ast$}]{buffer,  }\item[{size\+\_\+t}]{length,  }\item[{const Address\+::ptr}]{to,  }\item[{int}]{flags = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+发送数据 U\+DP 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em buffer} & 待发送数据的内存 \\
+\hline
+\mbox{\texttt{ in}}  & {\em length} & 待发送数据的长度 \\
+\hline
+\mbox{\texttt{ in}}  & {\em to} & 发送的目标地址 \\
+\hline
+\mbox{\texttt{ in}}  & {\em flags} & 标志字 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em $>$0} & 发送成功对应大小的数据 \\
+\hline
+{\em =0} & socket被关闭 \\
+\hline
+{\em $<$0} & socket出错 \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classserver__cc_1_1Socket_ac114287c274d65ebafde7ef3cb0056ca}\label{classserver__cc_1_1Socket_ac114287c274d65ebafde7ef3cb0056ca}} 
+\index{server\_cc::Socket@{server\_cc::Socket}!setOption@{setOption}}
+\index{setOption@{setOption}!server\_cc::Socket@{server\_cc::Socket}}
+\doxysubsubsection{\texorpdfstring{setOption()}{setOption()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool server\+\_\+cc\+::\+Socket\+::set\+Option (\begin{DoxyParamCaption}\item[{int}]{level,  }\item[{int}]{option,  }\item[{const T \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+设置sockopt模板 
+
+\begin{DoxySeeAlso}{See also}
+setsockopt 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classserver__cc_1_1Socket_aa60685badbe72a1c86d4d280e36e6d1c}\label{classserver__cc_1_1Socket_aa60685badbe72a1c86d4d280e36e6d1c}} 
+\index{server\_cc::Socket@{server\_cc::Socket}!setOption@{setOption}}
+\index{setOption@{setOption}!server\_cc::Socket@{server\_cc::Socket}}
+\doxysubsubsection{\texorpdfstring{setOption()}{setOption()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool server\+\_\+cc\+::\+Socket\+::set\+Option (\begin{DoxyParamCaption}\item[{int}]{level,  }\item[{int}]{option,  }\item[{const void $\ast$}]{result,  }\item[{socklen\+\_\+t}]{len }\end{DoxyParamCaption})}
+
+
+
+设置sockopt 
+
+\begin{DoxySeeAlso}{See also}
+setsockopt 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+socket.\+h\item 
+socket.\+cpp\end{DoxyCompactItemize}

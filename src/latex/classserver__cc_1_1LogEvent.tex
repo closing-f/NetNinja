@@ -1,0 +1,117 @@
+\hypertarget{classserver__cc_1_1LogEvent}{}\doxysection{server\+\_\+cc\+::Log\+Event Class Reference}
+\label{classserver__cc_1_1LogEvent}\index{server\_cc::LogEvent@{server\_cc::LogEvent}}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1LogEvent_aed9a71cda382bdf9d096ef46c56ff999}\label{classserver__cc_1_1LogEvent_aed9a71cda382bdf9d096ef46c56ff999}} 
+typedef std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classserver__cc_1_1LogEvent}{Log\+Event}} $>$ {\bfseries ptr}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classserver__cc_1_1LogEvent_a3544cc1ed8073a97bf697b6bf94e45c4}{Log\+Event}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classserver__cc_1_1Logger}{Logger}} $>$ logger, Log\+Level\+::\+Level level, const char $\ast$file, int32\+\_\+t line, uint32\+\_\+t elapse, uint32\+\_\+t thread\+\_\+id, uint32\+\_\+t fiber\+\_\+id, uint64\+\_\+t time, const std\+::string \&thread\+\_\+name)
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1LogEvent_ae90760bc77e21c53ebfbd3fa58a79ea5}\label{classserver__cc_1_1LogEvent_ae90760bc77e21c53ebfbd3fa58a79ea5}} 
+const char $\ast$ {\bfseries get\+File} () const
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1LogEvent_a44665b558c5bc64b3845688bcaf2567d}\label{classserver__cc_1_1LogEvent_a44665b558c5bc64b3845688bcaf2567d}} 
+int {\bfseries get\+Line} () const
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1LogEvent_a30ca7cd6a41c037f03b319f7a59c6fe4}\label{classserver__cc_1_1LogEvent_a30ca7cd6a41c037f03b319f7a59c6fe4}} 
+u\+\_\+int32\+\_\+t {\bfseries get\+Elapse} () const
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1LogEvent_abd969309a1158ecf8772cf342d3c6d9e}\label{classserver__cc_1_1LogEvent_abd969309a1158ecf8772cf342d3c6d9e}} 
+u\+\_\+int32\+\_\+t {\bfseries get\+Thread\+Id} () const
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1LogEvent_a2adb0099f160480ac4cb7c92acd59edc}\label{classserver__cc_1_1LogEvent_a2adb0099f160480ac4cb7c92acd59edc}} 
+u\+\_\+int32\+\_\+t {\bfseries get\+Fiber\+Id} () const
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1LogEvent_a4e0075f15873b3bbe76667b6ddca6d4e}\label{classserver__cc_1_1LogEvent_a4e0075f15873b3bbe76667b6ddca6d4e}} 
+u\+\_\+int64\+\_\+t {\bfseries get\+Time} () const
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1LogEvent_a2835ebb7870d50e33d8c607e8f323f85}\label{classserver__cc_1_1LogEvent_a2835ebb7870d50e33d8c607e8f323f85}} 
+std\+::string {\bfseries get\+Content} () const
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1LogEvent_a28425b47eef943f60acc988337e7c26d}\label{classserver__cc_1_1LogEvent_a28425b47eef943f60acc988337e7c26d}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classserver__cc_1_1Logger}{Logger}} $>$ {\bfseries get\+Logger} () const
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1LogEvent_a28a6d1a250d1e18203576311a441ff1d}\label{classserver__cc_1_1LogEvent_a28a6d1a250d1e18203576311a441ff1d}} 
+Log\+Level\+::\+Level {\bfseries get\+Level} () const
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1LogEvent_a6a7680d8d625a9a13f4414f71f7926bf}\label{classserver__cc_1_1LogEvent_a6a7680d8d625a9a13f4414f71f7926bf}} 
+const std\+::string \& {\bfseries get\+Thread\+Name} () const
+\item 
+void \mbox{\hyperlink{classserver__cc_1_1LogEvent_add1f0bb8855d31c44b4134911c26c024}{format}} (const char $\ast$fmt,...)
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1LogEvent_a81a5bc008adc03025c684da02059b71b}\label{classserver__cc_1_1LogEvent_a81a5bc008adc03025c684da02059b71b}} 
+void {\bfseries format} (const char $\ast$fmt, va\+\_\+list al)
+\item 
+std\+::stringstream \& \mbox{\hyperlink{classserver__cc_1_1LogEvent_aab227c07275fefeeedc3c190093e967b}{get\+SS}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classserver__cc_1_1LogEvent_a3544cc1ed8073a97bf697b6bf94e45c4}\label{classserver__cc_1_1LogEvent_a3544cc1ed8073a97bf697b6bf94e45c4}} 
+\index{server\_cc::LogEvent@{server\_cc::LogEvent}!LogEvent@{LogEvent}}
+\index{LogEvent@{LogEvent}!server\_cc::LogEvent@{server\_cc::LogEvent}}
+\doxysubsubsection{\texorpdfstring{LogEvent()}{LogEvent()}}
+{\footnotesize\ttfamily server\+\_\+cc\+::\+Log\+Event\+::\+Log\+Event (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classserver__cc_1_1Logger}{Logger}} $>$}]{logger,  }\item[{Log\+Level\+::\+Level}]{level,  }\item[{const char $\ast$}]{file,  }\item[{int32\+\_\+t}]{line,  }\item[{uint32\+\_\+t}]{elapse,  }\item[{uint32\+\_\+t}]{thread\+\_\+id,  }\item[{uint32\+\_\+t}]{fiber\+\_\+id,  }\item[{uint64\+\_\+t}]{time,  }\item[{const std\+::string \&}]{thread\+\_\+name }\end{DoxyParamCaption})}
+
+@description\+: 构造函数 
+\begin{DoxyParams}{Parameters}
+{\em \{std\+::shared\+\_\+ptr$<$\+Logger$>$\}} & logger 日志器 \\
+\hline
+{\em \{\+Log\+Level\+::\+Level\}} & level 日志级别 \\
+\hline
+{\em \{const} & char$\ast$\} file 文件名 \\
+\hline
+{\em \{int32\+\_\+t\}} & line 行号 \\
+\hline
+{\em \{uint32\+\_\+t\}} & elapse 程序启动到现在的毫秒数 \\
+\hline
+{\em \{uint32\+\_\+t\}} & thread\+\_\+id 线程id \\
+\hline
+{\em \{uint32\+\_\+t\}} & fiber\+\_\+id 协程id \\
+\hline
+{\em \{uint64\+\_\+t\}} & time 时间戳 \\
+\hline
+{\em \{const} & std\+::string\&\} thread\+\_\+name 线程名称 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\{$\ast$\} 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classserver__cc_1_1LogEvent_add1f0bb8855d31c44b4134911c26c024}\label{classserver__cc_1_1LogEvent_add1f0bb8855d31c44b4134911c26c024}} 
+\index{server\_cc::LogEvent@{server\_cc::LogEvent}!format@{format}}
+\index{format@{format}!server\_cc::LogEvent@{server\_cc::LogEvent}}
+\doxysubsubsection{\texorpdfstring{format()}{format()}}
+{\footnotesize\ttfamily void server\+\_\+cc\+::\+Log\+Event\+::format (\begin{DoxyParamCaption}\item[{const char $\ast$}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+@description\+: 
+\begin{DoxyParams}{Parameters}
+{\em \{char$\ast$\}} & fmt 格式 \\
+\hline
+{\em \{va\+\_\+list\}} & al 可变参数列表 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\{$\ast$\} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classserver__cc_1_1LogEvent_aab227c07275fefeeedc3c190093e967b}\label{classserver__cc_1_1LogEvent_aab227c07275fefeeedc3c190093e967b}} 
+\index{server\_cc::LogEvent@{server\_cc::LogEvent}!getSS@{getSS}}
+\index{getSS@{getSS}!server\_cc::LogEvent@{server\_cc::LogEvent}}
+\doxysubsubsection{\texorpdfstring{getSS()}{getSS()}}
+{\footnotesize\ttfamily std\+::stringstream\& server\+\_\+cc\+::\+Log\+Event\+::get\+SS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+@description\+: 获取日志内容字符串流 \begin{DoxyReturn}{Returns}
+\{$\ast$\} 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+logger.\+h\item 
+logger.\+cpp\end{DoxyCompactItemize}

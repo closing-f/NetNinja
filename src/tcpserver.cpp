@@ -2,7 +2,7 @@
  * @Author: closing
  * @Date: 2023-05-24 21:50:16
  * @LastEditors: closing
- * @LastEditTime: 2023-05-31 21:16:30
+ * @LastEditTime: 2023-06-14 16:48:47
  * @Description: 请填写简介
  */
 #include "tcpserver.h"
@@ -72,9 +72,11 @@ bool TcpServer::bind(const std::vector<Address::ptr>& addrs
 
 void TcpServer::startAccept(Socket::ptr sock){
     while(!m_isStop){
+        // std::cout<<"startAccept"<<std::endl;
         Socket::ptr client = sock->accept();
         SERVER_CC_LOG_INFO(g_logger) << "accept !!";
         if(client){
+            std::cout<<"accept success"<<std::endl;
             m_worker->schedule(std::bind(&TcpServer::handleClient,shared_from_this(),
                     client));//传智能指针，保证在handleClient结束前TcpServer不会被释放掉
         }else{

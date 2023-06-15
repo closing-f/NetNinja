@@ -1,0 +1,205 @@
+\hypertarget{classserver__cc_1_1Stream}{}\doxysection{server\+\_\+cc\+::Stream Class Reference}
+\label{classserver__cc_1_1Stream}\index{server\_cc::Stream@{server\_cc::Stream}}
+
+
+Inheritance diagram for server\+\_\+cc\+::Stream\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classserver__cc_1_1Stream__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1Stream_ac6564c0643072e16453dedce29aa6783}\label{classserver__cc_1_1Stream_ac6564c0643072e16453dedce29aa6783}} 
+typedef std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classserver__cc_1_1Stream}{Stream}} $>$ {\bfseries ptr}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual int \mbox{\hyperlink{classserver__cc_1_1Stream_a18f62b7581709681d898d1bd7a0d6aa7}{read}} (void $\ast$buffer, size\+\_\+t length)=0
+\item 
+virtual int \mbox{\hyperlink{classserver__cc_1_1Stream_ad3f215cfbc5c990c198c4d607c5c9125}{read}} (Byte\+Array\+::ptr ba, size\+\_\+t length)=0
+\item 
+virtual int \mbox{\hyperlink{classserver__cc_1_1Stream_af23f36787e0c17265897ce2dca567a53}{read\+Fix\+Size}} (void $\ast$buffer, size\+\_\+t length)
+\item 
+virtual int \mbox{\hyperlink{classserver__cc_1_1Stream_aa27ea9199d1ee1ed0ebda151b8060ee5}{read\+Fix\+Size}} (Byte\+Array\+::ptr ba, size\+\_\+t length)
+\item 
+virtual int \mbox{\hyperlink{classserver__cc_1_1Stream_a3f753255c84e9f660bd284435cd82f6f}{write}} (const void $\ast$buffer, size\+\_\+t length)=0
+\item 
+virtual int \mbox{\hyperlink{classserver__cc_1_1Stream_a172a9e223d44e14fd6a6733875ce31df}{write}} (Byte\+Array\+::ptr ba, size\+\_\+t length)=0
+\item 
+virtual int \mbox{\hyperlink{classserver__cc_1_1Stream_a42bcdd982bc2a31379d22fb0351ec07a}{write\+Fix\+Size}} (const void $\ast$buffer, size\+\_\+t length)
+\item 
+virtual int \mbox{\hyperlink{classserver__cc_1_1Stream_a3d77c120015ded3fcb1459faed46da83}{write\+Fix\+Size}} (Byte\+Array\+::ptr ba, size\+\_\+t length)
+\item 
+virtual void \mbox{\hyperlink{classserver__cc_1_1Stream_a35199036f83c5c29532170b23c22c178}{close}} ()=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classserver__cc_1_1Stream_a35199036f83c5c29532170b23c22c178}\label{classserver__cc_1_1Stream_a35199036f83c5c29532170b23c22c178}} 
+\index{server\_cc::Stream@{server\_cc::Stream}!close@{close}}
+\index{close@{close}!server\_cc::Stream@{server\_cc::Stream}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily virtual void server\+\_\+cc\+::\+Stream\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+@description\+: 关闭流 \begin{DoxyReturn}{Returns}
+\{$\ast$\} void 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classserver__cc_1_1SocketStream_ad1e015bab6d1b84ab5767157a80f5eba}{server\+\_\+cc\+::\+Socket\+Stream}}.
+
+\mbox{\Hypertarget{classserver__cc_1_1Stream_ad3f215cfbc5c990c198c4d607c5c9125}\label{classserver__cc_1_1Stream_ad3f215cfbc5c990c198c4d607c5c9125}} 
+\index{server\_cc::Stream@{server\_cc::Stream}!read@{read}}
+\index{read@{read}!server\_cc::Stream@{server\_cc::Stream}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual int server\+\_\+cc\+::\+Stream\+::read (\begin{DoxyParamCaption}\item[{Byte\+Array\+::ptr}]{ba,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+@description\+: 读取固定长度的数据到\+Byte\+Array中 
+\begin{DoxyParams}{Parameters}
+{\em \{ptr\}} & ba 读取的数据存放的位置 \\
+\hline
+{\em \{size\+\_\+t\}} & length 读取的数据长度 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\{$\ast$\} 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classserver__cc_1_1SocketStream_afc97eb622e36e153c6e004d0f7dd1932}{server\+\_\+cc\+::\+Socket\+Stream}}.
+
+\mbox{\Hypertarget{classserver__cc_1_1Stream_a18f62b7581709681d898d1bd7a0d6aa7}\label{classserver__cc_1_1Stream_a18f62b7581709681d898d1bd7a0d6aa7}} 
+\index{server\_cc::Stream@{server\_cc::Stream}!read@{read}}
+\index{read@{read}!server\_cc::Stream@{server\_cc::Stream}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual int server\+\_\+cc\+::\+Stream\+::read (\begin{DoxyParamCaption}\item[{void $\ast$}]{buffer,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+@description\+: 读取固定长度的数据到buffer中 
+\begin{DoxyParams}{Parameters}
+{\em \{void$\ast$\}} & buffer 读取的数据存放的位置 \\
+\hline
+{\em \{size\+\_\+t\}} & length 读取的数据长度 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\{$\ast$\} 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classserver__cc_1_1SocketStream_ac2e0e5e6435b19f86729d994c25e445f}{server\+\_\+cc\+::\+Socket\+Stream}}.
+
+\mbox{\Hypertarget{classserver__cc_1_1Stream_aa27ea9199d1ee1ed0ebda151b8060ee5}\label{classserver__cc_1_1Stream_aa27ea9199d1ee1ed0ebda151b8060ee5}} 
+\index{server\_cc::Stream@{server\_cc::Stream}!readFixSize@{readFixSize}}
+\index{readFixSize@{readFixSize}!server\_cc::Stream@{server\_cc::Stream}}
+\doxysubsubsection{\texorpdfstring{readFixSize()}{readFixSize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int server\+\_\+cc\+::\+Stream\+::read\+Fix\+Size (\begin{DoxyParamCaption}\item[{Byte\+Array\+::ptr}]{ba,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+@description\+: 写入固定长度的数据到\+Byte\+Array中 
+\begin{DoxyParams}{Parameters}
+{\em \{ptr\}} & ba 写入的数据存放的位置 \\
+\hline
+{\em \{size\+\_\+t\}} & length 写入的数据长度 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\{$\ast$\} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classserver__cc_1_1Stream_af23f36787e0c17265897ce2dca567a53}\label{classserver__cc_1_1Stream_af23f36787e0c17265897ce2dca567a53}} 
+\index{server\_cc::Stream@{server\_cc::Stream}!readFixSize@{readFixSize}}
+\index{readFixSize@{readFixSize}!server\_cc::Stream@{server\_cc::Stream}}
+\doxysubsubsection{\texorpdfstring{readFixSize()}{readFixSize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int server\+\_\+cc\+::\+Stream\+::read\+Fix\+Size (\begin{DoxyParamCaption}\item[{void $\ast$}]{buffer,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+@description\+: 写入固定长度的数据到buffer中 
+\begin{DoxyParams}{Parameters}
+{\em \{void$\ast$\}} & buffer 写入的数据存放的位置 \\
+\hline
+{\em \{size\+\_\+t\}} & length 写入的数据长度 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\{$\ast$\} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classserver__cc_1_1Stream_a172a9e223d44e14fd6a6733875ce31df}\label{classserver__cc_1_1Stream_a172a9e223d44e14fd6a6733875ce31df}} 
+\index{server\_cc::Stream@{server\_cc::Stream}!write@{write}}
+\index{write@{write}!server\_cc::Stream@{server\_cc::Stream}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual int server\+\_\+cc\+::\+Stream\+::write (\begin{DoxyParamCaption}\item[{Byte\+Array\+::ptr}]{ba,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+@description\+: 将buffer中的数据发送出去 
+\begin{DoxyParams}{Parameters}
+{\em \{ptr\}} & ba 写入的数据存放的位置 \\
+\hline
+{\em \{size\+\_\+t\}} & length 写入的数据长度 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\{$\ast$\} 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classserver__cc_1_1SocketStream_a4de0b9c43aca9df21e922fa993728e87}{server\+\_\+cc\+::\+Socket\+Stream}}.
+
+\mbox{\Hypertarget{classserver__cc_1_1Stream_a3f753255c84e9f660bd284435cd82f6f}\label{classserver__cc_1_1Stream_a3f753255c84e9f660bd284435cd82f6f}} 
+\index{server\_cc::Stream@{server\_cc::Stream}!write@{write}}
+\index{write@{write}!server\_cc::Stream@{server\_cc::Stream}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual int server\+\_\+cc\+::\+Stream\+::write (\begin{DoxyParamCaption}\item[{const void $\ast$}]{buffer,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+@description\+: 将buffer中的数据发送出去 
+\begin{DoxyParams}{Parameters}
+{\em \{void$\ast$\}} & buffer 写入的数据存放的位置 \\
+\hline
+{\em \{size\+\_\+t\}} & length 写入的数据长度 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\{$\ast$\} 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classserver__cc_1_1SocketStream_a1f38f238e3a381a74e326f4d0183de3e}{server\+\_\+cc\+::\+Socket\+Stream}}.
+
+\mbox{\Hypertarget{classserver__cc_1_1Stream_a3d77c120015ded3fcb1459faed46da83}\label{classserver__cc_1_1Stream_a3d77c120015ded3fcb1459faed46da83}} 
+\index{server\_cc::Stream@{server\_cc::Stream}!writeFixSize@{writeFixSize}}
+\index{writeFixSize@{writeFixSize}!server\_cc::Stream@{server\_cc::Stream}}
+\doxysubsubsection{\texorpdfstring{writeFixSize()}{writeFixSize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int server\+\_\+cc\+::\+Stream\+::write\+Fix\+Size (\begin{DoxyParamCaption}\item[{Byte\+Array\+::ptr}]{ba,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+@description\+: 将buffer中的数据发送出去 
+\begin{DoxyParams}{Parameters}
+{\em \{ptr\}} & ba 写入的数据存放的位置 \\
+\hline
+{\em \{size\+\_\+t\}} & length 写入的数据长度 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\{$\ast$\} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classserver__cc_1_1Stream_a42bcdd982bc2a31379d22fb0351ec07a}\label{classserver__cc_1_1Stream_a42bcdd982bc2a31379d22fb0351ec07a}} 
+\index{server\_cc::Stream@{server\_cc::Stream}!writeFixSize@{writeFixSize}}
+\index{writeFixSize@{writeFixSize}!server\_cc::Stream@{server\_cc::Stream}}
+\doxysubsubsection{\texorpdfstring{writeFixSize()}{writeFixSize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int server\+\_\+cc\+::\+Stream\+::write\+Fix\+Size (\begin{DoxyParamCaption}\item[{const void $\ast$}]{buffer,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+@description\+: 将buffer中的数据发送出去 
+\begin{DoxyParams}{Parameters}
+{\em \{void$\ast$\}} & buffer 写入的数据存放的位置 \\
+\hline
+{\em \{size\+\_\+t\}} & length 写入的数据长度 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\{$\ast$\} 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+stream.\+h\item 
+stream.\+cpp\end{DoxyCompactItemize}

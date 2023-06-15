@@ -1,0 +1,44 @@
+\hypertarget{classserver__cc_1_1LogEventWrapper}{}\doxysection{server\+\_\+cc\+::Log\+Event\+Wrapper Class Reference}
+\label{classserver__cc_1_1LogEventWrapper}\index{server\_cc::LogEventWrapper@{server\_cc::LogEventWrapper}}
+
+
+{\ttfamily \#include $<$logger.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1LogEventWrapper_a498d739df77331e96c4b2d5c64571c1e}\label{classserver__cc_1_1LogEventWrapper_a498d739df77331e96c4b2d5c64571c1e}} 
+{\bfseries Log\+Event\+Wrapper} (Log\+Event\+::ptr event)
+\item 
+\mbox{\hyperlink{classserver__cc_1_1LogEventWrapper_a8d5da2e3a35fd1b269177844f09235db}{$\sim$\+Log\+Event\+Wrapper}} ()
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1LogEventWrapper_a1bb6020755c72364262b5b6827ba182b}\label{classserver__cc_1_1LogEventWrapper_a1bb6020755c72364262b5b6827ba182b}} 
+std\+::stringstream \& {\bfseries get\+SS} ()
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1LogEventWrapper_aae083d3d0bf279536a673e396cfc912d}\label{classserver__cc_1_1LogEventWrapper_aae083d3d0bf279536a673e396cfc912d}} 
+Log\+Event\+::ptr {\bfseries get\+Event} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+@description\+: 在析构函数中，将日志内容写入到日志文件中. //?为什么要用wrapper来实现流式风格日志，不直接用\+Log\+Event？ \begin{DoxyReturn}{Returns}
+\{$\ast$\} 
+\end{DoxyReturn}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classserver__cc_1_1LogEventWrapper_a8d5da2e3a35fd1b269177844f09235db}\label{classserver__cc_1_1LogEventWrapper_a8d5da2e3a35fd1b269177844f09235db}} 
+\index{server\_cc::LogEventWrapper@{server\_cc::LogEventWrapper}!````~LogEventWrapper@{$\sim$LogEventWrapper}}
+\index{````~LogEventWrapper@{$\sim$LogEventWrapper}!server\_cc::LogEventWrapper@{server\_cc::LogEventWrapper}}
+\doxysubsubsection{\texorpdfstring{$\sim$LogEventWrapper()}{~LogEventWrapper()}}
+{\footnotesize\ttfamily server\+\_\+cc\+::\+Log\+Event\+Wrapper\+::$\sim$\+Log\+Event\+Wrapper (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+@description\+: 析构函数，调用log方法 \begin{DoxyReturn}{Returns}
+\{$\ast$\} 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+logger.\+h\item 
+logger.\+cpp\end{DoxyCompactItemize}

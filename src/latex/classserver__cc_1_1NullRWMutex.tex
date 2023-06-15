@@ -1,0 +1,66 @@
+\hypertarget{classserver__cc_1_1NullRWMutex}{}\doxysection{server\+\_\+cc\+::Null\+R\+W\+Mutex Class Reference}
+\label{classserver__cc_1_1NullRWMutex}\index{server\_cc::NullRWMutex@{server\_cc::NullRWMutex}}
+
+
+空读写锁(用于调试)  
+
+
+
+
+{\ttfamily \#include $<$mutex.\+h$>$}
+
+
+
+Inheritance diagram for server\+\_\+cc\+::Null\+R\+W\+Mutex\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{classserver__cc_1_1NullRWMutex__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for server\+\_\+cc\+::Null\+R\+W\+Mutex\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{classserver__cc_1_1NullRWMutex__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1NullRWMutex_afe181b206617666cfb3565a3b6293445}\label{classserver__cc_1_1NullRWMutex_afe181b206617666cfb3565a3b6293445}} 
+typedef \mbox{\hyperlink{structserver__cc_1_1ReadScopedLockImpl}{Read\+Scoped\+Lock\+Impl}}$<$ \mbox{\hyperlink{classserver__cc_1_1NullMutex}{Null\+Mutex}} $>$ \mbox{\hyperlink{classserver__cc_1_1NullRWMutex_afe181b206617666cfb3565a3b6293445}{Read\+Lock}}
+\begin{DoxyCompactList}\small\item\em 局部读锁 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1NullRWMutex_aafa2793b10b8c97f3fecdd274a7eb7e6}\label{classserver__cc_1_1NullRWMutex_aafa2793b10b8c97f3fecdd274a7eb7e6}} 
+typedef \mbox{\hyperlink{structserver__cc_1_1WriteScopedLockImpl}{Write\+Scoped\+Lock\+Impl}}$<$ \mbox{\hyperlink{classserver__cc_1_1NullMutex}{Null\+Mutex}} $>$ \mbox{\hyperlink{classserver__cc_1_1NullRWMutex_aafa2793b10b8c97f3fecdd274a7eb7e6}{Write\+Lock}}
+\begin{DoxyCompactList}\small\item\em 局部写锁 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1NullRWMutex_ab88bbe6fdfd0cedcb76cb8d56c2c6f10}\label{classserver__cc_1_1NullRWMutex_ab88bbe6fdfd0cedcb76cb8d56c2c6f10}} 
+\mbox{\hyperlink{classserver__cc_1_1NullRWMutex_ab88bbe6fdfd0cedcb76cb8d56c2c6f10}{Null\+R\+W\+Mutex}} ()
+\begin{DoxyCompactList}\small\item\em 构造函数 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1NullRWMutex_a424776838e1bdc3e02a3a25aaa727575}\label{classserver__cc_1_1NullRWMutex_a424776838e1bdc3e02a3a25aaa727575}} 
+\mbox{\hyperlink{classserver__cc_1_1NullRWMutex_a424776838e1bdc3e02a3a25aaa727575}{$\sim$\+Null\+R\+W\+Mutex}} ()
+\begin{DoxyCompactList}\small\item\em 析构函数 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1NullRWMutex_ab7b750deb33c0d6874f941895d334165}\label{classserver__cc_1_1NullRWMutex_ab7b750deb33c0d6874f941895d334165}} 
+void \mbox{\hyperlink{classserver__cc_1_1NullRWMutex_ab7b750deb33c0d6874f941895d334165}{rdlock}} ()
+\begin{DoxyCompactList}\small\item\em 上读锁 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1NullRWMutex_ace275de8d8eed3d86d60c836af9e1013}\label{classserver__cc_1_1NullRWMutex_ace275de8d8eed3d86d60c836af9e1013}} 
+void \mbox{\hyperlink{classserver__cc_1_1NullRWMutex_ace275de8d8eed3d86d60c836af9e1013}{wrlock}} ()
+\begin{DoxyCompactList}\small\item\em 上写锁 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1NullRWMutex_a683054778879fbd6b106f2f75f8b443c}\label{classserver__cc_1_1NullRWMutex_a683054778879fbd6b106f2f75f8b443c}} 
+void \mbox{\hyperlink{classserver__cc_1_1NullRWMutex_a683054778879fbd6b106f2f75f8b443c}{unlock}} ()
+\begin{DoxyCompactList}\small\item\em 解锁 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+空读写锁(用于调试) 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+mutex.\+h\end{DoxyCompactItemize}

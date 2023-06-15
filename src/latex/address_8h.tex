@@ -1,0 +1,68 @@
+\hypertarget{address_8h}{}\doxysection{address.\+h File Reference}
+\label{address_8h}\index{address.h@{address.h}}
+
+
+网络地址的封装(\+I\+Pv4,\+I\+Pv6,\+Unix)  
+
+
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$sys/types.\+h$>$}\newline
+{\ttfamily \#include $<$sys/socket.\+h$>$}\newline
+{\ttfamily \#include $<$sys/un.\+h$>$}\newline
+{\ttfamily \#include $<$arpa/inet.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+Include dependency graph for address.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{address_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{address_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classserver__cc_1_1Address}{server\+\_\+cc\+::\+Address}}
+\begin{DoxyCompactList}\small\item\em 网络地址的基类,抽象类 \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classserver__cc_1_1IPAddress}{server\+\_\+cc\+::\+I\+P\+Address}}
+\begin{DoxyCompactList}\small\item\em I\+P地址的基类 \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classserver__cc_1_1IPv4Address}{server\+\_\+cc\+::\+I\+Pv4\+Address}}
+\begin{DoxyCompactList}\small\item\em I\+Pv4地址 \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classserver__cc_1_1IPv6Address}{server\+\_\+cc\+::\+I\+Pv6\+Address}}
+\begin{DoxyCompactList}\small\item\em I\+Pv6地址 \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classserver__cc_1_1UnixAddress}{server\+\_\+cc\+::\+Unix\+Address}}
+\begin{DoxyCompactList}\small\item\em Unix\+Socket地址 \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classserver__cc_1_1UnknownAddress}{server\+\_\+cc\+::\+Unknown\+Address}}
+\begin{DoxyCompactList}\small\item\em 未知地址 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{address_8cpp_a20bb0d070657634871dae65751f3fc50}\label{address_8cpp_a20bb0d070657634871dae65751f3fc50}} 
+std\+::ostream \& {\bfseries server\+\_\+cc\+::operator$<$$<$} (std\+::ostream \&os, const Address \&addr)
+\begin{DoxyCompactList}\small\item\em 流式输出\+Address \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+网络地址的封装(\+I\+Pv4,\+I\+Pv6,\+Unix) 
+
+\begin{DoxyAuthor}{Author}
+server\+\_\+cc.\+yin @email \href{mailto:564628276@qq.com}{\texttt{ 564628276@qq.\+com}} 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2019-\/06-\/05 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2019年 server\+\_\+cc.\+yin All rights reserved (www.\+server\+\_\+cc.\+top) 
+\end{DoxyCopyright}

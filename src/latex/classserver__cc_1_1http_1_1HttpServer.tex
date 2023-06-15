@@ -1,0 +1,89 @@
+\hypertarget{classserver__cc_1_1http_1_1HttpServer}{}\doxysection{server\+\_\+cc\+::http\+::Http\+Server Class Reference}
+\label{classserver__cc_1_1http_1_1HttpServer}\index{server\_cc::http::HttpServer@{server\_cc::http::HttpServer}}
+
+
+Inheritance diagram for server\+\_\+cc\+::http\+::Http\+Server\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classserver__cc_1_1http_1_1HttpServer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for server\+\_\+cc\+::http\+::Http\+Server\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classserver__cc_1_1http_1_1HttpServer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1http_1_1HttpServer_aac3709427a44ece7a2785402edfc0ed8}\label{classserver__cc_1_1http_1_1HttpServer_aac3709427a44ece7a2785402edfc0ed8}} 
+typedef std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classserver__cc_1_1http_1_1HttpServer}{Http\+Server}} $>$ {\bfseries ptr}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classserver__cc_1_1http_1_1HttpServer_a79c030b8d1755cbb8cec9aef2a123f42}{Http\+Server}} (bool keepalive=false, \mbox{\hyperlink{classserver__cc_1_1IOManager}{server\+\_\+cc\+::\+I\+O\+Manager}} $\ast$worker=server\+\_\+cc\+::\+I\+O\+Manager\+::\+Get\+This(), \mbox{\hyperlink{classserver__cc_1_1IOManager}{server\+\_\+cc\+::\+I\+O\+Manager}} $\ast$io\+\_\+worker=server\+\_\+cc\+::\+I\+O\+Manager\+::\+Get\+This(), \mbox{\hyperlink{classserver__cc_1_1IOManager}{server\+\_\+cc\+::\+I\+O\+Manager}} $\ast$accept\+\_\+worker=server\+\_\+cc\+::\+I\+O\+Manager\+::\+Get\+This())
+\item 
+\mbox{\hyperlink{classserver__cc_1_1http_1_1ServletDispatch_aa72bc4651528a94ed91ff0e45ac1f83e}{Servlet\+Dispatch\+::ptr}} \mbox{\hyperlink{classserver__cc_1_1http_1_1HttpServer_a3b3935a82bfd9a82a709602973205785}{get\+Servlet\+Dispatch}} () const
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1http_1_1HttpServer_a867c1530bd8d1cc059793ec29ab6e8d5}\label{classserver__cc_1_1http_1_1HttpServer_a867c1530bd8d1cc059793ec29ab6e8d5}} 
+void \mbox{\hyperlink{classserver__cc_1_1http_1_1HttpServer_a867c1530bd8d1cc059793ec29ab6e8d5}{set\+Servlet\+Dispatch}} (\mbox{\hyperlink{classserver__cc_1_1http_1_1ServletDispatch_aa72bc4651528a94ed91ff0e45ac1f83e}{Servlet\+Dispatch\+::ptr}} v)
+\begin{DoxyCompactList}\small\item\em 设置\+Servlet\+Dispatch \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1http_1_1HttpServer_a80b95a2a5b407df2e8874dd03ec6feb0}\label{classserver__cc_1_1http_1_1HttpServer_a80b95a2a5b407df2e8874dd03ec6feb0}} 
+virtual void {\bfseries set\+Name} (const std\+::string \&v) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1http_1_1HttpServer_acac3e66b5869efbe111c8b068f9b7645}\label{classserver__cc_1_1http_1_1HttpServer_acac3e66b5869efbe111c8b068f9b7645}} 
+virtual void {\bfseries handle\+Client} (Socket\+::ptr client) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classserver__cc_1_1http_1_1HttpServer_a79c030b8d1755cbb8cec9aef2a123f42}\label{classserver__cc_1_1http_1_1HttpServer_a79c030b8d1755cbb8cec9aef2a123f42}} 
+\index{server\_cc::http::HttpServer@{server\_cc::http::HttpServer}!HttpServer@{HttpServer}}
+\index{HttpServer@{HttpServer}!server\_cc::http::HttpServer@{server\_cc::http::HttpServer}}
+\doxysubsubsection{\texorpdfstring{HttpServer()}{HttpServer()}}
+{\footnotesize\ttfamily server\+\_\+cc\+::http\+::\+Http\+Server\+::\+Http\+Server (\begin{DoxyParamCaption}\item[{bool}]{keepalive = {\ttfamily false},  }\item[{\mbox{\hyperlink{classserver__cc_1_1IOManager}{server\+\_\+cc\+::\+I\+O\+Manager}} $\ast$}]{worker = {\ttfamily server\+\_\+cc\+:\+:IOManager\+:\+:GetThis()},  }\item[{\mbox{\hyperlink{classserver__cc_1_1IOManager}{server\+\_\+cc\+::\+I\+O\+Manager}} $\ast$}]{io\+\_\+worker = {\ttfamily server\+\_\+cc\+:\+:IOManager\+:\+:GetThis()},  }\item[{\mbox{\hyperlink{classserver__cc_1_1IOManager}{server\+\_\+cc\+::\+I\+O\+Manager}} $\ast$}]{accept\+\_\+worker = {\ttfamily server\+\_\+cc\+:\+:IOManager\+:\+:GetThis()} }\end{DoxyParamCaption})}
+
+@description\+: 构造函数 
+\begin{DoxyParams}{Parameters}
+{\em \{bool\}} & keepalive 是否支持长连接 \\
+\hline
+{\em \{server\+\_\+cc\+::\+I\+O\+Manager$\ast$\}} & worker 工作调度器 \\
+\hline
+{\em \{server\+\_\+cc\+::\+I\+O\+Manager$\ast$\}} & io\+\_\+worker 读写调度器 \\
+\hline
+{\em \{server\+\_\+cc\+::\+I\+O\+Manager$\ast$\}} & accept\+\_\+worker 接收连接调度器 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\{$\ast$\} 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classserver__cc_1_1http_1_1HttpServer_a3b3935a82bfd9a82a709602973205785}\label{classserver__cc_1_1http_1_1HttpServer_a3b3935a82bfd9a82a709602973205785}} 
+\index{server\_cc::http::HttpServer@{server\_cc::http::HttpServer}!getServletDispatch@{getServletDispatch}}
+\index{getServletDispatch@{getServletDispatch}!server\_cc::http::HttpServer@{server\_cc::http::HttpServer}}
+\doxysubsubsection{\texorpdfstring{getServletDispatch()}{getServletDispatch()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classserver__cc_1_1http_1_1ServletDispatch_aa72bc4651528a94ed91ff0e45ac1f83e}{Servlet\+Dispatch\+::ptr}} server\+\_\+cc\+::http\+::\+Http\+Server\+::get\+Servlet\+Dispatch (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+@description\+: 获取\+Servlet\+Dispatch \begin{DoxyReturn}{Returns}
+\{$\ast$\} 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+http\+\_\+server.\+h\item 
+http\+\_\+server.\+cpp\end{DoxyCompactItemize}

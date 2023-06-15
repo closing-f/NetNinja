@@ -1,0 +1,60 @@
+\hypertarget{classserver__cc_1_1TimerManager}{}\doxysection{server\+\_\+cc\+::Timer\+Manager Class Reference}
+\label{classserver__cc_1_1TimerManager}\index{server\_cc::TimerManager@{server\_cc::TimerManager}}
+
+
+Inheritance diagram for server\+\_\+cc\+::Timer\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{classserver__cc_1_1TimerManager__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1TimerManager_adf2f72b821c33d5ae0a6556aafac9b5f}\label{classserver__cc_1_1TimerManager_adf2f72b821c33d5ae0a6556aafac9b5f}} 
+typedef \mbox{\hyperlink{classserver__cc_1_1RWMutex}{R\+W\+Mutex}} {\bfseries R\+W\+Mutex\+Type}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1TimerManager_a968b1ec0075d3cabc4ef9dfffcfe3b3a}\label{classserver__cc_1_1TimerManager_a968b1ec0075d3cabc4ef9dfffcfe3b3a}} 
+Timer\+::ptr {\bfseries add\+Timer} (uint64\+\_\+t ms, std\+::function$<$ void()$>$ cb, bool recurring=false)
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1TimerManager_a0de1fb0f3d6deb708e62a12d803eab1d}\label{classserver__cc_1_1TimerManager_a0de1fb0f3d6deb708e62a12d803eab1d}} 
+Timer\+::ptr {\bfseries add\+Condition\+Timer} (uint64\+\_\+t ms, std\+::function$<$ void()$>$ cb, std\+::weak\+\_\+ptr$<$ void $>$ weak\+\_\+cond, bool recurring=false)
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1TimerManager_ae528e39fb4b6e47523a06e169b3a39d4}\label{classserver__cc_1_1TimerManager_ae528e39fb4b6e47523a06e169b3a39d4}} 
+uint64\+\_\+t {\bfseries get\+Timer\+Next} ()
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1TimerManager_a326b665a46a398901a505db784b8118e}\label{classserver__cc_1_1TimerManager_a326b665a46a398901a505db784b8118e}} 
+void {\bfseries list\+Expired\+Cb} (std\+::vector$<$ std\+::function$<$ void()$>$$>$ \&cbs)
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1TimerManager_af71103c2d0b6d4abcd1d0e3f4eb75098}\label{classserver__cc_1_1TimerManager_af71103c2d0b6d4abcd1d0e3f4eb75098}} 
+void {\bfseries add\+Timer} (Timer\+::ptr val, \mbox{\hyperlink{classserver__cc_1_1RWMutex_ae5f869dd199eabf548aeb7062bde304e}{R\+W\+Mutex\+Type\+::\+Write\+Lock}} \&lock)
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1TimerManager_ad047311c8f90cf76e0daa5108bfbd6c5}\label{classserver__cc_1_1TimerManager_ad047311c8f90cf76e0daa5108bfbd6c5}} 
+bool {\bfseries detect\+Clock\+Rollover} (uint64\+\_\+t now\+\_\+ms)
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1TimerManager_a9eeb9904e228c1e4d534cdd84db2523a}\label{classserver__cc_1_1TimerManager_a9eeb9904e228c1e4d534cdd84db2523a}} 
+bool {\bfseries has\+Timer} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1TimerManager_a2986378f048cf73cc3b6a4f1184fe778}\label{classserver__cc_1_1TimerManager_a2986378f048cf73cc3b6a4f1184fe778}} 
+virtual void {\bfseries on\+Timer\+Inserted\+At\+Front} ()=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1TimerManager_a50de43af5bed41f30c071d8cce0e81bc}\label{classserver__cc_1_1TimerManager_a50de43af5bed41f30c071d8cce0e81bc}} 
+class {\bfseries Timer}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+timer.\+h\item 
+timer.\+cpp\end{DoxyCompactItemize}

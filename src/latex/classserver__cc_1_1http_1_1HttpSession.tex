@@ -1,0 +1,102 @@
+\hypertarget{classserver__cc_1_1http_1_1HttpSession}{}\doxysection{server\+\_\+cc\+::http\+::Http\+Session Class Reference}
+\label{classserver__cc_1_1http_1_1HttpSession}\index{server\_cc::http::HttpSession@{server\_cc::http::HttpSession}}
+
+
+{\ttfamily \#include $<$http\+\_\+session.\+h$>$}
+
+
+
+Inheritance diagram for server\+\_\+cc\+::http\+::Http\+Session\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=233pt]{classserver__cc_1_1http_1_1HttpSession__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for server\+\_\+cc\+::http\+::Http\+Session\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=233pt]{classserver__cc_1_1http_1_1HttpSession__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1http_1_1HttpSession_af415e5e4756aa43520bd31444e092e47}\label{classserver__cc_1_1http_1_1HttpSession_af415e5e4756aa43520bd31444e092e47}} 
+typedef std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classserver__cc_1_1http_1_1HttpSession}{Http\+Session}} $>$ {\bfseries ptr}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classserver__cc_1_1http_1_1HttpSession_a7a0fddf3d87dadfd4b64f26032490b90}{Http\+Session}} (Socket\+::ptr sock, bool owner=true)
+\item 
+Http\+Request\+::ptr \mbox{\hyperlink{classserver__cc_1_1http_1_1HttpSession_a4f75d1a0e6e6b70b9a9ab1b8c0925d03}{recv\+Request}} ()
+\item 
+int \mbox{\hyperlink{classserver__cc_1_1http_1_1HttpSession_ab3a311a29fe6746c3aeee4d9905f6885}{send\+Response}} (Http\+Response\+::ptr rsp)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+@description\+: Http\+Session类,服务端使用 \begin{DoxyReturn}{Returns}
+\{$\ast$\} 
+\end{DoxyReturn}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classserver__cc_1_1http_1_1HttpSession_a7a0fddf3d87dadfd4b64f26032490b90}\label{classserver__cc_1_1http_1_1HttpSession_a7a0fddf3d87dadfd4b64f26032490b90}} 
+\index{server\_cc::http::HttpSession@{server\_cc::http::HttpSession}!HttpSession@{HttpSession}}
+\index{HttpSession@{HttpSession}!server\_cc::http::HttpSession@{server\_cc::http::HttpSession}}
+\doxysubsubsection{\texorpdfstring{HttpSession()}{HttpSession()}}
+{\footnotesize\ttfamily server\+\_\+cc\+::http\+::\+Http\+Session\+::\+Http\+Session (\begin{DoxyParamCaption}\item[{Socket\+::ptr}]{sock,  }\item[{bool}]{owner = {\ttfamily true} }\end{DoxyParamCaption})}
+
+@description\+: 构造函数 
+\begin{DoxyParams}{Parameters}
+{\em \{ptr\}} & sock socket类 \\
+\hline
+{\em \{bool\}} & owner ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\{$\ast$\} 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classserver__cc_1_1http_1_1HttpSession_a4f75d1a0e6e6b70b9a9ab1b8c0925d03}\label{classserver__cc_1_1http_1_1HttpSession_a4f75d1a0e6e6b70b9a9ab1b8c0925d03}} 
+\index{server\_cc::http::HttpSession@{server\_cc::http::HttpSession}!recvRequest@{recvRequest}}
+\index{recvRequest@{recvRequest}!server\_cc::http::HttpSession@{server\_cc::http::HttpSession}}
+\doxysubsubsection{\texorpdfstring{recvRequest()}{recvRequest()}}
+{\footnotesize\ttfamily Http\+Request\+::ptr server\+\_\+cc\+::http\+::\+Http\+Session\+::recv\+Request (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+@description\+: 接收http请求
+
+\begin{DoxyReturn}{Returns}
+\{$\ast$\} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classserver__cc_1_1http_1_1HttpSession_ab3a311a29fe6746c3aeee4d9905f6885}\label{classserver__cc_1_1http_1_1HttpSession_ab3a311a29fe6746c3aeee4d9905f6885}} 
+\index{server\_cc::http::HttpSession@{server\_cc::http::HttpSession}!sendResponse@{sendResponse}}
+\index{sendResponse@{sendResponse}!server\_cc::http::HttpSession@{server\_cc::http::HttpSession}}
+\doxysubsubsection{\texorpdfstring{sendResponse()}{sendResponse()}}
+{\footnotesize\ttfamily int server\+\_\+cc\+::http\+::\+Http\+Session\+::send\+Response (\begin{DoxyParamCaption}\item[{Http\+Response\+::ptr}]{rsp }\end{DoxyParamCaption})}
+
+@description\+: 发送http响应 
+\begin{DoxyParams}{Parameters}
+{\em \{ptr\}} & rsp 响应类 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\{$\ast$\} 返回发送的字节数 $>$0 发送成功 =0 对方关闭 $<$0 Socket异常 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+http\+\_\+session.\+h\item 
+http\+\_\+session.\+cpp\end{DoxyCompactItemize}

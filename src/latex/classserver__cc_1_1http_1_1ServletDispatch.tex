@@ -1,0 +1,270 @@
+\hypertarget{classserver__cc_1_1http_1_1ServletDispatch}{}\doxysection{server\+\_\+cc\+::http\+::Servlet\+Dispatch Class Reference}
+\label{classserver__cc_1_1http_1_1ServletDispatch}\index{server\_cc::http::ServletDispatch@{server\_cc::http::ServletDispatch}}
+
+
+Servlet分发器  
+
+
+
+
+{\ttfamily \#include $<$http\+\_\+servlet.\+h$>$}
+
+
+
+Inheritance diagram for server\+\_\+cc\+::http\+::Servlet\+Dispatch\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=209pt]{classserver__cc_1_1http_1_1ServletDispatch__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for server\+\_\+cc\+::http\+::Servlet\+Dispatch\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=209pt]{classserver__cc_1_1http_1_1ServletDispatch__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1http_1_1ServletDispatch_aa72bc4651528a94ed91ff0e45ac1f83e}\label{classserver__cc_1_1http_1_1ServletDispatch_aa72bc4651528a94ed91ff0e45ac1f83e}} 
+typedef std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classserver__cc_1_1http_1_1ServletDispatch}{Servlet\+Dispatch}} $>$ \mbox{\hyperlink{classserver__cc_1_1http_1_1ServletDispatch_aa72bc4651528a94ed91ff0e45ac1f83e}{ptr}}
+\begin{DoxyCompactList}\small\item\em 智能指针类型定义 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1http_1_1ServletDispatch_a81e8cf2d661f0c69aedc4a46d3caf5ba}\label{classserver__cc_1_1http_1_1ServletDispatch_a81e8cf2d661f0c69aedc4a46d3caf5ba}} 
+typedef \mbox{\hyperlink{classserver__cc_1_1RWMutex}{R\+W\+Mutex}} \mbox{\hyperlink{classserver__cc_1_1http_1_1ServletDispatch_a81e8cf2d661f0c69aedc4a46d3caf5ba}{R\+W\+Mutex\+Type}}
+\begin{DoxyCompactList}\small\item\em 读写锁类型定义 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1http_1_1ServletDispatch_a1611cc0b2851dd503c352f5e75915251}\label{classserver__cc_1_1http_1_1ServletDispatch_a1611cc0b2851dd503c352f5e75915251}} 
+\mbox{\hyperlink{classserver__cc_1_1http_1_1ServletDispatch_a1611cc0b2851dd503c352f5e75915251}{Servlet\+Dispatch}} ()
+\begin{DoxyCompactList}\small\item\em 构造函数 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1http_1_1ServletDispatch_ab72355c735816e7f15c3943aec371525}\label{classserver__cc_1_1http_1_1ServletDispatch_ab72355c735816e7f15c3943aec371525}} 
+virtual int32\+\_\+t {\bfseries handle} (server\+\_\+cc\+::http\+::\+Http\+Request\+::ptr request, server\+\_\+cc\+::http\+::\+Http\+Response\+::ptr response, server\+\_\+cc\+::http\+::\+Http\+Session\+::ptr session) override
+\item 
+void \mbox{\hyperlink{classserver__cc_1_1http_1_1ServletDispatch_a238ada626d58d14f368a1ffbbfa1b809}{add\+Servlet}} (const std\+::string \&uri, Servlet\+::ptr slt)
+\begin{DoxyCompactList}\small\item\em 添加servlet \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classserver__cc_1_1http_1_1ServletDispatch_adeffff3dc28b471dc5cac2cf8cc54c82}{add\+Servlet}} (const std\+::string \&uri, \mbox{\hyperlink{classserver__cc_1_1http_1_1FunctionServlet_af78b955bfac25adf1760751ea7afb264}{Function\+Servlet\+::callback}} cb)
+\begin{DoxyCompactList}\small\item\em 添加servlet \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classserver__cc_1_1http_1_1ServletDispatch_abedfbd28ec57a00b8bded2e7444ff5d0}{add\+Glob\+Servlet}} (const std\+::string \&uri, Servlet\+::ptr slt)
+\begin{DoxyCompactList}\small\item\em 添加模糊匹配servlet \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classserver__cc_1_1http_1_1ServletDispatch_a599aeba35d3673247cf0d2348b7a0066}{add\+Glob\+Servlet}} (const std\+::string \&uri, \mbox{\hyperlink{classserver__cc_1_1http_1_1FunctionServlet_af78b955bfac25adf1760751ea7afb264}{Function\+Servlet\+::callback}} cb)
+\begin{DoxyCompactList}\small\item\em 添加模糊匹配servlet \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1http_1_1ServletDispatch_a26c612855f0208a99797f110074fb5aa}\label{classserver__cc_1_1http_1_1ServletDispatch_a26c612855f0208a99797f110074fb5aa}} 
+void {\bfseries add\+Servlet\+Creator} (const std\+::string \&uri, I\+Servlet\+Creator\+::ptr creator)
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1http_1_1ServletDispatch_af1819aa402925bb5103ada1e9690896a}\label{classserver__cc_1_1http_1_1ServletDispatch_af1819aa402925bb5103ada1e9690896a}} 
+void {\bfseries add\+Glob\+Servlet\+Creator} (const std\+::string \&uri, I\+Servlet\+Creator\+::ptr creator)
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1http_1_1ServletDispatch_acb0f201e6adb37d7cd1feaf0c7866d6a}\label{classserver__cc_1_1http_1_1ServletDispatch_acb0f201e6adb37d7cd1feaf0c7866d6a}} 
+{\footnotesize template$<$class T $>$ }\\void {\bfseries add\+Servlet\+Creator} (const std\+::string \&uri)
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1http_1_1ServletDispatch_a1993f910c546af410fbcb1b60f009dc3}\label{classserver__cc_1_1http_1_1ServletDispatch_a1993f910c546af410fbcb1b60f009dc3}} 
+{\footnotesize template$<$class T $>$ }\\void {\bfseries add\+Glob\+Servlet\+Creator} (const std\+::string \&uri)
+\item 
+void \mbox{\hyperlink{classserver__cc_1_1http_1_1ServletDispatch_a2f36cdb2b59b2c974b1ae8010a9838a0}{del\+Servlet}} (const std\+::string \&uri)
+\begin{DoxyCompactList}\small\item\em 删除servlet \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classserver__cc_1_1http_1_1ServletDispatch_a37c2745b80449a5b902af64c8cf58a6e}{del\+Glob\+Servlet}} (const std\+::string \&uri)
+\begin{DoxyCompactList}\small\item\em 删除模糊匹配servlet \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1http_1_1ServletDispatch_a33b386be5bee80611dc7d9745b6aedf7}\label{classserver__cc_1_1http_1_1ServletDispatch_a33b386be5bee80611dc7d9745b6aedf7}} 
+Servlet\+::ptr \mbox{\hyperlink{classserver__cc_1_1http_1_1ServletDispatch_a33b386be5bee80611dc7d9745b6aedf7}{get\+Default}} () const
+\begin{DoxyCompactList}\small\item\em 返回默认servlet \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classserver__cc_1_1http_1_1ServletDispatch_ad5419b28e02c0a1041b1b2b71ac57264}{set\+Default}} (Servlet\+::ptr v)
+\begin{DoxyCompactList}\small\item\em 设置默认servlet \end{DoxyCompactList}\item 
+Servlet\+::ptr \mbox{\hyperlink{classserver__cc_1_1http_1_1ServletDispatch_a9741316870f603897efc7eba495d487e}{get\+Servlet}} (const std\+::string \&uri)
+\begin{DoxyCompactList}\small\item\em 通过uri获取servlet \end{DoxyCompactList}\item 
+Servlet\+::ptr \mbox{\hyperlink{classserver__cc_1_1http_1_1ServletDispatch_ab9f832f71a80b288ec0f0fdf65ece5e0}{get\+Glob\+Servlet}} (const std\+::string \&uri)
+\begin{DoxyCompactList}\small\item\em 通过uri获取模糊匹配servlet \end{DoxyCompactList}\item 
+Servlet\+::ptr \mbox{\hyperlink{classserver__cc_1_1http_1_1ServletDispatch_a5fbfd4378ebebddceec591f80ae3450e}{get\+Matched\+Servlet}} (const std\+::string \&uri)
+\begin{DoxyCompactList}\small\item\em 通过uri获取servlet \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1http_1_1ServletDispatch_a536060cd3ef2007a9ce10ed001607c7b}\label{classserver__cc_1_1http_1_1ServletDispatch_a536060cd3ef2007a9ce10ed001607c7b}} 
+void {\bfseries list\+All\+Servlet\+Creator} (std\+::map$<$ std\+::string, I\+Servlet\+Creator\+::ptr $>$ \&infos)
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1http_1_1ServletDispatch_a8c667441c347698c06e72e6c802615a9}\label{classserver__cc_1_1http_1_1ServletDispatch_a8c667441c347698c06e72e6c802615a9}} 
+void {\bfseries list\+All\+Glob\+Servlet\+Creator} (std\+::map$<$ std\+::string, I\+Servlet\+Creator\+::ptr $>$ \&infos)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Servlet分发器 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classserver__cc_1_1http_1_1ServletDispatch_a599aeba35d3673247cf0d2348b7a0066}\label{classserver__cc_1_1http_1_1ServletDispatch_a599aeba35d3673247cf0d2348b7a0066}} 
+\index{server\_cc::http::ServletDispatch@{server\_cc::http::ServletDispatch}!addGlobServlet@{addGlobServlet}}
+\index{addGlobServlet@{addGlobServlet}!server\_cc::http::ServletDispatch@{server\_cc::http::ServletDispatch}}
+\doxysubsubsection{\texorpdfstring{addGlobServlet()}{addGlobServlet()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void server\+\_\+cc\+::http\+::\+Servlet\+Dispatch\+::add\+Glob\+Servlet (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{uri,  }\item[{\mbox{\hyperlink{classserver__cc_1_1http_1_1FunctionServlet_af78b955bfac25adf1760751ea7afb264}{Function\+Servlet\+::callback}}}]{cb }\end{DoxyParamCaption})}
+
+
+
+添加模糊匹配servlet 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em uri} & uri 模糊匹配 /server\+\_\+cc\+\_\+$\ast$ \\
+\hline
+\mbox{\texttt{ in}}  & {\em cb} & Function\+Servlet回调函数 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classserver__cc_1_1http_1_1ServletDispatch_abedfbd28ec57a00b8bded2e7444ff5d0}\label{classserver__cc_1_1http_1_1ServletDispatch_abedfbd28ec57a00b8bded2e7444ff5d0}} 
+\index{server\_cc::http::ServletDispatch@{server\_cc::http::ServletDispatch}!addGlobServlet@{addGlobServlet}}
+\index{addGlobServlet@{addGlobServlet}!server\_cc::http::ServletDispatch@{server\_cc::http::ServletDispatch}}
+\doxysubsubsection{\texorpdfstring{addGlobServlet()}{addGlobServlet()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void server\+\_\+cc\+::http\+::\+Servlet\+Dispatch\+::add\+Glob\+Servlet (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{uri,  }\item[{Servlet\+::ptr}]{slt }\end{DoxyParamCaption})}
+
+
+
+添加模糊匹配servlet 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em uri} & uri 模糊匹配 /server\+\_\+cc\+\_\+$\ast$ \\
+\hline
+\mbox{\texttt{ in}}  & {\em slt} & servlet \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classserver__cc_1_1http_1_1ServletDispatch_adeffff3dc28b471dc5cac2cf8cc54c82}\label{classserver__cc_1_1http_1_1ServletDispatch_adeffff3dc28b471dc5cac2cf8cc54c82}} 
+\index{server\_cc::http::ServletDispatch@{server\_cc::http::ServletDispatch}!addServlet@{addServlet}}
+\index{addServlet@{addServlet}!server\_cc::http::ServletDispatch@{server\_cc::http::ServletDispatch}}
+\doxysubsubsection{\texorpdfstring{addServlet()}{addServlet()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void server\+\_\+cc\+::http\+::\+Servlet\+Dispatch\+::add\+Servlet (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{uri,  }\item[{\mbox{\hyperlink{classserver__cc_1_1http_1_1FunctionServlet_af78b955bfac25adf1760751ea7afb264}{Function\+Servlet\+::callback}}}]{cb }\end{DoxyParamCaption})}
+
+
+
+添加servlet 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em uri} & uri \\
+\hline
+\mbox{\texttt{ in}}  & {\em cb} & Function\+Servlet回调函数 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classserver__cc_1_1http_1_1ServletDispatch_a238ada626d58d14f368a1ffbbfa1b809}\label{classserver__cc_1_1http_1_1ServletDispatch_a238ada626d58d14f368a1ffbbfa1b809}} 
+\index{server\_cc::http::ServletDispatch@{server\_cc::http::ServletDispatch}!addServlet@{addServlet}}
+\index{addServlet@{addServlet}!server\_cc::http::ServletDispatch@{server\_cc::http::ServletDispatch}}
+\doxysubsubsection{\texorpdfstring{addServlet()}{addServlet()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void server\+\_\+cc\+::http\+::\+Servlet\+Dispatch\+::add\+Servlet (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{uri,  }\item[{Servlet\+::ptr}]{slt }\end{DoxyParamCaption})}
+
+
+
+添加servlet 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em uri} & uri \\
+\hline
+\mbox{\texttt{ in}}  & {\em slt} & serlvet \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classserver__cc_1_1http_1_1ServletDispatch_a37c2745b80449a5b902af64c8cf58a6e}\label{classserver__cc_1_1http_1_1ServletDispatch_a37c2745b80449a5b902af64c8cf58a6e}} 
+\index{server\_cc::http::ServletDispatch@{server\_cc::http::ServletDispatch}!delGlobServlet@{delGlobServlet}}
+\index{delGlobServlet@{delGlobServlet}!server\_cc::http::ServletDispatch@{server\_cc::http::ServletDispatch}}
+\doxysubsubsection{\texorpdfstring{delGlobServlet()}{delGlobServlet()}}
+{\footnotesize\ttfamily void server\+\_\+cc\+::http\+::\+Servlet\+Dispatch\+::del\+Glob\+Servlet (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{uri }\end{DoxyParamCaption})}
+
+
+
+删除模糊匹配servlet 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em uri} & uri \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classserver__cc_1_1http_1_1ServletDispatch_a2f36cdb2b59b2c974b1ae8010a9838a0}\label{classserver__cc_1_1http_1_1ServletDispatch_a2f36cdb2b59b2c974b1ae8010a9838a0}} 
+\index{server\_cc::http::ServletDispatch@{server\_cc::http::ServletDispatch}!delServlet@{delServlet}}
+\index{delServlet@{delServlet}!server\_cc::http::ServletDispatch@{server\_cc::http::ServletDispatch}}
+\doxysubsubsection{\texorpdfstring{delServlet()}{delServlet()}}
+{\footnotesize\ttfamily void server\+\_\+cc\+::http\+::\+Servlet\+Dispatch\+::del\+Servlet (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{uri }\end{DoxyParamCaption})}
+
+
+
+删除servlet 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em uri} & uri \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classserver__cc_1_1http_1_1ServletDispatch_ab9f832f71a80b288ec0f0fdf65ece5e0}\label{classserver__cc_1_1http_1_1ServletDispatch_ab9f832f71a80b288ec0f0fdf65ece5e0}} 
+\index{server\_cc::http::ServletDispatch@{server\_cc::http::ServletDispatch}!getGlobServlet@{getGlobServlet}}
+\index{getGlobServlet@{getGlobServlet}!server\_cc::http::ServletDispatch@{server\_cc::http::ServletDispatch}}
+\doxysubsubsection{\texorpdfstring{getGlobServlet()}{getGlobServlet()}}
+{\footnotesize\ttfamily Servlet\+::ptr server\+\_\+cc\+::http\+::\+Servlet\+Dispatch\+::get\+Glob\+Servlet (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{uri }\end{DoxyParamCaption})}
+
+
+
+通过uri获取模糊匹配servlet 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em uri} & uri \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+返回对应的servlet 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classserver__cc_1_1http_1_1ServletDispatch_a5fbfd4378ebebddceec591f80ae3450e}\label{classserver__cc_1_1http_1_1ServletDispatch_a5fbfd4378ebebddceec591f80ae3450e}} 
+\index{server\_cc::http::ServletDispatch@{server\_cc::http::ServletDispatch}!getMatchedServlet@{getMatchedServlet}}
+\index{getMatchedServlet@{getMatchedServlet}!server\_cc::http::ServletDispatch@{server\_cc::http::ServletDispatch}}
+\doxysubsubsection{\texorpdfstring{getMatchedServlet()}{getMatchedServlet()}}
+{\footnotesize\ttfamily Servlet\+::ptr server\+\_\+cc\+::http\+::\+Servlet\+Dispatch\+::get\+Matched\+Servlet (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{uri }\end{DoxyParamCaption})}
+
+
+
+通过uri获取servlet 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em uri} & uri \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+优先精准匹配,其次模糊匹配,最后返回默认 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classserver__cc_1_1http_1_1ServletDispatch_a9741316870f603897efc7eba495d487e}\label{classserver__cc_1_1http_1_1ServletDispatch_a9741316870f603897efc7eba495d487e}} 
+\index{server\_cc::http::ServletDispatch@{server\_cc::http::ServletDispatch}!getServlet@{getServlet}}
+\index{getServlet@{getServlet}!server\_cc::http::ServletDispatch@{server\_cc::http::ServletDispatch}}
+\doxysubsubsection{\texorpdfstring{getServlet()}{getServlet()}}
+{\footnotesize\ttfamily Servlet\+::ptr server\+\_\+cc\+::http\+::\+Servlet\+Dispatch\+::get\+Servlet (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{uri }\end{DoxyParamCaption})}
+
+
+
+通过uri获取servlet 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em uri} & uri \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+返回对应的servlet 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classserver__cc_1_1http_1_1ServletDispatch_ad5419b28e02c0a1041b1b2b71ac57264}\label{classserver__cc_1_1http_1_1ServletDispatch_ad5419b28e02c0a1041b1b2b71ac57264}} 
+\index{server\_cc::http::ServletDispatch@{server\_cc::http::ServletDispatch}!setDefault@{setDefault}}
+\index{setDefault@{setDefault}!server\_cc::http::ServletDispatch@{server\_cc::http::ServletDispatch}}
+\doxysubsubsection{\texorpdfstring{setDefault()}{setDefault()}}
+{\footnotesize\ttfamily void server\+\_\+cc\+::http\+::\+Servlet\+Dispatch\+::set\+Default (\begin{DoxyParamCaption}\item[{Servlet\+::ptr}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+设置默认servlet 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & servlet \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+http\+\_\+servlet.\+h\item 
+http\+\_\+servlet.\+cpp\end{DoxyCompactItemize}

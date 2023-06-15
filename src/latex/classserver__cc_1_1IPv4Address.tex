@@ -1,0 +1,206 @@
+\hypertarget{classserver__cc_1_1IPv4Address}{}\doxysection{server\+\_\+cc\+::I\+Pv4\+Address Class Reference}
+\label{classserver__cc_1_1IPv4Address}\index{server\_cc::IPv4Address@{server\_cc::IPv4Address}}
+
+
+I\+Pv4地址  
+
+
+
+
+{\ttfamily \#include $<$address.\+h$>$}
+
+
+
+Inheritance diagram for server\+\_\+cc\+::I\+Pv4\+Address\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=209pt]{classserver__cc_1_1IPv4Address__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for server\+\_\+cc\+::I\+Pv4\+Address\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=209pt]{classserver__cc_1_1IPv4Address__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1IPv4Address_ac0d65ab6c40eecdfc82c96a04516c8b8}\label{classserver__cc_1_1IPv4Address_ac0d65ab6c40eecdfc82c96a04516c8b8}} 
+typedef std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classserver__cc_1_1IPv4Address}{I\+Pv4\+Address}} $>$ {\bfseries ptr}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classserver__cc_1_1IPv4Address_ae1de5d4b3592f111b3d3d560326d34a1}{I\+Pv4\+Address}} (const sockaddr\+\_\+in \&address)
+\begin{DoxyCompactList}\small\item\em 通过sockaddr\+\_\+in构造\+I\+Pv4\+Address \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classserver__cc_1_1IPv4Address_a6030686440c5a7f41e1923c4a1d5191f}{I\+Pv4\+Address}} (uint32\+\_\+t address=I\+N\+A\+D\+D\+R\+\_\+\+A\+NY, uint16\+\_\+t port=0)
+\begin{DoxyCompactList}\small\item\em 通过二进制地址构造\+I\+Pv4\+Address \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1IPv4Address_a27f52fbc8451ed96d44e9907bad67e13}\label{classserver__cc_1_1IPv4Address_a27f52fbc8451ed96d44e9907bad67e13}} 
+const sockaddr $\ast$ \mbox{\hyperlink{classserver__cc_1_1IPv4Address_a27f52fbc8451ed96d44e9907bad67e13}{get\+Addr}} () const override
+\begin{DoxyCompactList}\small\item\em 返回sockaddr指针,只读 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1IPv4Address_ac171cd85392f357fe2d6c3b8b13b6b19}\label{classserver__cc_1_1IPv4Address_ac171cd85392f357fe2d6c3b8b13b6b19}} 
+sockaddr $\ast$ \mbox{\hyperlink{classserver__cc_1_1IPv4Address_ac171cd85392f357fe2d6c3b8b13b6b19}{get\+Addr}} () override
+\begin{DoxyCompactList}\small\item\em 返回sockaddr指针,读写 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1IPv4Address_a70c73519c82d070b745577b8b33c619d}\label{classserver__cc_1_1IPv4Address_a70c73519c82d070b745577b8b33c619d}} 
+socklen\+\_\+t \mbox{\hyperlink{classserver__cc_1_1IPv4Address_a70c73519c82d070b745577b8b33c619d}{get\+Addr\+Len}} () const override
+\begin{DoxyCompactList}\small\item\em 返回sockaddr的长度 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1IPv4Address_ae7895c1422f31d5fd290a2112043e0d0}\label{classserver__cc_1_1IPv4Address_ae7895c1422f31d5fd290a2112043e0d0}} 
+std\+::ostream \& \mbox{\hyperlink{classserver__cc_1_1IPv4Address_ae7895c1422f31d5fd290a2112043e0d0}{insert}} (std\+::ostream \&os) const override
+\begin{DoxyCompactList}\small\item\em 可读性输出地址 \end{DoxyCompactList}\item 
+I\+P\+Address\+::ptr \mbox{\hyperlink{classserver__cc_1_1IPv4Address_a16ef177b1db66ff8d99eca93f0e3ae6c}{broadcast\+Address}} (uint32\+\_\+t prefix\+\_\+len) override
+\begin{DoxyCompactList}\small\item\em 获取该地址的广播地址 \end{DoxyCompactList}\item 
+I\+P\+Address\+::ptr \mbox{\hyperlink{classserver__cc_1_1IPv4Address_a5a30d44a9c5cb9352f9ebdd680c737bc}{netword\+Address}} (uint32\+\_\+t prefix\+\_\+len) override
+\begin{DoxyCompactList}\small\item\em 获取该地址的网段 \end{DoxyCompactList}\item 
+I\+P\+Address\+::ptr \mbox{\hyperlink{classserver__cc_1_1IPv4Address_a29b79cd562637e9740fe574b37bd94cc}{subnet\+Mask}} (uint32\+\_\+t prefix\+\_\+len) override
+\begin{DoxyCompactList}\small\item\em 获取子网掩码地址 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1IPv4Address_ad3d4de9dccc3bc746ded114623bfe069}\label{classserver__cc_1_1IPv4Address_ad3d4de9dccc3bc746ded114623bfe069}} 
+uint32\+\_\+t \mbox{\hyperlink{classserver__cc_1_1IPv4Address_ad3d4de9dccc3bc746ded114623bfe069}{get\+Port}} () const override
+\begin{DoxyCompactList}\small\item\em 返回端口号 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1IPv4Address_a9dd44c8e09e437b0ecf2e3754c8c2d48}\label{classserver__cc_1_1IPv4Address_a9dd44c8e09e437b0ecf2e3754c8c2d48}} 
+void \mbox{\hyperlink{classserver__cc_1_1IPv4Address_a9dd44c8e09e437b0ecf2e3754c8c2d48}{set\+Port}} (uint16\+\_\+t v) override
+\begin{DoxyCompactList}\small\item\em 设置端口号 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static I\+Pv4\+Address\+::ptr \mbox{\hyperlink{classserver__cc_1_1IPv4Address_a2667fc35f780d813393e7a183c2deede}{Create}} (const char $\ast$address, uint16\+\_\+t port=0)
+\begin{DoxyCompactList}\small\item\em 使用点分十进制地址创建\+I\+Pv4\+Address \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+I\+Pv4地址 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classserver__cc_1_1IPv4Address_ae1de5d4b3592f111b3d3d560326d34a1}\label{classserver__cc_1_1IPv4Address_ae1de5d4b3592f111b3d3d560326d34a1}} 
+\index{server\_cc::IPv4Address@{server\_cc::IPv4Address}!IPv4Address@{IPv4Address}}
+\index{IPv4Address@{IPv4Address}!server\_cc::IPv4Address@{server\_cc::IPv4Address}}
+\doxysubsubsection{\texorpdfstring{IPv4Address()}{IPv4Address()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily server\+\_\+cc\+::\+I\+Pv4\+Address\+::\+I\+Pv4\+Address (\begin{DoxyParamCaption}\item[{const sockaddr\+\_\+in \&}]{address }\end{DoxyParamCaption})}
+
+
+
+通过sockaddr\+\_\+in构造\+I\+Pv4\+Address 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em address} & sockaddr\+\_\+in结构体 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classserver__cc_1_1IPv4Address_a6030686440c5a7f41e1923c4a1d5191f}\label{classserver__cc_1_1IPv4Address_a6030686440c5a7f41e1923c4a1d5191f}} 
+\index{server\_cc::IPv4Address@{server\_cc::IPv4Address}!IPv4Address@{IPv4Address}}
+\index{IPv4Address@{IPv4Address}!server\_cc::IPv4Address@{server\_cc::IPv4Address}}
+\doxysubsubsection{\texorpdfstring{IPv4Address()}{IPv4Address()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily server\+\_\+cc\+::\+I\+Pv4\+Address\+::\+I\+Pv4\+Address (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{address = {\ttfamily INADDR\+\_\+ANY},  }\item[{uint16\+\_\+t}]{port = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+通过二进制地址构造\+I\+Pv4\+Address 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em address} & 二进制地址address \\
+\hline
+\mbox{\texttt{ in}}  & {\em port} & 端口号 \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classserver__cc_1_1IPv4Address_a16ef177b1db66ff8d99eca93f0e3ae6c}\label{classserver__cc_1_1IPv4Address_a16ef177b1db66ff8d99eca93f0e3ae6c}} 
+\index{server\_cc::IPv4Address@{server\_cc::IPv4Address}!broadcastAddress@{broadcastAddress}}
+\index{broadcastAddress@{broadcastAddress}!server\_cc::IPv4Address@{server\_cc::IPv4Address}}
+\doxysubsubsection{\texorpdfstring{broadcastAddress()}{broadcastAddress()}}
+{\footnotesize\ttfamily I\+P\+Address\+::ptr server\+\_\+cc\+::\+I\+Pv4\+Address\+::broadcast\+Address (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{prefix\+\_\+len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+获取该地址的广播地址 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em prefix\+\_\+len} & 子网掩码位数 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+调用成功返回\+I\+P\+Address,失败返回nullptr 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classserver__cc_1_1IPAddress_a24ed2b0d619b91102a65b7e5ae7f166c}{server\+\_\+cc\+::\+I\+P\+Address}}.
+
+\mbox{\Hypertarget{classserver__cc_1_1IPv4Address_a2667fc35f780d813393e7a183c2deede}\label{classserver__cc_1_1IPv4Address_a2667fc35f780d813393e7a183c2deede}} 
+\index{server\_cc::IPv4Address@{server\_cc::IPv4Address}!Create@{Create}}
+\index{Create@{Create}!server\_cc::IPv4Address@{server\_cc::IPv4Address}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}}
+{\footnotesize\ttfamily I\+Pv4\+Address\+::ptr server\+\_\+cc\+::\+I\+Pv4\+Address\+::\+Create (\begin{DoxyParamCaption}\item[{const char $\ast$}]{address,  }\item[{uint16\+\_\+t}]{port = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+使用点分十进制地址创建\+I\+Pv4\+Address 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em address} & 点分十进制地址,如\+:192.\+168.\+1.\+1 \\
+\hline
+\mbox{\texttt{ in}}  & {\em port} & 端口号 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+返回\+I\+Pv4\+Address,失败返回nullptr 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classserver__cc_1_1IPv4Address_a5a30d44a9c5cb9352f9ebdd680c737bc}\label{classserver__cc_1_1IPv4Address_a5a30d44a9c5cb9352f9ebdd680c737bc}} 
+\index{server\_cc::IPv4Address@{server\_cc::IPv4Address}!networdAddress@{networdAddress}}
+\index{networdAddress@{networdAddress}!server\_cc::IPv4Address@{server\_cc::IPv4Address}}
+\doxysubsubsection{\texorpdfstring{networdAddress()}{networdAddress()}}
+{\footnotesize\ttfamily I\+P\+Address\+::ptr server\+\_\+cc\+::\+I\+Pv4\+Address\+::netword\+Address (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{prefix\+\_\+len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+获取该地址的网段 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em prefix\+\_\+len} & 子网掩码位数 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+调用成功返回\+I\+P\+Address,失败返回nullptr 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classserver__cc_1_1IPAddress_a5bdc2c62e535b279fe7884316e31a382}{server\+\_\+cc\+::\+I\+P\+Address}}.
+
+\mbox{\Hypertarget{classserver__cc_1_1IPv4Address_a29b79cd562637e9740fe574b37bd94cc}\label{classserver__cc_1_1IPv4Address_a29b79cd562637e9740fe574b37bd94cc}} 
+\index{server\_cc::IPv4Address@{server\_cc::IPv4Address}!subnetMask@{subnetMask}}
+\index{subnetMask@{subnetMask}!server\_cc::IPv4Address@{server\_cc::IPv4Address}}
+\doxysubsubsection{\texorpdfstring{subnetMask()}{subnetMask()}}
+{\footnotesize\ttfamily I\+P\+Address\+::ptr server\+\_\+cc\+::\+I\+Pv4\+Address\+::subnet\+Mask (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{prefix\+\_\+len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+获取子网掩码地址 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em prefix\+\_\+len} & 子网掩码位数 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+调用成功返回\+I\+P\+Address,失败返回nullptr 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classserver__cc_1_1IPAddress_ad045840a691297c2fa886d78d2881895}{server\+\_\+cc\+::\+I\+P\+Address}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{address_8h}{address.\+h}}\item 
+address.\+cpp\end{DoxyCompactItemize}

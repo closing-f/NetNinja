@@ -1,0 +1,204 @@
+\hypertarget{classserver__cc_1_1IPv6Address}{}\doxysection{server\+\_\+cc\+::I\+Pv6\+Address Class Reference}
+\label{classserver__cc_1_1IPv6Address}\index{server\_cc::IPv6Address@{server\_cc::IPv6Address}}
+
+
+I\+Pv6地址  
+
+
+
+
+{\ttfamily \#include $<$address.\+h$>$}
+
+
+
+Inheritance diagram for server\+\_\+cc\+::I\+Pv6\+Address\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=209pt]{classserver__cc_1_1IPv6Address__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for server\+\_\+cc\+::I\+Pv6\+Address\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=209pt]{classserver__cc_1_1IPv6Address__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1IPv6Address_ad5fac633e33c39b616b619660554f46e}\label{classserver__cc_1_1IPv6Address_ad5fac633e33c39b616b619660554f46e}} 
+typedef std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classserver__cc_1_1IPv6Address}{I\+Pv6\+Address}} $>$ {\bfseries ptr}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1IPv6Address_a143c42d160c8a4a2c96c037bd341d431}\label{classserver__cc_1_1IPv6Address_a143c42d160c8a4a2c96c037bd341d431}} 
+\mbox{\hyperlink{classserver__cc_1_1IPv6Address_a143c42d160c8a4a2c96c037bd341d431}{I\+Pv6\+Address}} ()
+\begin{DoxyCompactList}\small\item\em 无参构造函数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classserver__cc_1_1IPv6Address_ad523f69dea483fd90a4581de516e6c30}{I\+Pv6\+Address}} (const sockaddr\+\_\+in6 \&address)
+\begin{DoxyCompactList}\small\item\em 通过sockaddr\+\_\+in6构造\+I\+Pv6\+Address \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classserver__cc_1_1IPv6Address_abd39a8778c32b661c0d9322516006a98}{I\+Pv6\+Address}} (const uint8\+\_\+t address\mbox{[}16\mbox{]}, uint16\+\_\+t port=0)
+\begin{DoxyCompactList}\small\item\em 通过\+I\+Pv6二进制地址构造\+I\+Pv6\+Address \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1IPv6Address_ae80af43245670ce3cd6d4a674d9a4145}\label{classserver__cc_1_1IPv6Address_ae80af43245670ce3cd6d4a674d9a4145}} 
+const sockaddr $\ast$ \mbox{\hyperlink{classserver__cc_1_1IPv6Address_ae80af43245670ce3cd6d4a674d9a4145}{get\+Addr}} () const override
+\begin{DoxyCompactList}\small\item\em 返回sockaddr指针,只读 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1IPv6Address_a2ef943a9d9e10b52e328420a6e3cb782}\label{classserver__cc_1_1IPv6Address_a2ef943a9d9e10b52e328420a6e3cb782}} 
+sockaddr $\ast$ \mbox{\hyperlink{classserver__cc_1_1IPv6Address_a2ef943a9d9e10b52e328420a6e3cb782}{get\+Addr}} () override
+\begin{DoxyCompactList}\small\item\em 返回sockaddr指针,读写 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1IPv6Address_a303ffeb3e1e61ed6052fc106f72ff642}\label{classserver__cc_1_1IPv6Address_a303ffeb3e1e61ed6052fc106f72ff642}} 
+socklen\+\_\+t \mbox{\hyperlink{classserver__cc_1_1IPv6Address_a303ffeb3e1e61ed6052fc106f72ff642}{get\+Addr\+Len}} () const override
+\begin{DoxyCompactList}\small\item\em 返回sockaddr的长度 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1IPv6Address_adbd50e116cb5f1363cfa8b4737e39bf3}\label{classserver__cc_1_1IPv6Address_adbd50e116cb5f1363cfa8b4737e39bf3}} 
+std\+::ostream \& \mbox{\hyperlink{classserver__cc_1_1IPv6Address_adbd50e116cb5f1363cfa8b4737e39bf3}{insert}} (std\+::ostream \&os) const override
+\begin{DoxyCompactList}\small\item\em 可读性输出地址 \end{DoxyCompactList}\item 
+I\+P\+Address\+::ptr \mbox{\hyperlink{classserver__cc_1_1IPv6Address_a6333ba556f3f67b4a63ee3bd91db26b3}{broadcast\+Address}} (uint32\+\_\+t prefix\+\_\+len) override
+\begin{DoxyCompactList}\small\item\em 获取该地址的广播地址 \end{DoxyCompactList}\item 
+I\+P\+Address\+::ptr \mbox{\hyperlink{classserver__cc_1_1IPv6Address_a0e970ad732293a3df82eeaf0c6be898f}{netword\+Address}} (uint32\+\_\+t prefix\+\_\+len) override
+\begin{DoxyCompactList}\small\item\em 获取该地址的网段 \end{DoxyCompactList}\item 
+I\+P\+Address\+::ptr \mbox{\hyperlink{classserver__cc_1_1IPv6Address_a70c76808b7ad48b3ea29bdad32b0a726}{subnet\+Mask}} (uint32\+\_\+t prefix\+\_\+len) override
+\begin{DoxyCompactList}\small\item\em 获取子网掩码地址 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1IPv6Address_a009342702f72d5fce3097bf6b726dc2e}\label{classserver__cc_1_1IPv6Address_a009342702f72d5fce3097bf6b726dc2e}} 
+uint32\+\_\+t \mbox{\hyperlink{classserver__cc_1_1IPv6Address_a009342702f72d5fce3097bf6b726dc2e}{get\+Port}} () const override
+\begin{DoxyCompactList}\small\item\em 返回端口号 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1IPv6Address_a30f09084f3f7c34006d74faca3079914}\label{classserver__cc_1_1IPv6Address_a30f09084f3f7c34006d74faca3079914}} 
+void \mbox{\hyperlink{classserver__cc_1_1IPv6Address_a30f09084f3f7c34006d74faca3079914}{set\+Port}} (uint16\+\_\+t v) override
+\begin{DoxyCompactList}\small\item\em 设置端口号 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static I\+Pv6\+Address\+::ptr \mbox{\hyperlink{classserver__cc_1_1IPv6Address_ae2991d6fb47379d5f96a1f87ff598710}{Create}} (const char $\ast$address, uint16\+\_\+t port=0)
+\begin{DoxyCompactList}\small\item\em 通过\+I\+Pv6地址字符串构造\+I\+Pv6\+Address \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+I\+Pv6地址 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classserver__cc_1_1IPv6Address_ad523f69dea483fd90a4581de516e6c30}\label{classserver__cc_1_1IPv6Address_ad523f69dea483fd90a4581de516e6c30}} 
+\index{server\_cc::IPv6Address@{server\_cc::IPv6Address}!IPv6Address@{IPv6Address}}
+\index{IPv6Address@{IPv6Address}!server\_cc::IPv6Address@{server\_cc::IPv6Address}}
+\doxysubsubsection{\texorpdfstring{IPv6Address()}{IPv6Address()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily server\+\_\+cc\+::\+I\+Pv6\+Address\+::\+I\+Pv6\+Address (\begin{DoxyParamCaption}\item[{const sockaddr\+\_\+in6 \&}]{address }\end{DoxyParamCaption})}
+
+
+
+通过sockaddr\+\_\+in6构造\+I\+Pv6\+Address 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em address} & sockaddr\+\_\+in6结构体 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classserver__cc_1_1IPv6Address_abd39a8778c32b661c0d9322516006a98}\label{classserver__cc_1_1IPv6Address_abd39a8778c32b661c0d9322516006a98}} 
+\index{server\_cc::IPv6Address@{server\_cc::IPv6Address}!IPv6Address@{IPv6Address}}
+\index{IPv6Address@{IPv6Address}!server\_cc::IPv6Address@{server\_cc::IPv6Address}}
+\doxysubsubsection{\texorpdfstring{IPv6Address()}{IPv6Address()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily server\+\_\+cc\+::\+I\+Pv6\+Address\+::\+I\+Pv6\+Address (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t}]{address\mbox{[}16\mbox{]},  }\item[{uint16\+\_\+t}]{port = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+通过\+I\+Pv6二进制地址构造\+I\+Pv6\+Address 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em address} & I\+Pv6二进制地址 \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classserver__cc_1_1IPv6Address_a6333ba556f3f67b4a63ee3bd91db26b3}\label{classserver__cc_1_1IPv6Address_a6333ba556f3f67b4a63ee3bd91db26b3}} 
+\index{server\_cc::IPv6Address@{server\_cc::IPv6Address}!broadcastAddress@{broadcastAddress}}
+\index{broadcastAddress@{broadcastAddress}!server\_cc::IPv6Address@{server\_cc::IPv6Address}}
+\doxysubsubsection{\texorpdfstring{broadcastAddress()}{broadcastAddress()}}
+{\footnotesize\ttfamily I\+P\+Address\+::ptr server\+\_\+cc\+::\+I\+Pv6\+Address\+::broadcast\+Address (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{prefix\+\_\+len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+获取该地址的广播地址 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em prefix\+\_\+len} & 子网掩码位数 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+调用成功返回\+I\+P\+Address,失败返回nullptr 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classserver__cc_1_1IPAddress_a24ed2b0d619b91102a65b7e5ae7f166c}{server\+\_\+cc\+::\+I\+P\+Address}}.
+
+\mbox{\Hypertarget{classserver__cc_1_1IPv6Address_ae2991d6fb47379d5f96a1f87ff598710}\label{classserver__cc_1_1IPv6Address_ae2991d6fb47379d5f96a1f87ff598710}} 
+\index{server\_cc::IPv6Address@{server\_cc::IPv6Address}!Create@{Create}}
+\index{Create@{Create}!server\_cc::IPv6Address@{server\_cc::IPv6Address}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}}
+{\footnotesize\ttfamily I\+Pv6\+Address\+::ptr server\+\_\+cc\+::\+I\+Pv6\+Address\+::\+Create (\begin{DoxyParamCaption}\item[{const char $\ast$}]{address,  }\item[{uint16\+\_\+t}]{port = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+通过\+I\+Pv6地址字符串构造\+I\+Pv6\+Address 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em address} & I\+Pv6地址字符串 \\
+\hline
+\mbox{\texttt{ in}}  & {\em port} & 端口号 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classserver__cc_1_1IPv6Address_a0e970ad732293a3df82eeaf0c6be898f}\label{classserver__cc_1_1IPv6Address_a0e970ad732293a3df82eeaf0c6be898f}} 
+\index{server\_cc::IPv6Address@{server\_cc::IPv6Address}!networdAddress@{networdAddress}}
+\index{networdAddress@{networdAddress}!server\_cc::IPv6Address@{server\_cc::IPv6Address}}
+\doxysubsubsection{\texorpdfstring{networdAddress()}{networdAddress()}}
+{\footnotesize\ttfamily I\+P\+Address\+::ptr server\+\_\+cc\+::\+I\+Pv6\+Address\+::netword\+Address (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{prefix\+\_\+len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+获取该地址的网段 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em prefix\+\_\+len} & 子网掩码位数 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+调用成功返回\+I\+P\+Address,失败返回nullptr 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classserver__cc_1_1IPAddress_a5bdc2c62e535b279fe7884316e31a382}{server\+\_\+cc\+::\+I\+P\+Address}}.
+
+\mbox{\Hypertarget{classserver__cc_1_1IPv6Address_a70c76808b7ad48b3ea29bdad32b0a726}\label{classserver__cc_1_1IPv6Address_a70c76808b7ad48b3ea29bdad32b0a726}} 
+\index{server\_cc::IPv6Address@{server\_cc::IPv6Address}!subnetMask@{subnetMask}}
+\index{subnetMask@{subnetMask}!server\_cc::IPv6Address@{server\_cc::IPv6Address}}
+\doxysubsubsection{\texorpdfstring{subnetMask()}{subnetMask()}}
+{\footnotesize\ttfamily I\+P\+Address\+::ptr server\+\_\+cc\+::\+I\+Pv6\+Address\+::subnet\+Mask (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{prefix\+\_\+len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+获取子网掩码地址 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em prefix\+\_\+len} & 子网掩码位数 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+调用成功返回\+I\+P\+Address,失败返回nullptr 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classserver__cc_1_1IPAddress_ad045840a691297c2fa886d78d2881895}{server\+\_\+cc\+::\+I\+P\+Address}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{address_8h}{address.\+h}}\item 
+address.\+cpp\end{DoxyCompactItemize}

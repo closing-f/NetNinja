@@ -1,0 +1,113 @@
+\hypertarget{structserver__cc_1_1Scheduler_1_1FiberOrCb}{}\doxysection{server\+\_\+cc\+::Scheduler\+::Fiber\+Or\+Cb Struct Reference}
+\label{structserver__cc_1_1Scheduler_1_1FiberOrCb}\index{server\_cc::Scheduler::FiberOrCb@{server\_cc::Scheduler::FiberOrCb}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structserver__cc_1_1Scheduler_1_1FiberOrCb_aa5c85324c21d1fbc614faf0cb5d77c88}{Fiber\+Or\+Cb}} (Fiber\+::ptr f, int thr)
+\begin{DoxyCompactList}\small\item\em 构造函数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structserver__cc_1_1Scheduler_1_1FiberOrCb_aab6061421dfe21d37daf967bdde0748e}{Fiber\+Or\+Cb}} (Fiber\+::ptr $\ast$f, int thr)
+\begin{DoxyCompactList}\small\item\em 构造函数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structserver__cc_1_1Scheduler_1_1FiberOrCb_a84f64f2aff841d102c711cb13164d066}{Fiber\+Or\+Cb}} (std\+::function$<$ void()$>$ f, int thr)
+\begin{DoxyCompactList}\small\item\em 构造函数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structserver__cc_1_1Scheduler_1_1FiberOrCb_a9ccc7ba384853293c8fca108cb2129e6}{Fiber\+Or\+Cb}} (std\+::function$<$ void()$>$ $\ast$f, int thr)
+\begin{DoxyCompactList}\small\item\em 构造函数 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structserver__cc_1_1Scheduler_1_1FiberOrCb_a07c0ad2cfe8c979676797058416f4bf4}\label{structserver__cc_1_1Scheduler_1_1FiberOrCb_a07c0ad2cfe8c979676797058416f4bf4}} 
+\mbox{\hyperlink{structserver__cc_1_1Scheduler_1_1FiberOrCb_a07c0ad2cfe8c979676797058416f4bf4}{Fiber\+Or\+Cb}} ()
+\begin{DoxyCompactList}\small\item\em 无参构造函数 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structserver__cc_1_1Scheduler_1_1FiberOrCb_a907254343fd7351b23680201b76374b2}\label{structserver__cc_1_1Scheduler_1_1FiberOrCb_a907254343fd7351b23680201b76374b2}} 
+void {\bfseries reset} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structserver__cc_1_1Scheduler_1_1FiberOrCb_a5d3937b9f03e7a1c002fc3b981b82553}\label{structserver__cc_1_1Scheduler_1_1FiberOrCb_a5d3937b9f03e7a1c002fc3b981b82553}} 
+Fiber\+::ptr {\bfseries fiber}
+\item 
+\mbox{\Hypertarget{structserver__cc_1_1Scheduler_1_1FiberOrCb_aae791bd2f64c644b558cd5844777cedd}\label{structserver__cc_1_1Scheduler_1_1FiberOrCb_aae791bd2f64c644b558cd5844777cedd}} 
+std\+::function$<$ void()$>$ {\bfseries cb}
+\item 
+\mbox{\Hypertarget{structserver__cc_1_1Scheduler_1_1FiberOrCb_a1a31b4c8a66a41bc113ab1ba6392a87e}\label{structserver__cc_1_1Scheduler_1_1FiberOrCb_a1a31b4c8a66a41bc113ab1ba6392a87e}} 
+int {\bfseries thread} = -\/1
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structserver__cc_1_1Scheduler_1_1FiberOrCb_aa5c85324c21d1fbc614faf0cb5d77c88}\label{structserver__cc_1_1Scheduler_1_1FiberOrCb_aa5c85324c21d1fbc614faf0cb5d77c88}} 
+\index{server\_cc::Scheduler::FiberOrCb@{server\_cc::Scheduler::FiberOrCb}!FiberOrCb@{FiberOrCb}}
+\index{FiberOrCb@{FiberOrCb}!server\_cc::Scheduler::FiberOrCb@{server\_cc::Scheduler::FiberOrCb}}
+\doxysubsubsection{\texorpdfstring{FiberOrCb()}{FiberOrCb()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily server\+\_\+cc\+::\+Scheduler\+::\+Fiber\+Or\+Cb\+::\+Fiber\+Or\+Cb (\begin{DoxyParamCaption}\item[{Fiber\+::ptr}]{f,  }\item[{int}]{thr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+构造函数 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em f} & 协程 \\
+\hline
+\mbox{\texttt{ in}}  & {\em thr} & 线程id \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structserver__cc_1_1Scheduler_1_1FiberOrCb_aab6061421dfe21d37daf967bdde0748e}\label{structserver__cc_1_1Scheduler_1_1FiberOrCb_aab6061421dfe21d37daf967bdde0748e}} 
+\index{server\_cc::Scheduler::FiberOrCb@{server\_cc::Scheduler::FiberOrCb}!FiberOrCb@{FiberOrCb}}
+\index{FiberOrCb@{FiberOrCb}!server\_cc::Scheduler::FiberOrCb@{server\_cc::Scheduler::FiberOrCb}}
+\doxysubsubsection{\texorpdfstring{FiberOrCb()}{FiberOrCb()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily server\+\_\+cc\+::\+Scheduler\+::\+Fiber\+Or\+Cb\+::\+Fiber\+Or\+Cb (\begin{DoxyParamCaption}\item[{Fiber\+::ptr $\ast$}]{f,  }\item[{int}]{thr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+构造函数 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em f} & 协程指针 \\
+\hline
+\mbox{\texttt{ in}}  & {\em thr} & 线程id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+$\ast$f = nullptr 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{structserver__cc_1_1Scheduler_1_1FiberOrCb_a84f64f2aff841d102c711cb13164d066}\label{structserver__cc_1_1Scheduler_1_1FiberOrCb_a84f64f2aff841d102c711cb13164d066}} 
+\index{server\_cc::Scheduler::FiberOrCb@{server\_cc::Scheduler::FiberOrCb}!FiberOrCb@{FiberOrCb}}
+\index{FiberOrCb@{FiberOrCb}!server\_cc::Scheduler::FiberOrCb@{server\_cc::Scheduler::FiberOrCb}}
+\doxysubsubsection{\texorpdfstring{FiberOrCb()}{FiberOrCb()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily server\+\_\+cc\+::\+Scheduler\+::\+Fiber\+Or\+Cb\+::\+Fiber\+Or\+Cb (\begin{DoxyParamCaption}\item[{std\+::function$<$ void()$>$}]{f,  }\item[{int}]{thr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+构造函数 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em f} & 协程执行函数 \\
+\hline
+\mbox{\texttt{ in}}  & {\em thr} & 线程id \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structserver__cc_1_1Scheduler_1_1FiberOrCb_a9ccc7ba384853293c8fca108cb2129e6}\label{structserver__cc_1_1Scheduler_1_1FiberOrCb_a9ccc7ba384853293c8fca108cb2129e6}} 
+\index{server\_cc::Scheduler::FiberOrCb@{server\_cc::Scheduler::FiberOrCb}!FiberOrCb@{FiberOrCb}}
+\index{FiberOrCb@{FiberOrCb}!server\_cc::Scheduler::FiberOrCb@{server\_cc::Scheduler::FiberOrCb}}
+\doxysubsubsection{\texorpdfstring{FiberOrCb()}{FiberOrCb()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily server\+\_\+cc\+::\+Scheduler\+::\+Fiber\+Or\+Cb\+::\+Fiber\+Or\+Cb (\begin{DoxyParamCaption}\item[{std\+::function$<$ void()$>$ $\ast$}]{f,  }\item[{int}]{thr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+构造函数 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em f} & 协程执行函数指针 \\
+\hline
+\mbox{\texttt{ in}}  & {\em thr} & 线程id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+$\ast$f = nullptr 
+\end{DoxyPostcond}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+scheduler.\+h\end{DoxyCompactItemize}

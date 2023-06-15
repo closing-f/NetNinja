@@ -1,0 +1,289 @@
+\hypertarget{classserver__cc_1_1Fiber}{}\doxysection{server\+\_\+cc\+::Fiber Class Reference}
+\label{classserver__cc_1_1Fiber}\index{server\_cc::Fiber@{server\_cc::Fiber}}
+
+
+Inheritance diagram for server\+\_\+cc\+::Fiber\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{classserver__cc_1_1Fiber__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for server\+\_\+cc\+::Fiber\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{classserver__cc_1_1Fiber__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classserver__cc_1_1Fiber_a12c31e03f4d024c687cb6b8c09d46fbc}{State}} \{ \newline
+\mbox{\hyperlink{classserver__cc_1_1Fiber_a12c31e03f4d024c687cb6b8c09d46fbcab2990a0404242302789060a3729c80ba}{I\+N\+IT}}, 
+\mbox{\hyperlink{classserver__cc_1_1Fiber_a12c31e03f4d024c687cb6b8c09d46fbca1b6871719a7e4b6a4e7c12bdb2c0cc20}{H\+O\+LD}}, 
+\mbox{\hyperlink{classserver__cc_1_1Fiber_a12c31e03f4d024c687cb6b8c09d46fbcac2d1ea8148a24b29f477e531a7ea68cd}{E\+X\+EC}}, 
+\mbox{\hyperlink{classserver__cc_1_1Fiber_a12c31e03f4d024c687cb6b8c09d46fbca1e86ca5abcd5f1192d7b03fa3c79ea83}{T\+E\+RM}}, 
+\newline
+\mbox{\hyperlink{classserver__cc_1_1Fiber_a12c31e03f4d024c687cb6b8c09d46fbcac6c4102e5c067f63016bdc04c88d016e}{R\+E\+A\+DY}}, 
+\mbox{\hyperlink{classserver__cc_1_1Fiber_a12c31e03f4d024c687cb6b8c09d46fbca681431286e269d097bfe23ddcaeb36d0}{E\+X\+C\+E\+PT}}
+ \}
+\begin{DoxyCompactList}\small\item\em 协程状态 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1Fiber_a250a1030da2b41c89e61f99f16bee23b}\label{classserver__cc_1_1Fiber_a250a1030da2b41c89e61f99f16bee23b}} 
+typedef std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classserver__cc_1_1Fiber}{Fiber}} $>$ {\bfseries ptr}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classserver__cc_1_1Fiber_acecbe46c266da1ff24f1950679a531bc}{Fiber}} (std\+::function$<$ void()$>$cb, size\+\_\+t stack\+\_\+size=0, bool use\+\_\+caller=false)
+\item 
+void \mbox{\hyperlink{classserver__cc_1_1Fiber_a7e3f94575b118e23f6a12a0d7d91fd37}{reset}} (std\+::function$<$ void()$>$cb)
+\item 
+void \mbox{\hyperlink{classserver__cc_1_1Fiber_a1cecd639b35867fbac3d8ce0e5c3066b}{swap\+In}} ()
+\item 
+void \mbox{\hyperlink{classserver__cc_1_1Fiber_aa8a31a8c63a796e89c050d22655844bc}{swap\+Out}} ()
+\item 
+void \mbox{\hyperlink{classserver__cc_1_1Fiber_a44c93d465334d353a6ee536835182a6c}{call}} ()
+\begin{DoxyCompactList}\small\item\em 将当前线程切换到执行状态 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classserver__cc_1_1Fiber_a62a25be25ebedcf390143bc026b7639e}{back}} ()
+\begin{DoxyCompactList}\small\item\em 将当前线程切换到后台 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1Fiber_aad8c162f7709f2eb53f27beaec2e56a6}\label{classserver__cc_1_1Fiber_aad8c162f7709f2eb53f27beaec2e56a6}} 
+uint64\+\_\+t \mbox{\hyperlink{classserver__cc_1_1Fiber_aad8c162f7709f2eb53f27beaec2e56a6}{get\+Id}} () const
+\begin{DoxyCompactList}\small\item\em 返回协程id \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1Fiber_ae926c5c5e67d997587ced8a438606e29}\label{classserver__cc_1_1Fiber_ae926c5c5e67d997587ced8a438606e29}} 
+\mbox{\hyperlink{classserver__cc_1_1Fiber_a12c31e03f4d024c687cb6b8c09d46fbc}{State}} \mbox{\hyperlink{classserver__cc_1_1Fiber_ae926c5c5e67d997587ced8a438606e29}{get\+State}} () const
+\begin{DoxyCompactList}\small\item\em 返回协程状态 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classserver__cc_1_1Fiber_afd3194fc1a3db00729d02cfadcc01b61}{Set\+This}} (\mbox{\hyperlink{classserver__cc_1_1Fiber}{Fiber}} $\ast$fiber)
+\item 
+static Fiber\+::ptr \mbox{\hyperlink{classserver__cc_1_1Fiber_accc5e5150607bdf4e22889de218d324d}{Get\+This}} ()
+\item 
+static void \mbox{\hyperlink{classserver__cc_1_1Fiber_ad669bc10242de7a51413a24f55f79031}{Yield\+To\+Ready}} ()
+\begin{DoxyCompactList}\small\item\em 将当前协程切换到后台,并设置为\+R\+E\+A\+D\+Y状态 \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classserver__cc_1_1Fiber_abf15de267bbeb54c48c7b1daa9a07af6}{Yield\+To\+Hold}} ()
+\begin{DoxyCompactList}\small\item\em 将当前协程切换到后台,并设置为\+H\+O\+L\+D状态 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1Fiber_a1c73842ef168e84aa803bd6161b927cf}\label{classserver__cc_1_1Fiber_a1c73842ef168e84aa803bd6161b927cf}} 
+static uint64\+\_\+t \mbox{\hyperlink{classserver__cc_1_1Fiber_a1c73842ef168e84aa803bd6161b927cf}{Total\+Fibers}} ()
+\begin{DoxyCompactList}\small\item\em 返回当前协程的总数量 \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classserver__cc_1_1Fiber_a4dccf0de882c5c25dfc95a603eaeb514}{Main\+Func}} ()
+\begin{DoxyCompactList}\small\item\em 协程执行函数 \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classserver__cc_1_1Fiber_a12bf77a68610db11f2ef801910078111}{Caller\+Main\+Func}} ()
+\begin{DoxyCompactList}\small\item\em 协程执行函数 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1Fiber_ad7578aced250e03bf85d7f672344a732}\label{classserver__cc_1_1Fiber_ad7578aced250e03bf85d7f672344a732}} 
+static uint64\+\_\+t \mbox{\hyperlink{classserver__cc_1_1Fiber_ad7578aced250e03bf85d7f672344a732}{Get\+Fiber\+Id}} ()
+\begin{DoxyCompactList}\small\item\em 获取当前协程的id \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1Fiber_ac1fc6c775a3cd458869394fc0b204390}\label{classserver__cc_1_1Fiber_ac1fc6c775a3cd458869394fc0b204390}} 
+\mbox{\hyperlink{classserver__cc_1_1Fiber_a12c31e03f4d024c687cb6b8c09d46fbc}{State}} {\bfseries m\+\_\+state} = \mbox{\hyperlink{classserver__cc_1_1Fiber_a12c31e03f4d024c687cb6b8c09d46fbcab2990a0404242302789060a3729c80ba}{I\+N\+IT}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classserver__cc_1_1Fiber_a12c31e03f4d024c687cb6b8c09d46fbc}\label{classserver__cc_1_1Fiber_a12c31e03f4d024c687cb6b8c09d46fbc}} 
+\index{server\_cc::Fiber@{server\_cc::Fiber}!State@{State}}
+\index{State@{State}!server\_cc::Fiber@{server\_cc::Fiber}}
+\doxysubsubsection{\texorpdfstring{State}{State}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classserver__cc_1_1Fiber_a12c31e03f4d024c687cb6b8c09d46fbc}{server\+\_\+cc\+::\+Fiber\+::\+State}}}
+
+
+
+协程状态 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INIT@{INIT}!server\_cc::Fiber@{server\_cc::Fiber}}\index{server\_cc::Fiber@{server\_cc::Fiber}!INIT@{INIT}}}\mbox{\Hypertarget{classserver__cc_1_1Fiber_a12c31e03f4d024c687cb6b8c09d46fbcab2990a0404242302789060a3729c80ba}\label{classserver__cc_1_1Fiber_a12c31e03f4d024c687cb6b8c09d46fbcab2990a0404242302789060a3729c80ba}} 
+I\+N\+IT&初始化状态 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HOLD@{HOLD}!server\_cc::Fiber@{server\_cc::Fiber}}\index{server\_cc::Fiber@{server\_cc::Fiber}!HOLD@{HOLD}}}\mbox{\Hypertarget{classserver__cc_1_1Fiber_a12c31e03f4d024c687cb6b8c09d46fbca1b6871719a7e4b6a4e7c12bdb2c0cc20}\label{classserver__cc_1_1Fiber_a12c31e03f4d024c687cb6b8c09d46fbca1b6871719a7e4b6a4e7c12bdb2c0cc20}} 
+H\+O\+LD&暂停状态 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EXEC@{EXEC}!server\_cc::Fiber@{server\_cc::Fiber}}\index{server\_cc::Fiber@{server\_cc::Fiber}!EXEC@{EXEC}}}\mbox{\Hypertarget{classserver__cc_1_1Fiber_a12c31e03f4d024c687cb6b8c09d46fbcac2d1ea8148a24b29f477e531a7ea68cd}\label{classserver__cc_1_1Fiber_a12c31e03f4d024c687cb6b8c09d46fbcac2d1ea8148a24b29f477e531a7ea68cd}} 
+E\+X\+EC&执行中状态 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TERM@{TERM}!server\_cc::Fiber@{server\_cc::Fiber}}\index{server\_cc::Fiber@{server\_cc::Fiber}!TERM@{TERM}}}\mbox{\Hypertarget{classserver__cc_1_1Fiber_a12c31e03f4d024c687cb6b8c09d46fbca1e86ca5abcd5f1192d7b03fa3c79ea83}\label{classserver__cc_1_1Fiber_a12c31e03f4d024c687cb6b8c09d46fbca1e86ca5abcd5f1192d7b03fa3c79ea83}} 
+T\+E\+RM&结束状态 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{READY@{READY}!server\_cc::Fiber@{server\_cc::Fiber}}\index{server\_cc::Fiber@{server\_cc::Fiber}!READY@{READY}}}\mbox{\Hypertarget{classserver__cc_1_1Fiber_a12c31e03f4d024c687cb6b8c09d46fbcac6c4102e5c067f63016bdc04c88d016e}\label{classserver__cc_1_1Fiber_a12c31e03f4d024c687cb6b8c09d46fbcac6c4102e5c067f63016bdc04c88d016e}} 
+R\+E\+A\+DY&可执行状态 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EXCEPT@{EXCEPT}!server\_cc::Fiber@{server\_cc::Fiber}}\index{server\_cc::Fiber@{server\_cc::Fiber}!EXCEPT@{EXCEPT}}}\mbox{\Hypertarget{classserver__cc_1_1Fiber_a12c31e03f4d024c687cb6b8c09d46fbca681431286e269d097bfe23ddcaeb36d0}\label{classserver__cc_1_1Fiber_a12c31e03f4d024c687cb6b8c09d46fbca681431286e269d097bfe23ddcaeb36d0}} 
+E\+X\+C\+E\+PT&异常状态 \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classserver__cc_1_1Fiber_acecbe46c266da1ff24f1950679a531bc}\label{classserver__cc_1_1Fiber_acecbe46c266da1ff24f1950679a531bc}} 
+\index{server\_cc::Fiber@{server\_cc::Fiber}!Fiber@{Fiber}}
+\index{Fiber@{Fiber}!server\_cc::Fiber@{server\_cc::Fiber}}
+\doxysubsubsection{\texorpdfstring{Fiber()}{Fiber()}}
+{\footnotesize\ttfamily server\+\_\+cc\+::\+Fiber\+::\+Fiber (\begin{DoxyParamCaption}\item[{std\+::function$<$ void()$>$}]{cb,  }\item[{size\+\_\+t}]{stack\+\_\+size = {\ttfamily 0},  }\item[{bool}]{use\+\_\+caller = {\ttfamily false} }\end{DoxyParamCaption})}
+
+@description\+: 构造函数，用于生成子协程 
+\begin{DoxyParams}{Parameters}
+{\em \{size\+\_\+t\}} & stack\+\_\+size 协程栈大小 \\
+\hline
+{\em \{bool\}} & use\+\_\+caller //? 是否在当前线程中创建协程 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\{$\ast$\} 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classserver__cc_1_1Fiber_a62a25be25ebedcf390143bc026b7639e}\label{classserver__cc_1_1Fiber_a62a25be25ebedcf390143bc026b7639e}} 
+\index{server\_cc::Fiber@{server\_cc::Fiber}!back@{back}}
+\index{back@{back}!server\_cc::Fiber@{server\_cc::Fiber}}
+\doxysubsubsection{\texorpdfstring{back()}{back()}}
+{\footnotesize\ttfamily void server\+\_\+cc\+::\+Fiber\+::back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+将当前线程切换到后台 
+
+\begin{DoxyPrecond}{Precondition}
+执行的为该协程 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+返回到线程的主协程 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classserver__cc_1_1Fiber_a44c93d465334d353a6ee536835182a6c}\label{classserver__cc_1_1Fiber_a44c93d465334d353a6ee536835182a6c}} 
+\index{server\_cc::Fiber@{server\_cc::Fiber}!call@{call}}
+\index{call@{call}!server\_cc::Fiber@{server\_cc::Fiber}}
+\doxysubsubsection{\texorpdfstring{call()}{call()}}
+{\footnotesize\ttfamily void server\+\_\+cc\+::\+Fiber\+::call (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+将当前线程切换到执行状态 
+
+\begin{DoxyPrecond}{Precondition}
+执行的为当前线程的主协程 
+\end{DoxyPrecond}
+\mbox{\Hypertarget{classserver__cc_1_1Fiber_a12bf77a68610db11f2ef801910078111}\label{classserver__cc_1_1Fiber_a12bf77a68610db11f2ef801910078111}} 
+\index{server\_cc::Fiber@{server\_cc::Fiber}!CallerMainFunc@{CallerMainFunc}}
+\index{CallerMainFunc@{CallerMainFunc}!server\_cc::Fiber@{server\_cc::Fiber}}
+\doxysubsubsection{\texorpdfstring{CallerMainFunc()}{CallerMainFunc()}}
+{\footnotesize\ttfamily void server\+\_\+cc\+::\+Fiber\+::\+Caller\+Main\+Func (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+协程执行函数 
+
+\begin{DoxyPostcond}{Postcondition}
+执行完成返回到线程调度协程 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classserver__cc_1_1Fiber_accc5e5150607bdf4e22889de218d324d}\label{classserver__cc_1_1Fiber_accc5e5150607bdf4e22889de218d324d}} 
+\index{server\_cc::Fiber@{server\_cc::Fiber}!GetThis@{GetThis}}
+\index{GetThis@{GetThis}!server\_cc::Fiber@{server\_cc::Fiber}}
+\doxysubsubsection{\texorpdfstring{GetThis()}{GetThis()}}
+{\footnotesize\ttfamily Fiber\+::ptr server\+\_\+cc\+::\+Fiber\+::\+Get\+This (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+@description\+: 
+\begin{DoxyParams}{Parameters}
+{\em \{\+Fiber$\ast$\}} & fiber \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\{$\ast$\} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classserver__cc_1_1Fiber_a4dccf0de882c5c25dfc95a603eaeb514}\label{classserver__cc_1_1Fiber_a4dccf0de882c5c25dfc95a603eaeb514}} 
+\index{server\_cc::Fiber@{server\_cc::Fiber}!MainFunc@{MainFunc}}
+\index{MainFunc@{MainFunc}!server\_cc::Fiber@{server\_cc::Fiber}}
+\doxysubsubsection{\texorpdfstring{MainFunc()}{MainFunc()}}
+{\footnotesize\ttfamily void server\+\_\+cc\+::\+Fiber\+::\+Main\+Func (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+协程执行函数 
+
+\begin{DoxyPostcond}{Postcondition}
+执行完成返回到线程主协程 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classserver__cc_1_1Fiber_a7e3f94575b118e23f6a12a0d7d91fd37}\label{classserver__cc_1_1Fiber_a7e3f94575b118e23f6a12a0d7d91fd37}} 
+\index{server\_cc::Fiber@{server\_cc::Fiber}!reset@{reset}}
+\index{reset@{reset}!server\_cc::Fiber@{server\_cc::Fiber}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void server\+\_\+cc\+::\+Fiber\+::reset (\begin{DoxyParamCaption}\item[{std\+::function$<$ void()$>$}]{cb }\end{DoxyParamCaption})}
+
+@description\+: 重置协程函数，并重置状态 \begin{DoxyReturn}{Returns}
+\{$\ast$\} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classserver__cc_1_1Fiber_afd3194fc1a3db00729d02cfadcc01b61}\label{classserver__cc_1_1Fiber_afd3194fc1a3db00729d02cfadcc01b61}} 
+\index{server\_cc::Fiber@{server\_cc::Fiber}!SetThis@{SetThis}}
+\index{SetThis@{SetThis}!server\_cc::Fiber@{server\_cc::Fiber}}
+\doxysubsubsection{\texorpdfstring{SetThis()}{SetThis()}}
+{\footnotesize\ttfamily void server\+\_\+cc\+::\+Fiber\+::\+Set\+This (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classserver__cc_1_1Fiber}{Fiber}} $\ast$}]{fiber }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+@description\+: 
+\begin{DoxyParams}{Parameters}
+{\em \{\+Fiber$\ast$\}} & fiber \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\{$\ast$\} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classserver__cc_1_1Fiber_a1cecd639b35867fbac3d8ce0e5c3066b}\label{classserver__cc_1_1Fiber_a1cecd639b35867fbac3d8ce0e5c3066b}} 
+\index{server\_cc::Fiber@{server\_cc::Fiber}!swapIn@{swapIn}}
+\index{swapIn@{swapIn}!server\_cc::Fiber@{server\_cc::Fiber}}
+\doxysubsubsection{\texorpdfstring{swapIn()}{swapIn()}}
+{\footnotesize\ttfamily void server\+\_\+cc\+::\+Fiber\+::swap\+In (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+@description\+: 切换到当前协程执行 \begin{DoxyReturn}{Returns}
+\{$\ast$\} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classserver__cc_1_1Fiber_aa8a31a8c63a796e89c050d22655844bc}\label{classserver__cc_1_1Fiber_aa8a31a8c63a796e89c050d22655844bc}} 
+\index{server\_cc::Fiber@{server\_cc::Fiber}!swapOut@{swapOut}}
+\index{swapOut@{swapOut}!server\_cc::Fiber@{server\_cc::Fiber}}
+\doxysubsubsection{\texorpdfstring{swapOut()}{swapOut()}}
+{\footnotesize\ttfamily void server\+\_\+cc\+::\+Fiber\+::swap\+Out (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+@description\+: 切换到后台执行 \begin{DoxyReturn}{Returns}
+\{$\ast$\} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classserver__cc_1_1Fiber_abf15de267bbeb54c48c7b1daa9a07af6}\label{classserver__cc_1_1Fiber_abf15de267bbeb54c48c7b1daa9a07af6}} 
+\index{server\_cc::Fiber@{server\_cc::Fiber}!YieldToHold@{YieldToHold}}
+\index{YieldToHold@{YieldToHold}!server\_cc::Fiber@{server\_cc::Fiber}}
+\doxysubsubsection{\texorpdfstring{YieldToHold()}{YieldToHold()}}
+{\footnotesize\ttfamily void server\+\_\+cc\+::\+Fiber\+::\+Yield\+To\+Hold (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+将当前协程切换到后台,并设置为\+H\+O\+L\+D状态 
+
+\begin{DoxyPostcond}{Postcondition}
+\mbox{\hyperlink{classserver__cc_1_1Fiber_ae926c5c5e67d997587ced8a438606e29}{get\+State()}} = H\+O\+LD 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classserver__cc_1_1Fiber_ad669bc10242de7a51413a24f55f79031}\label{classserver__cc_1_1Fiber_ad669bc10242de7a51413a24f55f79031}} 
+\index{server\_cc::Fiber@{server\_cc::Fiber}!YieldToReady@{YieldToReady}}
+\index{YieldToReady@{YieldToReady}!server\_cc::Fiber@{server\_cc::Fiber}}
+\doxysubsubsection{\texorpdfstring{YieldToReady()}{YieldToReady()}}
+{\footnotesize\ttfamily void server\+\_\+cc\+::\+Fiber\+::\+Yield\+To\+Ready (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+将当前协程切换到后台,并设置为\+R\+E\+A\+D\+Y状态 
+
+\begin{DoxyPostcond}{Postcondition}
+\mbox{\hyperlink{classserver__cc_1_1Fiber_ae926c5c5e67d997587ced8a438606e29}{get\+State()}} = R\+E\+A\+DY 
+\end{DoxyPostcond}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+fiber.\+h\item 
+fiber.\+cpp\end{DoxyCompactItemize}

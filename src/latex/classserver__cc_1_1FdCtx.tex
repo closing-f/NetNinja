@@ -1,0 +1,148 @@
+\hypertarget{classserver__cc_1_1FdCtx}{}\doxysection{server\+\_\+cc\+::Fd\+Ctx Class Reference}
+\label{classserver__cc_1_1FdCtx}\index{server\_cc::FdCtx@{server\_cc::FdCtx}}
+
+
+文件句柄上下文类  
+
+
+
+
+{\ttfamily \#include $<$fd\+\_\+manager.\+h$>$}
+
+
+
+Inheritance diagram for server\+\_\+cc\+::Fd\+Ctx\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{classserver__cc_1_1FdCtx__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for server\+\_\+cc\+::Fd\+Ctx\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{classserver__cc_1_1FdCtx__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1FdCtx_aa3519cfc065ea299a9bf08bd3b7c33e4}\label{classserver__cc_1_1FdCtx_aa3519cfc065ea299a9bf08bd3b7c33e4}} 
+typedef std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classserver__cc_1_1FdCtx}{Fd\+Ctx}} $>$ {\bfseries ptr}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1FdCtx_aaf0ab18c46ed732603e95965c8c43903}\label{classserver__cc_1_1FdCtx_aaf0ab18c46ed732603e95965c8c43903}} 
+\mbox{\hyperlink{classserver__cc_1_1FdCtx_aaf0ab18c46ed732603e95965c8c43903}{Fd\+Ctx}} (int fd)
+\begin{DoxyCompactList}\small\item\em 通过文件句柄构造\+Fd\+Ctx \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1FdCtx_a5787309292fbb620176660e8f01efc8e}\label{classserver__cc_1_1FdCtx_a5787309292fbb620176660e8f01efc8e}} 
+\mbox{\hyperlink{classserver__cc_1_1FdCtx_a5787309292fbb620176660e8f01efc8e}{$\sim$\+Fd\+Ctx}} ()
+\begin{DoxyCompactList}\small\item\em 析构函数 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1FdCtx_a364e5b2562b388bdbc6d559841c742b4}\label{classserver__cc_1_1FdCtx_a364e5b2562b388bdbc6d559841c742b4}} 
+bool \mbox{\hyperlink{classserver__cc_1_1FdCtx_a364e5b2562b388bdbc6d559841c742b4}{is\+Init}} () const
+\begin{DoxyCompactList}\small\item\em 是否初始化完成 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1FdCtx_ad607c7ece62e7b1772b0bb4200f31a3d}\label{classserver__cc_1_1FdCtx_ad607c7ece62e7b1772b0bb4200f31a3d}} 
+bool \mbox{\hyperlink{classserver__cc_1_1FdCtx_ad607c7ece62e7b1772b0bb4200f31a3d}{is\+Socket}} () const
+\begin{DoxyCompactList}\small\item\em 是否socket \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1FdCtx_a07c90398aac5f5931270fa80161f883b}\label{classserver__cc_1_1FdCtx_a07c90398aac5f5931270fa80161f883b}} 
+bool \mbox{\hyperlink{classserver__cc_1_1FdCtx_a07c90398aac5f5931270fa80161f883b}{is\+Close}} () const
+\begin{DoxyCompactList}\small\item\em 是否已关闭 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classserver__cc_1_1FdCtx_a822d0f753e138b2ab3a28cbea1fc07d3}{set\+User\+Nonblock}} (bool v)
+\begin{DoxyCompactList}\small\item\em 设置用户主动设置非阻塞 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1FdCtx_a094cb2c9ba71b898a87ddf20cf6ca01d}\label{classserver__cc_1_1FdCtx_a094cb2c9ba71b898a87ddf20cf6ca01d}} 
+bool \mbox{\hyperlink{classserver__cc_1_1FdCtx_a094cb2c9ba71b898a87ddf20cf6ca01d}{get\+User\+Nonblock}} () const
+\begin{DoxyCompactList}\small\item\em 获取是否用户主动设置的非阻塞 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classserver__cc_1_1FdCtx_adde11cbd22016d0feaf00e2c6ed39569}{set\+Sys\+Nonblock}} (bool v)
+\begin{DoxyCompactList}\small\item\em 设置系统非阻塞 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__cc_1_1FdCtx_a5db69fa94383a9ddbd19a48ffdad7dc4}\label{classserver__cc_1_1FdCtx_a5db69fa94383a9ddbd19a48ffdad7dc4}} 
+bool \mbox{\hyperlink{classserver__cc_1_1FdCtx_a5db69fa94383a9ddbd19a48ffdad7dc4}{get\+Sys\+Nonblock}} () const
+\begin{DoxyCompactList}\small\item\em 获取系统非阻塞 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classserver__cc_1_1FdCtx_aa9d1a1f886536fba61f466dcac7d2f99}{set\+Timeout}} (int type, uint64\+\_\+t v)
+\begin{DoxyCompactList}\small\item\em 设置超时时间 \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{classserver__cc_1_1FdCtx_aab4ddef7e8c52b0a2fb9e478fe76957b}{get\+Timeout}} (int type)
+\begin{DoxyCompactList}\small\item\em 获取超时时间 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+文件句柄上下文类 
+
+管理文件句柄类型(是否socket) 是否阻塞,是否关闭,读/写超时时间 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classserver__cc_1_1FdCtx_aab4ddef7e8c52b0a2fb9e478fe76957b}\label{classserver__cc_1_1FdCtx_aab4ddef7e8c52b0a2fb9e478fe76957b}} 
+\index{server\_cc::FdCtx@{server\_cc::FdCtx}!getTimeout@{getTimeout}}
+\index{getTimeout@{getTimeout}!server\_cc::FdCtx@{server\_cc::FdCtx}}
+\doxysubsubsection{\texorpdfstring{getTimeout()}{getTimeout()}}
+{\footnotesize\ttfamily uint64\+\_\+t server\+\_\+cc\+::\+Fd\+Ctx\+::get\+Timeout (\begin{DoxyParamCaption}\item[{int}]{type }\end{DoxyParamCaption})}
+
+
+
+获取超时时间 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em type} & 类型\+S\+O\+\_\+\+R\+C\+V\+T\+I\+M\+EO(读超时), S\+O\+\_\+\+S\+N\+D\+T\+I\+M\+EO(写超时) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+超时时间毫秒 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classserver__cc_1_1FdCtx_adde11cbd22016d0feaf00e2c6ed39569}\label{classserver__cc_1_1FdCtx_adde11cbd22016d0feaf00e2c6ed39569}} 
+\index{server\_cc::FdCtx@{server\_cc::FdCtx}!setSysNonblock@{setSysNonblock}}
+\index{setSysNonblock@{setSysNonblock}!server\_cc::FdCtx@{server\_cc::FdCtx}}
+\doxysubsubsection{\texorpdfstring{setSysNonblock()}{setSysNonblock()}}
+{\footnotesize\ttfamily void server\+\_\+cc\+::\+Fd\+Ctx\+::set\+Sys\+Nonblock (\begin{DoxyParamCaption}\item[{bool}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+设置系统非阻塞 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & 是否阻塞 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classserver__cc_1_1FdCtx_aa9d1a1f886536fba61f466dcac7d2f99}\label{classserver__cc_1_1FdCtx_aa9d1a1f886536fba61f466dcac7d2f99}} 
+\index{server\_cc::FdCtx@{server\_cc::FdCtx}!setTimeout@{setTimeout}}
+\index{setTimeout@{setTimeout}!server\_cc::FdCtx@{server\_cc::FdCtx}}
+\doxysubsubsection{\texorpdfstring{setTimeout()}{setTimeout()}}
+{\footnotesize\ttfamily void server\+\_\+cc\+::\+Fd\+Ctx\+::set\+Timeout (\begin{DoxyParamCaption}\item[{int}]{type,  }\item[{uint64\+\_\+t}]{v }\end{DoxyParamCaption})}
+
+
+
+设置超时时间 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em type} & 类型\+S\+O\+\_\+\+R\+C\+V\+T\+I\+M\+EO(读超时), S\+O\+\_\+\+S\+N\+D\+T\+I\+M\+EO(写超时) \\
+\hline
+\mbox{\texttt{ in}}  & {\em v} & 时间毫秒 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classserver__cc_1_1FdCtx_a822d0f753e138b2ab3a28cbea1fc07d3}\label{classserver__cc_1_1FdCtx_a822d0f753e138b2ab3a28cbea1fc07d3}} 
+\index{server\_cc::FdCtx@{server\_cc::FdCtx}!setUserNonblock@{setUserNonblock}}
+\index{setUserNonblock@{setUserNonblock}!server\_cc::FdCtx@{server\_cc::FdCtx}}
+\doxysubsubsection{\texorpdfstring{setUserNonblock()}{setUserNonblock()}}
+{\footnotesize\ttfamily void server\+\_\+cc\+::\+Fd\+Ctx\+::set\+User\+Nonblock (\begin{DoxyParamCaption}\item[{bool}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+设置用户主动设置非阻塞 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & 是否阻塞 \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+fd\+\_\+manager.\+h\item 
+fd\+\_\+manager.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,211 @@
+\hypertarget{classserver__cc_1_1SocketStream}{}\doxysection{server\+\_\+cc\+::Socket\+Stream Class Reference}
+\label{classserver__cc_1_1SocketStream}\index{server\_cc::SocketStream@{server\_cc::SocketStream}}
+
+
+Inheritance diagram for server\+\_\+cc\+::Socket\+Stream\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classserver__cc_1_1SocketStream__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for server\+\_\+cc\+::Socket\+Stream\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{classserver__cc_1_1SocketStream__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1SocketStream_a175dba088943290f3f6e1b3bb4c4dd7a}\label{classserver__cc_1_1SocketStream_a175dba088943290f3f6e1b3bb4c4dd7a}} 
+typedef std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classserver__cc_1_1SocketStream}{Socket\+Stream}} $>$ {\bfseries ptr}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classserver__cc_1_1SocketStream_aa827380983e509663e392429dd0fb00d}{Socket\+Stream}} (Socket\+::ptr sock, bool owner=true)
+\item 
+\mbox{\hyperlink{classserver__cc_1_1SocketStream_a3813468f719f1f3af6187a017e05d335}{$\sim$\+Socket\+Stream}} ()
+\begin{DoxyCompactList}\small\item\em 析构函数 \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classserver__cc_1_1SocketStream_ac2e0e5e6435b19f86729d994c25e445f}{read}} (void $\ast$buffer, size\+\_\+t length) override
+\item 
+virtual int \mbox{\hyperlink{classserver__cc_1_1SocketStream_afc97eb622e36e153c6e004d0f7dd1932}{read}} (Byte\+Array\+::ptr ba, size\+\_\+t length) override
+\item 
+virtual int \mbox{\hyperlink{classserver__cc_1_1SocketStream_a1f38f238e3a381a74e326f4d0183de3e}{write}} (const void $\ast$buffer, size\+\_\+t length) override
+\item 
+virtual int \mbox{\hyperlink{classserver__cc_1_1SocketStream_a4de0b9c43aca9df21e922fa993728e87}{write}} (Byte\+Array\+::ptr ba, size\+\_\+t length) override
+\item 
+virtual void \mbox{\hyperlink{classserver__cc_1_1SocketStream_ad1e015bab6d1b84ab5767157a80f5eba}{close}} () override
+\item 
+Socket\+::ptr \mbox{\hyperlink{classserver__cc_1_1SocketStream_a5ab2b837ca453f7d33aeb38c51dcef10}{get\+Socket}} () const
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1SocketStream_a4096da3675f8d8809c8fd5c1f1ee1a69}\label{classserver__cc_1_1SocketStream_a4096da3675f8d8809c8fd5c1f1ee1a69}} 
+bool {\bfseries is\+Connected} () const
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1SocketStream_a26f802d616a3f42d9f2f847450b3a1c6}\label{classserver__cc_1_1SocketStream_a26f802d616a3f42d9f2f847450b3a1c6}} 
+Address\+::ptr {\bfseries get\+Remote\+Address} ()
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1SocketStream_a5401b73af2e9eb7764b5caf968dbddb3}\label{classserver__cc_1_1SocketStream_a5401b73af2e9eb7764b5caf968dbddb3}} 
+Address\+::ptr {\bfseries get\+Local\+Address} ()
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1SocketStream_af2a012c5deb29b3544ebcd19550c48b5}\label{classserver__cc_1_1SocketStream_af2a012c5deb29b3544ebcd19550c48b5}} 
+std\+::string {\bfseries get\+Remote\+Address\+String} ()
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1SocketStream_aeeb7b619eb1c0e86695f364ae612964f}\label{classserver__cc_1_1SocketStream_aeeb7b619eb1c0e86695f364ae612964f}} 
+std\+::string {\bfseries get\+Local\+Address\+String} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1SocketStream_a7317a3ccb181fe04015252141ae6d5f0}\label{classserver__cc_1_1SocketStream_a7317a3ccb181fe04015252141ae6d5f0}} 
+Socket\+::ptr {\bfseries m\+\_\+socket}
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1SocketStream_add4b41312984442852c85182ebcc85b4}\label{classserver__cc_1_1SocketStream_add4b41312984442852c85182ebcc85b4}} 
+bool {\bfseries m\+\_\+owner}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classserver__cc_1_1SocketStream_aa827380983e509663e392429dd0fb00d}\label{classserver__cc_1_1SocketStream_aa827380983e509663e392429dd0fb00d}} 
+\index{server\_cc::SocketStream@{server\_cc::SocketStream}!SocketStream@{SocketStream}}
+\index{SocketStream@{SocketStream}!server\_cc::SocketStream@{server\_cc::SocketStream}}
+\doxysubsubsection{\texorpdfstring{SocketStream()}{SocketStream()}}
+{\footnotesize\ttfamily server\+\_\+cc\+::\+Socket\+Stream\+::\+Socket\+Stream (\begin{DoxyParamCaption}\item[{Socket\+::ptr}]{sock,  }\item[{bool}]{owner = {\ttfamily true} }\end{DoxyParamCaption})}
+
+@description\+: 构造函数 
+\begin{DoxyParams}{Parameters}
+{\em \{ptr\}} & sock socket类 \\
+\hline
+{\em \{bool\}} & owner //? \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\{$\ast$\} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classserver__cc_1_1SocketStream_a3813468f719f1f3af6187a017e05d335}\label{classserver__cc_1_1SocketStream_a3813468f719f1f3af6187a017e05d335}} 
+\index{server\_cc::SocketStream@{server\_cc::SocketStream}!````~SocketStream@{$\sim$SocketStream}}
+\index{````~SocketStream@{$\sim$SocketStream}!server\_cc::SocketStream@{server\_cc::SocketStream}}
+\doxysubsubsection{\texorpdfstring{$\sim$SocketStream()}{~SocketStream()}}
+{\footnotesize\ttfamily server\+\_\+cc\+::\+Socket\+Stream\+::$\sim$\+Socket\+Stream (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+析构函数 
+
+如果m\+\_\+owner=true,则close 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classserver__cc_1_1SocketStream_ad1e015bab6d1b84ab5767157a80f5eba}\label{classserver__cc_1_1SocketStream_ad1e015bab6d1b84ab5767157a80f5eba}} 
+\index{server\_cc::SocketStream@{server\_cc::SocketStream}!close@{close}}
+\index{close@{close}!server\_cc::SocketStream@{server\_cc::SocketStream}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily void server\+\_\+cc\+::\+Socket\+Stream\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+@description\+: 关闭流 \begin{DoxyReturn}{Returns}
+\{$\ast$\} void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classserver__cc_1_1Stream_a35199036f83c5c29532170b23c22c178}{server\+\_\+cc\+::\+Stream}}.
+
+\mbox{\Hypertarget{classserver__cc_1_1SocketStream_a5ab2b837ca453f7d33aeb38c51dcef10}\label{classserver__cc_1_1SocketStream_a5ab2b837ca453f7d33aeb38c51dcef10}} 
+\index{server\_cc::SocketStream@{server\_cc::SocketStream}!getSocket@{getSocket}}
+\index{getSocket@{getSocket}!server\_cc::SocketStream@{server\_cc::SocketStream}}
+\doxysubsubsection{\texorpdfstring{getSocket()}{getSocket()}}
+{\footnotesize\ttfamily Socket\+::ptr server\+\_\+cc\+::\+Socket\+Stream\+::get\+Socket (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+@description\+: 返回socket类 \begin{DoxyReturn}{Returns}
+\{$\ast$\} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classserver__cc_1_1SocketStream_afc97eb622e36e153c6e004d0f7dd1932}\label{classserver__cc_1_1SocketStream_afc97eb622e36e153c6e004d0f7dd1932}} 
+\index{server\_cc::SocketStream@{server\_cc::SocketStream}!read@{read}}
+\index{read@{read}!server\_cc::SocketStream@{server\_cc::SocketStream}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int server\+\_\+cc\+::\+Socket\+Stream\+::read (\begin{DoxyParamCaption}\item[{Byte\+Array\+::ptr}]{ba,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+@description\+: 读取固定长度的数据到\+Byte\+Array中 
+\begin{DoxyParams}{Parameters}
+{\em \{ptr\}} & ba 读取的数据存放的位置 \\
+\hline
+{\em \{size\+\_\+t\}} & length 读取的数据长度 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\{$\ast$\} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classserver__cc_1_1Stream_ad3f215cfbc5c990c198c4d607c5c9125}{server\+\_\+cc\+::\+Stream}}.
+
+\mbox{\Hypertarget{classserver__cc_1_1SocketStream_ac2e0e5e6435b19f86729d994c25e445f}\label{classserver__cc_1_1SocketStream_ac2e0e5e6435b19f86729d994c25e445f}} 
+\index{server\_cc::SocketStream@{server\_cc::SocketStream}!read@{read}}
+\index{read@{read}!server\_cc::SocketStream@{server\_cc::SocketStream}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int server\+\_\+cc\+::\+Socket\+Stream\+::read (\begin{DoxyParamCaption}\item[{void $\ast$}]{buffer,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+@description\+: 读取固定长度的数据到buffer中 
+\begin{DoxyParams}{Parameters}
+{\em \{void$\ast$\}} & buffer 读取的数据存放的位置 \\
+\hline
+{\em \{size\+\_\+t\}} & length 读取的数据长度 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\{$\ast$\} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classserver__cc_1_1Stream_a18f62b7581709681d898d1bd7a0d6aa7}{server\+\_\+cc\+::\+Stream}}.
+
+\mbox{\Hypertarget{classserver__cc_1_1SocketStream_a4de0b9c43aca9df21e922fa993728e87}\label{classserver__cc_1_1SocketStream_a4de0b9c43aca9df21e922fa993728e87}} 
+\index{server\_cc::SocketStream@{server\_cc::SocketStream}!write@{write}}
+\index{write@{write}!server\_cc::SocketStream@{server\_cc::SocketStream}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int server\+\_\+cc\+::\+Socket\+Stream\+::write (\begin{DoxyParamCaption}\item[{Byte\+Array\+::ptr}]{ba,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+@description\+: 将buffer中的数据发送出去 
+\begin{DoxyParams}{Parameters}
+{\em \{ptr\}} & ba 写入的数据存放的位置 \\
+\hline
+{\em \{size\+\_\+t\}} & length 写入的数据长度 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\{$\ast$\} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classserver__cc_1_1Stream_a172a9e223d44e14fd6a6733875ce31df}{server\+\_\+cc\+::\+Stream}}.
+
+\mbox{\Hypertarget{classserver__cc_1_1SocketStream_a1f38f238e3a381a74e326f4d0183de3e}\label{classserver__cc_1_1SocketStream_a1f38f238e3a381a74e326f4d0183de3e}} 
+\index{server\_cc::SocketStream@{server\_cc::SocketStream}!write@{write}}
+\index{write@{write}!server\_cc::SocketStream@{server\_cc::SocketStream}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int server\+\_\+cc\+::\+Socket\+Stream\+::write (\begin{DoxyParamCaption}\item[{const void $\ast$}]{buffer,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+@description\+: 将buffer中的数据发送出去 
+\begin{DoxyParams}{Parameters}
+{\em \{void$\ast$\}} & buffer 写入的数据存放的位置 \\
+\hline
+{\em \{size\+\_\+t\}} & length 写入的数据长度 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\{$\ast$\} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classserver__cc_1_1Stream_a3f753255c84e9f660bd284435cd82f6f}{server\+\_\+cc\+::\+Stream}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+socket\+\_\+stream.\+h\item 
+socket\+\_\+stream.\+cpp\end{DoxyCompactItemize}

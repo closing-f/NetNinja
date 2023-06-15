@@ -2,7 +2,7 @@
  * @Author: closing
  * @Date: 2023-05-29 16:54:26
  * @LastEditors: closing
- * @LastEditTime: 2023-06-06 21:44:43
+ * @LastEditTime: 2023-06-14 16:48:36
  * @Description: 请填写简介
  */
 #include "src/http_server.h"
@@ -37,7 +37,7 @@ server_cc::IOManager::ptr worker;
 void run() {
     g_logger->setLevel(server_cc::LogLevel::INFO);
     //server_cc::http::HttpServer::ptr server(new server_cc::http::HttpServer(true, worker.get(), server_cc::IOManager::GetThis()));
-    server_cc::http::HttpServer::ptr server(new server_cc::http::HttpServer(true));
+    server_cc::http::HttpServer::ptr server(new server_cc::http::HttpServer(true,worker.get()));
     server_cc::Address::ptr addr = server_cc::Address::LookupAnyIPAddress("0.0.0.0:8020");
     while(!server->bind(addr)) {
         sleep(2);
@@ -62,7 +62,7 @@ void run() {
                 ,server_cc::http::HttpResponse::ptr rsp
                 ,server_cc::http::HttpSession::ptr session) {
             rsp->setBody(XX(<html>
-<head><title>404 Not Found</title></head>
+<head><title>404 Not Found!!!</title></head>
 <body>
 <center><h1>404 Not Found</h1></center>
 <hr><center>nginx/1.16.0</center>

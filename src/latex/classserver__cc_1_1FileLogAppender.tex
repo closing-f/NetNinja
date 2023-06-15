@@ -1,0 +1,74 @@
+\hypertarget{classserver__cc_1_1FileLogAppender}{}\doxysection{server\+\_\+cc\+::File\+Log\+Appender Class Reference}
+\label{classserver__cc_1_1FileLogAppender}\index{server\_cc::FileLogAppender@{server\_cc::FileLogAppender}}
+
+
+Inheritance diagram for server\+\_\+cc\+::File\+Log\+Appender\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{classserver__cc_1_1FileLogAppender__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for server\+\_\+cc\+::File\+Log\+Appender\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{classserver__cc_1_1FileLogAppender__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1FileLogAppender_af1bcb4f17c13553cc340849839c437ad}\label{classserver__cc_1_1FileLogAppender_af1bcb4f17c13553cc340849839c437ad}} 
+typedef std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classserver__cc_1_1FileLogAppender}{File\+Log\+Appender}} $>$ {\bfseries ptr}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1FileLogAppender_afc179cd03809c7c0b6c438a950d254a5}\label{classserver__cc_1_1FileLogAppender_afc179cd03809c7c0b6c438a950d254a5}} 
+{\bfseries File\+Log\+Appender} (const std\+::string \&filename)
+\item 
+void \mbox{\hyperlink{classserver__cc_1_1FileLogAppender_a0fb628518e94e8e90ffa82d5ced6de53}{log}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classserver__cc_1_1Logger}{Logger}} $>$ logger, Log\+Level\+::\+Level level, Log\+Event\+::ptr event) override
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1FileLogAppender_a6c49f475c356a7a5ee9d0bb33aefc91f}\label{classserver__cc_1_1FileLogAppender_a6c49f475c356a7a5ee9d0bb33aefc91f}} 
+std\+::string {\bfseries To\+Yaml\+String} () override
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1FileLogAppender_a619bcde7fb88cb92187d264cb0bba8df}\label{classserver__cc_1_1FileLogAppender_a619bcde7fb88cb92187d264cb0bba8df}} 
+bool {\bfseries reopen} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classserver__cc_1_1FileLogAppender_a0fb628518e94e8e90ffa82d5ced6de53}\label{classserver__cc_1_1FileLogAppender_a0fb628518e94e8e90ffa82d5ced6de53}} 
+\index{server\_cc::FileLogAppender@{server\_cc::FileLogAppender}!log@{log}}
+\index{log@{log}!server\_cc::FileLogAppender@{server\_cc::FileLogAppender}}
+\doxysubsubsection{\texorpdfstring{log()}{log()}}
+{\footnotesize\ttfamily void server\+\_\+cc\+::\+File\+Log\+Appender\+::log (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classserver__cc_1_1Logger}{Logger}} $>$}]{logger,  }\item[{Log\+Level\+::\+Level}]{level,  }\item[{Log\+Event\+::ptr}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+@description\+: 写入日志 
+\begin{DoxyParams}{Parameters}
+{\em \{shared\+\_\+ptr$<$\+Logger$>$\}} & logger 日志器 \\
+\hline
+{\em \{\+Level\}} & level 日志级别 \\
+\hline
+{\em \{ptr\}} & event 日志事件 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\{$\ast$\} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classserver__cc_1_1LogAppender_aab7c4626f082e7db2bc80e61c84d1f05}{server\+\_\+cc\+::\+Log\+Appender}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+logger.\+h\item 
+logger.\+cpp\end{DoxyCompactItemize}

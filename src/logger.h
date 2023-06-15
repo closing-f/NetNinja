@@ -2,7 +2,7 @@
  * @Author: closing
  * @Date: 2023-04-09 00:57:34
  * @LastEditors: closing
- * @LastEditTime: 2023-05-22 11:09:47
+ * @LastEditTime: 2023-06-14 11:07:02
  * @Description: logger头文件，定义logger的相关类
  */
 
@@ -93,6 +93,7 @@ public:
 };
 
 class Logger;
+class LoggerManager;
 class LogEvent {
     public:
         typedef std::shared_ptr<LogEvent> ptr;
@@ -139,9 +140,6 @@ class LogEvent {
          * @return {*}
          */        
         std::stringstream& getSS() { return m_ss; }
-
-        
-
           
     private:
         const char* m_filename = nullptr;//文件名
@@ -154,7 +152,7 @@ class LogEvent {
         std::shared_ptr<Logger> m_logger=nullptr;
         LogLevel::Level m_level;
         const std::string m_threadName;
-        std::stringstream m_ss;
+        std::stringstream m_ss; //
 
 
 };
@@ -180,70 +178,109 @@ class LogEventWrapper{
 class LogFormatter {
 public:
     typedef std::shared_ptr<LogFormatter> ptr;
-    
-    std::string format(LogLevel::Level level,LogEvent::ptr event);
-    std::ostream& format(std::ostream& os,LogLevel::Level level, LogEvent::ptr event);
+    /**
+     * @brief 构造函数
+     * @param[in] pattern 格式模板
+     * @details 
+     *  %m 消息
+     *  %p 日志级别
+     *  %r 累计毫秒数
+     *  %c 日志名称
+     *  %t 线程id
+     *  %n 换行
+     *  %d 时间
+     *  %f 文件名
+     *  %l 行号
+     *  %T 制表符
+     *  %F 协程id
+     *  %N 线程名称
+     *
+     *  默认格式 "%d{%Y-%m-%d %H:%M:%S}%T%t%T%N%T%F%T[%p]%T[%c]%T%f:%l%T%m%n"
+     */
     LogFormatter(const std::string& pattern);
-    std::string getPattern() const { return m_pattern; }
 
-    void resetPattern(const std::string& pattern);
+    /**
+     * @description: 返回格式化日志文本
+     * @param {shared_ptr<Logger>} logger   日志器
+     * @param {Level} level  日志级别
+     * @param {ptr} event   日志事件
+     * @return {*}
+     */    
+    std::string format(std::shared_ptr<Logger> logger, LogLevel::Level level, LogEvent::ptr event);
+    std::ostream& format(std::ostream& ofs, std::shared_ptr<Logger> logger, LogLevel::Level level, LogEvent::ptr event);
     
 public:
-    std::string m_pattern;//日志格式
+
     class FormatItem {
     public:
-        
         typedef std::shared_ptr<FormatItem> ptr;
+        
         virtual ~FormatItem() {}
-        virtual void format(std::ostream& os, LogEvent::ptr event) = 0;
+        virtual void format(std::ostream& os, std::shared_ptr<Logger> logger, LogLevel::Level level, LogEvent::ptr event) = 0;
     };
-    void init();
+
+    void init();//解析日志模板
+
+    /**
+     * @brief 是否有错误
+     */
+    bool isError() const { return m_error;}
+    std::string getPattern() const { return m_pattern; }
 private:
     
-    std::string m_error;//错误信息
+    /// 日志格式模板
+    std::string m_pattern;
+    /// 日志格式解析后格式
     std::vector<FormatItem::ptr> m_items;
+    /// 是否有错误
+    bool m_error = false;
 };
 
 
 class LogAppender{
+friend class Logger;
     public:
         typedef std::shared_ptr<LogAppender> ptr;
-        typedef Mutex MutexType;
+        typedef Mutex MutexType; //TODO typedef Spinlock MutexType; Spinlock的好处
 
-        virtual ~LogAppender();
+        virtual ~LogAppender(){};
         
-        virtual void log(LogLevel::Level level, LogEvent::ptr event) = 0;
-        void setFormatter(const std::string& formatter);
-        LogFormatter::ptr getFormatter() const { return m_formatter; }
+        /**
+         * @description:  写入日志
+         * @param {shared_ptr<Logger>} logger   日志器
+         * @param {Level} level   日志级别
+         * @param {ptr} event   日志事件
+         * @return {*}
+         */        
+        virtual void log(std::shared_ptr<Logger> logger, LogLevel::Level level, LogEvent::ptr event) = 0;
+        
+        void setFormatter(LogFormatter::ptr val);
+        LogFormatter::ptr getFormatter();
 
         LogLevel::Level getLevel() const { return m_level; }
         void setLevel(LogLevel::Level val) { m_level = val; }
+        
         virtual std::string ToYamlString() = 0;
 
     protected:
-        LogLevel::Level m_level= LogLevel::DEBUG;
-        
-        
-    public:
+        LogLevel::Level m_level = LogLevel::DEBUG;       
         LogFormatter::ptr m_formatter;
-        bool m_hasFormatter = false;
+        bool m_hasFormatter = false;//是否有自己的日志格式器
         MutexType m_mutex;
 };
 class FileLogAppender : public LogAppender {
     public:
         typedef std::shared_ptr<FileLogAppender> ptr;
         FileLogAppender(const std::string& filename);
-        void log(LogLevel::Level level, LogEvent::ptr event) override;
-        // bool reopen();
+        
+        void log(std::shared_ptr<Logger> logger, LogLevel::Level level, LogEvent::ptr event) override;
         std::string ToYamlString() override;
-        ~FileLogAppender();
-        bool hasFormatter() const { return m_hasFormatter; }
-      
+        bool reopen();
     private:
         std::string m_filename;
         std::ofstream m_filestream;
-    public:
-        bool m_hasFormatter = false;
+         /// 上次重新打开时间
+        uint64_t m_lastTime = 0;
 
 };
 
@@ -253,27 +290,26 @@ class FileLogAppender : public LogAppender {
  */
 class StdoutLogAppender : public LogAppender {
     public:
-        
-        
         typedef std::shared_ptr<StdoutLogAppender> ptr;
-        void log(LogLevel::Level level, LogEvent::ptr event) override;
+        void log(std::shared_ptr<Logger> logger, LogLevel::Level level, LogEvent::ptr event) override;
         std::string ToYamlString() override;
-        bool hasFormatter() const { return m_hasFormatter; }
-        ~StdoutLogAppender(){};
 };
 
 /**
  * @description: 日志器
  * @return {*}
  */
-class Logger{
+class Logger: public std::enable_shared_from_this<Logger>{
+friend class LoggerManager;
     public:
         typedef std::shared_ptr<Logger> ptr;
         typedef Mutex MutexType;
         Logger(const std::string& name="root") : m_name(name), m_level(LogLevel::DEBUG){
             m_formatter.reset(new LogFormatter("%d{%Y-%m-%d %H:%M:%S}%T%t%T%N%T%F%T[%p]%T[%c]%T%f:%l%T%m%n"));
         };
+        
         void log(LogLevel::Level level, LogEvent::ptr event);
+        
         void debug(LogEvent::ptr event);
         void info(LogEvent::ptr event);
         void warn(LogEvent::ptr event);
@@ -282,12 +318,16 @@ class Logger{
         void addAppender(LogAppender::ptr appender);
         void delAppender(LogAppender::ptr appender);
         void clearAppenders();
+
         LogLevel::Level getLevel() const { return m_level; }
         void setLevel(LogLevel::Level val) { m_level = val; }
         const std::string getName() const { return m_name; }
         void setName(const std::string& val) { m_name = val; }
+        
+        void setFormatter(LogFormatter::ptr val);
         void setFormatter(const std::string&pattern);
-        LogFormatter::ptr getFormatter() const { return m_formatter; }
+       
+        LogFormatter::ptr getFormatter();
         std::string ToYamlString();
         
     private:
@@ -297,6 +337,7 @@ class Logger{
         std::list<LogAppender::ptr> m_appenders;//Appender集合
         LogFormatter::ptr m_formatter;
         MutexType m_mutex;
+        Logger::ptr m_root;//根日志器
 };
 
 /**

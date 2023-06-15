@@ -1,0 +1,54 @@
+\hypertarget{classserver__cc_1_1FiberSemaphore}{}\doxysection{server\+\_\+cc\+::Fiber\+Semaphore Class Reference}
+\label{classserver__cc_1_1FiberSemaphore}\index{server\_cc::FiberSemaphore@{server\_cc::FiberSemaphore}}
+
+
+Inheritance diagram for server\+\_\+cc\+::Fiber\+Semaphore\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{classserver__cc_1_1FiberSemaphore__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for server\+\_\+cc\+::Fiber\+Semaphore\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{classserver__cc_1_1FiberSemaphore__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1FiberSemaphore_ae98551cc7ffe7353db9aca528707fc14}\label{classserver__cc_1_1FiberSemaphore_ae98551cc7ffe7353db9aca528707fc14}} 
+typedef \mbox{\hyperlink{classserver__cc_1_1Spinlock}{Spinlock}} {\bfseries Mutex\+Type}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1FiberSemaphore_a16e655e08e0fa95db2fb1378fb955f56}\label{classserver__cc_1_1FiberSemaphore_a16e655e08e0fa95db2fb1378fb955f56}} 
+{\bfseries Fiber\+Semaphore} (size\+\_\+t initial\+\_\+concurrency=0)
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1FiberSemaphore_a958cd160b5dee990b5e8aa804cf5ea8a}\label{classserver__cc_1_1FiberSemaphore_a958cd160b5dee990b5e8aa804cf5ea8a}} 
+bool {\bfseries try\+Wait} ()
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1FiberSemaphore_a82b339f9edd5c4ea2f86883d51364c24}\label{classserver__cc_1_1FiberSemaphore_a82b339f9edd5c4ea2f86883d51364c24}} 
+void {\bfseries wait} ()
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1FiberSemaphore_ad74de7442abe8e2678352600e567a6a6}\label{classserver__cc_1_1FiberSemaphore_ad74de7442abe8e2678352600e567a6a6}} 
+void {\bfseries notify} ()
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1FiberSemaphore_aa0dbf2c0792038ce5aa18d1d44ad1f59}\label{classserver__cc_1_1FiberSemaphore_aa0dbf2c0792038ce5aa18d1d44ad1f59}} 
+size\+\_\+t {\bfseries get\+Concurrency} () const
+\item 
+\mbox{\Hypertarget{classserver__cc_1_1FiberSemaphore_ad8aae996df62d0dd34968d1714086555}\label{classserver__cc_1_1FiberSemaphore_ad8aae996df62d0dd34968d1714086555}} 
+void {\bfseries reset} ()
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+mutex.\+h\end{DoxyCompactItemize}
