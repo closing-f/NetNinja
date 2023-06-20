@@ -2,8 +2,8 @@
  * @Author: closing
  * @Date: 2023-05-23 10:51:10
  * @LastEditors: closing
- * @LastEditTime: 2023-05-31 20:41:55
- * @Description: http结构体的封装
+ * @LastEditTime: 2023-06-20 08:26:03
+ * @Description: http_request和http_response类实现，枚举类http_method和http_status的实现
  */
 #ifndef _HTTP_HTTP_H
 #define _HTTP_HTTP_H
@@ -124,7 +124,7 @@ namespace http{
   XX(510, NOT_EXTENDED,                    Not Extended)                    \
   XX(511, NETWORK_AUTHENTICATION_REQUIRED, Network Authentication Required) \
 
-//? 枚举类的用法
+// 枚举类的用法：隐藏作用域的枚举类型
 /**
  * @description: http方法的枚举类
  */
@@ -177,6 +177,7 @@ struct CaseInsensitiveLess {
     bool operator()(const std::string& lhs, const std::string& rhs) const;
 };
 
+//在MapType中查找key对应的val,如果不存在,则返回def
 template<class MapType, class T>
 bool checkGetAs(const MapType& m, const std::string& key, T& val, const T& def = T()) {
     auto it = m.find(key);
@@ -220,7 +221,7 @@ class HttpRequest{
 public:
     typedef std::shared_ptr<HttpRequest> ptr;
 
-    typedef std::map<std::string, std::string, CaseInsensitiveLess> MapType;
+    typedef std::map<std::string, std::string, CaseInsensitiveLess> MapType;// CaseInsensitiveLess忽略大小写比较仿函数(结构体且实现operator()重载)
     
     
     /**
@@ -458,18 +459,18 @@ public:
     
     template <class T>
     T getParamAs(const std::string& key, const T& def = T()) {
-        return getAs(m_headers, key, def);
+        return getAs(m_params, key, def);
     }
 
     template <class T>
     bool checkGetCookieAs(const std::string& key, T& val, const T& def = T()) {
-        return checkGetAs(m_headers, key, val, def);
+        return checkGetAs(m_cookies, key, val, def);
     }
 
     
     template <class T>
     T getCookieAs(const std::string& key, const T& def = T()) {
-        return getAs(m_headers, key, def);
+        return getAs(m_cookies, key, def);
     }
 
     /**
@@ -479,9 +480,6 @@ public:
 
     std::string toString();
 private:
-
-   
-
     // void init();
     // void initParam();
     // void initQueryParam();
@@ -600,19 +598,5 @@ std::ostream& operator<<(std::ostream& os, HttpResponse& rsp);
 
 } // namespace http
 } // namespace server_cc
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #endif

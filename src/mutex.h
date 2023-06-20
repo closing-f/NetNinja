@@ -1,5 +1,6 @@
-#ifndef __SYLAR_MUTEX_H__
-#define __SYLAR_MUTEX_H__
+
+#ifndef _MUTEX_H__
+#define _MUTEX_H__
 
 #include <thread>
 #include <functional>
@@ -18,7 +19,7 @@ namespace server_cc {
 /**
  * @brief 信号量
  */
-class Semaphore : Noncopyable {
+class Semaphore : Noncopyable { 
 public:
     /**
      * @brief 构造函数
@@ -45,7 +46,7 @@ private:
 };
 
 /**
- * @brief 局部锁的模板实现
+ * @brief 局部锁的模板实现：用于自动释放锁。在构造函数中加锁，在析构函数中解锁
  */
 template<class T>
 struct ScopedLockImpl {
@@ -94,7 +95,7 @@ private:
 };
 
 /**
- * @brief 局部读锁模板实现
+ * @brief 局部读锁模板实现。
  */
 template<class T>
 struct ReadScopedLockImpl {
@@ -348,7 +349,9 @@ public:
 };
 
 /**
- * @brief 自旋锁
+ * @brief 自旋锁：当一个线程尝试去获取某一把锁的时候，如果这个锁此时已经被别人获取(占用)，那么此线程就无法获取到这把锁，该线程将会等待，间隔一段时间后会再次尝试获取
+ * 这对于锁的竞争不激烈，且占用锁时间非常短的代码块来说性能能大幅度的提升，因为自旋的消耗会小于线程阻塞挂起再唤醒的操作的消耗，这些操作会导致线程发生两次上下文切换！
+ * 但是如果锁的竞争激烈，或者持有锁的线程需要长时间占用锁执行同步块，这时候就不适合使用自旋锁了，因为自旋锁在获取锁前一直都是占用 cpu 做无用功
  */
 class Spinlock : Noncopyable {
 public:
@@ -412,6 +415,7 @@ public:
      * @brief 上锁
      */
     void lock() {
+        //std::memory_order_acquire表示的是，后续的读操作都不能放到这条指令之前。简单地可以写成读不前
         while(std::atomic_flag_test_and_set_explicit(&m_mutex, std::memory_order_acquire));
     }
 
@@ -419,6 +423,7 @@ public:
      * @brief 解锁
      */
     void unlock() {
+        //std::memory_order_release: 在本行代码之前，如果有任何写内存的操作，都是不能放到本行语句之后的。简单地说，就是写不后
         std::atomic_flag_clear_explicit(&m_mutex, std::memory_order_release);
     }
 private:

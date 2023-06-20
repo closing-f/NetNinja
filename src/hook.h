@@ -1,10 +1,10 @@
 /*
  * @Author: closing-f fql2018@bupt.edu.cn
  * @Date: 2023-05-15 08:57:03
- * @LastEditors: closing-f fql2018@bupt.edu.cn
- * @LastEditTime: 2023-05-16 11:08:39
+ * @LastEditors: closing
+ * @LastEditTime: 2023-06-20 10:01:57
  * @FilePath: /sylar/src/hook.h
- * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%A
+ * @Description: 通过extern "C"修饰的函数，兼容C语言的函数调用
  */
 #ifndef _HOOK_H
 #define _HOOK_H
@@ -21,6 +21,7 @@ namespace server_cc{
     void set_hook_enable(bool flag);
 }
 
+//被 extern "C" 修饰的变量和函数是按照 C 语言方式编译和连接的。
 extern "C"{
 typedef unsigned int (*sleep_fun)(unsigned int seconds);
 extern sleep_fun sleep_f;

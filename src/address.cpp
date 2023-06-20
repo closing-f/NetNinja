@@ -28,6 +28,7 @@ static uint32_t CountBytes(T value) {
     return result;
 }
 
+
 Address::ptr Address::LookupAny(const std::string& host,
                                 int family, int type, int protocol) {
     std::vector<Address::ptr> result;
@@ -319,7 +320,7 @@ socklen_t IPv4Address::getAddrLen() const {
 }
 
 std::ostream& IPv4Address::insert(std::ostream& os) const {
-    uint32_t addr = byteswapOnLittleEndian(m_addr.sin_addr.s_addr);
+    uint32_t addr = byteswapOnLittleEndian(m_addr.sin_addr.s_addr);//主机字节序转网络字节序
     os << ((addr >> 24) & 0xff) << "."
        << ((addr >> 16) & 0xff) << "."
        << ((addr >> 8) & 0xff) << "."
@@ -340,7 +341,7 @@ IPAddress::ptr IPv4Address::broadcastAddress(uint32_t prefix_len) {
     return IPv4Address::ptr(new IPv4Address(baddr));
 }
 
-IPAddress::ptr IPv4Address::networdAddress(uint32_t prefix_len) {
+IPAddress::ptr IPv4Address::networkAddress(uint32_t prefix_len) {
     if(prefix_len > 32) {
         return nullptr;
     }
@@ -444,7 +445,7 @@ IPAddress::ptr IPv6Address::broadcastAddress(uint32_t prefix_len) {
     return IPv6Address::ptr(new IPv6Address(baddr));
 }
 
-IPAddress::ptr IPv6Address::networdAddress(uint32_t prefix_len) {
+IPAddress::ptr IPv6Address::networkAddress(uint32_t prefix_len) {
     sockaddr_in6 baddr(m_addr);
     baddr.sin6_addr.s6_addr[prefix_len / 8] &=
         CreateMask<uint8_t>(prefix_len % 8);

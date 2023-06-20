@@ -1,13 +1,6 @@
-/**
- * @file address.h
- * @brief 网络地址的封装(IPv4,IPv6,Unix)
- * @author server_cc.yin
- * @email 564628276@qq.com
- * @date 2019-06-05
- * @copyright Copyright (c) 2019年 server_cc.yin All rights reserved (www.server_cc.top)
- */
-#ifndef __SYLAR_ADDRESS_H__
-#define __SYLAR_ADDRESS_H__
+
+#ifndef _ADDRESS_H__
+#define _ADDRESS_H__
 
 #include <memory>
 #include <string>
@@ -189,8 +182,8 @@ public:
     static IPAddress::ptr Create(const char* address, uint16_t port = 0);
 
     /**
-     * @brief 获取该地址的广播地址
-     * @param[in] prefix_len 子网掩码位数
+     * @description: 获取该地址的广播地址
+     * @param{uint32_t} prefix_len 子网掩码位数
      * @return 调用成功返回IPAddress,失败返回nullptr
      */
     virtual IPAddress::ptr broadcastAddress(uint32_t prefix_len) = 0;
@@ -200,7 +193,7 @@ public:
      * @param[in] prefix_len 子网掩码位数
      * @return 调用成功返回IPAddress,失败返回nullptr
      */
-    virtual IPAddress::ptr networdAddress(uint32_t prefix_len) = 0;
+    virtual IPAddress::ptr networkAddress(uint32_t prefix_len) = 0;
 
     /**
      * @brief 获取子网掩码地址
@@ -251,11 +244,17 @@ public:
     const sockaddr* getAddr() const override;
     sockaddr* getAddr() override;
     socklen_t getAddrLen() const override;
+    
+    /**
+     * @description: 将IPv4Address转换为点分十进制地址并输出到os中
+     * @param {ostream&} os
+     * @return {*}
+     */    
     std::ostream& insert(std::ostream& os) const override;
 
     IPAddress::ptr broadcastAddress(uint32_t prefix_len) override;
     //? 笔误？networkAddress
-    IPAddress::ptr networdAddress(uint32_t prefix_len) override;
+    IPAddress::ptr networkAddress(uint32_t prefix_len) override;
     IPAddress::ptr subnetMask(uint32_t prefix_len) override;
     uint32_t getPort() const override;
     void setPort(uint16_t v) override;
@@ -299,7 +298,7 @@ public:
     std::ostream& insert(std::ostream& os) const override;
 
     IPAddress::ptr broadcastAddress(uint32_t prefix_len) override;
-    IPAddress::ptr networdAddress(uint32_t prefix_len) override;
+    IPAddress::ptr networkAddress(uint32_t prefix_len) override;
     IPAddress::ptr subnetMask(uint32_t prefix_len) override;
     uint32_t getPort() const override;
     void setPort(uint16_t v) override;

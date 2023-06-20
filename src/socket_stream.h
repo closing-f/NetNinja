@@ -2,7 +2,7 @@
  * @Author: closing
  * @Date: 2023-05-27 21:38:15
  * @LastEditors: closing
- * @LastEditTime: 2023-05-27 21:43:37
+ * @LastEditTime: 2023-06-19 23:42:54
  * @Description: 请填写简介
  */
 #ifndef _SOCKET_STREAM_H
@@ -22,7 +22,7 @@ public:
     /**
      * @description: 构造函数
      * @param {ptr} sock    socket类
-     * @param {bool} owner  //?
+     * @param {bool} owner  是否需要释放socket
      * @return {*}
      */    
     SocketStream(Socket::ptr sock,bool owner = true);

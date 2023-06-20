@@ -57,27 +57,27 @@ include CMakeFiles/test.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/test.dir/flags.make
 
-CMakeFiles/test.dir/test_http_server.cpp.o: CMakeFiles/test.dir/flags.make
-CMakeFiles/test.dir/test_http_server.cpp.o: ../test_http_server.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fql/Project/C++/sylar/_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test.dir/test_http_server.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test.dir/test_http_server.cpp.o -c /home/fql/Project/C++/sylar/test_http_server.cpp
+CMakeFiles/test.dir/test_config.cpp.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/test_config.cpp.o: ../test_config.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fql/Project/C++/sylar/_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test.dir/test_config.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test.dir/test_config.cpp.o -c /home/fql/Project/C++/sylar/test_config.cpp
 
-CMakeFiles/test.dir/test_http_server.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/test_http_server.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/fql/Project/C++/sylar/test_http_server.cpp > CMakeFiles/test.dir/test_http_server.cpp.i
+CMakeFiles/test.dir/test_config.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/test_config.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/fql/Project/C++/sylar/test_config.cpp > CMakeFiles/test.dir/test_config.cpp.i
 
-CMakeFiles/test.dir/test_http_server.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/test_http_server.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/fql/Project/C++/sylar/test_http_server.cpp -o CMakeFiles/test.dir/test_http_server.cpp.s
+CMakeFiles/test.dir/test_config.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/test_config.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/fql/Project/C++/sylar/test_config.cpp -o CMakeFiles/test.dir/test_config.cpp.s
 
 # Object files for target test
 test_OBJECTS = \
-"CMakeFiles/test.dir/test_http_server.cpp.o"
+"CMakeFiles/test.dir/test_config.cpp.o"
 
 # External object files for target test
 test_EXTERNAL_OBJECTS =
 
-../bin/test: CMakeFiles/test.dir/test_http_server.cpp.o
+../bin/test: CMakeFiles/test.dir/test_config.cpp.o
 ../bin/test: CMakeFiles/test.dir/build.make
 ../bin/test: ../lib/libservercc.so
 ../bin/test: CMakeFiles/test.dir/link.txt

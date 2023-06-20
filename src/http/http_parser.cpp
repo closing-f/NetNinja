@@ -79,6 +79,7 @@ struct _RequestSizeIniter {
 static _RequestSizeIniter _init;
 }
 
+
 void on_request_method(void *data, const char *at, size_t length) {
     HttpRequestParser* parser = static_cast<HttpRequestParser*>(data);
     HttpMethod m = CharsToHttpMethod(at);
@@ -155,7 +156,7 @@ HttpRequestParser::HttpRequestParser()
     m_parser.http_version = on_request_version;
     m_parser.header_done = on_request_header_done;
     m_parser.http_field = on_request_http_field;
-    m_parser.data = this;
+    m_parser.data = this;//设置回调函数的参数，即HttpRequestParser
 }
 
 uint64_t HttpRequestParser::getContentLength() {

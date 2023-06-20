@@ -36,21 +36,21 @@ server_cc::ConfigVar<std::unordered_map<std::string, int> >::ptr g_str_int_umap_
 
 void print_yaml(const YAML::Node& node, int level) {
     if(node.IsScalar()) {
-        SEVER_CC_LOG_INFO(SEVER_CC_LOG_ROOT()) << std::string(level * 4, ' ')
+        SERVER_CC_LOG_INFO(SERVER_CC_LOG_ROOT()) << std::string(level * 4, ' ')
             << node.Scalar() << " - " << node.Type() << " - " << level;
     } else if(node.IsNull()) {
-        SEVER_CC_LOG_INFO(SEVER_CC_LOG_ROOT()) << std::string(level * 4, ' ')
+        SERVER_CC_LOG_INFO(SERVER_CC_LOG_ROOT()) << std::string(level * 4, ' ')
             << "NULL - " << node.Type() << " - " << level;
     } else if(node.IsMap()) {
         for(auto it = node.begin();
                 it != node.end(); ++it) {
-            SEVER_CC_LOG_INFO(SEVER_CC_LOG_ROOT()) << std::string(level * 4, ' ')
+            SERVER_CC_LOG_INFO(SERVER_CC_LOG_ROOT()) << std::string(level * 4, ' ')
                     << it->first << " - " << it->second.Type() << " - " << level;
             print_yaml(it->second, level + 1);
         }
     } else if(node.IsSequence()) {
         for(size_t i = 0; i < node.size(); ++i) {
-            SEVER_CC_LOG_INFO(SEVER_CC_LOG_ROOT()) << std::string(level * 4, ' ')
+            SERVER_CC_LOG_INFO(SERVER_CC_LOG_ROOT()) << std::string(level * 4, ' ')
                 << i << " - " << node[i].Type() << " - " << level;
             print_yaml(node[i], level + 1);
         }
@@ -59,35 +59,35 @@ void print_yaml(const YAML::Node& node, int level) {
 
 void test_yaml() {
     YAML::Node root = YAML::LoadFile("/home/fql/Project/C++/sylar/log.yml");
-    print_yaml(root, 0);
-    SEVER_CC_LOG_INFO(SEVER_CC_LOG_ROOT()) << root.Scalar();
+    // print_yaml(root, 0);
+    SERVER_CC_LOG_INFO(SERVER_CC_LOG_ROOT()) << root.Scalar();
 
-    SEVER_CC_LOG_INFO(SEVER_CC_LOG_ROOT()) << root["test"].IsDefined();
-    SEVER_CC_LOG_INFO(SEVER_CC_LOG_ROOT()) << root["logs"].IsDefined();
-    SEVER_CC_LOG_INFO(SEVER_CC_LOG_ROOT()) << root;
+    SERVER_CC_LOG_INFO(SERVER_CC_LOG_ROOT()) << root["test"].IsDefined();
+    SERVER_CC_LOG_INFO(SERVER_CC_LOG_ROOT()) << root["logs"].IsDefined();
+    SERVER_CC_LOG_INFO(SERVER_CC_LOG_ROOT()) << root;
 }
 
 void test_config() {
-    SEVER_CC_LOG_INFO(SEVER_CC_LOG_ROOT()) << "before: " << g_int_value_config->getValue();
-    SEVER_CC_LOG_INFO(SEVER_CC_LOG_ROOT()) << "before: " << g_float_value_config->toString();
+    SERVER_CC_LOG_INFO(SERVER_CC_LOG_ROOT()) << "before: " << g_int_value_config->getValue();
+    SERVER_CC_LOG_INFO(SERVER_CC_LOG_ROOT()) << "before: " << g_float_value_config->toString();
 
 #define XX(g_var, name, prefix) \
     { \
         auto& v = g_var->getValue(); \
         for(auto& i : v) { \
-            SEVER_CC_LOG_INFO(SEVER_CC_LOG_ROOT()) << #prefix " " #name ": " << i; \
+            SERVER_CC_LOG_INFO(SERVER_CC_LOG_ROOT()) << #prefix " " #name ": " << i; \
         } \
-        SEVER_CC_LOG_INFO(SEVER_CC_LOG_ROOT()) << #prefix " " #name " yaml: " << g_var->toString(); \
+        SERVER_CC_LOG_INFO(SERVER_CC_LOG_ROOT()) << #prefix " " #name " yaml: " << g_var->toString(); \
     }
 
 #define XX_M(g_var, name, prefix) \
     { \
         auto& v = g_var->getValue(); \
         for(auto& i : v) { \
-            SEVER_CC_LOG_INFO(SEVER_CC_LOG_ROOT()) << #prefix " " #name ": {" \
+            SERVER_CC_LOG_INFO(SERVER_CC_LOG_ROOT()) << #prefix " " #name ": {" \
                     << i.first << " - " << i.second << "}"; \
         } \
-        SEVER_CC_LOG_INFO(SEVER_CC_LOG_ROOT()) << #prefix " " #name " yaml: " << g_var->toString(); \
+        SERVER_CC_LOG_INFO(SERVER_CC_LOG_ROOT()) << #prefix " " #name " yaml: " << g_var->toString(); \
     }
 
 
@@ -102,16 +102,16 @@ void test_config() {
     YAML::Node root = YAML::LoadFile("/home/fql/Project/C++/sylar/log.yml");
     server_cc::Config::LoadFromYaml(root);
     
-    SEVER_CC_LOG_INFO(SEVER_CC_LOG_ROOT()) << "after: " << g_int_value_config->getValue();
-    SEVER_CC_LOG_INFO(SEVER_CC_LOG_ROOT()) << "after: " << g_float_value_config->toString();
+    SERVER_CC_LOG_INFO(SERVER_CC_LOG_ROOT()) << "after: " << g_int_value_config->getValue();
+    SERVER_CC_LOG_INFO(SERVER_CC_LOG_ROOT()) << "after: " << g_float_value_config->toString();
     XX(g_int_set_value_config, int_set, after);
     // XX_M(g_str_int_umap_value_config, str_int_umap, before);
 
 
 }
 void test_log() {
-    server_cc::Logger::ptr system_log = SEVER_CC_LOG_NAME("system");
-    SEVER_CC_LOG_INFO(system_log) << "hello system" << std::endl;
+    server_cc::Logger::ptr system_log = SERVER_CC_LOG_NAME("system");
+    SERVER_CC_LOG_INFO(system_log) << "hello system" << std::endl;
     
     // std::cout << server_cc::LoggerMgr::GetInstance().ToYamlString() << std::endl;
     
@@ -121,18 +121,18 @@ void test_log() {
     std::cout << server_cc::LoggerMgr::GetInstance().ToYamlString() << std::endl;
     // std::cout << "=============" << std::endl;
     // std::cout << root << std::endl;
-    SEVER_CC_LOG_INFO(system_log) << "hello system" << std::endl;
+    SERVER_CC_LOG_INFO(system_log) << "hello system" << std::endl;
 
     // system_log->setFormatter((std::string("%d - %m%n")));
-    // SEVER_CC_LOG_INFO(system_log) << "hello system" << std::endl;
+    // SERVER_CC_LOG_INFO(system_log) << "hello system" << std::endl;
 }
 
 int main(int argc, char** argv) {
     // test_yaml();
 
-    // test_config();
+    test_config();
     //test_class();
-    test_log();
+    // test_log();
     
     // test_loadconf();
     // std::cout << " ==== " << std::endl;
@@ -140,7 +140,7 @@ int main(int argc, char** argv) {
     // test_loadconf();
     // return 0;
     // server_cc::Config::Visit([](server_cc::ConfigVarBase::ptr var) {
-    //     SEVER_CC_LOG_INFO(SEVER_CC_LOG_ROOT()) << "name=" << var->getName()
+    //     SERVER_CC_LOG_INFO(SERVER_CC_LOG_ROOT()) << "name=" << var->getName()
     //                 << " description=" << var->getDescription()
     //                 << " typename=" << var->getTypeName()
     //                 << " value=" << var->toString();

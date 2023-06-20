@@ -1,11 +1,3 @@
-/**
- * @file http_parser.h
- * @brief HTTP协议解析封装
- * @author server_cc.yin
- * @email 564628276@qq.com
- * @date 2019-06-11
- * @copyright Copyright (c) 2019年 server_cc.yin All rights reserved (www.server_cc.top)
- */
 
 #ifndef _HTTP_PARSER_H__
 #define _HTTP_PARSER_H__
@@ -81,14 +73,14 @@ public:
      */
     static uint64_t GetHttpRequestMaxBodySize();
 private:
-    /// http_parser
+    // http11_parser 
     http_parser m_parser;
-    /// HttpRequest结构
+    // HttpRequest结构
     HttpRequest::ptr m_data;
-    /// 错误码
-    /// 1000: invalid method
-    /// 1001: invalid version
-    /// 1002: invalid field
+    // 错误码
+    // 1000: invalid method
+    // 1001: invalid version
+    // 1002: invalid field
     int m_error;
 };
 

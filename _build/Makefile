@@ -838,32 +838,32 @@ src/utils.cpp.s:
 	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/utils.cpp.s
 .PHONY : src/utils.cpp.s
 
-test_http_server.o: test_http_server.cpp.o
+test_config.o: test_config.cpp.o
 
-.PHONY : test_http_server.o
+.PHONY : test_config.o
 
 # target to build an object file
-test_http_server.cpp.o:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test_http_server.cpp.o
-.PHONY : test_http_server.cpp.o
+test_config.cpp.o:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test_config.cpp.o
+.PHONY : test_config.cpp.o
 
-test_http_server.i: test_http_server.cpp.i
+test_config.i: test_config.cpp.i
 
-.PHONY : test_http_server.i
+.PHONY : test_config.i
 
 # target to preprocess a source file
-test_http_server.cpp.i:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test_http_server.cpp.i
-.PHONY : test_http_server.cpp.i
+test_config.cpp.i:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test_config.cpp.i
+.PHONY : test_config.cpp.i
 
-test_http_server.s: test_http_server.cpp.s
+test_config.s: test_config.cpp.s
 
-.PHONY : test_http_server.s
+.PHONY : test_config.s
 
 # target to generate assembly for a file
-test_http_server.cpp.s:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test_http_server.cpp.s
-.PHONY : test_http_server.cpp.s
+test_config.cpp.s:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test_config.cpp.s
+.PHONY : test_config.cpp.s
 
 # Help Target
 help:
@@ -953,9 +953,9 @@ help:
 	@echo "... src/utils.o"
 	@echo "... src/utils.i"
 	@echo "... src/utils.s"
-	@echo "... test_http_server.o"
-	@echo "... test_http_server.i"
-	@echo "... test_http_server.s"
+	@echo "... test_config.o"
+	@echo "... test_config.i"
+	@echo "... test_config.s"
 .PHONY : help
 
 

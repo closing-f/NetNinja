@@ -44,7 +44,7 @@ void hook_init() {
     if(is_inited) {
         return;
     }
-#define XX(name) name ## _f = (name ## _fun)dlsym(RTLD_NEXT, #name);
+#define XX(name) name ## _f = (name ## _fun)dlsym(RTLD_NEXT, #name);//将C库函数调用修改为name_f的形式，这样就可以在hook中调用系统函数
     HOOK_FUN(XX);
 #undef XX
 }
@@ -79,9 +79,10 @@ struct timer_info {
     int cancelled = 0;
 };
 
-template<typename OriginFun, typename... Args>
+template<typename OriginFun, typename... Args>//OriginFun是函数指针类型，Args是可变参数模板
 static ssize_t do_io(int fd, OriginFun fun, const char* hook_fun_name,
         uint32_t event, int timeout_so, Args&&... args) {
+    
     if(!server_cc::t_hook_enable) {
         return fun(fd, std::forward<Args>(args)...);
     }
@@ -105,14 +106,17 @@ static ssize_t do_io(int fd, OriginFun fun, const char* hook_fun_name,
 
 retry:
     ssize_t n = fun(fd, std::forward<Args>(args)...);
-    while(n == -1 && errno == EINTR) {
+    
+    while(n == -1 && errno == EINTR) {//被系统调用中断，重试
         n = fun(fd, std::forward<Args>(args)...);
     }
+
     if(n == -1 && errno == EAGAIN) {
         server_cc::IOManager* iom = server_cc::IOManager::GetThis();
         server_cc::Timer::ptr timer;
         std::weak_ptr<timer_info> winfo(tinfo);
 
+        //如果设定了超时时间，就添加定时器，到点后取消事件
         if(to != (uint64_t)-1) {
             timer = iom->addConditionTimer(to, [winfo, fd, iom, event]() {
                 auto t = winfo.lock();
@@ -123,9 +127,9 @@ retry:
                 iom->cancelEvent(fd, (server_cc::IOManager::Event)(event));
             }, winfo);
         }
-
+        //在IOManager中添加该事件然后让出协程，等到该事件被触发后，再继续执行
         int rt = iom->addEvent(fd, (server_cc::IOManager::Event)(event));
-        if((rt)) {
+        if((rt)) {//error
             SERVER_CC_LOG_ERROR(g_logger) << hook_fun_name << " addEvent("
                 << fd << ", " << event << ")";
             if(timer) {
@@ -137,6 +141,7 @@ retry:
             if(timer) {
                 timer->cancel();
             }
+            //如果超出了超时时间，就返回错误，不再retry
             if(tinfo->cancelled) {
                 errno = tinfo->cancelled;
                 return -1;
@@ -148,7 +153,8 @@ retry:
     return n;
 }
 
-
+//兼容C语言的函数调用，需要使用extern "C"修饰。可以实现C 引用 C++ 函数
+//? 那么有没有一种可能C++文件引用该C函数呢？名称还能识别出来吗
 extern "C" {
 #define XX(name) name ## _fun name ## _f = nullptr;
     HOOK_FUN(XX);
