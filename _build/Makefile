@@ -163,6 +163,33 @@ src/address.cpp.s:
 	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/address.cpp.s
 .PHONY : src/address.cpp.s
 
+src/application.o: src/application.cpp.o
+
+.PHONY : src/application.o
+
+# target to build an object file
+src/application.cpp.o:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/application.cpp.o
+.PHONY : src/application.cpp.o
+
+src/application.i: src/application.cpp.i
+
+.PHONY : src/application.i
+
+# target to preprocess a source file
+src/application.cpp.i:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/application.cpp.i
+.PHONY : src/application.cpp.i
+
+src/application.s: src/application.cpp.s
+
+.PHONY : src/application.s
+
+# target to generate assembly for a file
+src/application.cpp.s:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/application.cpp.s
+.PHONY : src/application.cpp.s
+
 src/bytearray.o: src/bytearray.cpp.o
 
 .PHONY : src/bytearray.o
@@ -216,6 +243,60 @@ src/config.s: src/config.cpp.s
 src/config.cpp.s:
 	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/config.cpp.s
 .PHONY : src/config.cpp.s
+
+src/daemon.o: src/daemon.cpp.o
+
+.PHONY : src/daemon.o
+
+# target to build an object file
+src/daemon.cpp.o:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/daemon.cpp.o
+.PHONY : src/daemon.cpp.o
+
+src/daemon.i: src/daemon.cpp.i
+
+.PHONY : src/daemon.i
+
+# target to preprocess a source file
+src/daemon.cpp.i:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/daemon.cpp.i
+.PHONY : src/daemon.cpp.i
+
+src/daemon.s: src/daemon.cpp.s
+
+.PHONY : src/daemon.s
+
+# target to generate assembly for a file
+src/daemon.cpp.s:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/daemon.cpp.s
+.PHONY : src/daemon.cpp.s
+
+src/env.o: src/env.cpp.o
+
+.PHONY : src/env.o
+
+# target to build an object file
+src/env.cpp.o:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/env.cpp.o
+.PHONY : src/env.cpp.o
+
+src/env.i: src/env.cpp.i
+
+.PHONY : src/env.i
+
+# target to preprocess a source file
+src/env.cpp.i:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/env.cpp.i
+.PHONY : src/env.cpp.i
+
+src/env.s: src/env.cpp.s
+
+.PHONY : src/env.s
+
+# target to generate assembly for a file
+src/env.cpp.s:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/env.cpp.s
+.PHONY : src/env.cpp.s
 
 src/fd_manager.o: src/fd_manager.cpp.o
 
@@ -352,6 +433,33 @@ src/http/http11_parser.cc.s:
 	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/http/http11_parser.cc.s
 .PHONY : src/http/http11_parser.cc.s
 
+src/http/http_connection.o: src/http/http_connection.cpp.o
+
+.PHONY : src/http/http_connection.o
+
+# target to build an object file
+src/http/http_connection.cpp.o:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/http/http_connection.cpp.o
+.PHONY : src/http/http_connection.cpp.o
+
+src/http/http_connection.i: src/http/http_connection.cpp.i
+
+.PHONY : src/http/http_connection.i
+
+# target to preprocess a source file
+src/http/http_connection.cpp.i:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/http/http_connection.cpp.i
+.PHONY : src/http/http_connection.cpp.i
+
+src/http/http_connection.s: src/http/http_connection.cpp.s
+
+.PHONY : src/http/http_connection.s
+
+# target to generate assembly for a file
+src/http/http_connection.cpp.s:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/http/http_connection.cpp.s
+.PHONY : src/http/http_connection.cpp.s
+
 src/http/http_parser.o: src/http/http_parser.cpp.o
 
 .PHONY : src/http/http_parser.o
@@ -378,6 +486,60 @@ src/http/http_parser.s: src/http/http_parser.cpp.s
 src/http/http_parser.cpp.s:
 	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/http/http_parser.cpp.s
 .PHONY : src/http/http_parser.cpp.s
+
+src/http/http_servlet.o: src/http/http_servlet.cpp.o
+
+.PHONY : src/http/http_servlet.o
+
+# target to build an object file
+src/http/http_servlet.cpp.o:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/http/http_servlet.cpp.o
+.PHONY : src/http/http_servlet.cpp.o
+
+src/http/http_servlet.i: src/http/http_servlet.cpp.i
+
+.PHONY : src/http/http_servlet.i
+
+# target to preprocess a source file
+src/http/http_servlet.cpp.i:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/http/http_servlet.cpp.i
+.PHONY : src/http/http_servlet.cpp.i
+
+src/http/http_servlet.s: src/http/http_servlet.cpp.s
+
+.PHONY : src/http/http_servlet.s
+
+# target to generate assembly for a file
+src/http/http_servlet.cpp.s:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/http/http_servlet.cpp.s
+.PHONY : src/http/http_servlet.cpp.s
+
+src/http/http_session.o: src/http/http_session.cpp.o
+
+.PHONY : src/http/http_session.o
+
+# target to build an object file
+src/http/http_session.cpp.o:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/http/http_session.cpp.o
+.PHONY : src/http/http_session.cpp.o
+
+src/http/http_session.i: src/http/http_session.cpp.i
+
+.PHONY : src/http/http_session.i
+
+# target to preprocess a source file
+src/http/http_session.cpp.i:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/http/http_session.cpp.i
+.PHONY : src/http/http_session.cpp.i
+
+src/http/http_session.s: src/http/http_session.cpp.s
+
+.PHONY : src/http/http_session.s
+
+# target to generate assembly for a file
+src/http/http_session.cpp.s:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/http/http_session.cpp.s
+.PHONY : src/http/http_session.cpp.s
 
 src/http/httpclient_parser.rl.o: src/http/httpclient_parser.rl.cc.o
 
@@ -406,32 +568,32 @@ src/http/httpclient_parser.rl.cc.s:
 	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/http/httpclient_parser.rl.cc.s
 .PHONY : src/http/httpclient_parser.rl.cc.s
 
-src/http_connection.o: src/http_connection.cpp.o
+src/http/uri.rl.o: src/http/uri.rl.cc.o
 
-.PHONY : src/http_connection.o
+.PHONY : src/http/uri.rl.o
 
 # target to build an object file
-src/http_connection.cpp.o:
-	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/http_connection.cpp.o
-.PHONY : src/http_connection.cpp.o
+src/http/uri.rl.cc.o:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/http/uri.rl.cc.o
+.PHONY : src/http/uri.rl.cc.o
 
-src/http_connection.i: src/http_connection.cpp.i
+src/http/uri.rl.i: src/http/uri.rl.cc.i
 
-.PHONY : src/http_connection.i
+.PHONY : src/http/uri.rl.i
 
 # target to preprocess a source file
-src/http_connection.cpp.i:
-	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/http_connection.cpp.i
-.PHONY : src/http_connection.cpp.i
+src/http/uri.rl.cc.i:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/http/uri.rl.cc.i
+.PHONY : src/http/uri.rl.cc.i
 
-src/http_connection.s: src/http_connection.cpp.s
+src/http/uri.rl.s: src/http/uri.rl.cc.s
 
-.PHONY : src/http_connection.s
+.PHONY : src/http/uri.rl.s
 
 # target to generate assembly for a file
-src/http_connection.cpp.s:
-	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/http_connection.cpp.s
-.PHONY : src/http_connection.cpp.s
+src/http/uri.rl.cc.s:
+	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/http/uri.rl.cc.s
+.PHONY : src/http/uri.rl.cc.s
 
 src/http_server.o: src/http_server.cpp.o
 
@@ -459,60 +621,6 @@ src/http_server.s: src/http_server.cpp.s
 src/http_server.cpp.s:
 	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/http_server.cpp.s
 .PHONY : src/http_server.cpp.s
-
-src/http_servlet.o: src/http_servlet.cpp.o
-
-.PHONY : src/http_servlet.o
-
-# target to build an object file
-src/http_servlet.cpp.o:
-	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/http_servlet.cpp.o
-.PHONY : src/http_servlet.cpp.o
-
-src/http_servlet.i: src/http_servlet.cpp.i
-
-.PHONY : src/http_servlet.i
-
-# target to preprocess a source file
-src/http_servlet.cpp.i:
-	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/http_servlet.cpp.i
-.PHONY : src/http_servlet.cpp.i
-
-src/http_servlet.s: src/http_servlet.cpp.s
-
-.PHONY : src/http_servlet.s
-
-# target to generate assembly for a file
-src/http_servlet.cpp.s:
-	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/http_servlet.cpp.s
-.PHONY : src/http_servlet.cpp.s
-
-src/http_session.o: src/http_session.cpp.o
-
-.PHONY : src/http_session.o
-
-# target to build an object file
-src/http_session.cpp.o:
-	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/http_session.cpp.o
-.PHONY : src/http_session.cpp.o
-
-src/http_session.i: src/http_session.cpp.i
-
-.PHONY : src/http_session.i
-
-# target to preprocess a source file
-src/http_session.cpp.i:
-	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/http_session.cpp.i
-.PHONY : src/http_session.cpp.i
-
-src/http_session.s: src/http_session.cpp.s
-
-.PHONY : src/http_session.s
-
-# target to generate assembly for a file
-src/http_session.cpp.s:
-	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/http_session.cpp.s
-.PHONY : src/http_session.cpp.s
 
 src/iomanager.o: src/iomanager.cpp.o
 
@@ -784,33 +892,6 @@ src/timer.cpp.s:
 	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/timer.cpp.s
 .PHONY : src/timer.cpp.s
 
-src/uri.rl.o: src/uri.rl.cc.o
-
-.PHONY : src/uri.rl.o
-
-# target to build an object file
-src/uri.rl.cc.o:
-	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/uri.rl.cc.o
-.PHONY : src/uri.rl.cc.o
-
-src/uri.rl.i: src/uri.rl.cc.i
-
-.PHONY : src/uri.rl.i
-
-# target to preprocess a source file
-src/uri.rl.cc.i:
-	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/uri.rl.cc.i
-.PHONY : src/uri.rl.cc.i
-
-src/uri.rl.s: src/uri.rl.cc.s
-
-.PHONY : src/uri.rl.s
-
-# target to generate assembly for a file
-src/uri.rl.cc.s:
-	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/uri.rl.cc.s
-.PHONY : src/uri.rl.cc.s
-
 src/utils.o: src/utils.cpp.o
 
 .PHONY : src/utils.o
@@ -838,32 +919,32 @@ src/utils.cpp.s:
 	$(MAKE) -f CMakeFiles/servercc.dir/build.make CMakeFiles/servercc.dir/src/utils.cpp.s
 .PHONY : src/utils.cpp.s
 
-test_config.o: test_config.cpp.o
+test_application.o: test_application.cpp.o
 
-.PHONY : test_config.o
+.PHONY : test_application.o
 
 # target to build an object file
-test_config.cpp.o:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test_config.cpp.o
-.PHONY : test_config.cpp.o
+test_application.cpp.o:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test_application.cpp.o
+.PHONY : test_application.cpp.o
 
-test_config.i: test_config.cpp.i
+test_application.i: test_application.cpp.i
 
-.PHONY : test_config.i
+.PHONY : test_application.i
 
 # target to preprocess a source file
-test_config.cpp.i:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test_config.cpp.i
-.PHONY : test_config.cpp.i
+test_application.cpp.i:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test_application.cpp.i
+.PHONY : test_application.cpp.i
 
-test_config.s: test_config.cpp.s
+test_application.s: test_application.cpp.s
 
-.PHONY : test_config.s
+.PHONY : test_application.s
 
 # target to generate assembly for a file
-test_config.cpp.s:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test_config.cpp.s
-.PHONY : test_config.cpp.s
+test_application.cpp.s:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test_application.cpp.s
+.PHONY : test_application.cpp.s
 
 # Help Target
 help:
@@ -878,12 +959,21 @@ help:
 	@echo "... src/address.o"
 	@echo "... src/address.i"
 	@echo "... src/address.s"
+	@echo "... src/application.o"
+	@echo "... src/application.i"
+	@echo "... src/application.s"
 	@echo "... src/bytearray.o"
 	@echo "... src/bytearray.i"
 	@echo "... src/bytearray.s"
 	@echo "... src/config.o"
 	@echo "... src/config.i"
 	@echo "... src/config.s"
+	@echo "... src/daemon.o"
+	@echo "... src/daemon.i"
+	@echo "... src/daemon.s"
+	@echo "... src/env.o"
+	@echo "... src/env.i"
+	@echo "... src/env.s"
 	@echo "... src/fd_manager.o"
 	@echo "... src/fd_manager.i"
 	@echo "... src/fd_manager.s"
@@ -899,24 +989,27 @@ help:
 	@echo "... src/http/http11_parser.o"
 	@echo "... src/http/http11_parser.i"
 	@echo "... src/http/http11_parser.s"
+	@echo "... src/http/http_connection.o"
+	@echo "... src/http/http_connection.i"
+	@echo "... src/http/http_connection.s"
 	@echo "... src/http/http_parser.o"
 	@echo "... src/http/http_parser.i"
 	@echo "... src/http/http_parser.s"
+	@echo "... src/http/http_servlet.o"
+	@echo "... src/http/http_servlet.i"
+	@echo "... src/http/http_servlet.s"
+	@echo "... src/http/http_session.o"
+	@echo "... src/http/http_session.i"
+	@echo "... src/http/http_session.s"
 	@echo "... src/http/httpclient_parser.rl.o"
 	@echo "... src/http/httpclient_parser.rl.i"
 	@echo "... src/http/httpclient_parser.rl.s"
-	@echo "... src/http_connection.o"
-	@echo "... src/http_connection.i"
-	@echo "... src/http_connection.s"
+	@echo "... src/http/uri.rl.o"
+	@echo "... src/http/uri.rl.i"
+	@echo "... src/http/uri.rl.s"
 	@echo "... src/http_server.o"
 	@echo "... src/http_server.i"
 	@echo "... src/http_server.s"
-	@echo "... src/http_servlet.o"
-	@echo "... src/http_servlet.i"
-	@echo "... src/http_servlet.s"
-	@echo "... src/http_session.o"
-	@echo "... src/http_session.i"
-	@echo "... src/http_session.s"
 	@echo "... src/iomanager.o"
 	@echo "... src/iomanager.i"
 	@echo "... src/iomanager.s"
@@ -947,15 +1040,12 @@ help:
 	@echo "... src/timer.o"
 	@echo "... src/timer.i"
 	@echo "... src/timer.s"
-	@echo "... src/uri.rl.o"
-	@echo "... src/uri.rl.i"
-	@echo "... src/uri.rl.s"
 	@echo "... src/utils.o"
 	@echo "... src/utils.i"
 	@echo "... src/utils.s"
-	@echo "... test_config.o"
-	@echo "... test_config.i"
-	@echo "... test_config.s"
+	@echo "... test_application.o"
+	@echo "... test_application.i"
+	@echo "... test_application.s"
 .PHONY : help
 
 

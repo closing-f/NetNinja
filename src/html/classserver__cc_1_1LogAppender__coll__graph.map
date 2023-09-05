@@ -1,5 +1,0 @@
-<map id="server_cc::LogAppender" name="server_cc::LogAppender">
-<area shape="rect" id="node1" title=" " alt="" coords="5,171,183,197"/>
-<area shape="rect" id="node2" href="$classserver__cc_1_1Mutex.html" title="互斥量" alt="" coords="27,81,161,108"/>
-<area shape="rect" id="node3" href="$classserver__cc_1_1Noncopyable.html" title="对象无法拷贝,赋值" alt="" coords="5,5,183,32"/>
-</map>

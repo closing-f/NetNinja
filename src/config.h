@@ -461,12 +461,22 @@ class Config{
     static void LoadFromYaml(const YAML::Node& root);
 
     /**
+     * @brief 加载path文件夹里面的配置文件
+     */
+    static void LoadFromConfDir(const std::string& path, bool force = false);
+
+    /**
      * @description: 查找name是否存在，不存在返回nullptr，不会创建
      * @param {string&} name
      * @return {*}
      */    
     static ConfigVarBase::ptr LookupBase(const std::string& name);
 
+    /**
+     * @brief 遍历配置模块里面所有配置项
+     * @param[in] cb 配置项回调函数
+     */
+    static void Visit(std::function<void(ConfigVarBase::ptr)> cb);
     /**
      * @brief 配置项的RWMutex
      */

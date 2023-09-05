@@ -175,7 +175,7 @@ bool Address::GetInterfaceAddresses(std::multimap<std::string
     freeifaddrs(results);
     return !result.empty();
 }
-
+//获取指定网卡的地址
 bool Address::GetInterfaceAddresses(std::vector<std::pair<Address::ptr, uint32_t> >&result
                     ,const std::string& iface, int family) {
     if(iface.empty() || iface == "*") {

@@ -11,6 +11,34 @@ CMakeFiles/servercc.dir/src/address.cpp.o
  /home/fql/Project/C++/sylar/src/nocopy.h
  /home/fql/Project/C++/sylar/src/thread.h
  /home/fql/Project/C++/sylar/src/utils.h
+CMakeFiles/servercc.dir/src/application.cpp.o
+ /home/fql/Project/C++/sylar/src/address.h
+ /home/fql/Project/C++/sylar/src/application.cpp
+ /home/fql/Project/C++/sylar/src/application.h
+ /home/fql/Project/C++/sylar/src/bytearray.h
+ /home/fql/Project/C++/sylar/src/config.h
+ /home/fql/Project/C++/sylar/src/daemon.h
+ /home/fql/Project/C++/sylar/src/env.h
+ /home/fql/Project/C++/sylar/src/fiber.h
+ /home/fql/Project/C++/sylar/src/http/http.h
+ /home/fql/Project/C++/sylar/src/http/http11_common.h
+ /home/fql/Project/C++/sylar/src/http/http11_parser.h
+ /home/fql/Project/C++/sylar/src/http/http_servlet.h
+ /home/fql/Project/C++/sylar/src/http/http_session.h
+ /home/fql/Project/C++/sylar/src/http/httpclient_parser.h
+ /home/fql/Project/C++/sylar/src/http_server.h
+ /home/fql/Project/C++/sylar/src/iomanager.h
+ /home/fql/Project/C++/sylar/src/logger.h
+ /home/fql/Project/C++/sylar/src/mutex.h
+ /home/fql/Project/C++/sylar/src/nocopy.h
+ /home/fql/Project/C++/sylar/src/scheduler.h
+ /home/fql/Project/C++/sylar/src/socket.h
+ /home/fql/Project/C++/sylar/src/socket_stream.h
+ /home/fql/Project/C++/sylar/src/stream.h
+ /home/fql/Project/C++/sylar/src/tcpserver.h
+ /home/fql/Project/C++/sylar/src/thread.h
+ /home/fql/Project/C++/sylar/src/timer.h
+ /home/fql/Project/C++/sylar/src/utils.h
 CMakeFiles/servercc.dir/src/bytearray.cpp.o
  /home/fql/Project/C++/sylar/src/bytearray.cpp
  /home/fql/Project/C++/sylar/src/bytearray.h
@@ -24,6 +52,27 @@ CMakeFiles/servercc.dir/src/bytearray.cpp.o
 CMakeFiles/servercc.dir/src/config.cpp.o
  /home/fql/Project/C++/sylar/src/config.cpp
  /home/fql/Project/C++/sylar/src/config.h
+ /home/fql/Project/C++/sylar/src/env.h
+ /home/fql/Project/C++/sylar/src/fiber.h
+ /home/fql/Project/C++/sylar/src/logger.h
+ /home/fql/Project/C++/sylar/src/mutex.h
+ /home/fql/Project/C++/sylar/src/nocopy.h
+ /home/fql/Project/C++/sylar/src/thread.h
+ /home/fql/Project/C++/sylar/src/utils.h
+CMakeFiles/servercc.dir/src/daemon.cpp.o
+ /home/fql/Project/C++/sylar/src/config.h
+ /home/fql/Project/C++/sylar/src/daemon.cpp
+ /home/fql/Project/C++/sylar/src/daemon.h
+ /home/fql/Project/C++/sylar/src/fiber.h
+ /home/fql/Project/C++/sylar/src/logger.h
+ /home/fql/Project/C++/sylar/src/mutex.h
+ /home/fql/Project/C++/sylar/src/nocopy.h
+ /home/fql/Project/C++/sylar/src/thread.h
+ /home/fql/Project/C++/sylar/src/utils.h
+CMakeFiles/servercc.dir/src/env.cpp.o
+ /home/fql/Project/C++/sylar/src/config.h
+ /home/fql/Project/C++/sylar/src/env.cpp
+ /home/fql/Project/C++/sylar/src/env.h
  /home/fql/Project/C++/sylar/src/fiber.h
  /home/fql/Project/C++/sylar/src/logger.h
  /home/fql/Project/C++/sylar/src/mutex.h
@@ -73,6 +122,29 @@ CMakeFiles/servercc.dir/src/http/http11_parser.cc.o
  /home/fql/Project/C++/sylar/src/http/http11_common.h
  /home/fql/Project/C++/sylar/src/http/http11_parser.cc
  /home/fql/Project/C++/sylar/src/http/http11_parser.h
+CMakeFiles/servercc.dir/src/http/http_connection.cpp.o
+ /home/fql/Project/C++/sylar/src/address.h
+ /home/fql/Project/C++/sylar/src/bytearray.h
+ /home/fql/Project/C++/sylar/src/fiber.h
+ /home/fql/Project/C++/sylar/src/http/http.h
+ /home/fql/Project/C++/sylar/src/http/http11_common.h
+ /home/fql/Project/C++/sylar/src/http/http11_parser.h
+ /home/fql/Project/C++/sylar/src/http/http_connection.cpp
+ /home/fql/Project/C++/sylar/src/http/http_connection.h
+ /home/fql/Project/C++/sylar/src/http/http_parser.h
+ /home/fql/Project/C++/sylar/src/http/httpclient_parser.h
+ /home/fql/Project/C++/sylar/src/http/uri.h
+ /home/fql/Project/C++/sylar/src/iomanager.h
+ /home/fql/Project/C++/sylar/src/logger.h
+ /home/fql/Project/C++/sylar/src/mutex.h
+ /home/fql/Project/C++/sylar/src/nocopy.h
+ /home/fql/Project/C++/sylar/src/scheduler.h
+ /home/fql/Project/C++/sylar/src/socket.h
+ /home/fql/Project/C++/sylar/src/socket_stream.h
+ /home/fql/Project/C++/sylar/src/stream.h
+ /home/fql/Project/C++/sylar/src/thread.h
+ /home/fql/Project/C++/sylar/src/timer.h
+ /home/fql/Project/C++/sylar/src/utils.h
 CMakeFiles/servercc.dir/src/http/http_parser.cpp.o
  /home/fql/Project/C++/sylar/src/config.h
  /home/fql/Project/C++/sylar/src/fiber.h
@@ -87,23 +159,18 @@ CMakeFiles/servercc.dir/src/http/http_parser.cpp.o
  /home/fql/Project/C++/sylar/src/nocopy.h
  /home/fql/Project/C++/sylar/src/thread.h
  /home/fql/Project/C++/sylar/src/utils.h
-CMakeFiles/servercc.dir/src/http/httpclient_parser.rl.cc.o
- /home/fql/Project/C++/sylar/src/http/http11_common.h
- /home/fql/Project/C++/sylar/src/http/httpclient_parser.h
- /home/fql/Project/C++/sylar/src/http/httpclient_parser.rl.cc
-CMakeFiles/servercc.dir/src/http_connection.cpp.o
+CMakeFiles/servercc.dir/src/http/http_servlet.cpp.o
  /home/fql/Project/C++/sylar/src/address.h
  /home/fql/Project/C++/sylar/src/bytearray.h
  /home/fql/Project/C++/sylar/src/fiber.h
  /home/fql/Project/C++/sylar/src/http/http.h
  /home/fql/Project/C++/sylar/src/http/http11_common.h
  /home/fql/Project/C++/sylar/src/http/http11_parser.h
- /home/fql/Project/C++/sylar/src/http/http_parser.h
+ /home/fql/Project/C++/sylar/src/http/http_servlet.cpp
+ /home/fql/Project/C++/sylar/src/http/http_servlet.h
+ /home/fql/Project/C++/sylar/src/http/http_session.h
  /home/fql/Project/C++/sylar/src/http/httpclient_parser.h
- /home/fql/Project/C++/sylar/src/http_connection.cpp
- /home/fql/Project/C++/sylar/src/http_connection.h
  /home/fql/Project/C++/sylar/src/iomanager.h
- /home/fql/Project/C++/sylar/src/logger.h
  /home/fql/Project/C++/sylar/src/mutex.h
  /home/fql/Project/C++/sylar/src/nocopy.h
  /home/fql/Project/C++/sylar/src/scheduler.h
@@ -112,8 +179,35 @@ CMakeFiles/servercc.dir/src/http_connection.cpp.o
  /home/fql/Project/C++/sylar/src/stream.h
  /home/fql/Project/C++/sylar/src/thread.h
  /home/fql/Project/C++/sylar/src/timer.h
- /home/fql/Project/C++/sylar/src/uri.h
  /home/fql/Project/C++/sylar/src/utils.h
+CMakeFiles/servercc.dir/src/http/http_session.cpp.o
+ /home/fql/Project/C++/sylar/src/address.h
+ /home/fql/Project/C++/sylar/src/bytearray.h
+ /home/fql/Project/C++/sylar/src/fiber.h
+ /home/fql/Project/C++/sylar/src/http/http.h
+ /home/fql/Project/C++/sylar/src/http/http11_common.h
+ /home/fql/Project/C++/sylar/src/http/http11_parser.h
+ /home/fql/Project/C++/sylar/src/http/http_parser.h
+ /home/fql/Project/C++/sylar/src/http/http_session.cpp
+ /home/fql/Project/C++/sylar/src/http/http_session.h
+ /home/fql/Project/C++/sylar/src/http/httpclient_parser.h
+ /home/fql/Project/C++/sylar/src/iomanager.h
+ /home/fql/Project/C++/sylar/src/mutex.h
+ /home/fql/Project/C++/sylar/src/nocopy.h
+ /home/fql/Project/C++/sylar/src/scheduler.h
+ /home/fql/Project/C++/sylar/src/socket.h
+ /home/fql/Project/C++/sylar/src/socket_stream.h
+ /home/fql/Project/C++/sylar/src/stream.h
+ /home/fql/Project/C++/sylar/src/thread.h
+ /home/fql/Project/C++/sylar/src/timer.h
+CMakeFiles/servercc.dir/src/http/httpclient_parser.rl.cc.o
+ /home/fql/Project/C++/sylar/src/http/http11_common.h
+ /home/fql/Project/C++/sylar/src/http/httpclient_parser.h
+ /home/fql/Project/C++/sylar/src/http/httpclient_parser.rl.cc
+CMakeFiles/servercc.dir/src/http/uri.rl.cc.o
+ /home/fql/Project/C++/sylar/src/address.h
+ /home/fql/Project/C++/sylar/src/http/uri.h
+ /home/fql/Project/C++/sylar/src/http/uri.rl.cc
 CMakeFiles/servercc.dir/src/http_server.cpp.o
  /home/fql/Project/C++/sylar/src/address.h
  /home/fql/Project/C++/sylar/src/bytearray.h
@@ -121,11 +215,11 @@ CMakeFiles/servercc.dir/src/http_server.cpp.o
  /home/fql/Project/C++/sylar/src/http/http.h
  /home/fql/Project/C++/sylar/src/http/http11_common.h
  /home/fql/Project/C++/sylar/src/http/http11_parser.h
+ /home/fql/Project/C++/sylar/src/http/http_servlet.h
+ /home/fql/Project/C++/sylar/src/http/http_session.h
  /home/fql/Project/C++/sylar/src/http/httpclient_parser.h
  /home/fql/Project/C++/sylar/src/http_server.cpp
  /home/fql/Project/C++/sylar/src/http_server.h
- /home/fql/Project/C++/sylar/src/http_servlet.h
- /home/fql/Project/C++/sylar/src/http_session.h
  /home/fql/Project/C++/sylar/src/iomanager.h
  /home/fql/Project/C++/sylar/src/logger.h
  /home/fql/Project/C++/sylar/src/mutex.h
@@ -138,47 +232,6 @@ CMakeFiles/servercc.dir/src/http_server.cpp.o
  /home/fql/Project/C++/sylar/src/thread.h
  /home/fql/Project/C++/sylar/src/timer.h
  /home/fql/Project/C++/sylar/src/utils.h
-CMakeFiles/servercc.dir/src/http_servlet.cpp.o
- /home/fql/Project/C++/sylar/src/address.h
- /home/fql/Project/C++/sylar/src/bytearray.h
- /home/fql/Project/C++/sylar/src/fiber.h
- /home/fql/Project/C++/sylar/src/http/http.h
- /home/fql/Project/C++/sylar/src/http/http11_common.h
- /home/fql/Project/C++/sylar/src/http/http11_parser.h
- /home/fql/Project/C++/sylar/src/http/httpclient_parser.h
- /home/fql/Project/C++/sylar/src/http_servlet.cpp
- /home/fql/Project/C++/sylar/src/http_servlet.h
- /home/fql/Project/C++/sylar/src/http_session.h
- /home/fql/Project/C++/sylar/src/iomanager.h
- /home/fql/Project/C++/sylar/src/mutex.h
- /home/fql/Project/C++/sylar/src/nocopy.h
- /home/fql/Project/C++/sylar/src/scheduler.h
- /home/fql/Project/C++/sylar/src/socket.h
- /home/fql/Project/C++/sylar/src/socket_stream.h
- /home/fql/Project/C++/sylar/src/stream.h
- /home/fql/Project/C++/sylar/src/thread.h
- /home/fql/Project/C++/sylar/src/timer.h
- /home/fql/Project/C++/sylar/src/utils.h
-CMakeFiles/servercc.dir/src/http_session.cpp.o
- /home/fql/Project/C++/sylar/src/address.h
- /home/fql/Project/C++/sylar/src/bytearray.h
- /home/fql/Project/C++/sylar/src/fiber.h
- /home/fql/Project/C++/sylar/src/http/http.h
- /home/fql/Project/C++/sylar/src/http/http11_common.h
- /home/fql/Project/C++/sylar/src/http/http11_parser.h
- /home/fql/Project/C++/sylar/src/http/http_parser.h
- /home/fql/Project/C++/sylar/src/http/httpclient_parser.h
- /home/fql/Project/C++/sylar/src/http_session.cpp
- /home/fql/Project/C++/sylar/src/http_session.h
- /home/fql/Project/C++/sylar/src/iomanager.h
- /home/fql/Project/C++/sylar/src/mutex.h
- /home/fql/Project/C++/sylar/src/nocopy.h
- /home/fql/Project/C++/sylar/src/scheduler.h
- /home/fql/Project/C++/sylar/src/socket.h
- /home/fql/Project/C++/sylar/src/socket_stream.h
- /home/fql/Project/C++/sylar/src/stream.h
- /home/fql/Project/C++/sylar/src/thread.h
- /home/fql/Project/C++/sylar/src/timer.h
 CMakeFiles/servercc.dir/src/iomanager.cpp.o
  /home/fql/Project/C++/sylar/src/fiber.h
  /home/fql/Project/C++/sylar/src/iomanager.cpp
@@ -278,10 +331,6 @@ CMakeFiles/servercc.dir/src/timer.cpp.o
  /home/fql/Project/C++/sylar/src/timer.cpp
  /home/fql/Project/C++/sylar/src/timer.h
  /home/fql/Project/C++/sylar/src/utils.h
-CMakeFiles/servercc.dir/src/uri.rl.cc.o
- /home/fql/Project/C++/sylar/src/address.h
- /home/fql/Project/C++/sylar/src/uri.h
- /home/fql/Project/C++/sylar/src/uri.rl.cc
 CMakeFiles/servercc.dir/src/utils.cpp.o
  /home/fql/Project/C++/sylar/src/fiber.h
  /home/fql/Project/C++/sylar/src/logger.h

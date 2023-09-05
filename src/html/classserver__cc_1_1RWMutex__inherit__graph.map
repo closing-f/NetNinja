@@ -1,4 +1,0 @@
-<map id="server_cc::RWMutex" name="server_cc::RWMutex">
-<area shape="rect" id="node1" title="读写互斥量" alt="" coords="17,80,171,107"/>
-<area shape="rect" id="node2" href="$classserver__cc_1_1Noncopyable.html" title="对象无法拷贝,赋值" alt="" coords="5,5,183,32"/>
-</map>

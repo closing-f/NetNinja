@@ -2,7 +2,7 @@
  * @Author: closing-f fql2018@bupt.edu.cn
  * @Date: 2023-05-09 09:48:39
  * @LastEditors: closing
- * @LastEditTime: 2023-06-02 08:49:19
+ * @LastEditTime: 2023-07-11 15:40:19
  * @FilePath: /sylar/src/fiber.cpp
  * @Description: 
  */
@@ -27,7 +27,8 @@ static thread_local Fiber::ptr t_threadFiber=nullptr; //主协程
 
 static ConfigVar<uint32_t>::ptr g_fiber_stacksize = Config::Lookup<uint32_t>("fiber.stacksize",128*1024,"fiber_stacksize");
 
-//malloc 当调用者请求的内存超过临界值，malloc 分配的内存是进程的映射区，和动态库的内存占用相同区域；小于临界值时，分配的内存才是在堆上
+//malloc 当调用者请求的内存超过临界值，malloc 分配的内存是进程的映射区，和动态库的内存占用相同区域；
+// 小于临界值时，分配的内存才是在堆上
 class MallocStackAllocator {
 public:
     static void* Alloc(size_t size) {
@@ -57,7 +58,7 @@ Fiber::Fiber(){
 Fiber::Fiber(std::function<void()>cb,size_t stack_size,bool use_caller):m_id(++s_fiber_id),m_cb(cb){
     
     ++s_fiber_count;
-    m_stacksize= stack_size? stack_size : g_fiber_stacksize->getValue();
+    m_stacksize = stack_size ? stack_size : g_fiber_stacksize->getValue();
     
     m_stack = StackAllocator::Alloc(m_stacksize);
     if(getcontext(&m_ctx)){

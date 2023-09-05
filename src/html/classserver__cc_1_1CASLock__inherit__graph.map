@@ -1,4 +1,0 @@
-<map id="server_cc::CASLock" name="server_cc::CASLock">
-<area shape="rect" id="node1" title="原子锁" alt="" coords="20,80,168,107"/>
-<area shape="rect" id="node2" href="$classserver__cc_1_1Noncopyable.html" title="对象无法拷贝,赋值" alt="" coords="5,5,183,32"/>
-</map>

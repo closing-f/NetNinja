@@ -1,7 +1,937 @@
-2023-05-08 15:46:37	545565	0	[INFO]	[root]:	name: name_0 this.name: name_0 id: 545565 this.id: 545565 
-2023-05-08 15:46:37	545566	0	[INFO]	[root]:	name: name_2 this.name: name_2 id: 545566 this.id: 545566 
-2023-05-08 15:46:37	545567	0	[INFO]	[root]:	name: name_4 this.name: name_4 id: 545567 this.id: 545567 
-2023-05-08 15:46:37	545568	0	[INFO]	[root]:	name: name_6 this.name: name_6 id: 545568 this.id: 545568 
-2023-05-08 15:46:37	545569	0	[INFO]	[root]:	name: name_8 this.name: name_8 id: 545569 this.id: 545569 
-2023-05-08 15:46:37	545564	0	[INFO]	[root]:	thread test end 
-2023-05-08 15:46:37	545564	0	[INFO]	[root]:	count=500 
+2023-07-10 10:47:39	624528	/home/fql/Project/C++/sylar/src/config.cpp	[INFO]	[system]:	LoadConfFile file=/home/fql/Project/C++/sylar/bin/conf/log.yml ok 
+2023-07-10 10:47:45	624592	/home/fql/Project/C++/sylar/src/config.cpp	[INFO]	[system]:	LoadConfFile file=/home/fql/Project/C++/sylar/bin/conf/log.yml ok 
+2023-07-10 10:47:45	624592	/home/fql/Project/C++/sylar/src/application.cpp	[FATAL]	[system]:	create work path [/apps/work/server_cc errno=13 errstr=Permission denied 
+2023-07-10 10:49:19	624926	/home/fql/Project/C++/sylar/src/config.cpp	[INFO]	[system]:	LoadConfFile file=/home/fql/Project/C++/sylar/bin/conf/log.yml ok 
+2023-07-10 10:49:19	624926	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 10:49:19	624926	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=1 
+2023-07-10 10:49:19	624926	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	start stop 
+2023-07-10 10:49:19	624926	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	0x7ffd89b78a80 stopped 
+2023-07-10 10:49:19	624926	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	 run 
+2023-07-10 10:49:19	624926	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=2 
+2023-07-10 10:49:19	624926	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=3 
+2023-07-10 10:54:02	625292	/home/fql/Project/C++/sylar/src/config.cpp	[INFO]	[system]:	LoadConfFile file=/home/fql/Project/C++/sylar/bin/conf/log.yml ok 
+2023-07-10 10:54:02	625292	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 10:54:02	625292	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=1 
+2023-07-10 10:54:02	625293	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	 run 
+2023-07-10 10:54:02	625292	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	start stop 
+2023-07-10 10:54:02	625293	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 10:54:02	625292	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	 run 
+2023-07-10 10:54:02	625293	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=2 
+2023-07-10 10:54:02	625292	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=3 
+2023-07-10 10:54:02	625293	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=4 
+2023-07-10 10:54:18	625356	/home/fql/Project/C++/sylar/src/config.cpp	[INFO]	[system]:	LoadConfFile file=/home/fql/Project/C++/sylar/bin/conf/log.yml ok 
+2023-07-10 10:56:24	625723	/home/fql/Project/C++/sylar/src/config.cpp	[INFO]	[system]:	LoadConfFile file=/home/fql/Project/C++/sylar/bin/conf/log.yml ok 
+2023-07-10 10:59:20	626071	/home/fql/Project/C++/sylar/src/config.cpp	[INFO]	[system]:	LoadConfFile file=/home/fql/Project/C++/sylar/bin/conf/log.yml ok 
+2023-07-10 10:59:22	626071	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 10:59:22	626071	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=1 
+2023-07-10 10:59:22	626104	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	 run 
+2023-07-10 10:59:22	626071	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	start stop 
+2023-07-10 10:59:22	626104	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 10:59:22	626071	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	 run 
+2023-07-10 10:59:22	626104	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=2 
+2023-07-10 10:59:22	626071	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=3 
+2023-07-10 10:59:22	626104	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=4 
+2023-07-10 11:37:07	627423	/home/fql/Project/C++/sylar/src/config.cpp	[INFO]	[system]:	LoadConfFile file=/home/fql/Project/C++/sylar/bin/conf/log.yml ok 
+2023-07-10 11:37:07	627423	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 11:37:07	627423	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=1 
+2023-07-10 11:37:07	627463	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	 run 
+2023-07-10 11:37:07	627423	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	start stop 
+2023-07-10 11:37:07	627463	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 11:37:07	627423	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	 run 
+2023-07-10 11:37:07	627463	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=2 
+2023-07-10 11:37:07	627423	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=3 
+2023-07-10 11:37:07	627463	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=4 
+2023-07-10 11:37:10	627463	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	server bind success: [Socket sock=9 is_connected=0 family=2 type=1 protocol=0 local_address=0.0.0.0:8090] 
+2023-07-10 11:37:10	627463	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	server bind success: [Socket sock=10 is_connected=0 family=2 type=1 protocol=0 local_address=127.0.0.1:8091] 
+2023-07-10 11:37:10	627423	/home/fql/Project/C++/sylar/src/iomanager.cpp	[INFO]	[system]:	name= idle tickle 
+2023-07-10 11:37:10	627423	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=5 
+2023-07-10 11:37:20	627544	/home/fql/Project/C++/sylar/src/config.cpp	[INFO]	[system]:	LoadConfFile file=/home/fql/Project/C++/sylar/bin/conf/log.yml ok 
+2023-07-10 11:37:20	627544	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 11:37:20	627544	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=1 
+2023-07-10 11:37:20	627544	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	start stop 
+2023-07-10 11:37:20	627545	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	 run 
+2023-07-10 11:37:20	627544	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	 run 
+2023-07-10 11:37:20	627544	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=2 
+2023-07-10 11:37:20	627544	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=3 
+2023-07-10 11:37:20	627545	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 11:37:20	627544	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	server bind success: [Socket sock=9 is_connected=0 family=2 type=1 protocol=0 local_address=0.0.0.0:8090] 
+2023-07-10 11:37:20	627544	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	server bind success: [Socket sock=10 is_connected=0 family=2 type=1 protocol=0 local_address=127.0.0.1:8091] 
+2023-07-10 11:37:20	627545	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=4 
+2023-07-10 11:37:24	627568	/home/fql/Project/C++/sylar/src/config.cpp	[INFO]	[system]:	LoadConfFile file=/home/fql/Project/C++/sylar/bin/conf/log.yml ok 
+2023-07-10 11:37:24	627568	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 11:37:24	627568	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=1 
+2023-07-10 11:37:24	627569	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	 run 
+2023-07-10 11:37:24	627568	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	start stop 
+2023-07-10 11:37:24	627569	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 11:37:24	627568	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	 run 
+2023-07-10 11:37:24	627569	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=2 
+2023-07-10 11:37:24	627568	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=3 
+2023-07-10 11:37:24	627569	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=4 
+2023-07-10 11:37:24	627569	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	server bind success: [Socket sock=9 is_connected=0 family=2 type=1 protocol=0 local_address=0.0.0.0:8090] 
+2023-07-10 11:37:24	627569	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	server bind success: [Socket sock=10 is_connected=0 family=2 type=1 protocol=0 local_address=127.0.0.1:8091] 
+2023-07-10 11:37:24	627568	/home/fql/Project/C++/sylar/src/iomanager.cpp	[INFO]	[system]:	name= idle tickle 
+2023-07-10 11:37:39	627618	/home/fql/Project/C++/sylar/src/config.cpp	[INFO]	[system]:	LoadConfFile file=/home/fql/Project/C++/sylar/bin/conf/log.yml ok 
+2023-07-10 11:37:48	627618	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 11:37:48	627618	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=1 
+2023-07-10 11:37:48	627674	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	 run 
+2023-07-10 11:37:48	627618	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	start stop 
+2023-07-10 11:37:48	627674	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 11:37:48	627618	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	 run 
+2023-07-10 11:37:48	627674	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=2 
+2023-07-10 11:37:48	627618	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=3 
+2023-07-10 11:37:48	627674	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=4 
+2023-07-10 11:38:53	627674	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	server bind success: [Socket sock=9 is_connected=0 family=2 type=1 protocol=0 local_address=0.0.0.0:8090] 
+2023-07-10 11:38:53	627674	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	server bind success: [Socket sock=10 is_connected=0 family=2 type=1 protocol=0 local_address=127.0.0.1:8091] 
+2023-07-10 11:38:53	627618	/home/fql/Project/C++/sylar/src/iomanager.cpp	[INFO]	[system]:	name= idle tickle 
+2023-07-10 11:38:53	627618	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=5 
+2023-07-10 11:40:37	628094	/home/fql/Project/C++/sylar/src/config.cpp	[INFO]	[system]:	LoadConfFile file=/home/fql/Project/C++/sylar/bin/conf/log.yml ok 
+2023-07-10 11:40:37	628094	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 11:40:37	628094	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=1 
+2023-07-10 11:40:37	628112	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	 run 
+2023-07-10 11:40:37	628094	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	start stop 
+2023-07-10 11:40:37	628112	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 11:40:37	628094	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	 run 
+2023-07-10 11:40:37	628112	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=2 
+2023-07-10 11:40:37	628094	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=3 
+2023-07-10 11:40:37	628112	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=4 
+2023-07-10 11:40:40	628112	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	server bind success: [Socket sock=9 is_connected=0 family=2 type=1 protocol=0 local_address=0.0.0.0:8090] 
+2023-07-10 11:40:40	628112	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	server bind success: [Socket sock=10 is_connected=0 family=2 type=1 protocol=0 local_address=127.0.0.1:8091] 
+2023-07-10 11:40:40	628094	/home/fql/Project/C++/sylar/src/iomanager.cpp	[INFO]	[system]:	name= idle tickle 
+2023-07-10 11:40:40	628094	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=5 
+2023-07-10 11:42:03	628407	/home/fql/Project/C++/sylar/src/config.cpp	[INFO]	[system]:	LoadConfFile file=/home/fql/Project/C++/sylar/bin/conf/log.yml ok 
+2023-07-10 11:42:03	628407	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 11:42:03	628407	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=1 
+2023-07-10 11:42:03	628407	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	start stop 
+2023-07-10 11:42:03	628407	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	 run 
+2023-07-10 11:42:03	628407	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=2 
+2023-07-10 11:42:03	628433	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	 run 
+2023-07-10 11:42:03	628407	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=3 
+2023-07-10 11:42:03	628433	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 11:42:03	628433	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=4 
+2023-07-10 11:42:04	628407	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	server bind success: [Socket sock=9 is_connected=0 family=2 type=1 protocol=0 local_address=0.0.0.0:8090] 
+2023-07-10 11:42:04	628407	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	server bind success: [Socket sock=10 is_connected=0 family=2 type=1 protocol=0 local_address=127.0.0.1:8091] 
+2023-07-10 11:42:04	628433	/home/fql/Project/C++/sylar/src/iomanager.cpp	[INFO]	[system]:	name= idle tickle 
+2023-07-10 11:42:04	628433	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=5 
+2023-07-10 11:45:18	629076	/home/fql/Project/C++/sylar/src/config.cpp	[INFO]	[system]:	LoadConfFile file=/home/fql/Project/C++/sylar/bin/conf/log.yml ok 
+2023-07-10 11:45:18	629076	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 11:45:18	629076	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=1 
+2023-07-10 11:45:18	629076	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	start stop 
+2023-07-10 11:45:18	629076	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	 run 
+2023-07-10 11:45:18	629077	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	 run 
+2023-07-10 11:45:18	629076	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=2 
+2023-07-10 11:45:18	629077	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 11:45:18	629076	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=3 
+2023-07-10 11:45:18	629077	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=4 
+2023-07-10 11:45:18	629076	/home/fql/Project/C++/sylar/src/application.cpp	[INFO]	[system]:	
+keepalive: 1
+timeout: 1000
+name: sylar/1.1
+address:
+  - 0.0.0.0:8090
+  - 127.0.0.1:8091 
+2023-07-10 11:45:18	629076	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	server bind success: [Socket sock=9 is_connected=0 family=2 type=1 protocol=0 local_address=0.0.0.0:8090] 
+2023-07-10 11:45:18	629076	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	server bind success: [Socket sock=10 is_connected=0 family=2 type=1 protocol=0 local_address=127.0.0.1:8091] 
+2023-07-10 11:45:18	629077	/home/fql/Project/C++/sylar/src/iomanager.cpp	[INFO]	[system]:	name= idle tickle 
+2023-07-10 14:56:11	634999	/home/fql/Project/C++/sylar/src/config.cpp	[INFO]	[system]:	LoadConfFile file=/home/fql/Project/C++/sylar/bin/conf/log.yml ok 
+2023-07-10 14:56:11	634999	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 14:56:11	634999	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=1 
+2023-07-10 14:56:11	635058	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	 run 
+2023-07-10 14:56:11	634999	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	start stop 
+2023-07-10 14:56:11	635058	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 14:56:11	634999	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	 run 
+2023-07-10 14:56:11	635058	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=2 
+2023-07-10 14:56:11	634999	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=3 
+2023-07-10 14:56:11	635058	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=4 
+2023-07-10 14:56:11	635058	/home/fql/Project/C++/sylar/src/application.cpp	[INFO]	[system]:	
+keepalive: 1
+timeout: 1000
+name: sylar/1.1
+address:
+  - 0.0.0.0:8090
+  - 127.0.0.1:8091 
+2023-07-10 14:56:15	635058	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	server bind success: [Socket sock=9 is_connected=0 family=2 type=1 protocol=0 local_address=0.0.0.0:8090] 
+2023-07-10 14:56:15	635058	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	server bind success: [Socket sock=10 is_connected=0 family=2 type=1 protocol=0 local_address=127.0.0.1:8091] 
+2023-07-10 14:56:15	634999	/home/fql/Project/C++/sylar/src/iomanager.cpp	[INFO]	[system]:	name= idle tickle 
+2023-07-10 14:56:15	634999	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=5 
+2023-07-10 14:56:15	635058	/home/fql/Project/C++/sylar/src/application.cpp	[ERROR]	[system]:	invalid address: 0# ˇ  ¿  ˇ                           ˇ   ˇ          P       $       P4¸˜ˇ   ö          
+2023-07-10 14:57:13	635585	/home/fql/Project/C++/sylar/src/config.cpp	[INFO]	[system]:	LoadConfFile file=/home/fql/Project/C++/sylar/bin/conf/log.yml ok 
+2023-07-10 14:57:13	635585	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 14:57:13	635585	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=1 
+2023-07-10 14:57:13	635585	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	start stop 
+2023-07-10 14:57:13	635713	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	 run 
+2023-07-10 14:57:13	635585	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	 run 
+2023-07-10 14:57:13	635713	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 14:57:13	635585	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=2 
+2023-07-10 14:57:13	635713	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=3 
+2023-07-10 14:57:13	635585	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=4 
+2023-07-10 14:57:13	635585	/home/fql/Project/C++/sylar/src/application.cpp	[INFO]	[system]:	
+keepalive: 1
+timeout: 1000
+name: sylar/1.1
+address:
+  - 0.0.0.0:8090
+  - 127.0.0.1:8091 
+2023-07-10 14:57:21	635585	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	server bind success: [Socket sock=9 is_connected=0 family=2 type=1 protocol=0 local_address=0.0.0.0:8090] 
+2023-07-10 14:57:21	635585	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	server bind success: [Socket sock=10 is_connected=0 family=2 type=1 protocol=0 local_address=127.0.0.1:8091] 
+2023-07-10 14:57:21	635713	/home/fql/Project/C++/sylar/src/iomanager.cpp	[INFO]	[system]:	name= idle tickle 
+2023-07-10 14:57:21	635713	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=5 
+2023-07-10 14:57:50	635953	/home/fql/Project/C++/sylar/src/config.cpp	[INFO]	[system]:	LoadConfFile file=/home/fql/Project/C++/sylar/bin/conf/log.yml ok 
+2023-07-10 14:57:50	635953	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 14:57:50	635953	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=1 
+2023-07-10 14:57:50	635954	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	 run 
+2023-07-10 14:57:50	635953	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	start stop 
+2023-07-10 14:57:50	635954	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 14:57:50	635953	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	 run 
+2023-07-10 14:57:50	635954	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=2 
+2023-07-10 14:57:50	635953	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=3 
+2023-07-10 14:57:50	635954	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=4 
+2023-07-10 14:57:50	635954	/home/fql/Project/C++/sylar/src/application.cpp	[INFO]	[system]:	
+keepalive: 1
+timeout: 1000
+name: sylar/1.1
+address:
+  - 0.0.0.0:8090
+  - 127.0.0.1:8091 
+2023-07-10 14:57:50	635954	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	server bind success: [Socket sock=9 is_connected=0 family=2 type=1 protocol=0 local_address=0.0.0.0:8090] 
+2023-07-10 14:57:50	635954	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	server bind success: [Socket sock=10 is_connected=0 family=2 type=1 protocol=0 local_address=127.0.0.1:8091] 
+2023-07-10 14:57:50	635953	/home/fql/Project/C++/sylar/src/iomanager.cpp	[INFO]	[system]:	name= idle tickle 
+2023-07-10 14:57:50	635953	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=5 
+2023-07-10 14:58:36	636009	/home/fql/Project/C++/sylar/src/config.cpp	[INFO]	[system]:	LoadConfFile file=/home/fql/Project/C++/sylar/bin/conf/log.yml ok 
+2023-07-10 14:58:36	636009	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 14:58:36	636009	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=1 
+2023-07-10 14:58:36	636009	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	start stop 
+2023-07-10 14:58:36	636071	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	 run 
+2023-07-10 14:58:36	636009	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	 run 
+2023-07-10 14:58:36	636071	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 14:58:36	636009	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=2 
+2023-07-10 14:58:36	636071	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=3 
+2023-07-10 14:58:36	636009	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=4 
+2023-07-10 14:58:36	636009	/home/fql/Project/C++/sylar/src/application.cpp	[INFO]	[system]:	
+keepalive: 1
+timeout: 1000
+name: sylar/1.1
+address:
+  - 0.0.0.0:8090
+  - 127.0.0.1:8091 
+2023-07-10 15:03:28	636592	/home/fql/Project/C++/sylar/src/config.cpp	[INFO]	[system]:	LoadConfFile file=/home/fql/Project/C++/sylar/bin/conf/log.yml ok 
+2023-07-10 15:03:28	636592	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:03:28	636592	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=1 
+2023-07-10 15:03:28	636593	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	worker run 
+2023-07-10 15:03:28	636593	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:03:28	636593	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=2 
+2023-07-10 15:03:28	636594	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	worker run 
+2023-07-10 15:03:28	636594	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:03:28	636595	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	worker run 
+2023-07-10 15:03:28	636592	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	start stop 
+2023-07-10 15:03:28	636592	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	0x56033a1e71d0 stopped 
+2023-07-10 15:03:28	636592	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	main run 
+2023-07-10 15:03:28	636594	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=3 
+2023-07-10 15:03:28	636595	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:03:28	636592	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=4 
+2023-07-10 15:03:28	636595	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=5 
+2023-07-10 15:03:28	636592	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=6 
+2023-07-10 15:03:28	636592	/home/fql/Project/C++/sylar/src/application.cpp	[INFO]	[system]:	
+keepalive: 1
+timeout: 1000
+name: sylar/1.1
+address:
+  - 0.0.0.0:8090
+  - 127.0.0.1:8091 
+2023-07-10 15:03:28	636592	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	server bind success: [Socket sock=12 is_connected=0 family=2 type=1 protocol=0 local_address=0.0.0.0:8090] 
+2023-07-10 15:03:28	636592	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	server bind success: [Socket sock=13 is_connected=0 family=2 type=1 protocol=0 local_address=127.0.0.1:8091] 
+2023-07-10 15:03:28	636592	/home/fql/Project/C++/sylar/src/application.cpp	[ERROR]	[system]:	invalid address: –b:V  q:V                  Ö:V  .:V  PAÄ>-  PEÄ>-  ˇˇˇˇ    ±                               !      p 
+2023-07-10 15:03:28	636592	/home/fql/Project/C++/sylar/src/application.cpp	[ERROR]	[system]:	invalid address:  
+2023-07-10 15:03:28	636592	/home/fql/Project/C++/sylar/src/application.cpp	[ERROR]	[system]:	invalid address:  
+2023-07-10 15:03:28	636592	/home/fql/Project/C++/sylar/src/application.cpp	[ERROR]	[system]:	invalid address:  
+2023-07-10 15:06:31	636791	/home/fql/Project/C++/sylar/src/config.cpp	[INFO]	[system]:	LoadConfFile file=/home/fql/Project/C++/sylar/bin/conf/log.yml ok 
+2023-07-10 15:06:31	636791	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:06:31	636791	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=1 
+2023-07-10 15:06:31	636825	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	worker run 
+2023-07-10 15:06:31	636825	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:06:31	636825	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=2 
+2023-07-10 15:06:31	636826	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	worker run 
+2023-07-10 15:06:31	636826	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:06:31	636826	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=3 
+2023-07-10 15:06:31	636827	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	worker run 
+2023-07-10 15:06:31	636791	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	start stop 
+2023-07-10 15:06:31	636827	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:06:31	636791	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	0x555555576240 stopped 
+2023-07-10 15:06:31	636827	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=4 
+2023-07-10 15:06:31	636791	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	main run 
+2023-07-10 15:06:31	636791	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=5 
+2023-07-10 15:06:31	636791	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=6 
+2023-07-10 15:06:31	636791	/home/fql/Project/C++/sylar/src/application.cpp	[INFO]	[system]:	
+keepalive: 1
+timeout: 1000
+name: sylar/1.1
+address:
+  - 0.0.0.0:8090
+  - 127.0.0.1:8091 
+2023-07-10 15:06:35	636791	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	server bind success: [Socket sock=12 is_connected=0 family=2 type=1 protocol=0 local_address=0.0.0.0:8090] 
+2023-07-10 15:06:35	636791	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	server bind success: [Socket sock=13 is_connected=0 family=2 type=1 protocol=0 local_address=127.0.0.1:8091] 
+2023-07-10 15:06:35	636791	/home/fql/Project/C++/sylar/src/application.cpp	[ERROR]	[system]:	invalid address: pUWUUU  `bWUUU                  ê°WUUU  Ä˛VUUU  Pëˆ˜ˇ  Pïˆ˜ˇ  ˇˇˇˇ    ±                               !      ‡ 
+2023-07-10 15:06:35	636791	/home/fql/Project/C++/sylar/src/application.cpp	[ERROR]	[system]:	invalid address:  
+2023-07-10 15:06:35	636791	/home/fql/Project/C++/sylar/src/application.cpp	[ERROR]	[system]:	invalid address:  
+2023-07-10 15:06:35	636791	/home/fql/Project/C++/sylar/src/application.cpp	[ERROR]	[system]:	invalid address:  
+2023-07-10 15:07:22	636935	/home/fql/Project/C++/sylar/src/config.cpp	[INFO]	[system]:	LoadConfFile file=/home/fql/Project/C++/sylar/bin/conf/log.yml ok 
+2023-07-10 15:07:22	636935	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:07:22	636935	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=1 
+2023-07-10 15:07:22	636971	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	worker run 
+2023-07-10 15:07:22	636971	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:07:22	636971	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=2 
+2023-07-10 15:07:22	636972	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	worker run 
+2023-07-10 15:07:22	636972	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:07:22	636972	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=3 
+2023-07-10 15:07:22	636973	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	worker run 
+2023-07-10 15:07:22	636935	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	start stop 
+2023-07-10 15:07:22	636973	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:07:22	636935	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	0x555555576240 stopped 
+2023-07-10 15:07:22	636973	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=4 
+2023-07-10 15:07:22	636935	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	main run 
+2023-07-10 15:07:22	636935	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=5 
+2023-07-10 15:07:22	636935	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=6 
+2023-07-10 15:07:22	636935	/home/fql/Project/C++/sylar/src/application.cpp	[INFO]	[system]:	
+keepalive: 1
+timeout: 1000
+name: sylar/1.1
+address:
+  - 0.0.0.0:8090
+  - 127.0.0.1:8091 
+2023-07-10 15:08:03	636935	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	server bind success: [Socket sock=12 is_connected=0 family=2 type=1 protocol=0 local_address=0.0.0.0:8090] 
+2023-07-10 15:08:03	636935	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	server bind success: [Socket sock=13 is_connected=0 family=2 type=1 protocol=0 local_address=127.0.0.1:8091] 
+2023-07-10 15:08:03	636935	/home/fql/Project/C++/sylar/src/application.cpp	[ERROR]	[system]:	invalid address: pUWUUU  `bWUUU                  ê°WUUU  Ä˛VUUU  Pëˆ˜ˇ  Pïˆ˜ˇ  ˇˇˇˇ    ±                               !      ‡ 
+2023-07-10 15:08:03	636935	/home/fql/Project/C++/sylar/src/application.cpp	[ERROR]	[system]:	invalid address:  
+2023-07-10 15:08:03	636935	/home/fql/Project/C++/sylar/src/application.cpp	[ERROR]	[system]:	invalid address:  
+2023-07-10 15:08:03	636935	/home/fql/Project/C++/sylar/src/application.cpp	[ERROR]	[system]:	invalid address:  
+2023-07-10 15:09:38	637215	/home/fql/Project/C++/sylar/src/config.cpp	[INFO]	[system]:	LoadConfFile file=/home/fql/Project/C++/sylar/bin/conf/log.yml ok 
+2023-07-10 15:09:38	637215	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:09:38	637215	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=1 
+2023-07-10 15:09:38	637248	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	worker run 
+2023-07-10 15:09:38	637248	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:09:38	637248	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=2 
+2023-07-10 15:09:38	637249	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	worker run 
+2023-07-10 15:09:38	637249	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:09:38	637249	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=3 
+2023-07-10 15:09:38	637250	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	worker run 
+2023-07-10 15:09:38	637215	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	start stop 
+2023-07-10 15:09:38	637250	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:09:38	637215	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	0x555555576240 stopped 
+2023-07-10 15:09:38	637250	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=4 
+2023-07-10 15:09:38	637215	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	main run 
+2023-07-10 15:09:38	637215	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=5 
+2023-07-10 15:09:38	637215	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=6 
+2023-07-10 15:09:38	637215	/home/fql/Project/C++/sylar/src/application.cpp	[INFO]	[system]:	
+keepalive: 1
+timeout: 1000
+name: sylar/1.1
+address:
+  - 0.0.0.0:8090
+  - 127.0.0.1:8091 
+2023-07-10 15:10:05	637800	/home/fql/Project/C++/sylar/src/config.cpp	[INFO]	[system]:	LoadConfFile file=/home/fql/Project/C++/sylar/bin/conf/log.yml ok 
+2023-07-10 15:10:05	637800	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:10:05	637800	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=1 
+2023-07-10 15:10:05	637899	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	worker run 
+2023-07-10 15:10:05	637899	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:10:05	637899	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=2 
+2023-07-10 15:10:05	637900	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	worker run 
+2023-07-10 15:10:05	637900	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:10:05	637900	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=3 
+2023-07-10 15:10:05	637901	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	worker run 
+2023-07-10 15:10:05	637800	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	start stop 
+2023-07-10 15:10:05	637901	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:10:05	637800	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	0x555555576240 stopped 
+2023-07-10 15:10:05	637901	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=4 
+2023-07-10 15:10:05	637800	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	main run 
+2023-07-10 15:10:05	637800	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=5 
+2023-07-10 15:10:05	637800	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=6 
+2023-07-10 15:10:05	637800	/home/fql/Project/C++/sylar/src/application.cpp	[INFO]	[system]:	
+keepalive: 1
+timeout: 1000
+name: sylar/1.1
+address:
+  - 0.0.0.0:8090
+  - 127.0.0.1:8091 
+2023-07-10 15:21:15	637800	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	server bind success: [Socket sock=12 is_connected=0 family=2 type=1 protocol=0 local_address=0.0.0.0:8090] 
+2023-07-10 15:21:15	637800	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	server bind success: [Socket sock=13 is_connected=0 family=2 type=1 protocol=0 local_address=127.0.0.1:8091] 
+2023-07-10 15:21:15	637800	/home/fql/Project/C++/sylar/src/application.cpp	[ERROR]	[system]:	invalid address: pUWUUU  `bWUUU                  ê°WUUU  Ä˛VUUU  Pëˆ˜ˇ  Pïˆ˜ˇ  ˇˇˇˇ    ±                               !      ‡ 
+2023-07-10 15:21:15	637800	/home/fql/Project/C++/sylar/src/application.cpp	[ERROR]	[system]:	invalid address:  
+2023-07-10 15:21:15	637800	/home/fql/Project/C++/sylar/src/application.cpp	[ERROR]	[system]:	invalid address:  
+2023-07-10 15:21:15	637800	/home/fql/Project/C++/sylar/src/application.cpp	[ERROR]	[system]:	invalid address:  
+2023-07-10 15:22:03	638582	/home/fql/Project/C++/sylar/src/config.cpp	[INFO]	[system]:	LoadConfFile file=/home/fql/Project/C++/sylar/bin/conf/log.yml ok 
+2023-07-10 15:22:03	638582	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:22:03	638582	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=1 
+2023-07-10 15:22:03	638657	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	worker run 
+2023-07-10 15:22:03	638657	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:22:03	638657	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=2 
+2023-07-10 15:22:03	638658	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	worker run 
+2023-07-10 15:22:03	638658	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:22:03	638658	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=3 
+2023-07-10 15:22:03	638582	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	start stop 
+2023-07-10 15:22:03	638659	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	worker run 
+2023-07-10 15:22:03	638582	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	0x555555576240 stopped 
+2023-07-10 15:22:03	638659	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:22:03	638582	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	main run 
+2023-07-10 15:22:03	638659	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=4 
+2023-07-10 15:22:03	638582	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=5 
+2023-07-10 15:22:03	638582	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=6 
+2023-07-10 15:22:03	638582	/home/fql/Project/C++/sylar/src/application.cpp	[INFO]	[system]:	
+keepalive: 1
+timeout: 1000
+name: sylar/1.1
+address:
+  - 0.0.0.0:8090
+  - 127.0.0.1:8091 
+2023-07-10 15:22:51	639003	/home/fql/Project/C++/sylar/src/config.cpp	[INFO]	[system]:	LoadConfFile file=/home/fql/Project/C++/sylar/bin/conf/log.yml ok 
+2023-07-10 15:22:51	639003	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:22:51	639003	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=1 
+2023-07-10 15:22:51	639114	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	worker run 
+2023-07-10 15:22:51	639114	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:22:51	639114	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=2 
+2023-07-10 15:22:51	639115	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	worker run 
+2023-07-10 15:22:51	639115	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:22:51	639115	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=3 
+2023-07-10 15:22:51	639116	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	worker run 
+2023-07-10 15:22:51	639003	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	start stop 
+2023-07-10 15:22:51	639003	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	0x555555576240 stopped 
+2023-07-10 15:22:51	639003	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	main run 
+2023-07-10 15:22:51	639116	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:22:51	639003	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=4 
+2023-07-10 15:22:51	639116	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=5 
+2023-07-10 15:22:51	639003	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=6 
+2023-07-10 15:22:51	639003	/home/fql/Project/C++/sylar/src/application.cpp	[INFO]	[system]:	
+keepalive: 1
+timeout: 1000
+name: sylar/1.1
+address:
+  - 0.0.0.0:8090
+  - 127.0.0.1:8091 
+2023-07-10 15:22:55	639003	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	server bind success: [Socket sock=12 is_connected=0 family=2 type=1 protocol=0 local_address=0.0.0.0:8090] 
+2023-07-10 15:22:55	639003	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	server bind success: [Socket sock=13 is_connected=0 family=2 type=1 protocol=0 local_address=127.0.0.1:8091] 
+2023-07-10 15:22:55	639003	/home/fql/Project/C++/sylar/src/application.cpp	[ERROR]	[system]:	invalid address: pUWUUU  `bWUUU                  ê°WUUU  Ä˛VUUU  Pëˆ˜ˇ  Pïˆ˜ˇ  ˇˇˇˇ    ±                               !      ‡ 
+2023-07-10 15:22:55	639003	/home/fql/Project/C++/sylar/src/application.cpp	[ERROR]	[system]:	invalid address:  
+2023-07-10 15:22:55	639003	/home/fql/Project/C++/sylar/src/application.cpp	[ERROR]	[system]:	invalid address:  
+2023-07-10 15:22:55	639003	/home/fql/Project/C++/sylar/src/application.cpp	[ERROR]	[system]:	invalid address:  
+2023-07-10 15:25:02	639432	/home/fql/Project/C++/sylar/src/config.cpp	[INFO]	[system]:	LoadConfFile file=/home/fql/Project/C++/sylar/bin/conf/log.yml ok 
+2023-07-10 15:25:02	639432	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:25:02	639432	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=1 
+2023-07-10 15:25:02	639460	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	worker run 
+2023-07-10 15:25:02	639460	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:25:02	639460	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=2 
+2023-07-10 15:25:02	639461	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	worker run 
+2023-07-10 15:25:02	639461	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:25:02	639461	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=3 
+2023-07-10 15:25:02	639462	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	worker run 
+2023-07-10 15:25:02	639432	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	start stop 
+2023-07-10 15:25:02	639462	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:25:02	639432	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	0x555555576240 stopped 
+2023-07-10 15:25:02	639462	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=4 
+2023-07-10 15:25:02	639432	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	main run 
+2023-07-10 15:25:02	639432	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=5 
+2023-07-10 15:25:02	639432	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=6 
+2023-07-10 15:25:02	639432	/home/fql/Project/C++/sylar/src/application.cpp	[INFO]	[system]:	
+keepalive: 1
+timeout: 1000
+name: sylar/1.1
+address:
+  - 0.0.0.0:8090
+  - 127.0.0.1:8091 
+2023-07-10 15:25:50	639432	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	server bind success: [Socket sock=12 is_connected=0 family=2 type=1 protocol=0 local_address=0.0.0.0:8090] 
+2023-07-10 15:25:50	639432	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	server bind success: [Socket sock=13 is_connected=0 family=2 type=1 protocol=0 local_address=127.0.0.1:8091] 
+2023-07-10 15:25:50	639432	/home/fql/Project/C++/sylar/src/application.cpp	[ERROR]	[system]:	invalid address: pUWUUU  `bWUUU                  ê°WUUU  Ä˛VUUU  Pëˆ˜ˇ  Pïˆ˜ˇ  ˇˇˇˇ    ±                               !      ‡ 
+2023-07-10 15:25:50	639432	/home/fql/Project/C++/sylar/src/application.cpp	[ERROR]	[system]:	invalid address:  
+2023-07-10 15:25:50	639432	/home/fql/Project/C++/sylar/src/application.cpp	[ERROR]	[system]:	invalid address:  
+2023-07-10 15:25:50	639432	/home/fql/Project/C++/sylar/src/application.cpp	[ERROR]	[system]:	invalid address:  
+2023-07-10 15:26:18	639643	/home/fql/Project/C++/sylar/src/config.cpp	[INFO]	[system]:	LoadConfFile file=/home/fql/Project/C++/sylar/bin/conf/log.yml ok 
+2023-07-10 15:26:18	639643	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:26:18	639643	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=1 
+2023-07-10 15:26:18	639678	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	worker run 
+2023-07-10 15:26:18	639678	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:26:18	639678	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=2 
+2023-07-10 15:26:18	639679	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	worker run 
+2023-07-10 15:26:18	639679	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:26:18	639679	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=3 
+2023-07-10 15:26:18	639680	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	worker run 
+2023-07-10 15:26:18	639643	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	start stop 
+2023-07-10 15:26:18	639680	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:26:18	639643	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	0x555555576240 stopped 
+2023-07-10 15:26:18	639643	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	main run 
+2023-07-10 15:26:18	639680	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=4 
+2023-07-10 15:26:18	639643	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=5 
+2023-07-10 15:26:18	639643	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=6 
+2023-07-10 15:26:18	639643	/home/fql/Project/C++/sylar/src/application.cpp	[INFO]	[system]:	
+keepalive: 1
+timeout: 1000
+name: sylar/1.1
+address:
+  - 0.0.0.0:8090
+  - 127.0.0.1:8091 
+2023-07-10 15:26:18	639643	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	server bind success: [Socket sock=12 is_connected=0 family=2 type=1 protocol=0 local_address=0.0.0.0:8090] 
+2023-07-10 15:26:18	639643	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	server bind success: [Socket sock=13 is_connected=0 family=2 type=1 protocol=0 local_address=127.0.0.1:8091] 
+2023-07-10 15:26:18	639643	/home/fql/Project/C++/sylar/src/application.cpp	[ERROR]	[system]:	invalid address: pUWUUU  `bWUUU                  ê°WUUU  Ä˛VUUU  Pëˆ˜ˇ  Pïˆ˜ˇ  ˇˇˇˇ    ±                               !      ‡ 
+2023-07-10 15:26:18	639643	/home/fql/Project/C++/sylar/src/application.cpp	[ERROR]	[system]:	invalid address:  
+2023-07-10 15:26:18	639643	/home/fql/Project/C++/sylar/src/application.cpp	[ERROR]	[system]:	invalid address:  
+2023-07-10 15:26:18	639643	/home/fql/Project/C++/sylar/src/application.cpp	[ERROR]	[system]:	invalid address:  
+2023-07-10 15:27:21	639977	/home/fql/Project/C++/sylar/src/config.cpp	[INFO]	[system]:	LoadConfFile file=/home/fql/Project/C++/sylar/bin/conf/log.yml ok 
+2023-07-10 15:27:21	639977	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:27:21	639977	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=1 
+2023-07-10 15:27:21	640012	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	worker run 
+2023-07-10 15:27:21	640012	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:27:21	640012	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=2 
+2023-07-10 15:27:21	640013	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	worker run 
+2023-07-10 15:27:21	640013	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:27:21	640013	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=3 
+2023-07-10 15:27:21	640014	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	worker run 
+2023-07-10 15:27:21	639977	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	start stop 
+2023-07-10 15:27:21	639977	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	0x555555576240 stopped 
+2023-07-10 15:27:21	640014	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:27:21	639977	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	main run 
+2023-07-10 15:27:21	640014	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=4 
+2023-07-10 15:27:21	639977	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=5 
+2023-07-10 15:27:21	639977	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=6 
+2023-07-10 15:27:21	639977	/home/fql/Project/C++/sylar/src/application.cpp	[INFO]	[system]:	
+keepalive: 1
+timeout: 1000
+name: sylar/1.1
+address:
+  - 0.0.0.0:8090
+  - 127.0.0.1:8091 
+2023-07-10 15:27:21	639977	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	server bind success: [Socket sock=12 is_connected=0 family=2 type=1 protocol=0 local_address=0.0.0.0:8090] 
+2023-07-10 15:27:21	639977	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	server bind success: [Socket sock=13 is_connected=0 family=2 type=1 protocol=0 local_address=127.0.0.1:8091] 
+2023-07-10 15:27:21	639977	/home/fql/Project/C++/sylar/src/application.cpp	[ERROR]	[system]:	invalid address: pUWUUU  `bWUUU                  ê°WUUU  Ä˛VUUU  êëˆ˜ˇ  êïˆ˜ˇ  ˇˇˇˇ    ±                               !      ‡ 
+2023-07-10 15:27:21	639977	/home/fql/Project/C++/sylar/src/application.cpp	[ERROR]	[system]:	invalid address:  
+2023-07-10 15:27:21	639977	/home/fql/Project/C++/sylar/src/application.cpp	[ERROR]	[system]:	invalid address:  
+2023-07-10 15:27:21	639977	/home/fql/Project/C++/sylar/src/application.cpp	[ERROR]	[system]:	invalid address:  
+2023-07-10 15:29:35	640854	/home/fql/Project/C++/sylar/src/config.cpp	[INFO]	[system]:	LoadConfFile file=/home/fql/Project/C++/sylar/bin/conf/log.yml ok 
+2023-07-10 15:29:35	640854	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:29:35	640854	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=1 
+2023-07-10 15:29:35	640896	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	worker run 
+2023-07-10 15:29:35	640896	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:29:35	640896	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=2 
+2023-07-10 15:29:35	640897	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	worker run 
+2023-07-10 15:29:35	640897	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:29:35	640897	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=3 
+2023-07-10 15:29:35	640898	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	worker run 
+2023-07-10 15:29:35	640898	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:29:35	640854	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	start stop 
+2023-07-10 15:29:35	640898	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=4 
+2023-07-10 15:29:35	640854	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	0x555555576240 stopped 
+2023-07-10 15:29:35	640854	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	main run 
+2023-07-10 15:29:35	640854	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=5 
+2023-07-10 15:29:35	640854	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=6 
+2023-07-10 15:29:35	640854	/home/fql/Project/C++/sylar/src/application.cpp	[INFO]	[system]:	
+keepalive: 1
+timeout: 1000
+name: sylar/1.1
+address:
+  - 0.0.0.0:8090
+  - 127.0.0.1:8091 
+2023-07-10 15:29:35	640854	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	server bind success: [Socket sock=12 is_connected=0 family=2 type=1 protocol=0 local_address=0.0.0.0:8090] 
+2023-07-10 15:29:35	640854	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	server bind success: [Socket sock=13 is_connected=0 family=2 type=1 protocol=0 local_address=127.0.0.1:8091] 
+2023-07-10 15:29:35	640854	/home/fql/Project/C++/sylar/src/application.cpp	[ERROR]	[system]:	invalid address: pUWUUU  `bWUUU                  ê°WUUU  Ä˛VUUU   ëˆ˜ˇ   ïˆ˜ˇ  ˇˇˇˇ    ±                               !      ‡ 
+2023-07-10 15:29:35	640854	/home/fql/Project/C++/sylar/src/application.cpp	[ERROR]	[system]:	invalid address:  
+2023-07-10 15:29:35	640854	/home/fql/Project/C++/sylar/src/application.cpp	[ERROR]	[system]:	invalid address:  
+2023-07-10 15:29:35	640854	/home/fql/Project/C++/sylar/src/application.cpp	[ERROR]	[system]:	invalid address:  
+2023-07-10 15:31:27	641478	/home/fql/Project/C++/sylar/src/config.cpp	[INFO]	[system]:	LoadConfFile file=/home/fql/Project/C++/sylar/bin/conf/log.yml ok 
+2023-07-10 15:31:27	641478	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:31:27	641478	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=1 
+2023-07-10 15:31:27	641524	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	worker run 
+2023-07-10 15:31:27	641524	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:31:27	641524	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=2 
+2023-07-10 15:31:27	641525	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	worker run 
+2023-07-10 15:31:27	641525	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:31:27	641525	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=3 
+2023-07-10 15:31:27	641526	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	worker run 
+2023-07-10 15:31:27	641478	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	start stop 
+2023-07-10 15:31:27	641526	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:31:27	641478	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	0x555555576240 stopped 
+2023-07-10 15:31:27	641526	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=4 
+2023-07-10 15:31:27	641478	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	main run 
+2023-07-10 15:31:27	641478	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=5 
+2023-07-10 15:31:27	641478	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=6 
+2023-07-10 15:31:27	641478	/home/fql/Project/C++/sylar/src/application.cpp	[INFO]	[system]:	
+keepalive: 1
+timeout: 1000
+name: sylar/1.1
+address:
+  - 0.0.0.0:8090
+  - 127.0.0.1:8091 
+2023-07-10 15:31:27	641478	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	server bind success: [Socket sock=12 is_connected=0 family=2 type=1 protocol=0 local_address=0.0.0.0:8090] 
+2023-07-10 15:31:27	641478	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	server bind success: [Socket sock=13 is_connected=0 family=2 type=1 protocol=0 local_address=127.0.0.1:8091] 
+2023-07-10 15:31:55	641478	/home/fql/Project/C++/sylar/src/application.cpp	[ERROR]	[system]:	invalid address: pUWUUU  `bWUUU                  ê°WUUU  Ä˛VUUU   ëˆ˜ˇ   ïˆ˜ˇ  ˇˇˇˇ    ±                               !      ‡ 
+2023-07-10 15:31:55	641478	/home/fql/Project/C++/sylar/src/application.cpp	[ERROR]	[system]:	invalid address:  
+2023-07-10 15:31:55	641478	/home/fql/Project/C++/sylar/src/application.cpp	[ERROR]	[system]:	invalid address:  
+2023-07-10 15:31:55	641478	/home/fql/Project/C++/sylar/src/application.cpp	[ERROR]	[system]:	invalid address:  
+2023-07-10 15:32:29	642118	/home/fql/Project/C++/sylar/src/config.cpp	[INFO]	[system]:	LoadConfFile file=/home/fql/Project/C++/sylar/bin/conf/log.yml ok 
+2023-07-10 15:32:29	642118	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:32:29	642118	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=1 
+2023-07-10 15:32:29	642155	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	worker run 
+2023-07-10 15:32:29	642155	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:32:29	642155	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=2 
+2023-07-10 15:32:29	642157	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	worker run 
+2023-07-10 15:32:29	642157	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:32:29	642157	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=3 
+2023-07-10 15:32:29	642158	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	worker run 
+2023-07-10 15:32:29	642118	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	start stop 
+2023-07-10 15:32:29	642158	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:32:29	642118	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	0x555555576240 stopped 
+2023-07-10 15:32:29	642158	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=4 
+2023-07-10 15:32:29	642118	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	main run 
+2023-07-10 15:32:29	642118	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=5 
+2023-07-10 15:32:29	642118	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=6 
+2023-07-10 15:32:29	642118	/home/fql/Project/C++/sylar/src/application.cpp	[INFO]	[system]:	
+keepalive: 1
+timeout: 1000
+name: sylar/1.1
+address:
+  - 0.0.0.0:8090
+  - 127.0.0.1:8091 
+2023-07-10 15:32:29	642118	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	server bind success: [Socket sock=12 is_connected=0 family=2 type=1 protocol=0 local_address=0.0.0.0:8090] 
+2023-07-10 15:32:29	642118	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	server bind success: [Socket sock=13 is_connected=0 family=2 type=1 protocol=0 local_address=127.0.0.1:8091] 
+2023-07-10 15:32:31	642118	/home/fql/Project/C++/sylar/src/application.cpp	[ERROR]	[system]:	invalid address: pUWUUU  `bWUUU                  ê°WUUU  Ä˛VUUU   ëˆ˜ˇ   ïˆ˜ˇ  ˇˇˇˇ    ±                               !      ‡ 
+2023-07-10 15:32:31	642118	/home/fql/Project/C++/sylar/src/application.cpp	[ERROR]	[system]:	invalid address:  
+2023-07-10 15:32:31	642118	/home/fql/Project/C++/sylar/src/application.cpp	[ERROR]	[system]:	invalid address:  
+2023-07-10 15:32:31	642118	/home/fql/Project/C++/sylar/src/application.cpp	[ERROR]	[system]:	invalid address:  
+2023-07-10 15:34:17	642674	/home/fql/Project/C++/sylar/src/config.cpp	[INFO]	[system]:	LoadConfFile file=/home/fql/Project/C++/sylar/bin/conf/log.yml ok 
+2023-07-10 15:34:17	642674	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:34:17	642674	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=1 
+2023-07-10 15:34:17	642708	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	worker run 
+2023-07-10 15:34:17	642708	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:34:17	642708	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=2 
+2023-07-10 15:34:17	642709	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	worker run 
+2023-07-10 15:34:17	642709	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:34:17	642709	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=3 
+2023-07-10 15:34:17	642710	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	worker run 
+2023-07-10 15:34:17	642674	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	start stop 
+2023-07-10 15:34:17	642710	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:34:17	642674	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	0x555555576240 stopped 
+2023-07-10 15:34:17	642710	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=4 
+2023-07-10 15:34:17	642674	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	main run 
+2023-07-10 15:34:17	642674	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=5 
+2023-07-10 15:34:17	642674	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=6 
+2023-07-10 15:34:17	642674	/home/fql/Project/C++/sylar/src/application.cpp	[INFO]	[system]:	
+keepalive: 1
+timeout: 1000
+name: sylar/1.1
+address:
+  - 0.0.0.0:8090
+  - 127.0.0.1:8091 
+2023-07-10 15:34:17	642674	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	server bind success: [Socket sock=12 is_connected=0 family=2 type=1 protocol=0 local_address=0.0.0.0:8090] 
+2023-07-10 15:34:17	642674	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	server bind success: [Socket sock=13 is_connected=0 family=2 type=1 protocol=0 local_address=127.0.0.1:8091] 
+2023-07-10 15:34:18	642674	/home/fql/Project/C++/sylar/src/application.cpp	[ERROR]	[system]:	invalid address: pUWUUU  `bWUUU                  ê°WUUU  Ä˛VUUU   ëˆ˜ˇ   ïˆ˜ˇ  ˇˇˇˇ    ±                               !      ‡ 
+2023-07-10 15:34:18	642674	/home/fql/Project/C++/sylar/src/application.cpp	[ERROR]	[system]:	invalid address:  
+2023-07-10 15:34:18	642674	/home/fql/Project/C++/sylar/src/application.cpp	[ERROR]	[system]:	invalid address:  
+2023-07-10 15:34:18	642674	/home/fql/Project/C++/sylar/src/application.cpp	[ERROR]	[system]:	invalid address:  
+2023-07-10 15:35:11	643206	/home/fql/Project/C++/sylar/src/config.cpp	[INFO]	[system]:	LoadConfFile file=/home/fql/Project/C++/sylar/bin/conf/log.yml ok 
+2023-07-10 15:35:11	643206	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:35:11	643206	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=1 
+2023-07-10 15:35:11	643253	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	worker run 
+2023-07-10 15:35:11	643253	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:35:11	643253	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=2 
+2023-07-10 15:35:11	643254	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	worker run 
+2023-07-10 15:35:11	643254	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:35:11	643254	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=3 
+2023-07-10 15:35:11	643255	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	worker run 
+2023-07-10 15:35:11	643206	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	start stop 
+2023-07-10 15:35:11	643255	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:35:11	643206	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	0x555555576240 stopped 
+2023-07-10 15:35:11	643255	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=4 
+2023-07-10 15:35:11	643206	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	main run 
+2023-07-10 15:35:11	643206	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=5 
+2023-07-10 15:35:11	643206	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=6 
+2023-07-10 15:35:11	643206	/home/fql/Project/C++/sylar/src/application.cpp	[INFO]	[system]:	
+keepalive: 1
+timeout: 1000
+name: sylar/1.1
+address:
+  - 0.0.0.0:8090
+  - 127.0.0.1:8091 
+2023-07-10 15:35:11	643206	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	server bind success: [Socket sock=12 is_connected=0 family=2 type=1 protocol=0 local_address=0.0.0.0:8090] 
+2023-07-10 15:35:11	643206	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	server bind success: [Socket sock=13 is_connected=0 family=2 type=1 protocol=0 local_address=127.0.0.1:8091] 
+2023-07-10 15:35:12	643206	/home/fql/Project/C++/sylar/src/application.cpp	[ERROR]	[system]:	invalid address: pUWUUU  `bWUUU                  ê°WUUU  Ä˛VUUU   ëˆ˜ˇ   ïˆ˜ˇ  ˇˇˇˇ    ±                               !      ‡ 
+2023-07-10 15:35:12	643206	/home/fql/Project/C++/sylar/src/application.cpp	[ERROR]	[system]:	invalid address:  
+2023-07-10 15:35:12	643206	/home/fql/Project/C++/sylar/src/application.cpp	[ERROR]	[system]:	invalid address:  
+2023-07-10 15:35:12	643206	/home/fql/Project/C++/sylar/src/application.cpp	[ERROR]	[system]:	invalid address:  
+2023-07-10 15:37:29	644201	/home/fql/Project/C++/sylar/src/config.cpp	[INFO]	[system]:	LoadConfFile file=/home/fql/Project/C++/sylar/bin/conf/log.yml ok 
+2023-07-10 15:37:29	644201	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:37:29	644201	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=1 
+2023-07-10 15:37:29	644239	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	worker run 
+2023-07-10 15:37:29	644239	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:37:29	644239	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=2 
+2023-07-10 15:37:29	644240	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	worker run 
+2023-07-10 15:37:29	644240	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:37:29	644240	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=3 
+2023-07-10 15:37:29	644241	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	worker run 
+2023-07-10 15:37:29	644201	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	start stop 
+2023-07-10 15:37:29	644201	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	0x555555576240 stopped 
+2023-07-10 15:37:29	644241	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:37:29	644201	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	main run 
+2023-07-10 15:37:29	644241	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=4 
+2023-07-10 15:37:29	644201	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=5 
+2023-07-10 15:37:29	644201	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=6 
+2023-07-10 15:37:29	644201	/home/fql/Project/C++/sylar/src/application.cpp	[INFO]	[system]:	
+keepalive: 1
+timeout: 1000
+name: sylar/1.1
+address:
+  - 0.0.0.0:8090
+  - 127.0.0.1:8091 
+2023-07-10 15:37:33	644201	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	server bind success: [Socket sock=12 is_connected=0 family=2 type=1 protocol=0 local_address=0.0.0.0:8090] 
+2023-07-10 15:37:33	644201	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	server bind success: [Socket sock=13 is_connected=0 family=2 type=1 protocol=0 local_address=127.0.0.1:8091] 
+2023-07-10 15:37:43	644201	/home/fql/Project/C++/sylar/src/application.cpp	[ERROR]	[system]:	invalid address: pUWUUU  `bWUUU                  ê°WUUU  Ä˛VUUU   ëˆ˜ˇ   ïˆ˜ˇ  ˇˇˇˇ    ±                               !      ‡ 
+2023-07-10 15:41:03	646120	/home/fql/Project/C++/sylar/src/config.cpp	[INFO]	[system]:	LoadConfFile file=/home/fql/Project/C++/sylar/bin/conf/log.yml ok 
+2023-07-10 15:41:03	646120	/home/fql/Project/C++/sylar/src/application.cpp	[INFO]	[system]:	main 
+2023-07-10 15:41:03	646120	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:41:03	646120	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=1 
+2023-07-10 15:41:03	646120	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	start stop 
+2023-07-10 15:41:03	646120	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	0x555555576240 stopped 
+2023-07-10 15:41:03	646120	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	main run 
+2023-07-10 15:41:03	646120	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=2 
+2023-07-10 15:41:03	646120	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=3 
+2023-07-10 15:41:03	646120	/home/fql/Project/C++/sylar/src/application.cpp	[INFO]	[system]:	
+keepalive: 1
+timeout: 1000
+name: sylar/1.1
+address:
+  - 0.0.0.0:8090
+  - 127.0.0.1:8091 
+2023-07-10 15:41:06	646120	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	server bind success: [Socket sock=9 is_connected=0 family=2 type=1 protocol=0 local_address=0.0.0.0:8090] 
+2023-07-10 15:41:06	646120	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	server bind success: [Socket sock=10 is_connected=0 family=2 type=1 protocol=0 local_address=127.0.0.1:8091] 
+2023-07-10 15:41:33	646523	/home/fql/Project/C++/sylar/src/config.cpp	[INFO]	[system]:	LoadConfFile file=/home/fql/Project/C++/sylar/bin/conf/log.yml ok 
+2023-07-10 15:41:33	646523	/home/fql/Project/C++/sylar/src/application.cpp	[INFO]	[system]:	main 
+2023-07-10 15:41:33	646523	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:41:33	646523	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=1 
+2023-07-10 15:41:33	646523	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	start stop 
+2023-07-10 15:41:33	646523	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	0x555555576240 stopped 
+2023-07-10 15:41:33	646523	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	main run 
+2023-07-10 15:41:33	646523	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=2 
+2023-07-10 15:41:33	646523	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=3 
+2023-07-10 15:41:33	646523	/home/fql/Project/C++/sylar/src/application.cpp	[INFO]	[system]:	
+keepalive: 1
+timeout: 1000
+name: sylar/1.1
+address:
+  - 0.0.0.0:8090
+  - 127.0.0.1:8091 
+2023-07-10 15:41:34	646523	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	server bind success: [Socket sock=9 is_connected=0 family=2 type=1 protocol=0 local_address=0.0.0.0:8090] 
+2023-07-10 15:41:34	646523	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	server bind success: [Socket sock=10 is_connected=0 family=2 type=1 protocol=0 local_address=127.0.0.1:8091] 
+2023-07-10 15:43:59	647576	/home/fql/Project/C++/sylar/src/config.cpp	[INFO]	[system]:	LoadConfFile file=/home/fql/Project/C++/sylar/bin/conf/log.yml ok 
+2023-07-10 15:43:59	647576	/home/fql/Project/C++/sylar/src/application.cpp	[INFO]	[system]:	main 
+2023-07-10 15:43:59	647576	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:43:59	647576	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=1 
+2023-07-10 15:43:59	647576	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	start stop 
+2023-07-10 15:43:59	647576	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	0x555555576240 stopped 
+2023-07-10 15:43:59	647576	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	main run 
+2023-07-10 15:43:59	647576	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=2 
+2023-07-10 15:43:59	647576	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=3 
+2023-07-10 15:43:59	647576	/home/fql/Project/C++/sylar/src/application.cpp	[INFO]	[system]:	
+keepalive: 1
+timeout: 1000
+name: sylar/1.1
+address:
+  - 0.0.0.0:8090
+  - 127.0.0.1:8091 
+2023-07-10 15:44:00	647576	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	server bind success: [Socket sock=9 is_connected=0 family=2 type=1 protocol=0 local_address=0.0.0.0:8090] 
+2023-07-10 15:44:00	647576	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	server bind success: [Socket sock=10 is_connected=0 family=2 type=1 protocol=0 local_address=127.0.0.1:8091] 
+2023-07-10 15:49:10	650100	/home/fql/Project/C++/sylar/src/config.cpp	[INFO]	[system]:	LoadConfFile file=/home/fql/Project/C++/sylar/bin/conf/log.yml ok 
+2023-07-10 15:49:10	650100	/home/fql/Project/C++/sylar/src/application.cpp	[INFO]	[system]:	main 
+2023-07-10 15:49:10	650100	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:49:10	650100	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=1 
+2023-07-10 15:49:10	650100	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	start stop 
+2023-07-10 15:49:10	650100	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	0x555555576240 stopped 
+2023-07-10 15:49:10	650100	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	main run 
+2023-07-10 15:49:10	650100	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=2 
+2023-07-10 15:49:10	650100	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=3 
+2023-07-10 15:49:10	650100	/home/fql/Project/C++/sylar/src/application.cpp	[INFO]	[system]:	
+keepalive: 1
+timeout: 1000
+name: sylar/1.1
+address:
+  - 0.0.0.0:8090
+  - 127.0.0.1:8091 
+2023-07-10 15:49:12	650100	/home/fql/Project/C++/sylar/src/iomanager.cpp	[INFO]	[system]:	name=main idle stopping exit 
+2023-07-10 15:49:12	650100	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	idle fiber term 
+2023-07-10 15:49:12	650100	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	start stop 
+2023-07-10 15:49:12	650100	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	0x555555576240 stopped 
+2023-07-10 15:49:12	650100	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	~Scheduler 
+2023-07-10 15:49:20	650270	/home/fql/Project/C++/sylar/src/config.cpp	[INFO]	[system]:	LoadConfFile file=/home/fql/Project/C++/sylar/bin/conf/log.yml ok 
+2023-07-10 15:49:20	650270	/home/fql/Project/C++/sylar/src/application.cpp	[INFO]	[system]:	main 
+2023-07-10 15:49:20	650270	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:49:20	650270	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=1 
+2023-07-10 15:49:20	650270	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	start stop 
+2023-07-10 15:49:20	650270	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	0x55cc1416a1d0 stopped 
+2023-07-10 15:49:20	650270	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	main run 
+2023-07-10 15:49:20	650270	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=2 
+2023-07-10 15:49:20	650270	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=3 
+2023-07-10 15:49:20	650270	/home/fql/Project/C++/sylar/src/application.cpp	[INFO]	[system]:	
+keepalive: 1
+timeout: 1000
+name: sylar/1.1
+address:
+  - 0.0.0.0:8090
+  - 127.0.0.1:8091 
+2023-07-10 15:49:20	650270	/home/fql/Project/C++/sylar/src/iomanager.cpp	[INFO]	[system]:	name=main idle stopping exit 
+2023-07-10 15:49:20	650270	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	idle fiber term 
+2023-07-10 15:49:20	650270	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	start stop 
+2023-07-10 15:49:20	650270	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	0x55cc1416a1d0 stopped 
+2023-07-10 15:49:20	650270	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	~Scheduler 
+2023-07-10 15:50:11	650672	/home/fql/Project/C++/sylar/src/config.cpp	[INFO]	[system]:	LoadConfFile file=/home/fql/Project/C++/sylar/bin/conf/log.yml ok 
+2023-07-10 15:50:11	650672	/home/fql/Project/C++/sylar/src/application.cpp	[INFO]	[system]:	main 
+2023-07-10 15:50:11	650672	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:50:11	650672	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=1 
+2023-07-10 15:50:11	650672	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	start stop 
+2023-07-10 15:50:11	650672	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	0x555555576240 stopped 
+2023-07-10 15:50:11	650672	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	main run 
+2023-07-10 15:50:11	650672	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=2 
+2023-07-10 15:50:11	650672	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=3 
+2023-07-10 15:50:11	650672	/home/fql/Project/C++/sylar/src/application.cpp	[INFO]	[system]:	
+keepalive: 1
+timeout: 1000
+name: sylar/1.1
+address:
+  - 0.0.0.0:8090
+  - 127.0.0.1:8091 
+2023-07-10 15:50:30	650672	/home/fql/Project/C++/sylar/src/iomanager.cpp	[INFO]	[system]:	name=main idle stopping exit 
+2023-07-10 15:50:30	650672	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	idle fiber term 
+2023-07-10 15:50:30	650672	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	start stop 
+2023-07-10 15:50:30	650672	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	0x555555576240 stopped 
+2023-07-10 15:50:30	650672	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	~Scheduler 
+2023-07-10 15:51:00	651197	/home/fql/Project/C++/sylar/src/config.cpp	[INFO]	[system]:	LoadConfFile file=/home/fql/Project/C++/sylar/bin/conf/log.yml ok 
+2023-07-10 15:51:00	651197	/home/fql/Project/C++/sylar/src/application.cpp	[INFO]	[system]:	main 
+2023-07-10 15:51:00	651197	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:51:00	651197	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=1 
+2023-07-10 15:51:00	651197	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	start stop 
+2023-07-10 15:51:00	651197	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	0x555555576240 stopped 
+2023-07-10 15:51:00	651197	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	main run 
+2023-07-10 15:51:00	651197	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=2 
+2023-07-10 15:51:00	651197	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=3 
+2023-07-10 15:51:00	651197	/home/fql/Project/C++/sylar/src/application.cpp	[INFO]	[system]:	
+keepalive: 1
+timeout: 1000
+name: sylar/1.1
+address:
+  - 0.0.0.0:8090
+  - 127.0.0.1:8091 
+2023-07-10 15:51:15	651375	/home/fql/Project/C++/sylar/src/config.cpp	[INFO]	[system]:	LoadConfFile file=/home/fql/Project/C++/sylar/bin/conf/log.yml ok 
+2023-07-10 15:51:15	651375	/home/fql/Project/C++/sylar/src/application.cpp	[INFO]	[system]:	main 
+2023-07-10 15:51:15	651375	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:51:15	651375	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=1 
+2023-07-10 15:51:15	651375	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	start stop 
+2023-07-10 15:51:15	651375	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	0x555555576240 stopped 
+2023-07-10 15:51:15	651375	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	main run 
+2023-07-10 15:51:15	651375	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=2 
+2023-07-10 15:51:15	651375	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=3 
+2023-07-10 15:51:15	651375	/home/fql/Project/C++/sylar/src/application.cpp	[INFO]	[system]:	
+keepalive: 1
+timeout: 1000
+name: sylar/1.1
+address:
+  - 0.0.0.0:8090
+  - 127.0.0.1:8091 
+2023-07-10 15:54:15	652863	/home/fql/Project/C++/sylar/src/config.cpp	[INFO]	[system]:	LoadConfFile file=/home/fql/Project/C++/sylar/bin/conf/log.yml ok 
+2023-07-10 15:54:15	652863	/home/fql/Project/C++/sylar/src/application.cpp	[INFO]	[system]:	main 
+2023-07-10 15:54:15	652863	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:54:15	652863	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=1 
+2023-07-10 15:54:15	652863	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	start stop 
+2023-07-10 15:54:15	652863	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	0x555555576240 stopped 
+2023-07-10 15:54:15	652863	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	main run 
+2023-07-10 15:54:15	652863	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=2 
+2023-07-10 15:54:15	652863	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=3 
+2023-07-10 15:54:15	652863	/home/fql/Project/C++/sylar/src/application.cpp	[INFO]	[system]:	
+keepalive: 1
+timeout: 1000
+name: sylar/1.1
+address:
+  - 0.0.0.0:8090
+  - 127.0.0.1:8091 
+2023-07-10 15:54:19	652863	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	server bind success: [Socket sock=9 is_connected=0 family=2 type=1 protocol=0 local_address=0.0.0.0:8090] 
+2023-07-10 15:54:19	652863	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	server bind success: [Socket sock=10 is_connected=0 family=2 type=1 protocol=0 local_address=127.0.0.1:8091] 
+2023-07-10 15:54:42	653157	/home/fql/Project/C++/sylar/src/config.cpp	[INFO]	[system]:	LoadConfFile file=/home/fql/Project/C++/sylar/bin/conf/log.yml ok 
+2023-07-10 15:54:42	653157	/home/fql/Project/C++/sylar/src/application.cpp	[INFO]	[system]:	main 
+2023-07-10 15:54:42	653157	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 15:54:42	653157	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=1 
+2023-07-10 15:54:42	653157	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	start stop 
+2023-07-10 15:54:42	653157	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	0x55c640b0f1d0 stopped 
+2023-07-10 15:54:42	653157	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	main run 
+2023-07-10 15:54:42	653157	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=2 
+2023-07-10 15:54:42	653157	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=3 
+2023-07-10 15:54:42	653157	/home/fql/Project/C++/sylar/src/application.cpp	[INFO]	[system]:	
+keepalive: 1
+timeout: 1000
+name: sylar/1.1
+address:
+  - 0.0.0.0:8090
+  - 127.0.0.1:8091 
+2023-07-10 15:54:42	653157	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	server bind success: [Socket sock=9 is_connected=0 family=2 type=1 protocol=0 local_address=0.0.0.0:8090] 
+2023-07-10 15:54:42	653157	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	server bind success: [Socket sock=10 is_connected=0 family=2 type=1 protocol=0 local_address=127.0.0.1:8091] 
+2023-07-10 15:56:37	653157	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	accept !! 
+2023-07-10 15:56:40	653157	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	accept !! 
+2023-07-10 15:56:57	653157	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	accept !! 
+2023-07-10 15:57:03	653157	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	accept !! 
+2023-07-10 15:58:18	653157	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	accept !! 
+2023-07-10 16:02:33	658175	/home/fql/Project/C++/sylar/src/config.cpp	[INFO]	[system]:	LoadConfFile file=/home/fql/Project/C++/sylar/bin/conf/log.yml ok 
+2023-07-10 16:02:33	658175	/home/fql/Project/C++/sylar/src/application.cpp	[INFO]	[system]:	main 
+2023-07-10 16:02:33	658175	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 16:02:33	658175	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=1 
+2023-07-10 16:02:33	658176	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	worker run 
+2023-07-10 16:02:33	658176	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 16:02:33	658177	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	worker run 
+2023-07-10 16:02:33	658178	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	worker run 
+2023-07-10 16:02:33	658175	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	start stop 
+2023-07-10 16:02:33	658175	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	0x55a463ffc1d0 stopped 
+2023-07-10 16:02:33	658177	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 16:02:33	658178	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 16:02:33	658176	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=2 
+2023-07-10 16:02:33	658175	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	main run 
+2023-07-10 16:02:33	658177	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=3 
+2023-07-10 16:02:33	658178	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=4 
+2023-07-10 16:02:33	658175	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=5 
+2023-07-10 16:02:33	658175	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=6 
+2023-07-10 16:02:33	658175	/home/fql/Project/C++/sylar/src/application.cpp	[INFO]	[system]:	
+keepalive: 1
+timeout: 1000
+name: sylar/1.1
+address:
+  - 0.0.0.0:8090
+  - 127.0.0.1:8091 
+2023-07-10 16:02:33	658175	/home/fql/Project/C++/sylar/src/socket.cpp	[ERROR]	[system]:	bind error errrno=98 errstr=Address already in use 
+2023-07-10 16:02:33	658175	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[ERROR]	[system]:	bind fail errno = 98 errstr = Address already in use addr = 0.0.0.0:8090 
+2023-07-10 16:02:33	658175	/home/fql/Project/C++/sylar/src/socket.cpp	[ERROR]	[system]:	bind error errrno=98 errstr=Address already in use 
+2023-07-10 16:02:33	658175	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[ERROR]	[system]:	bind fail errno = 98 errstr = Address already in use addr = 127.0.0.1:8091 
+2023-07-10 16:02:33	658175	/home/fql/Project/C++/sylar/src/application.cpp	[ERROR]	[system]:	bind address fail: 0.0.0.0:8090 
+2023-07-10 16:02:33	658175	/home/fql/Project/C++/sylar/src/application.cpp	[ERROR]	[system]:	bind address fail: 127.0.0.1:8091 
+2023-07-10 16:02:43	658295	/home/fql/Project/C++/sylar/src/config.cpp	[INFO]	[system]:	LoadConfFile file=/home/fql/Project/C++/sylar/bin/conf/log.yml ok 
+2023-07-10 16:02:43	658295	/home/fql/Project/C++/sylar/src/application.cpp	[INFO]	[system]:	main 
+2023-07-10 16:02:43	658295	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 16:02:43	658295	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=1 
+2023-07-10 16:02:43	658296	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	worker run 
+2023-07-10 16:02:43	658297	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	worker run 
+2023-07-10 16:02:43	658298	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	worker run 
+2023-07-10 16:02:43	658298	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 16:02:43	658296	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 16:02:43	658295	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	start stop 
+2023-07-10 16:02:43	658295	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	0x5639478661d0 stopped 
+2023-07-10 16:02:43	658298	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=2 
+2023-07-10 16:02:43	658296	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=3 
+2023-07-10 16:02:43	658297	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber main construction completed 
+2023-07-10 16:02:43	658295	/home/fql/Project/C++/sylar/src/scheduler.cpp	[INFO]	[system]:	main run 
+2023-07-10 16:02:43	658297	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=4 
+2023-07-10 16:02:43	658295	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=5 
+2023-07-10 16:02:43	658295	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=6 
+2023-07-10 16:02:43	658295	/home/fql/Project/C++/sylar/src/application.cpp	[INFO]	[system]:	
+keepalive: 1
+timeout: 1000
+name: sylar/1.1
+address:
+  - 0.0.0.0:8090
+  - 127.0.0.1:8091 
+2023-07-10 16:02:43	658295	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	server bind success: [Socket sock=12 is_connected=0 family=2 type=1 protocol=0 local_address=0.0.0.0:8090] 
+2023-07-10 16:02:43	658295	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	server bind success: [Socket sock=13 is_connected=0 family=2 type=1 protocol=0 local_address=127.0.0.1:8091] 
+2023-07-10 16:02:43	658295	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	accept !! 
+2023-07-10 16:02:43	658297	/home/fql/Project/C++/sylar/src/iomanager.cpp	[INFO]	[system]:	name=worker idle tickle 
+2023-07-10 16:02:43	658297	/home/fql/Project/C++/sylar/src/fiber.cpp	[INFO]	[system]:	Fiber::Fiber id=7 
+2023-07-10 16:02:43	658295	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	accept !! 
+2023-07-10 16:02:43	658297	/home/fql/Project/C++/sylar/src/iomanager.cpp	[INFO]	[system]:	name=worker idle tickle 
+2023-07-10 16:02:43	658295	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	accept !! 
+2023-07-10 16:02:43	658297	/home/fql/Project/C++/sylar/src/iomanager.cpp	[INFO]	[system]:	name=worker idle tickle 
+2023-07-10 16:02:50	658295	/home/fql/Project/C++/sylar/src/tcpserver.cpp	[INFO]	[system]:	accept !! 
+2023-07-10 16:02:50	658297	/home/fql/Project/C++/sylar/src/iomanager.cpp	[INFO]	[system]:	name=worker idle tickle 

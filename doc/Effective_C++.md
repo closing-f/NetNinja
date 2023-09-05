@@ -2,10 +2,10 @@
  * @Author: closing
  * @Date: 2023-06-06 21:06:22
  * @LastEditors: closing
- * @LastEditTime: 2023-06-12 11:27:31
+ * @LastEditTime: 2023-08-30 11:31:07
  * @Description: 请填写简介
 -->
-
+<font size=5>
 ## 导读
 
 条款01:视C++为一个语言联邦
@@ -18,7 +18,7 @@
 
 条款03:尽可能使用const
 
-1. 如果关键字const出现在星号左边，表示被指物是常量：如果出现在垦号右边，表示指针自身是常量
+1. 如果关键字const出现在星号左边，表示被指物是常量：如果出现在星号右边，表示指针自身是常量
 2. 两个成员函数如果只是常量性(constness)不同，可以被重载。
 3. 在C++中，只有被声明为const的成员函数才能被一个const类对象调用。
 4. 对于const成员函数，编译器强制实施bitwise constness，只需寻找成员变量的赋值动作即可。一个更改了“指针所指物”的成员函数虽然不能算是const,但如果只有指针(而非其所指物)隶属于对象，那么称此函数为bitvise const不会引发编译器异议
@@ -151,7 +151,7 @@ Window::onResize();
 ```
 3. 之所以需要dynamic_cast,通常是因为你想在一个你认定为derived class对象身上执行derived class操作函数，但你的手上却只有一个“指向base”的pointer或reference,你只能靠它们来处理对象
    
-条款28:避免返回handks指向对象内部成分
+条款28:避免返回handles指向对象内部成分
 1. References、指针和迭代器统统都是所调的handles(号码牌，用来取得某个对象),而返回一个“代表对象内部数据”的handle,随之而来的便是“降低对象封装性”的风险, 可以通过对他们的返回值添加const解决
 2. 返回handles就会暴露在“handle比其所指对象更长寿”的风险下, 可能会导致dangling handles：这种handles所指东西(的所属对象)不复存在。
 

@@ -1,5 +1,0 @@
-<map id="server_cc::IPv6Address" name="server_cc::IPv6Address">
-<area shape="rect" id="node1" title="IPv6地址" alt="" coords="5,155,177,181"/>
-<area shape="rect" id="node2" href="$classserver__cc_1_1IPAddress.html" title="IP地址的基类" alt="" coords="13,80,169,107"/>
-<area shape="rect" id="node3" href="$classserver__cc_1_1Address.html" title="网络地址的基类,抽象类" alt="" coords="19,5,163,32"/>
-</map>
