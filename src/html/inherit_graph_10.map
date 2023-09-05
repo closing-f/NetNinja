@@ -1,6 +1,0 @@
-<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classserver__cc_1_1http_1_1Servlet.html" title=" " alt="" coords="5,78,177,105"/>
-<area shape="rect" id="node2" href="$classserver__cc_1_1http_1_1FunctionServlet.html" title="函数式Servlet" alt="" coords="229,5,410,47"/>
-<area shape="rect" id="node3" href="$classserver__cc_1_1http_1_1NotFoundServlet.html" title="NotFoundServlet(默认返回404)" alt="" coords="225,71,413,112"/>
-<area shape="rect" id="node4" href="$classserver__cc_1_1http_1_1ServletDispatch.html" title="Servlet分发器" alt="" coords="233,136,405,177"/>
-</map>

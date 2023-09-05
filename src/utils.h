@@ -2,7 +2,7 @@
  * @Author: closing-f fql2018@bupt.edu.cn
  * @Date: 2023-04-09 00:57:42
  * @LastEditors: closing
- * @LastEditTime: 2023-05-31 09:53:12
+ * @LastEditTime: 2023-07-10 09:49:43
  * @FilePath: /sylar/src/utils.h
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -87,6 +87,30 @@ void BackTrace(std::vector<std::string>&bt,int size=64,int skip=1);
  * @return {*}
  */
 std::string BackTraceToString(int size=64,int skip=2,const std::string &prefix="");
+
+std::string Time2Str(time_t ts = time(0), const std::string& format = "%Y-%m-%d %H:%M:%S");
+time_t Str2Time(const char* str, const char* format = "%Y-%m-%d %H:%M:%S");
+
+class FSUtil {
+public:
+    static void ListAllFile(std::vector<std::string>& files
+                            ,const std::string& path
+                            ,const std::string& subfix);
+    static bool Mkdir(const std::string& dirname);
+    static bool IsRunningPidfile(const std::string& pidfile);
+    // static bool Rm(const std::string& path);
+    // static bool Mv(const std::string& from, const std::string& to);
+    // static bool Realpath(const std::string& path, std::string& rpath);
+    // static bool Symlink(const std::string& frm, const std::string& to);
+    // static bool Unlink(const std::string& filename, bool exist = false);
+    // static std::string Dirname(const std::string& filename);
+    // static std::string Basename(const std::string& filename);
+    // static bool OpenForRead(std::ifstream& ifs, const std::string& filename
+    //                 ,std::ios_base::openmode mode);
+    // static bool OpenForWrite(std::ofstream& ofs, const std::string& filename
+    //                 ,std::ios_base::openmode mode);
+};
+
 
 template<class T>
 const char* TypeToName() {

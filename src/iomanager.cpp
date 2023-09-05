@@ -2,7 +2,7 @@
  * @Author: closing-f fql2018@bupt.edu.cn
  * @Date: 2023-05-13 07:48:12
  * @LastEditors: closing
- * @LastEditTime: 2023-06-02 10:07:45
+ * @LastEditTime: 2023-07-11 16:27:03
  * @FilePath: /sylar/src/iomanager.cpp
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -340,7 +340,7 @@ void IOManager::idle() {
                 uint8_t dummy[256];
                 while(read(m_tickleFds[0], dummy, sizeof(dummy)) > 0);
 
-                continue;
+                continue;//被tickle触发，继续循环
             }
 
             //获取事件上下文，在添加事件时，将fd_ctx作为data.ptr传入

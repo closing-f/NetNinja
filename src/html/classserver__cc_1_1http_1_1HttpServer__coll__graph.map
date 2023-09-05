@@ -1,9 +1,0 @@
-<map id="server_cc::http::HttpServer" name="server_cc::http::HttpServer">
-<area shape="rect" id="node1" title=" " alt="" coords="791,71,987,98"/>
-<area shape="rect" id="node2" href="$classserver__cc_1_1TcpServer.html" title=" " alt="" coords="587,71,741,98"/>
-<area shape="rect" id="node3" title=" " alt="" coords="241,5,425,47"/>
-<area shape="rect" id="node4" href="$classserver__cc_1_1Noncopyable.html" title="对象无法拷贝,赋值" alt="" coords="245,71,422,98"/>
-<area shape="rect" id="node5" href="$classserver__cc_1_1IOManager.html" title=" " alt="" coords="252,135,415,162"/>
-<area shape="rect" id="node6" href="$classserver__cc_1_1Scheduler.html" title=" " alt="" coords="21,110,177,137"/>
-<area shape="rect" id="node7" href="$classserver__cc_1_1TimerManager.html" title=" " alt="" coords="5,161,192,187"/>
-</map>
